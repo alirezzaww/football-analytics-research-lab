@@ -530,3 +530,7 @@ Prepared assisted inspection of all three existing headers. Two Renard goals fol
 ### 2026-11-03 · Lesson 35: corner denominators
 
 Prepared assisted count of all corner deliveries: France 13 (10 first half, 3 second half), Korea Republic 1. France has 2 verified direct shot links, both goals: 2/13=15.38%. Covered inclusion of incomplete deliveries, direct links versus later phase chances, selected-chance versus delivery denominators, and small-sample limits. Independent explanation pending.
+
+### 2026-11-03 · Lesson 36: bounded corner phases
+
+Completed assisted assignment with explicit phase protocol written before this calculation, using an already inspected match. France: 6/13 corners with a phase shot, 7 unique shots and 2 shot goals, versus 2/13 direct links. Covered boundary rules, follow-up attempts and corners-with-shots versus shot counts. User requested compact explanations and completed worked assignments for familiar concepts. No independent-mastery claim.

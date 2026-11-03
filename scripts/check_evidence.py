@@ -1001,3 +1001,72 @@ if raw_path.exists():
             assert shot['index'] > event['index']
             assert row['linked_shot_goal'] == (shot['shot']['outcome']['name'] == 'Goal')
 print('PASS: every corner delivery, direct shot links and explicit rate denominators reconcile.')
+
+phase = json.loads((ROOT / 'data/36_corner_phase_evidence.json').read_text())
+assert phase['source_path'] == 'data/35_corner_delivery_evidence.json'
+assert hashlib.sha256((ROOT / phase['source_path']).read_bytes()).hexdigest() == phase['source_sha256']
+phase_protocol_path = ROOT / phase['protocol_path']
+assert hashlib.sha256(phase_protocol_path.read_bytes()).hexdigest() == phase['protocol_sha256']
+phase_protocol = json.loads(phase_protocol_path.read_text())
+assert phase_protocol['maximum_seconds_inclusive'] == 15
+assert phase['raw_input'] == corner['raw_input']
+assert phase['fixture'] == corner['fixture']
+assert [r['corner_id'] for r in phase['phases']] == [r['id'] for r in corner_rows]
+phase_shot_source = {r['id']: r for r in match['shots']}
+assigned = []
+for row, delivery in zip(phase['phases'], corner_rows):
+    for key in ['team', 'period', 'minute', 'second']:
+        assert row[key] == delivery[key]
+    assert row['direct_shot_id'] == delivery['assisted_shot_id']
+    for shot in row['shots']:
+        original = phase_shot_source[shot['shot_id']]
+        assert original['team'] == row['team']
+        assert original['period'] == row['period']
+        assert 0 <= shot['elapsed_seconds'] <= 15
+        assert shot['goal'] == original['goal']
+        assert shot['model_probability'] == original['model_probability']
+        assigned.append(shot['shot_id'])
+assert len(assigned) == len(set(assigned))
+assert [r['team'] for r in phase['teams']] == [r['team'] for r in corner['teams']]
+for team, direct in zip(phase['teams'], corner['teams']):
+    rows = [r for r in phase['phases'] if r['team'] == team['team']]
+    with_shot = sum(bool(r['shots']) for r in rows)
+    assert team['deliveries'] == direct['deliveries'] == len(rows)
+    assert team['direct_linked_shots'] == direct['direct_linked_shots']
+    assert team['direct_shot_link_rate'] == direct['recorded_direct_shot_link_rate']
+    assert team['corners_with_phase_shot'] == with_shot
+    assert team['phase_shots'] == sum(len(r['shots']) for r in rows)
+    assert team['phase_shot_goals'] == sum(s['goal'] for r in rows for s in r['shots'])
+    assert math.isclose(team['phase_shot_rate'], with_shot / len(rows))
+if raw_path.exists():
+    ordered_raw = sorted(raw_events.values(), key=lambda e: e['index'])
+    def phase_ms(e):
+        h, m, s = e['timestamp'].split(':')
+        return int(h) * 3600000 + int(m) * 60000 + round(float(s) * 1000)
+    for row in phase['phases']:
+        start_event = raw_events[row['corner_id']]
+        expected_shots = []
+        reason = 'End of available events'
+        for event in ordered_raw:
+            if event['index'] <= start_event['index']:
+                continue
+            if event['period'] != start_event['period']:
+                reason = 'Period changed'; break
+            if event['possession'] != start_event['possession']:
+                reason = 'Possession changed'; break
+            elapsed = (phase_ms(event) - phase_ms(start_event)) / 1000
+            assert elapsed >= 0
+            if elapsed > 15:
+                reason = 'Time limit'; break
+            if event['type']['name'] == 'Pass' and event['pass'].get('type', {}).get('name') in phase_protocol['restart_pass_types']:
+                reason = 'New restart'; break
+            if event['id'] in phase_shot_source and event['team']['id'] == start_event['team']['id']:
+                source_shot = phase_shot_source[event['id']]
+                expected_shots.append({'shot_id': event['id'], 'elapsed_seconds': elapsed, 'goal': source_shot['goal'], 'model_probability': source_shot['model_probability']})
+            if event['type']['name'] == 'Shot' and event['shot']['outcome']['name'] == 'Goal':
+                reason = 'Goal'; break
+            if event['type']['name'] in ('Own Goal Against', 'Own Goal For'):
+                reason = 'Own goal'; break
+        assert row['shots'] == expected_shots
+        assert row['stop_reason'] == reason
+print('PASS: corner-phase membership, unique shot assignments, boundaries and rates reconcile.')

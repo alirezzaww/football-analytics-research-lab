@@ -166,3 +166,7 @@ Executed all-three-header pass inspection with raw SHA256 verification. Tests co
 ### Lesson 35 (2026-11-03)
 
 Executed all-corner selection with the existing raw hash check. Unit tests verify inclusion of unlinked deliveries and distinguish zero observed rates from undefined empty exposure. Evidence checker reconstructs all raw corner IDs, direct reciprocal links, team/half summaries and denominators when cached; saved aggregate reconciliation is cache-free. Chart inspected. No xG model changes.
+
+### Lesson 36 (2026-11-03)
+
+Executed the fixed-rule phase scan, preserving millisecond timing and unique shot assignments. Tests cover exact 15-second inclusion, added time, possession/period/restart stops, multiple shots and goal/own-goal stops. Saved evidence checks reconcile protocol/source digests and team rates; cached raw replay verifies each phase membership and stop reason. Chart inspected. Descriptive reuse, not fresh validation.

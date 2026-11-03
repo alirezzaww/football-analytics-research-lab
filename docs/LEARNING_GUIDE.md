@@ -125,3 +125,7 @@ Run `34_header_assisting_passes.py` and read [the header-link lesson](../lessons
 ## Lesson 35: define a corner rate
 
 Run `35_corner_delivery_rates.py` and read [the denominator lesson](../lessons/0017-corner-delivery-rates.html). Explain why 2/2 and 2/13 answer different questions, and why no direct shot link does not prove no later chance.
+
+## Lesson 36: bounded sequence analysis
+
+Run `36_corner_phase_analysis.py`; [the compact lesson](../lessons/0018-corner-phase-analysis.html) and [completed worked assignment](../reports/19_corner_phase_analysis.md) show why phase boundaries alter shot association without changing the delivery denominator.

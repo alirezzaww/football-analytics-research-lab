@@ -1,0 +1,13 @@
+{
+  "defined_on": "2026-11-03",
+  "purpose": "Descriptive extension of the already inspected France–Korea Republic match; not fresh validation",
+  "maximum_seconds_inclusive": 15,
+  "start": "Every period-1/2 corner Pass event in the lesson-35 denominator",
+  "stop": "First possession-ID change, period change, new restart pass, shot goal, own-goal event or elapsed time over 15 seconds",
+  "restart_pass_types": ["Corner", "Free Kick", "Throw-in", "Goal Kick", "Kick Off"],
+  "shots": "Only the same team's non-penalty shots already included in the lesson-29 ledger, after the delivery index",
+  "time": "Within-period timestamp with subsecond precision; exactly 15 seconds included",
+  "assignment": "Stop at the next restart so a shot can belong to at most one corner; duplicate assignments are errors",
+  "comparison": "Compare corners with a phase shot against the recorded direct shot-link rate using the same delivery denominator",
+  "limitations": "Provider possession and these chosen boundaries are a proxy for a corner phase, not a universal tactical definition. No retrospective window tuning."
+}

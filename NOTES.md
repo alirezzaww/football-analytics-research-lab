@@ -61,3 +61,5 @@ formula outputs, then adds the new concept of extrapolation. Explain one example
 at a time. Neither group sample rates nor curve outputs are known true individual
 xG; independent explanation remains pending. Training-support plots are in-sample
 and the evaluation coverage audit reuses already inspected data.
+
+The user explicitly requests faster, compact explanations for familiar/easy concepts, without skipping lessons or assignments. Complete assignments as assisted worked examples and document that status; do not imply independent user mastery. Use deeper explanation when concepts are new or requested.

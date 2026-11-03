@@ -1,0 +1,231 @@
+{
+  "source_path": "data/35_corner_delivery_evidence.json",
+  "source_sha256": "5d2f801255582299efee4499059eb85588cd91d5d662763430c45b658267e994",
+  "protocol_path": "data/36_corner_phase_protocol.json",
+  "protocol_sha256": "e6a1182b0f871f9fba1b44a0fb37d364142fa11b1f575ec955515d5a1eafe477",
+  "fixture": {
+    "match_id": 22921,
+    "match_date": "2019-06-07",
+    "home_team": "France Women's",
+    "away_team": "Korea Republic Women's"
+  },
+  "raw_input": {
+    "match_id": 22921,
+    "relative_path": "data/cache_2019_events/22921.json",
+    "sha256": "4fdbe28dc3e5828b12e97228e7d6a35736a9c78d08e3566089feb2f0fbea62cf",
+    "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22921.json"
+  },
+  "phases": [
+    {
+      "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 8,
+      "second": 10,
+      "direct_shot_id": null,
+      "shots": [],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 12,
+      "second": 11,
+      "direct_shot_id": null,
+      "shots": [
+        {
+          "shot_id": "75e60ccb-117b-425d-b961-5f39cc93c8e6",
+          "elapsed_seconds": 4.929,
+          "goal": 0,
+          "model_probability": 0.02984294030652792
+        },
+        {
+          "shot_id": "57e846fc-1136-4212-a2bc-9009581f1725",
+          "elapsed_seconds": 10.282,
+          "goal": 0,
+          "model_probability": 0.08934706036967337
+        }
+      ],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "e1fc2300-9add-448c-aaa3-d3cd811eabfb",
+      "team": "Korea Republic Women's",
+      "period": 1,
+      "minute": 19,
+      "second": 47,
+      "direct_shot_id": null,
+      "shots": [],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 21,
+      "second": 29,
+      "direct_shot_id": null,
+      "shots": [
+        {
+          "shot_id": "9d561bcf-e043-40e6-8255-0d9f31c52093",
+          "elapsed_seconds": 4.346,
+          "goal": 0,
+          "model_probability": 0.02647258007919606
+        }
+      ],
+      "stop_reason": "Time limit"
+    },
+    {
+      "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 23,
+      "second": 51,
+      "direct_shot_id": null,
+      "shots": [],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 26,
+      "second": 16,
+      "direct_shot_id": null,
+      "shots": [],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 32,
+      "second": 28,
+      "direct_shot_id": null,
+      "shots": [
+        {
+          "shot_id": "95319c05-4c68-46f2-ac16-d9c38c8cedb3",
+          "elapsed_seconds": 6.324,
+          "goal": 0,
+          "model_probability": 0.029348072958914565
+        }
+      ],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 33,
+      "second": 50,
+      "direct_shot_id": null,
+      "shots": [],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 34,
+      "second": 52,
+      "direct_shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+      "shots": [
+        {
+          "shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+          "elapsed_seconds": 1.935,
+          "goal": 1,
+          "model_probability": 0.21649471040182458
+        }
+      ],
+      "stop_reason": "Goal"
+    },
+    {
+      "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 45,
+      "second": 17,
+      "direct_shot_id": null,
+      "shots": [],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 46,
+      "second": 55,
+      "direct_shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+      "shots": [
+        {
+          "shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+          "elapsed_seconds": 1.87,
+          "goal": 1,
+          "model_probability": 0.16301249622984576
+        }
+      ],
+      "stop_reason": "Goal"
+    },
+    {
+      "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+      "team": "France Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 0,
+      "direct_shot_id": null,
+      "shots": [],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+      "team": "France Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 20,
+      "direct_shot_id": null,
+      "shots": [],
+      "stop_reason": "Possession changed"
+    },
+    {
+      "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+      "team": "France Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 40,
+      "direct_shot_id": null,
+      "shots": [
+        {
+          "shot_id": "f3ee572a-8e76-4c2f-86bd-fc46ba75a96d",
+          "elapsed_seconds": 5.003,
+          "goal": 0,
+          "model_probability": 0.03802439923848541
+        }
+      ],
+      "stop_reason": "Time limit"
+    }
+  ],
+  "teams": [
+    {
+      "team": "France Women's",
+      "deliveries": 13,
+      "direct_linked_shots": 2,
+      "corners_with_phase_shot": 6,
+      "phase_shots": 7,
+      "phase_shot_goals": 2,
+      "phase_shot_rate": 0.46153846153846156,
+      "direct_shot_link_rate": 0.15384615384615385
+    },
+    {
+      "team": "Korea Republic Women's",
+      "deliveries": 1,
+      "direct_linked_shots": 0,
+      "corners_with_phase_shot": 0,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.0,
+      "direct_shot_link_rate": 0.0
+    }
+  ],
+  "scope": "Provider possession and these chosen boundaries are a proxy for a corner phase, not a universal tactical definition. No retrospective window tuning."
+}

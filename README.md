@@ -267,3 +267,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Count the corner-delivery denominator
 
 [Lesson 35](lessons/0017-corner-delivery-rates.html) counts every recorded corner pass event, including incomplete deliveries, before calculating direct shot/goal link rates. [The report](reports/18_corner_delivery_rates.md) distinguishes direct links from later corner-phase chances. Run `python 35_corner_delivery_rates.py`; the model remains unchanged.
+
+## Extend direct links to bounded corner phases
+
+[Lesson 36](lessons/0018-corner-phase-analysis.html) completes a [worked phase-analysis assignment](reports/19_corner_phase_analysis.md): same possession, at most 15 seconds, with restart/period/goal boundaries. Six of France's 13 corners associate with seven shots under this rule, compared with two direct links. Run `python 36_corner_phase_analysis.py`. This is a descriptive proxy, not causal attribution.

@@ -30,6 +30,7 @@ STAGES = [
     "33_shot_body_part_context.py",
     "34_header_assisting_passes.py",
     "35_corner_delivery_rates.py",
+    "36_corner_phase_analysis.py",
     "scripts/check_evidence.py",
 ]
 
