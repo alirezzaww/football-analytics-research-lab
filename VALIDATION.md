@@ -142,3 +142,7 @@ No source events, model fit or prior evaluation inclusion criteria were changed.
 ### Lesson 29 (2026-11-03)
 
 Match summary executed with the frozen probabilities and hash-verified raw fixture. Saved shot identity, probability and aggregate reconciliation are covered by unit tests; raw team/timing verification runs when cache is present. This is descriptive interpretation, not a new validation dataset or a model update.
+
+### Lesson 30 (2026-11-03)
+
+Executed the timeline from the committed lesson-29 ledger without downloads or fitting. Independently reconciled shot steps, half totals and final totals in unit tests; covered added-time period boundaries, halftime carry-forward and empty halves. Inspected the saved chart for labels and full y-range visibility.

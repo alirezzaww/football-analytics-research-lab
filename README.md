@@ -232,3 +232,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Turn shot predictions into a match brief
 
 [Lesson 29](lessons/0011-match-xg-summary.html) distinguishes shot volume, total non-penalty xG and average shot quality using France–Korea Republic. [The report](reports/12_match_xg_summary.md) documents the frozen-model calculation and its limits. Run `python 29_match_xg_summary.py`; only one raw fixture downloads if absent. No model refitting or fresh validation.
+
+## Follow chance creation through a match
+
+[Lesson 30](lessons/0012-cumulative-xg-timeline.html) adds a [cumulative non-penalty xG timeline](reports/13_cumulative_xg_timeline.md) for the same fixture. Separate half clocks preserve added time, with cumulative totals carried across halftime. Run `python 30_cumulative_xg_timeline.py`; no downloads or model changes.

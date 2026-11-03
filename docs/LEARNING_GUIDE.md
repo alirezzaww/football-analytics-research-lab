@@ -101,3 +101,7 @@ what is complete and what remains before a defensible portfolio assessment.
 ## Lesson 29: write a match brief
 
 Use [the match-summary lesson](../lessons/0011-match-xg-summary.html) and run `29_match_xg_summary.py` in Spyder. Distinguish volume (shots), combined expectation (npxG) and average quality (npxG/shot). Submit a two-sentence coach brief with a limitation for feedback.
+
+## Lesson 30: follow the timeline
+
+Run `30_cumulative_xg_timeline.py` in Spyder and use [the timeline lesson](../lessons/0012-cumulative-xg-timeline.html). Explain a jump, a flat stretch and the halftime carry-forward. Then describe the half contrast and propose one video question without claiming a cause.

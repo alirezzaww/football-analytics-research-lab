@@ -24,6 +24,7 @@ STAGES = [
     "26_probability_calibration.py",
     "28_training_distance_support.py",
     "29_match_xg_summary.py",
+    "30_cumulative_xg_timeline.py",
     "scripts/check_evidence.py",
 ]
 

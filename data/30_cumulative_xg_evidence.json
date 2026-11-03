@@ -1,0 +1,288 @@
+{
+  "source_path": "data/29_match_xg_evidence.json",
+  "source_sha256": "379db13a86ba557a2b04738e88f78fcfa4248d7e6e132131b288acad89768066",
+  "fixture": {
+    "match_id": 22921,
+    "match_date": "2019-06-07",
+    "home_team": "France Women's",
+    "away_team": "Korea Republic Women's"
+  },
+  "timelines": [
+    {
+      "team": "France Women's",
+      "period": 1,
+      "start_npxg": 0.0,
+      "end_npxg": 1.4454033710600152,
+      "half_npxg": 1.4454033710600152,
+      "shots": 16,
+      "points": [
+        {
+          "id": "4cba9e2e-383b-4810-a8e3-456d2077c7ab",
+          "minute": 1,
+          "second": 41,
+          "half_clock_minute": 1.6833333333333333,
+          "shot_xg": 0.035263542875532315,
+          "goal": 0,
+          "cumulative_npxg": 0.035263542875532315
+        },
+        {
+          "id": "7c4bfe6f-bb65-4f20-811f-a9c17d30cd4b",
+          "minute": 2,
+          "second": 39,
+          "half_clock_minute": 2.65,
+          "shot_xg": 0.02206771961494694,
+          "goal": 0,
+          "cumulative_npxg": 0.057331262490479255
+        },
+        {
+          "id": "222a728d-466f-4c40-afcb-a982a61bfdb1",
+          "minute": 6,
+          "second": 36,
+          "half_clock_minute": 6.6,
+          "shot_xg": 0.06318539726987357,
+          "goal": 0,
+          "cumulative_npxg": 0.12051665976035283
+        },
+        {
+          "id": "c5e3622c-b6b1-4c0e-8d7a-6a6e77e4a56e",
+          "minute": 8,
+          "second": 52,
+          "half_clock_minute": 8.866666666666667,
+          "shot_xg": 0.19833211996115313,
+          "goal": 1,
+          "cumulative_npxg": 0.31884877972150594
+        },
+        {
+          "id": "75e60ccb-117b-425d-b961-5f39cc93c8e6",
+          "minute": 12,
+          "second": 16,
+          "half_clock_minute": 12.266666666666667,
+          "shot_xg": 0.02984294030652792,
+          "goal": 0,
+          "cumulative_npxg": 0.34869172002803384
+        },
+        {
+          "id": "57e846fc-1136-4212-a2bc-9009581f1725",
+          "minute": 12,
+          "second": 21,
+          "half_clock_minute": 12.35,
+          "shot_xg": 0.08934706036967337,
+          "goal": 0,
+          "cumulative_npxg": 0.4380387803977072
+        },
+        {
+          "id": "9d561bcf-e043-40e6-8255-0d9f31c52093",
+          "minute": 21,
+          "second": 33,
+          "half_clock_minute": 21.55,
+          "shot_xg": 0.02647258007919606,
+          "goal": 0,
+          "cumulative_npxg": 0.4645113604769033
+        },
+        {
+          "id": "0c6c81a8-6dda-4bd4-95b5-a299d642a738",
+          "minute": 21,
+          "second": 50,
+          "half_clock_minute": 21.833333333333332,
+          "shot_xg": 0.16191465026152613,
+          "goal": 0,
+          "cumulative_npxg": 0.6264260107384294
+        },
+        {
+          "id": "6981d641-0cfb-45cb-885c-d0528bd4602d",
+          "minute": 31,
+          "second": 2,
+          "half_clock_minute": 31.033333333333335,
+          "shot_xg": 0.08928388381573674,
+          "goal": 0,
+          "cumulative_npxg": 0.7157098945541661
+        },
+        {
+          "id": "07f9eda2-f0e7-4411-b0a4-4261ed0c76e7",
+          "minute": 31,
+          "second": 55,
+          "half_clock_minute": 31.916666666666668,
+          "shot_xg": 0.04419639332336778,
+          "goal": 0,
+          "cumulative_npxg": 0.7599062878775339
+        },
+        {
+          "id": "95319c05-4c68-46f2-ac16-d9c38c8cedb3",
+          "minute": 32,
+          "second": 35,
+          "half_clock_minute": 32.583333333333336,
+          "shot_xg": 0.029348072958914565,
+          "goal": 0,
+          "cumulative_npxg": 0.7892543608364485
+        },
+        {
+          "id": "f4068c54-7101-4cd8-aab2-c106c0611c6b",
+          "minute": 33,
+          "second": 15,
+          "half_clock_minute": 33.25,
+          "shot_xg": 0.0986816901887934,
+          "goal": 0,
+          "cumulative_npxg": 0.8879360510252419
+        },
+        {
+          "id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+          "minute": 34,
+          "second": 54,
+          "half_clock_minute": 34.9,
+          "shot_xg": 0.21649471040182458,
+          "goal": 1,
+          "cumulative_npxg": 1.1044307614270665
+        },
+        {
+          "id": "ea7b7375-f033-4fb0-88f3-0eb709d6d229",
+          "minute": 37,
+          "second": 52,
+          "half_clock_minute": 37.86666666666667,
+          "shot_xg": 0.16228145687413023,
+          "goal": 0,
+          "cumulative_npxg": 1.2667122183011967
+        },
+        {
+          "id": "f512fac3-17a3-425f-86f1-cf19ce085df6",
+          "minute": 43,
+          "second": 20,
+          "half_clock_minute": 43.333333333333336,
+          "shot_xg": 0.015678656528972625,
+          "goal": 0,
+          "cumulative_npxg": 1.2823908748301693
+        },
+        {
+          "id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+          "minute": 46,
+          "second": 57,
+          "half_clock_minute": 46.95,
+          "shot_xg": 0.16301249622984576,
+          "goal": 1,
+          "cumulative_npxg": 1.4454033710600152
+        }
+      ]
+    },
+    {
+      "team": "France Women's",
+      "period": 2,
+      "start_npxg": 1.4454033710600152,
+      "end_npxg": 1.6433398712250502,
+      "half_npxg": 0.19793650016503506,
+      "shots": 5,
+      "points": [
+        {
+          "id": "f3ee572a-8e76-4c2f-86bd-fc46ba75a96d",
+          "minute": 53,
+          "second": 45,
+          "half_clock_minute": 8.75,
+          "shot_xg": 0.03802439923848541,
+          "goal": 0,
+          "cumulative_npxg": 1.4834277702985006
+        },
+        {
+          "id": "d056d576-cc49-46a5-913d-e5c5ac712a77",
+          "minute": 56,
+          "second": 56,
+          "half_clock_minute": 11.933333333333334,
+          "shot_xg": 0.03569125250299743,
+          "goal": 0,
+          "cumulative_npxg": 1.519119022801498
+        },
+        {
+          "id": "0b7da2a2-61c4-4e6b-bbb1-1cd413d56e69",
+          "minute": 77,
+          "second": 57,
+          "half_clock_minute": 32.95,
+          "shot_xg": 0.05101840342393382,
+          "goal": 0,
+          "cumulative_npxg": 1.5701374262254317
+        },
+        {
+          "id": "1a44ba98-bd11-4b6e-aec8-598407f4802d",
+          "minute": 84,
+          "second": 5,
+          "half_clock_minute": 39.083333333333336,
+          "shot_xg": 0.03816338112754598,
+          "goal": 1,
+          "cumulative_npxg": 1.6083008073529776
+        },
+        {
+          "id": "13e768ea-b3ad-4041-818d-94fd7cda9d03",
+          "minute": 88,
+          "second": 40,
+          "half_clock_minute": 43.666666666666664,
+          "shot_xg": 0.03503906387207255,
+          "goal": 0,
+          "cumulative_npxg": 1.6433398712250502
+        }
+      ]
+    },
+    {
+      "team": "Korea Republic Women's",
+      "period": 1,
+      "start_npxg": 0.0,
+      "end_npxg": 0.00859453297948321,
+      "half_npxg": 0.00859453297948321,
+      "shots": 1,
+      "points": [
+        {
+          "id": "cab76ebe-67e8-48ca-94b7-3403139bb09d",
+          "minute": 1,
+          "second": 0,
+          "half_clock_minute": 1.0,
+          "shot_xg": 0.00859453297948321,
+          "goal": 0,
+          "cumulative_npxg": 0.00859453297948321
+        }
+      ]
+    },
+    {
+      "team": "Korea Republic Women's",
+      "period": 2,
+      "start_npxg": 0.00859453297948321,
+      "end_npxg": 0.15721840710438595,
+      "half_npxg": 0.14862387412490274,
+      "shots": 4,
+      "points": [
+        {
+          "id": "41b9f9ee-6fbb-4397-a7f5-62cd7f0eb072",
+          "minute": 69,
+          "second": 2,
+          "half_clock_minute": 24.033333333333335,
+          "shot_xg": 0.027414121308018933,
+          "goal": 0,
+          "cumulative_npxg": 0.03600865428750214
+        },
+        {
+          "id": "1ea4dcad-aed8-4ecc-a35e-b3e0cc75849c",
+          "minute": 76,
+          "second": 31,
+          "half_clock_minute": 31.516666666666666,
+          "shot_xg": 0.0657369703368302,
+          "goal": 0,
+          "cumulative_npxg": 0.10174562462433234
+        },
+        {
+          "id": "3cbc7728-2970-45c6-9ddb-81e4ccdff17c",
+          "minute": 83,
+          "second": 21,
+          "half_clock_minute": 38.35,
+          "shot_xg": 0.0187548626730689,
+          "goal": 0,
+          "cumulative_npxg": 0.12050048729740125
+        },
+        {
+          "id": "0789fbca-2d38-41d3-b181-eb64cff68181",
+          "minute": 92,
+          "second": 25,
+          "half_clock_minute": 47.416666666666664,
+          "shot_xg": 0.03671791980698471,
+          "goal": 0,
+          "cumulative_npxg": 0.15721840710438595
+        }
+      ]
+    }
+  ],
+  "clock_rule": "Separate periods; second-half nominal minute minus 45; seconds retained. Stable source order within tied seconds.",
+  "scope": "Existing non-penalty shots and frozen distance-model probabilities. Not possession, tactical causation, live win probability or fresh validation."
+}
