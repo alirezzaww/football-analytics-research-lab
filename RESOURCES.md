@@ -48,3 +48,5 @@ video review remain future project work. No community participation has been req
 - [Hudl StatsBomb xG: body-part context](https://www.hudl.com/blog/expected-goals-xg-explained) — revisited for lesson 33, distinguishing general model features from a single-match descriptive split (2026-11-03).
 
 - [StatsBomb Open Data specification](https://raw.githubusercontent.com/statsbomb/open-data/master/doc/StatsBomb%20Open%20Data%20Specification%20v1.1.pdf) — revisited for lesson 34: key-pass links, assisted-shot IDs, pass type and shot type. Historical raw fields are retained separately from phase interpretation.
+
+- [Whitecaps analysts: attacking corners](https://www.whitecapsfc.com/news/analysts-corner-attacking-corners) — club analyst definitions of inswinging and outswinging deliveries; used in lesson 39 alongside the StatsBomb technique specification.

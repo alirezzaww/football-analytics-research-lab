@@ -178,3 +178,7 @@ Executed four chosen windows with all other phase rules unchanged. Unit check co
 ### Phase 2 / Lesson 38 (2026-11-03)
 
 Executed the five-fixture study from SHA256-verified raw events. Verified all France fixtures from the existing metadata, unique assignment within each fixture, explicit extra-time counts, pooled denominators and exact original-fixture memberships. Cached raw replay checks each phase. Unit tests cover delivery-weighted pooling and undefined empty exposure. Chart inspected; no xG inference or new validation.
+
+### Lesson 39 (2026-11-03)
+
+Executed technique join on all five hash-verified raw files. Unit tests cover category/missing-label handling and all-delivery denominators. Evidence checks preserve exact source corner order, original phase outcomes, group IDs and totals; cached raw labels and takers reconcile. Chart inspected. No new model or causal comparison.

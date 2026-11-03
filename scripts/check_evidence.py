@@ -1183,3 +1183,44 @@ assert math.isclose(pooled['phase_shot_rate'], pooled['corners_with_phase_shot']
 original_fixture = next(r for r in study['matches'] if r['fixture']['match_id'] == phase['fixture']['match_id'])
 assert [[s['shot_id'] for s in r['shots']] for r in original_fixture['phases']] == [[s['shot_id'] for s in r['shots']] for r in phase['phases'] if r['team'] == study_protocol['team']]
 print('PASS: five-fixture France selection, corner-phase replay, extra time and pooled delivery rates reconcile.')
+
+profiles = json.loads((ROOT / 'data/39_corner_delivery_profiles_evidence.json').read_text())
+assert profiles['source_path'] == 'data/38_france_corner_study_evidence.json'
+assert hashlib.sha256((ROOT / profiles['source_path']).read_bytes()).hexdigest() == profiles['source_sha256']
+profile_rows = profiles['deliveries']
+expected_profile_keys = [(m['fixture']['match_id'], p['corner_id']) for m in study['matches'] for p in m['phases']]
+assert [(r['match_id'], r['corner_id']) for r in profile_rows] == expected_profile_keys
+assert len(set(expected_profile_keys)) == len(expected_profile_keys)
+category_labels = ['Inswinging', 'Outswinging', 'Straight', 'Other / unrecorded']
+assert [g['category'] for g in profiles['groups']] == category_labels
+for record in study['matches']:
+    selected = [r for r in profile_rows if r['match_id'] == record['fixture']['match_id']]
+    for row, phase_row in zip(selected, record['phases']):
+        assert row['opponent'] == record['opponent']
+        assert row['phase_has_shot'] == bool(phase_row['shots'])
+        assert row['phase_shots'] == len(phase_row['shots'])
+        assert row['phase_shot_goals'] == sum(s['goal'] for s in phase_row['shots'])
+        assert row['category'] == (row['raw_technique'] if row['raw_technique'] in category_labels[:3] else category_labels[3])
+    cached = ROOT / record['raw_input']['relative_path']
+    if cached.exists():
+        assert hashlib.sha256(cached.read_bytes()).hexdigest() == record['raw_input']['sha256']
+        events_by_id = {r['id']: r for r in json.loads(cached.read_text())}
+        for row in selected:
+            event = events_by_id[row['corner_id']]
+            assert row['raw_technique'] == event['pass'].get('technique', {}).get('name')
+            assert row['passer'] == event['player']['name']
+for group in profiles['groups']:
+    rows = [r for r in profile_rows if r['category'] == group['category']]
+    assert group['corner_keys'] == [{'match_id': r['match_id'], 'corner_id': r['corner_id']} for r in rows]
+    assert group['deliveries'] == len(rows)
+    count = sum(r['phase_has_shot'] for r in rows)
+    assert group['corners_with_phase_shot'] == count
+    assert group['phase_shots'] == sum(r['phase_shots'] for r in rows)
+    assert group['phase_shot_goals'] == sum(r['phase_shot_goals'] for r in rows)
+    if rows:
+        assert math.isclose(group['phase_shot_rate'], count / len(rows))
+    else:
+        assert group['phase_shot_rate'] is None
+assert sum(g['deliveries'] for g in profiles['groups']) == pooled['deliveries']
+assert sum(g['corners_with_phase_shot'] for g in profiles['groups']) == pooled['corners_with_phase_shot']
+print('PASS: delivery-technique labels, unknown coverage and unchanged corner-phase groups reconcile.')

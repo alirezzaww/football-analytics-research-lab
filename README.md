@@ -279,3 +279,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Phase 2: multi-match set-piece research
 
 [Lesson 38](lessons/0020-france-tournament-corners.html) applies the fixed corner-phase method to [all five France tournament fixtures](reports/21_france_tournament_corner_study.md): 19 of 45 deliveries associate with 21 shots, with two goals. Match variation, pooled denominators and extra-time exposure are explicit. Run `python 38_france_tournament_corners.py`; missing raw caches download with hash verification. No xG inference or fresh validation.
+
+## Compare recorded corner-delivery profiles
+
+[Lesson 39](lessons/0021-corner-delivery-profiles.html) adds [delivery-technique groups](reports/22_corner_delivery_profiles.md) to the five-match study, retaining missing labels and all phase outcomes. Inswinging and outswinging rates are descriptive, not a causal tactical ranking. Run `python 39_corner_delivery_profiles.py`.

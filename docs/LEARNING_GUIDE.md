@@ -137,3 +137,7 @@ Run `37_corner_window_sensitivity.py`. [The compact lesson](../lessons/0019-corn
 ## Phase 2 / Lesson 38: repeat a fixed method across fixtures
 
 Run `38_france_tournament_corners.py`. [The lesson](../lessons/0020-france-tournament-corners.html) and [completed study](../reports/21_france_tournament_corner_study.md) cover complete fixture selection, pooled exposure, match variation and explicit extra-time inclusion.
+
+## Lesson 39: compare a tactical category
+
+Run `39_corner_delivery_profiles.py`. [The lesson](../lessons/0021-corner-delivery-profiles.html) and [completed report](../reports/22_corner_delivery_profiles.md) cover inswinging/outswinging groups, missing labels and confounding.

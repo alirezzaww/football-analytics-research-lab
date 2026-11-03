@@ -542,3 +542,7 @@ Completed assisted four-window assignment: France 4/13 at 5 seconds, 6/13 at 10/
 ### 2026-11-03 · Phase 2 / Lesson 38: multi-match research
 
 Completed assisted five-match France corner study with unchanged phase boundaries: 19/45 deliveries with shots (42.22%), 21 associated shots and 2 goals, both in Korea Republic match. Brazil includes 3 extra-time deliveries. Covered pooled counts versus equal-match means and single-match versus campaign descriptions. No model inference, fresh validation or independent-mastery claim.
+
+### 2026-11-03 · Lesson 39: delivery profiles
+
+Completed assisted technique stratification: inswinging 9/17, outswinging 5/10, straight 3/9, unrecorded 2/9 corners associated with phase shots. Retained 9 missing labels (20% coverage gap), unchanged phase outcomes and sample size. Covered category denominators, confounding and descriptive versus tactical recommendations. Independent mastery not claimed.
