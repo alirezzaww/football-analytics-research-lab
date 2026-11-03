@@ -1,0 +1,609 @@
+{
+  "source_path": "data/36_corner_phase_evidence.json",
+  "source_sha256": "90237928e60a8977856344d2d69d546e565bc6a21c406daef8e2ced947512e9f",
+  "protocol_path": "data/37_corner_window_protocol.json",
+  "protocol_sha256": "5ad1bcabf4845c2f1ce7effb3ff5db0f82c4827116bec4c55ca47671995dd5f2",
+  "fixture": {
+    "match_id": 22921,
+    "match_date": "2019-06-07",
+    "home_team": "France Women's",
+    "away_team": "Korea Republic Women's"
+  },
+  "results": [
+    {
+      "window_seconds": 5,
+      "teams": [
+        {
+          "team": "France Women's",
+          "deliveries": 13,
+          "corners_with_shot": 4,
+          "phase_shots": 4,
+          "phase_shot_goals": 2,
+          "corner_shot_rate": 0.3076923076923077
+        },
+        {
+          "team": "Korea Republic Women's",
+          "deliveries": 1,
+          "corners_with_shot": 0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_shot_rate": 0.0
+        }
+      ],
+      "phases": [
+        {
+          "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "75e60ccb-117b-425d-b961-5f39cc93c8e6",
+              "elapsed_seconds": 4.929,
+              "goal": 0,
+              "model_probability": 0.02984294030652792
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "e1fc2300-9add-448c-aaa3-d3cd811eabfb",
+          "team": "Korea Republic Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "9d561bcf-e043-40e6-8255-0d9f31c52093",
+              "elapsed_seconds": 4.346,
+              "goal": 0,
+              "model_probability": 0.02647258007919606
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+              "elapsed_seconds": 1.935,
+              "goal": 1,
+              "model_probability": 0.21649471040182458
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+              "elapsed_seconds": 1.87,
+              "goal": 1,
+              "model_probability": 0.16301249622984576
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Time limit"
+        }
+      ]
+    },
+    {
+      "window_seconds": 10,
+      "teams": [
+        {
+          "team": "France Women's",
+          "deliveries": 13,
+          "corners_with_shot": 6,
+          "phase_shots": 6,
+          "phase_shot_goals": 2,
+          "corner_shot_rate": 0.46153846153846156
+        },
+        {
+          "team": "Korea Republic Women's",
+          "deliveries": 1,
+          "corners_with_shot": 0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_shot_rate": 0.0
+        }
+      ],
+      "phases": [
+        {
+          "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "75e60ccb-117b-425d-b961-5f39cc93c8e6",
+              "elapsed_seconds": 4.929,
+              "goal": 0,
+              "model_probability": 0.02984294030652792
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "e1fc2300-9add-448c-aaa3-d3cd811eabfb",
+          "team": "Korea Republic Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "9d561bcf-e043-40e6-8255-0d9f31c52093",
+              "elapsed_seconds": 4.346,
+              "goal": 0,
+              "model_probability": 0.02647258007919606
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "95319c05-4c68-46f2-ac16-d9c38c8cedb3",
+              "elapsed_seconds": 6.324,
+              "goal": 0,
+              "model_probability": 0.029348072958914565
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+              "elapsed_seconds": 1.935,
+              "goal": 1,
+              "model_probability": 0.21649471040182458
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+              "elapsed_seconds": 1.87,
+              "goal": 1,
+              "model_probability": 0.16301249622984576
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "f3ee572a-8e76-4c2f-86bd-fc46ba75a96d",
+              "elapsed_seconds": 5.003,
+              "goal": 0,
+              "model_probability": 0.03802439923848541
+            }
+          ],
+          "stop_reason": "Time limit"
+        }
+      ]
+    },
+    {
+      "window_seconds": 15,
+      "teams": [
+        {
+          "team": "France Women's",
+          "deliveries": 13,
+          "corners_with_shot": 6,
+          "phase_shots": 7,
+          "phase_shot_goals": 2,
+          "corner_shot_rate": 0.46153846153846156
+        },
+        {
+          "team": "Korea Republic Women's",
+          "deliveries": 1,
+          "corners_with_shot": 0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_shot_rate": 0.0
+        }
+      ],
+      "phases": [
+        {
+          "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "75e60ccb-117b-425d-b961-5f39cc93c8e6",
+              "elapsed_seconds": 4.929,
+              "goal": 0,
+              "model_probability": 0.02984294030652792
+            },
+            {
+              "shot_id": "57e846fc-1136-4212-a2bc-9009581f1725",
+              "elapsed_seconds": 10.282,
+              "goal": 0,
+              "model_probability": 0.08934706036967337
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e1fc2300-9add-448c-aaa3-d3cd811eabfb",
+          "team": "Korea Republic Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "9d561bcf-e043-40e6-8255-0d9f31c52093",
+              "elapsed_seconds": 4.346,
+              "goal": 0,
+              "model_probability": 0.02647258007919606
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "95319c05-4c68-46f2-ac16-d9c38c8cedb3",
+              "elapsed_seconds": 6.324,
+              "goal": 0,
+              "model_probability": 0.029348072958914565
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+              "elapsed_seconds": 1.935,
+              "goal": 1,
+              "model_probability": 0.21649471040182458
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+              "elapsed_seconds": 1.87,
+              "goal": 1,
+              "model_probability": 0.16301249622984576
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "f3ee572a-8e76-4c2f-86bd-fc46ba75a96d",
+              "elapsed_seconds": 5.003,
+              "goal": 0,
+              "model_probability": 0.03802439923848541
+            }
+          ],
+          "stop_reason": "Time limit"
+        }
+      ]
+    },
+    {
+      "window_seconds": 20,
+      "teams": [
+        {
+          "team": "France Women's",
+          "deliveries": 13,
+          "corners_with_shot": 6,
+          "phase_shots": 7,
+          "phase_shot_goals": 2,
+          "corner_shot_rate": 0.46153846153846156
+        },
+        {
+          "team": "Korea Republic Women's",
+          "deliveries": 1,
+          "corners_with_shot": 0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_shot_rate": 0.0
+        }
+      ],
+      "phases": [
+        {
+          "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "75e60ccb-117b-425d-b961-5f39cc93c8e6",
+              "elapsed_seconds": 4.929,
+              "goal": 0,
+              "model_probability": 0.02984294030652792
+            },
+            {
+              "shot_id": "57e846fc-1136-4212-a2bc-9009581f1725",
+              "elapsed_seconds": 10.282,
+              "goal": 0,
+              "model_probability": 0.08934706036967337
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e1fc2300-9add-448c-aaa3-d3cd811eabfb",
+          "team": "Korea Republic Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "9d561bcf-e043-40e6-8255-0d9f31c52093",
+              "elapsed_seconds": 4.346,
+              "goal": 0,
+              "model_probability": 0.02647258007919606
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "95319c05-4c68-46f2-ac16-d9c38c8cedb3",
+              "elapsed_seconds": 6.324,
+              "goal": 0,
+              "model_probability": 0.029348072958914565
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+              "elapsed_seconds": 1.935,
+              "goal": 1,
+              "model_probability": 0.21649471040182458
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+              "elapsed_seconds": 1.87,
+              "goal": 1,
+              "model_probability": 0.16301249622984576
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+          "team": "France Women's",
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+          "team": "France Women's",
+          "shots": [
+            {
+              "shot_id": "f3ee572a-8e76-4c2f-86bd-fc46ba75a96d",
+              "elapsed_seconds": 5.003,
+              "goal": 0,
+              "model_probability": 0.03802439923848541
+            }
+          ],
+          "stop_reason": "Time limit"
+        }
+      ]
+    }
+  ],
+  "scope": "Same-match definition sensitivity, not new data, uncertainty intervals, causal evidence or model validation."
+}

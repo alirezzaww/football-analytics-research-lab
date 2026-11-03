@@ -31,6 +31,7 @@ STAGES = [
     "34_header_assisting_passes.py",
     "35_corner_delivery_rates.py",
     "36_corner_phase_analysis.py",
+    "37_corner_window_sensitivity.py",
     "scripts/check_evidence.py",
 ]
 

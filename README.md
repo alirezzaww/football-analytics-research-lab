@@ -271,3 +271,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Extend direct links to bounded corner phases
 
 [Lesson 36](lessons/0018-corner-phase-analysis.html) completes a [worked phase-analysis assignment](reports/19_corner_phase_analysis.md): same possession, at most 15 seconds, with restart/period/goal boundaries. Six of France's 13 corners associate with seven shots under this rule, compared with two direct links. Run `python 36_corner_phase_analysis.py`. This is a descriptive proxy, not causal attribution.
+
+## Check sensitivity to the corner-phase time limit
+
+[Lesson 37](lessons/0019-corner-window-sensitivity.html) completes a [four-window robustness assignment](reports/20_corner_window_sensitivity.md) while keeping delivery and phase boundaries fixed. France has 4/13 shot-associated corners at five seconds and 6/13 at 10, 15 and 20 seconds. Run `python 37_corner_window_sensitivity.py`; this is definition sensitivity, not fresh validation.

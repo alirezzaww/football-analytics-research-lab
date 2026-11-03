@@ -534,3 +534,7 @@ Prepared assisted count of all corner deliveries: France 13 (10 first half, 3 se
 ### 2026-11-03 · Lesson 36: bounded corner phases
 
 Completed assisted assignment with explicit phase protocol written before this calculation, using an already inspected match. France: 6/13 corners with a phase shot, 7 unique shots and 2 shot goals, versus 2/13 direct links. Covered boundary rules, follow-up attempts and corners-with-shots versus shot counts. User requested compact explanations and completed worked assignments for familiar concepts. No independent-mastery claim.
+
+### 2026-11-03 · Lesson 37: corner-window sensitivity
+
+Completed assisted four-window assignment: France 4/13 at 5 seconds, 6/13 at 10/15/20; shot counts 4/6/7/7. Covered limited robustness, repeated definitions versus independent samples, millisecond thresholds and avoiding selection of the most flattering definition. User restated that a corner can lead into multiple attacking events; broader independent code/analysis mastery is not assumed.

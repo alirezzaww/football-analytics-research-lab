@@ -1,0 +1,8 @@
+{
+  "defined_on": "2026-11-03",
+  "windows_seconds_inclusive": [5, 10, 15, 20],
+  "reference_window_seconds": 15,
+  "fixed_rules": "Same delivery denominator, same possession, restart/period/goal stops, shot eligibility and unique assignment as lesson 36",
+  "purpose": "Descriptive sensitivity analysis of the already inspected match; not fresh validation or a search for the highest rate",
+  "interpretation": "Report all chosen windows. A larger count is not evidence of a better definition."
+}

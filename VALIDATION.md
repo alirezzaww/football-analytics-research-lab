@@ -170,3 +170,7 @@ Executed all-corner selection with the existing raw hash check. Unit tests verif
 ### Lesson 36 (2026-11-03)
 
 Executed the fixed-rule phase scan, preserving millisecond timing and unique shot assignments. Tests cover exact 15-second inclusion, added time, possession/period/restart stops, multiple shots and goal/own-goal stops. Saved evidence checks reconcile protocol/source digests and team rates; cached raw replay verifies each phase membership and stop reason. Chart inspected. Descriptive reuse, not fresh validation.
+
+### Lesson 37 (2026-11-03)
+
+Executed four chosen windows with all other phase rules unchanged. Unit check covers a shot 5.003 seconds after delivery. Evidence checks reconcile hashes, denominators, unique/nested shot memberships, aggregate rates and exact 15-second reproduction; cached raw replay verifies every window membership and stop. Chart inspected. No new data or model fitting.

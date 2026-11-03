@@ -129,3 +129,7 @@ Run `35_corner_delivery_rates.py` and read [the denominator lesson](../lessons/0
 ## Lesson 36: bounded sequence analysis
 
 Run `36_corner_phase_analysis.py`; [the compact lesson](../lessons/0018-corner-phase-analysis.html) and [completed worked assignment](../reports/19_corner_phase_analysis.md) show why phase boundaries alter shot association without changing the delivery denominator.
+
+## Lesson 37: challenge an analysis assumption
+
+Run `37_corner_window_sensitivity.py`. [The compact lesson](../lessons/0019-corner-window-sensitivity.html) and [completed worked assignment](../reports/20_corner_window_sensitivity.md) compare fixed-boundary 5/10/15/20-second windows. Separate definition sensitivity from sampling uncertainty.

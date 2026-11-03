@@ -1070,3 +1070,52 @@ if raw_path.exists():
         assert row['shots'] == expected_shots
         assert row['stop_reason'] == reason
 print('PASS: corner-phase membership, unique shot assignments, boundaries and rates reconcile.')
+
+window = json.loads((ROOT / 'data/37_corner_window_evidence.json').read_text())
+assert window['source_path'] == 'data/36_corner_phase_evidence.json'
+assert hashlib.sha256((ROOT / window['source_path']).read_bytes()).hexdigest() == window['source_sha256']
+window_protocol_path = ROOT / window['protocol_path']
+assert hashlib.sha256(window_protocol_path.read_bytes()).hexdigest() == window['protocol_sha256']
+window_protocol = json.loads(window_protocol_path.read_text())
+assert window_protocol['windows_seconds_inclusive'] == [5, 10, 15, 20]
+assert window['fixture'] == phase['fixture']
+assert [r['window_seconds'] for r in window['results']] == window_protocol['windows_seconds_inclusive']
+previous_ids = set()
+if raw_path.exists():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('audit_phase_windows', ROOT / '36_corner_phase_analysis.py')
+    window_helper = importlib.util.module_from_spec(spec); spec.loader.exec_module(window_helper)
+for result in window['results']:
+    limit = result['window_seconds']
+    assert [r['corner_id'] for r in result['phases']] == [r['corner_id'] for r in phase['phases']]
+    current_ids = []
+    for row, reference_phase in zip(result['phases'], phase['phases']):
+        assert row['team'] == reference_phase['team']
+        for shot in row['shots']:
+            original = phase_shot_source[shot['shot_id']]
+            assert original['team'] == row['team']
+            assert shot['goal'] == original['goal']
+            assert shot['model_probability'] == original['model_probability']
+            assert 0 <= shot['elapsed_seconds'] <= limit
+            current_ids.append(shot['shot_id'])
+        if limit == 15:
+            assert row['shots'] == reference_phase['shots']
+            assert row['stop_reason'] == reference_phase['stop_reason']
+        if raw_path.exists():
+            rules = dict(phase_protocol, maximum_seconds_inclusive=limit)
+            replay = window_helper.phase_after(raw_events[row['corner_id']], ordered_raw, phase_shot_source, rules)
+            assert row['shots'] == replay['shots']
+            assert row['stop_reason'] == replay['stop_reason']
+    assert len(current_ids) == len(set(current_ids))
+    assert previous_ids <= set(current_ids)
+    previous_ids = set(current_ids)
+    assert [r['team'] for r in result['teams']] == [r['team'] for r in phase['teams']]
+    for summary, original_team in zip(result['teams'], phase['teams']):
+        rows = [r for r in result['phases'] if r['team'] == summary['team']]
+        count = sum(bool(r['shots']) for r in rows)
+        assert summary['deliveries'] == original_team['deliveries'] == len(rows)
+        assert summary['corners_with_shot'] == count
+        assert summary['phase_shots'] == sum(len(r['shots']) for r in rows)
+        assert summary['phase_shot_goals'] == sum(s['goal'] for r in rows for s in r['shots'])
+        assert math.isclose(summary['corner_shot_rate'], count / len(rows))
+print('PASS: all corner-window definitions, nested shot memberships and reference-window results reconcile.')
