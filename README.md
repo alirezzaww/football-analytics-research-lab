@@ -228,3 +228,7 @@ The original training range is about 3.97–34.66 reference-pitch metres; 36 of 
 already evaluated shots lie outside it. All 1,131 evaluation shots remain included.
 This is a descriptive coverage audit, not new fitting or fresh validation. Run
 `python 28_training_distance_support.py` without downloads.
+
+## Turn shot predictions into a match brief
+
+[Lesson 29](lessons/0011-match-xg-summary.html) distinguishes shot volume, total non-penalty xG and average shot quality using France–Korea Republic. [The report](reports/12_match_xg_summary.md) documents the frozen-model calculation and its limits. Run `python 29_match_xg_summary.py`; only one raw fixture downloads if absent. No model refitting or fresh validation.

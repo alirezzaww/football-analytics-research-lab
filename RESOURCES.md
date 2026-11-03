@@ -38,3 +38,5 @@
 
 Role-specific comparisons, statistical uncertainty, larger-sample model validation and
 video review remain future project work. No community participation has been requested.
+
+- [Hudl StatsBomb: What are Expected Goals?](https://www.hudl.com/blog/expected-goals-xg-explained) — probability interpretation, average shot quality and team analysis; used for lesson 29 (2026-11-03).

@@ -97,3 +97,7 @@ Then run `15_kirby_passing_profile.py` to examine Kirby's 12 selected passes at
 0.10, including nine final-third starts and two final-third entries. Figures 17
 and 18 and their JSON evidence record the outputs. The project brief describes
 what is complete and what remains before a defensible portfolio assessment.
+
+## Lesson 29: write a match brief
+
+Use [the match-summary lesson](../lessons/0011-match-xg-summary.html) and run `29_match_xg_summary.py` in Spyder. Distinguish volume (shots), combined expectation (npxG) and average quality (npxG/shot). Submit a two-sentence coach brief with a limitation for feedback.

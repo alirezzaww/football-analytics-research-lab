@@ -138,3 +138,7 @@ counts, goals, rates, full-precision bounds and actual frozen-model outputs reco
 The frozen protocol digest is unchanged. Six tests cover band boundaries, range
 endpoints, missing versus measured-zero groups, pooled rates and pipeline ordering.
 No source events, model fit or prior evaluation inclusion criteria were changed.
+
+### Lesson 29 (2026-11-03)
+
+Match summary executed with the frozen probabilities and hash-verified raw fixture. Saved shot identity, probability and aggregate reconciliation are covered by unit tests; raw team/timing verification runs when cache is present. This is descriptive interpretation, not a new validation dataset or a model update.

@@ -494,3 +494,7 @@ Six new tests cover distance bands, inclusive range edges, empty/zero observatio
 pooled rates and the default/extended pipeline sequence. Independent practice pending:
 explain why a 2 m prediction needs scrutiny and why inside-range membership alone
 does not establish trustworthy xG.
+
+### 2026-11-03 · Lesson 29: match interpretation
+
+Prepared assisted code and lesson on shots, summed npxG and npxG per shot using the first chronological existing evaluation fixture. France 21 / 1.643 / 0.078; Korea Republic 5 / 0.157 / 0.031. No refit or new evaluation. Independent two-sentence coach brief remains pending; no mastery claim.

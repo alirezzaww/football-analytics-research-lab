@@ -23,6 +23,7 @@ STAGES = [
     "25_shot_angle_model.py",
     "26_probability_calibration.py",
     "28_training_distance_support.py",
+    "29_match_xg_summary.py",
     "scripts/check_evidence.py",
 ]
 
