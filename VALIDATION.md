@@ -154,3 +154,7 @@ Executed the map from the saved match ledger, verified all 26 shots fit the disp
 ### Lesson 32 (2026-11-03)
 
 Executed the volume/quality calculation from the saved ledger. Tests cover multiplicative changes, undefined empty-half means and saved-artifact reconciliation. Evidence checks independently reconcile counts, half xG and ratios to the existing map records. Chart visually inspected. No refitting or new evaluation.
+
+### Lesson 33 (2026-11-03)
+
+Reconstructed the existing match ledger against hash-verified raw events, then joined body-part labels by shot ID. Evidence checker reconciles tags, full original probabilities, counts, goal outcomes, memberships and group means; raw label checks run when cached. Unit tests cover explicit contact categories, unknown labels and absent groups. Chart inspected. No fitting or new validation.

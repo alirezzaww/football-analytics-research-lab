@@ -510,3 +510,7 @@ Prepared assisted four-panel shot map, retaining the same 26 shots and frozen pr
 ### 2026-11-03 · Lesson 32: shot volume and mean quality
 
 Prepared assisted arithmetic comparison: France retained 31.25% of shot count and 43.82% of average model quality, yielding 13.69% of total model npxG. Covered multiplicative ratios, zero denominators and avoiding causal interpretation. Independent explanation remains pending.
+
+### 2026-11-03 · Lesson 33: body-part context
+
+Added assisted descriptive body-part join for the same 26 shots. France first half: 13 foot shots, 3 headers; second half: 5 foot shots. Covered reporting tags versus fitted features, small-sample conversion pitfalls, and contact foot versus weak-foot status. No model change. Independent explanation pending.

@@ -27,6 +27,7 @@ STAGES = [
     "30_cumulative_xg_timeline.py",
     "31_shot_location_maps.py",
     "32_shot_volume_quality.py",
+    "33_shot_body_part_context.py",
     "scripts/check_evidence.py",
 ]
 

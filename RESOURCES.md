@@ -44,3 +44,5 @@ video review remain future project work. No community participation has been req
 - [JoGall: Adjusting xG per possession](https://jogall.github.io/2019-01-16-adjusted-xG/) — author example of cumulative match xG timelines; separate R package, not the Python Soccermatics course. Lesson 30 uses its own implementation and unchanged shot-level sums.
 
 - [mplsoccer official scatter example](https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_plots/plot_scatter.html) — vertical shot maps and probability-sized markers; lesson 31 uses proportional circle area with a common scale (2026-11-03).
+
+- [Hudl StatsBomb xG: body-part context](https://www.hudl.com/blog/expected-goals-xg-explained) — revisited for lesson 33, distinguishing general model features from a single-match descriptive split (2026-11-03).

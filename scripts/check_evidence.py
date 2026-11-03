@@ -882,3 +882,37 @@ for comparison in volume_quality['comparisons']:
         assert math.isclose(comparison[field], value)
     assert math.isclose(comparison['second_over_first_shot_ratio'] * comparison['second_over_first_mean_quality_ratio'], comparison['second_over_first_total_npxg_ratio'])
 print('PASS: volume-quality factors reconcile to the same half-specific shots and xG.')
+
+body = json.loads((ROOT / 'data/33_body_part_evidence.json').read_text())
+assert body['source_path'] == location['source_path']
+assert body['source_sha256'] == location['source_sha256']
+assert body['fixture'] == match['fixture']
+assert body['raw_input'] == match['raw_input']
+assert len(body['shots']) == len(match['shots'])
+for tagged, original in zip(body['shots'], match['shots']):
+    assert {k: v for k, v in tagged.items() if k != 'body_part'} == original
+assert len(body['panels']) == 4
+assert {(r['team'], r['period']) for r in body['panels']} == expected_keys
+for panel in body['panels']:
+    rows = [r for r in body['shots'] if r['team'] == panel['team'] and r['period'] == panel['period']]
+    assert panel['total_shots'] == len(rows)
+    assert [g['category'] for g in panel['groups']] == ['Foot', 'Head', 'Other / unknown']
+    for group in panel['groups']:
+        selected = [r for r in rows if ('Foot' if r['body_part'] in ('Left Foot', 'Right Foot') else 'Head' if r['body_part'] == 'Head' else 'Other / unknown') == group['category']]
+        assert group['shot_ids'] == [r['id'] for r in selected]
+        assert group['shots'] == len(selected)
+        assert group['shot_goals'] == sum(r['goal'] for r in selected)
+        total = sum(r['model_probability'] for r in selected)
+        assert math.isclose(group['model_npxg'], total, abs_tol=1e-12)
+        assert math.isclose(group['share_of_half_shots'], len(selected) / len(rows))
+        if selected:
+            assert math.isclose(group['mean_model_npxg'], total / len(selected))
+        else:
+            assert group['mean_model_npxg'] is None
+raw_path = ROOT / body['raw_input']['relative_path']
+if raw_path.exists():
+    assert hashlib.sha256(raw_path.read_bytes()).hexdigest() == body['raw_input']['sha256']
+    raw_events = {r['id']: r for r in json.loads(raw_path.read_text())}
+    for row in body['shots']:
+        assert row['body_part'] == raw_events[row['id']]['shot'].get('body_part', {}).get('name')
+print('PASS: body-part tags, group membership and unchanged probabilities reconcile.')

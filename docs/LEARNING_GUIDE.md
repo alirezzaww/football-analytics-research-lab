@@ -113,3 +113,7 @@ Run `31_shot_location_maps.py` and read [the shot-map lesson](../lessons/0013-sh
 ## Lesson 32: explain a changing xG total
 
 Run `32_shot_volume_quality.py` and use [the volume/quality lesson](../lessons/0014-shot-volume-and-quality.html). Distinguish count, average and total; multiply retained proportions rather than adding percentage reductions.
+
+## Lesson 33: add football context carefully
+
+Run `33_shot_body_part_context.py` and read [the body-part lesson](../lessons/0015-shot-body-part-context.html). Explain why a reporting column does not change model predictions and why Left Foot does not establish weak-foot status.

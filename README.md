@@ -244,3 +244,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Separate shot volume from average quality
 
 [Lesson 32](lessons/0014-shot-volume-and-quality.html) explains the identity `total npxG = shots × mean npxG per shot`. [The report](reports/15_shot_volume_quality.md) shows how the two half-to-half ratios multiply and why percentage reductions should not be added. Run `python 32_shot_volume_quality.py`; no new fitting or downloads.
+
+## Add body-part context to the match brief
+
+[Lesson 33](lessons/0015-shot-body-part-context.html) separates headers from foot shots using hash-verified event labels. [The report](reports/16_shot_body_part_context.md) distinguishes reporting tags from model features, and contact foot from preferred-foot status. Run `python 33_shot_body_part_context.py`; the frozen distance model is unchanged.
