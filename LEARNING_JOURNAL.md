@@ -502,3 +502,7 @@ Prepared assisted code and lesson on shots, summed npxG and npxG per shot using 
 ### 2026-11-03 · Lesson 30: chance timing
 
 Prepared assisted cumulative-xG lesson and script using the existing match ledger. Covered running sums, shot/goal distinction, first-half added time and carry-forward across halftime. France added 1.445 first-half and 0.198 second-half model npxG. No causal tactical claim or new model validation. Independent coach explanation and video question remain pending.
+
+### 2026-11-03 · Lesson 31: shot locations
+
+Prepared assisted four-panel shot map, retaining the same 26 shots and frozen probabilities. France average reference distance: 16.16 m before halftime, 20.12 afterward. Covered normalized attacking direction, circle area, goal markers and description versus tactical cause. Independent interpretation/video question pending.

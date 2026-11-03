@@ -1,0 +1,76 @@
+{
+  "source_path": "data/29_match_xg_evidence.json",
+  "source_sha256": "379db13a86ba557a2b04738e88f78fcfa4248d7e6e132131b288acad89768066",
+  "fixture": {
+    "match_id": 22921,
+    "match_date": "2019-06-07",
+    "home_team": "France Women's",
+    "away_team": "Korea Republic Women's"
+  },
+  "panels": [
+    {
+      "team": "France Women's",
+      "period": 1,
+      "shots": 16,
+      "model_npxg": 1.4454033710600152,
+      "mean_distance_template_m": 16.16493892899895,
+      "shot_ids": [
+        "4cba9e2e-383b-4810-a8e3-456d2077c7ab",
+        "7c4bfe6f-bb65-4f20-811f-a9c17d30cd4b",
+        "222a728d-466f-4c40-afcb-a982a61bfdb1",
+        "c5e3622c-b6b1-4c0e-8d7a-6a6e77e4a56e",
+        "75e60ccb-117b-425d-b961-5f39cc93c8e6",
+        "57e846fc-1136-4212-a2bc-9009581f1725",
+        "9d561bcf-e043-40e6-8255-0d9f31c52093",
+        "0c6c81a8-6dda-4bd4-95b5-a299d642a738",
+        "6981d641-0cfb-45cb-885c-d0528bd4602d",
+        "07f9eda2-f0e7-4411-b0a4-4261ed0c76e7",
+        "95319c05-4c68-46f2-ac16-d9c38c8cedb3",
+        "f4068c54-7101-4cd8-aab2-c106c0611c6b",
+        "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+        "ea7b7375-f033-4fb0-88f3-0eb709d6d229",
+        "f512fac3-17a3-425f-86f1-cf19ce085df6",
+        "77d54b1d-9be2-4585-a2cf-437cd06e72ec"
+      ]
+    },
+    {
+      "team": "France Women's",
+      "period": 2,
+      "shots": 5,
+      "model_npxg": 0.19793650016503517,
+      "mean_distance_template_m": 20.11553729345406,
+      "shot_ids": [
+        "f3ee572a-8e76-4c2f-86bd-fc46ba75a96d",
+        "d056d576-cc49-46a5-913d-e5c5ac712a77",
+        "0b7da2a2-61c4-4e6b-bbb1-1cd413d56e69",
+        "1a44ba98-bd11-4b6e-aec8-598407f4802d",
+        "13e768ea-b3ad-4041-818d-94fd7cda9d03"
+      ]
+    },
+    {
+      "team": "Korea Republic Women's",
+      "period": 1,
+      "shots": 1,
+      "model_npxg": 0.00859453297948321,
+      "mean_distance_template_m": 30.851681072512083,
+      "shot_ids": [
+        "cab76ebe-67e8-48ca-94b7-3403139bb09d"
+      ]
+    },
+    {
+      "team": "Korea Republic Women's",
+      "period": 2,
+      "shots": 4,
+      "model_npxg": 0.14862387412490274,
+      "mean_distance_template_m": 21.2467403655383,
+      "shot_ids": [
+        "41b9f9ee-6fbb-4397-a7f5-62cd7f0eb072",
+        "1ea4dcad-aed8-4ecc-a35e-b3e0cc75849c",
+        "3cbc7728-2970-45c6-9ddb-81e4ccdff17c",
+        "0789fbca-2d38-41d3-b181-eb64cff68181"
+      ]
+    }
+  ],
+  "display_rule": "StatsBomb original x,y; VerticalPitch half=True; all teams attack top. Circle area = probability * 1800 points squared; black stars mark goals.",
+  "scope": "Same 26 non-penalty shots, frozen distance-only probabilities; descriptive location comparison, not tactical causation."
+}

@@ -146,3 +146,7 @@ Match summary executed with the frozen probabilities and hash-verified raw fixtu
 ### Lesson 30 (2026-11-03)
 
 Executed the timeline from the committed lesson-29 ledger without downloads or fitting. Independently reconciled shot steps, half totals and final totals in unit tests; covered added-time period boundaries, halftime carry-forward and empty halves. Inspected the saved chart for labels and full y-range visibility.
+
+### Lesson 31 (2026-11-03)
+
+Executed the map from the saved match ledger, verified all 26 shots fit the displayed half, and inspected panel layout and common marker-size legend. Evidence checker reconciles source digest, unique panel membership, counts, average distances, xG and prior timeline totals. No new fitting or validation data.

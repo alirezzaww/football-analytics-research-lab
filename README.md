@@ -236,3 +236,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Follow chance creation through a match
 
 [Lesson 30](lessons/0012-cumulative-xg-timeline.html) adds a [cumulative non-penalty xG timeline](reports/13_cumulative_xg_timeline.md) for the same fixture. Separate half clocks preserve added time, with cumulative totals carried across halftime. Run `python 30_cumulative_xg_timeline.py`; no downloads or model changes.
+
+## Connect chance timing with shot locations
+
+[Lesson 31](lessons/0013-shot-location-maps.html) adds [shot maps by team and half](reports/14_shot_location_maps.md) for the same fixture. Circle areas share one frozen-model xG scale and stars mark goals. Run `python 31_shot_location_maps.py` without downloads. Descriptive locations do not establish tactical causes.

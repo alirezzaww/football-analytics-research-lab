@@ -25,6 +25,7 @@ STAGES = [
     "28_training_distance_support.py",
     "29_match_xg_summary.py",
     "30_cumulative_xg_timeline.py",
+    "31_shot_location_maps.py",
     "scripts/check_evidence.py",
 ]
 

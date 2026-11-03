@@ -105,3 +105,7 @@ Use [the match-summary lesson](../lessons/0011-match-xg-summary.html) and run `2
 ## Lesson 30: follow the timeline
 
 Run `30_cumulative_xg_timeline.py` in Spyder and use [the timeline lesson](../lessons/0012-cumulative-xg-timeline.html). Explain a jump, a flat stretch and the halftime carry-forward. Then describe the half contrast and propose one video question without claiming a cause.
+
+## Lesson 31: connect the pitch and timeline
+
+Run `31_shot_location_maps.py` and read [the shot-map lesson](../lessons/0013-shot-location-maps.html). Describe changes in volume and average distance, then formulate a video question. Keep distance-only model limitations visible.

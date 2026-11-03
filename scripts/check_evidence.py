@@ -833,3 +833,31 @@ print(f'Pre-pass scores independently reconstructed from raw events: {raw_score_
 print(f'Location denominators independently reconstructed from raw events: {raw_context_matches}/7 matches.')
 print(f'Time-window selections independently reconstructed from raw events: {raw_window_matches}/7 matches.')
 print(f'Raw input hashes checked locally: {checked}/7 (cache is optional and not committed).')
+
+# Lesson 31 is a visual extension of the same match ledger, not a new model.
+location = json.loads((ROOT / 'data/31_shot_location_evidence.json').read_text())
+match_path = ROOT / location['source_path']
+assert hashlib.sha256(match_path.read_bytes()).hexdigest() == location['source_sha256']
+match = json.loads(match_path.read_text())
+assert location['fixture'] == match['fixture']
+timeline = json.loads((ROOT / 'data/30_cumulative_xg_evidence.json').read_text())
+expected_keys = {(r['team'], h) for r in match['teams'] for h in (1, 2)}
+assert len(location['panels']) == len(expected_keys)
+assert {(p['team'], p['period']) for p in location['panels']} == expected_keys
+seen = []
+for panel in location['panels']:
+    rows = [r for r in match['shots'] if r['team'] == panel['team'] and r['period'] == panel['period']]
+    assert panel['shot_ids'] == [r['id'] for r in rows]
+    seen.extend(panel['shot_ids'])
+    assert panel['shots'] == len(rows)
+    assert all(60 <= r['x'] <= 120 and 0 <= r['y'] <= 80 for r in rows)
+    assert math.isclose(panel['model_npxg'], sum(r['model_probability'] for r in rows))
+    if rows:
+        assert math.isclose(panel['mean_distance_template_m'], sum(r['distance_template_m'] for r in rows) / len(rows))
+    else:
+        assert panel['mean_distance_template_m'] is None
+    group = next(r for r in timeline['timelines'] if r['team'] == panel['team'] and r['period'] == panel['period'])
+    assert math.isclose(panel['model_npxg'], group['half_npxg'], abs_tol=1e-12)
+assert len(seen) == len(set(seen)) == len(match['shots'])
+assert set(seen) == {r['id'] for r in match['shots']}
+print('PASS: shot-map membership, display bounds and half summaries reconcile with the existing ledger and timeline.')

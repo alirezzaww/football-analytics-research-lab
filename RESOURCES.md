@@ -42,3 +42,5 @@ video review remain future project work. No community participation has been req
 - [Hudl StatsBomb: What are Expected Goals?](https://www.hudl.com/blog/expected-goals-xg-explained) — probability interpretation, average shot quality and team analysis; used for lesson 29 (2026-11-03).
 
 - [JoGall: Adjusting xG per possession](https://jogall.github.io/2019-01-16-adjusted-xG/) — author example of cumulative match xG timelines; separate R package, not the Python Soccermatics course. Lesson 30 uses its own implementation and unchanged shot-level sums.
+
+- [mplsoccer official scatter example](https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_plots/plot_scatter.html) — vertical shot maps and probability-sized markers; lesson 31 uses proportional circle area with a common scale (2026-11-03).
