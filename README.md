@@ -291,3 +291,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Add corner-side context before interpreting technique
 
 [Lesson 41](lessons/0023-corner-side-context.html) checks [taker, side and match together](reports/24_corner_side_context.md). No such context contains both recorded inswinging and outswinging deliveries, limiting a direct like-for-like comparison. Run `python 41_corner_side_context.py`; this is an overlap audit, not an adjusted tactical effect.
+
+## Map recorded corner endpoints into pitch zones
+
+[Lesson 42](lessons/0024-corner-endpoint-zones.html) classifies [corner pass endpoints](reports/25_corner_endpoint_zones.md) into disjoint six-yard, remaining penalty-area and outside zones. All 45 deliveries remain included. Run `python 42_corner_endpoint_zones.py`; recorded endpoints do not establish intended targets or controlled receptions.

@@ -554,3 +554,7 @@ Completed assisted overlap audit: Majri took 15/17 inswingers; Thiney 8/10 outsw
 ### 2026-11-03 · Lesson 41: corner-side context
 
 Completed assisted source-location join for all 45 deliveries. Majri inswingers (15) occur near y=80 and outswingers (2) near y=0. No same-taker/side/match context has both recorded types. Covered missing comparison support and why same player alone does not hold other context fixed. Independent mastery not claimed.
+
+### 2026-11-03 · Lesson 42: spatial endpoint bins
+
+Completed assisted endpoint join and map: six-yard box 15 deliveries / 5 with phase shot; rest of penalty area 19/11; outside 11/3; missing 0. Covered nested-region priority, coordinate boundaries and endpoint versus intention/control. Original 45-delivery/19-positive totals preserved. No independent-mastery claim.

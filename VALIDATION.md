@@ -190,3 +190,7 @@ Executed cache-free overlap audit from committed technique records. Tests cover 
 ### Lesson 41 (2026-11-03)
 
 Executed source-location join after verifying the five-fixture source. Tests cover coordinate boundaries, invalid/ambiguous points and unknown-technique overlap; regeneration is tested only with existing raw caches. Evidence checks reconcile original records, raw locations when cached, category memberships, empty cells and exact-context overlap. Chart inspected. No causal estimate or model fitting.
+
+### Lesson 42 (2026-11-03)
+
+Executed hash-verified endpoint join. Tests cover nested box boundaries, unknown/off-pitch locations, all-delivery denominators and empty groups. Evidence checks preserve every original field and phase outcome, independently classify each endpoint, reconcile totals and verify cached raw endpoints/outcome labels. Map inspected. No new model or causal targeting claim.

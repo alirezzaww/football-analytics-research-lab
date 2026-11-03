@@ -149,3 +149,7 @@ Run `40_corner_taker_overlap.py`; [the compact lesson](../lessons/0022-corner-ta
 ## Lesson 41: add side to the comparison
 
 Run `41_corner_side_context.py`. [The lesson](../lessons/0023-corner-side-context.html) and [completed audit](../reports/24_corner_side_context.md) show how adding side changes the observed overlap within taker/match contexts.
+
+## Lesson 42: spatial binning
+
+Run `42_corner_endpoint_zones.py`. [The lesson](../lessons/0024-corner-endpoint-zones.html) and [completed report](../reports/25_corner_endpoint_zones.md) cover disjoint nested boxes, missing points and careful endpoint interpretation.

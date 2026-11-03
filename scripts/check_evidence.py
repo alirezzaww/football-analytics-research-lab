@@ -1305,3 +1305,47 @@ for context in side_audit['taker_side_match_contexts']:
 assert side_audit['contexts_with_both_types'] == sum(r['both_recorded_types'] for r in side_audit['taker_side_match_contexts'])
 assert sum(r['deliveries'] for r in side_audit['taker_sides']) == pooled['deliveries']
 print('PASS: recorded corner sides, taker/side groups and exact-context comparison support reconcile.')
+
+endpoint = json.loads((ROOT / 'data/42_corner_endpoint_evidence.json').read_text())
+assert endpoint['source_path'] == 'data/41_corner_side_evidence.json'
+assert hashlib.sha256((ROOT / endpoint['source_path']).read_bytes()).hexdigest() == endpoint['source_sha256']
+endpoint_rows = endpoint['deliveries']
+assert len(endpoint_rows) == len(side_rows)
+zone_labels = ['Six-yard box', 'Rest of penalty area', 'Outside penalty area', 'Endpoint unknown']
+assert [g['zone'] for g in endpoint['groups']] == zone_labels
+for row, original in zip(endpoint_rows, side_rows):
+    assert {k: v for k, v in row.items() if k not in ('end_location', 'pass_outcome', 'endpoint_zone')} == original
+    point = row['end_location']
+    finite = isinstance(point, list) and len(point) >= 2 and all(isinstance(v, (int, float)) and math.isfinite(v) for v in point[:2])
+    if not finite:
+        expected_zone = zone_labels[3]
+    elif 114 <= point[0] <= 120 and 30 <= point[1] <= 50:
+        expected_zone = zone_labels[0]
+    elif 102 <= point[0] <= 120 and 18 <= point[1] <= 62:
+        expected_zone = zone_labels[1]
+    else:
+        expected_zone = zone_labels[2]
+    assert row['endpoint_zone'] == expected_zone
+for record in study['matches']:
+    cached = ROOT / record['raw_input']['relative_path']
+    if cached.exists():
+        assert hashlib.sha256(cached.read_bytes()).hexdigest() == record['raw_input']['sha256']
+        lookup = {r['id']: r for r in json.loads(cached.read_text())}
+        for row in endpoint_rows:
+            if row['match_id'] == record['fixture']['match_id']:
+                p = lookup[row['corner_id']]['pass']
+                assert row['end_location'] == p.get('end_location')
+                assert row['pass_outcome'] == p.get('outcome', {}).get('name')
+for group in endpoint['groups']:
+    rows = [r for r in endpoint_rows if r['endpoint_zone'] == group['zone']]
+    assert group['corner_keys'] == [{'match_id': r['match_id'], 'corner_id': r['corner_id']} for r in rows]
+    assert group['deliveries'] == len(rows)
+    count = sum(r['phase_has_shot'] for r in rows)
+    assert group['corners_with_phase_shot'] == count
+    if rows:
+        assert math.isclose(group['phase_shot_rate'], count / len(rows))
+    else:
+        assert group['phase_shot_rate'] is None
+assert sum(g['deliveries'] for g in endpoint['groups']) == pooled['deliveries']
+assert sum(g['corners_with_phase_shot'] for g in endpoint['groups']) == pooled['corners_with_phase_shot']
+print('PASS: recorded corner endpoints, disjoint spatial bins and unchanged phase outcomes reconcile.')
