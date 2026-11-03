@@ -14,7 +14,7 @@ Updated: 30 October 2026.
   completed. All seven regenerated evidence files matched saved results within
   1e-10 numerical tolerance; all seven raw-input hashes verified.
 - Analysis stages were executed and charts inspected during the guided project.
-- [Initial public GitHub Actions run](https://github.com/alirezzaww/england-2019-attacking-pass-analysis/actions/runs/41046075862)
+- [Initial public GitHub Actions run](https://github.com/alirezzaww/football-analytics-research-lab/actions/runs/41046075862)
   passed on Windows, macOS and Ubuntu. It checks saved evidence, website assets/data,
   browser script syntax and Python compilation. It does not install the full plotting
   environment or rerun network-dependent analysis on all three operating systems.

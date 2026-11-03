@@ -332,7 +332,7 @@ reuse. The repository includes source code, saved evidence, methods, limitations
 licence notices, cross-platform setup and contribution instructions. A responsive
 website introduces the findings and educational xG exercise.
 
-- [GitHub](https://github.com/alirezzaww/england-2019-attacking-pass-analysis)
+- [GitHub](https://github.com/alirezzaww/football-analytics-research-lab)
 - [Website](https://alireza-england-2019-research.sara-erfania-6316.chatgpt.site)
 
 The assistant prepared publication and ran the full pipeline in a fresh environment.
@@ -514,3 +514,11 @@ Prepared assisted arithmetic comparison: France retained 31.25% of shot count an
 ### 2026-11-03 · Lesson 33: body-part context
 
 Added assisted descriptive body-part join for the same 26 shots. France first half: 13 foot shots, 3 headers; second half: 5 foot shots. Covered reporting tags versus fitted features, small-sample conversion pitfalls, and contact foot versus weak-foot status. No model change. Independent explanation pending.
+
+### 2026-11-03 · Broaden project identity
+
+Renamed the repository and project to Football Analytics Research Lab to reflect
+England passing research, multi-team tournament xG evaluation and the France–Korea
+Republic match analysis. Updated citation metadata, résumé wording and repository
+links. Original study-specific titles and frozen research artifacts remain scoped
+to the teams and data actually analysed.

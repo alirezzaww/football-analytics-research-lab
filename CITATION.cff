@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "Please cite this project and credit the original data and course sources."
-title: "England 2019: attacking passing involvement"
+title: "Football Analytics Research Lab"
 authors:
   - family-names: Erfanian
     given-names: Alireza
 type: software
-repository-code: "https://github.com/alirezzaww/england-2019-attacking-pass-analysis"
+repository-code: "https://github.com/alirezzaww/football-analytics-research-lab"
 license: MIT
-abstract: "A guided, reproducible football analytics case study using StatsBomb Open Data; provider data retains separate terms."
+abstract: "A guided, reproducible football analytics research portfolio covering passing involvement, expected-goals modelling and multi-team match analysis using StatsBomb Open Data; provider data retains separate terms."

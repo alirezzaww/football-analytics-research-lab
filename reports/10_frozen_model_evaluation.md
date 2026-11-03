@@ -9,7 +9,7 @@ It does not increase the model's training sample or certify professional readine
 
 ## Protocol frozen before new shot-event downloads
 
-The [protocol commit](https://github.com/alirezzaww/england-2019-attacking-pass-analysis/commit/d3b76cb)
+The [protocol commit](https://github.com/alirezzaww/football-analytics-research-lab/commit/d3b76cb)
 precedes event-file loading. It records the selected distance fit, its scaling and
 coefficients, the constant baseline fit, exact fixture IDs, source hashes, exclusions,
 primary log loss, secondary Brier score, calibration bands and paired match-bootstrap

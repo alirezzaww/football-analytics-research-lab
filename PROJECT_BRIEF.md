@@ -1,8 +1,12 @@
-# Practical project: England's attacking passing involvement
+# Football Analytics Research Lab: project brief
 
 ## Purpose and audience
 
-Produce a reproducible player-analysis case study for a coach or performance analyst:
+Build a reproducible football analytics portfolio for coaches, performance analysts
+and learners. The current collection combines an England passing study, tournament
+xG evaluation across 45 other fixtures, and a France–Korea Republic match brief.
+
+The original player-analysis case study asks:
 **Which England players were frequently involved in passing shortly before shots at
 the 2019 Women's World Cup, and how does that picture change with playing time,
 shot-quality thresholds, and spatial context?**

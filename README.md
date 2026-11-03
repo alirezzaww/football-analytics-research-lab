@@ -1,37 +1,48 @@
-# England 2019: attacking passing involvement
+# Football Analytics Research Lab
 
 **Football analytics portfolio · Python/pandas · In progress**
 **Author:** Alireza Erfanian
 
-[![Research checks](https://github.com/alirezzaww/england-2019-attacking-pass-analysis/actions/workflows/evidence.yml/badge.svg)](https://github.com/alirezzaww/england-2019-attacking-pass-analysis/actions/workflows/evidence.yml)
+[![Research checks](https://github.com/alirezzaww/football-analytics-research-lab/actions/workflows/evidence.yml/badge.svg)](https://github.com/alirezzaww/football-analytics-research-lab/actions/workflows/evidence.yml)
 
 **[Explore the live portfolio](https://alireza-england-2019-research.sara-erfania-6316.chatgpt.site)** ·
-[Study the source](https://github.com/alirezzaww/england-2019-attacking-pass-analysis)
+[Study the source](https://github.com/alirezzaww/football-analytics-research-lab)
 
-Which England players were involved in passing shortly before shots at the 2019
-Women's World Cup—and how does that picture change with playing time, shot quality
-and pitch location?
+A growing collection of reproducible football research using StatsBomb Open Data,
+covering passing involvement, expected-goals modelling and match analysis across
+multiple teams at the 2019 Women's World Cup.
 
-This applied case study covers seven England matches using StatsBomb Open Data.
-It extends a Soccermatics exercise with reconstructed playing time, threshold
-sensitivity checks and individual-event inspection. It is a guided learning project
-with assistant support, not an independently developed player-valuation model.
+The current research has three connected parts:
+
+- **England passing case study:** seven fixtures, player involvement before shots,
+  reconstructed playing time and sensitivity to definitions.
+- **Tournament xG evaluation:** a frozen educational model checked on 1,131 shots
+  from 45 other fixtures, covering teams beyond England.
+- **Match interpretation:** France–Korea Republic chance volume, average quality,
+  timelines, shot locations and body-part context.
+
+This is a guided learning portfolio built with assistant support and grounded in
+Soccermatics. Individual case studies retain their own team, sample and method
+limits; the broader project name does not imply professional model readiness.
 
 A separate educational xG extension now evaluates a **frozen 114-shot model on 1,131
 shots from 45 other fixtures**, with lower log loss than a frozen training-rate
 baseline (0.2696 versus 0.3052). See the [fixed-model evaluation](reports/10_frozen_model_evaluation.md)
 for the protocol committed before event downloads, calibration, uncertainty and limits.
 
-## Read the case study
+## Explore the research
 
-- **[Findings and football interpretation](docs/CASE_STUDY.md)**
+- **[England passing case study](docs/CASE_STUDY.md)**
+- [Tournament model evaluation](reports/10_frozen_model_evaluation.md)
+- [France–Korea Republic match analysis](reports/12_match_xg_summary.md)
+- [Shot body-part context](reports/16_shot_body_part_context.md)
 - [Methods and definitions](docs/METHODS.md)
 - [Reproduce the results](docs/REPRODUCIBILITY.md)
 - [Project scope and remaining work](PROJECT_BRIEF.md)
 
 ![How the shot-xG threshold changes player rates](figures/17_england_xg_threshold_sensitivity.png)
 
-## Findings from this sample
+## Findings from the England passing sample
 
 - **200 qualifying passes** across seven games: completed possession-team passes
   within 15 seconds before a same-possession England shot, excluding listed restarts.

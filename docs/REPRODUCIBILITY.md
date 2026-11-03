@@ -5,8 +5,8 @@
 Install Python 3.11 and Git, then clone the public repository:
 
 ```bash
-git clone https://github.com/alirezzaww/england-2019-attacking-pass-analysis.git
-cd england-2019-attacking-pass-analysis
+git clone https://github.com/alirezzaww/football-analytics-research-lab.git
+cd football-analytics-research-lab
 ```
 
 On macOS/Linux:

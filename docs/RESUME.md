@@ -1,13 +1,14 @@
 # Résumé presentation
 
-**Project:** England 2019: attacking passing involvement
+**Project:** Football Analytics Research Lab
 **Tools:** Python, pandas, NumPy, Matplotlib, mplsoccer, StatsBomb event data
 
 ## Wording while the project is in progress
 
-> Developing a reproducible football event-data case study across seven England
-> matches, examining passing involvement before shots with per-90 rates, spatial
-> visualisations and sensitivity checks on shot-xG thresholds.
+> Developing a guided, reproducible football analytics portfolio using StatsBomb
+> Open Data: England passing involvement, fixed-model xG evaluation across 45 other
+> tournament fixtures, and multi-team match reporting with spatial and temporal
+> visualisations.
 
 ## Evidence-backed project bullets
 
@@ -28,7 +29,7 @@ join and duplicate handling, justify denominators, interpret a figure, identify 
 limitation and implement a small extension yourself. Record that work in the journal.
 Published links for a CV or application:
 
-- [Public research repository](https://github.com/alirezzaww/england-2019-attacking-pass-analysis)
+- [Public research repository](https://github.com/alirezzaww/football-analytics-research-lab)
 - [Interactive portfolio](https://alireza-england-2019-research.sara-erfania-6316.chatgpt.site)
 
 Use the website for a quick overview and the repository for methods and reproducibility.
