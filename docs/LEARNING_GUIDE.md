@@ -145,3 +145,7 @@ Run `39_corner_delivery_profiles.py`. [The lesson](../lessons/0021-corner-delive
 ## Lesson 40: check comparison support
 
 Run `40_corner_taker_overlap.py`; [the compact lesson](../lessons/0022-corner-taker-overlap.html) and [worked audit](../reports/23_corner_taker_overlap.md) explain taker mix, confounding and sparse overlap.
+
+## Lesson 41: add side to the comparison
+
+Run `41_corner_side_context.py`. [The lesson](../lessons/0023-corner-side-context.html) and [completed audit](../reports/24_corner_side_context.md) show how adding side changes the observed overlap within taker/match contexts.

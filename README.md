@@ -287,3 +287,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Audit taker and opponent overlap
 
 [Lesson 40](lessons/0022-corner-taker-overlap.html) checks [who supplied each technique](reports/23_corner_taker_overlap.md), retaining empty cells and missing labels. Different taker mixtures and sparse same-taker/match overlap limit tactical interpretation. Run `python 40_corner_taker_overlap.py`; no downloads or causal modelling.
+
+## Add corner-side context before interpreting technique
+
+[Lesson 41](lessons/0023-corner-side-context.html) checks [taker, side and match together](reports/24_corner_side_context.md). No such context contains both recorded inswinging and outswinging deliveries, limiting a direct like-for-like comparison. Run `python 41_corner_side_context.py`; this is an overlap audit, not an adjusted tactical effect.

@@ -550,3 +550,7 @@ Completed assisted technique stratification: inswinging 9/17, outswinging 5/10, 
 ### 2026-11-03 · Lesson 40: taker mix and overlap
 
 Completed assisted overlap audit: Majri took 15/17 inswingers; Thiney 8/10 outswingers. Only two taker/match contexts have both types, each with one outswinger. Covered sparse comparison support, different taker mixtures and why within-taker stratification is not full causal adjustment. No independent-mastery claim.
+
+### 2026-11-03 · Lesson 41: corner-side context
+
+Completed assisted source-location join for all 45 deliveries. Majri inswingers (15) occur near y=80 and outswingers (2) near y=0. No same-taker/side/match context has both recorded types. Covered missing comparison support and why same player alone does not hold other context fixed. Independent mastery not claimed.

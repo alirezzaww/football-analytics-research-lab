@@ -186,3 +186,7 @@ Executed technique join on all five hash-verified raw files. Unit tests cover ca
 ### Lesson 40 (2026-11-03)
 
 Executed cache-free overlap audit from committed technique records. Tests cover positive exposure to both types and exact saved-artifact reproduction. Evidence checks independently reconcile every taker and taker/match subgroup, rates, empty cells and original 45-delivery/19-outcome totals. Heatmap inspected. No new fitting or validation.
+
+### Lesson 41 (2026-11-03)
+
+Executed source-location join after verifying the five-fixture source. Tests cover coordinate boundaries, invalid/ambiguous points and unknown-technique overlap; regeneration is tested only with existing raw caches. Evidence checks reconcile original records, raw locations when cached, category memberships, empty cells and exact-context overlap. Chart inspected. No causal estimate or model fitting.

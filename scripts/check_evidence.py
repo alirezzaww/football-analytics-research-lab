@@ -1255,3 +1255,53 @@ for collection in [overlap['takers'], overlap['taker_match_contexts']]:
     assert sum(g['deliveries'] for r in collection for g in r['groups']) == pooled['deliveries']
     assert sum(g['corners_with_phase_shot'] for r in collection for g in r['groups']) == pooled['corners_with_phase_shot']
 print('PASS: taker mixtures, match-context overlap, empty groups and original corner outcomes reconcile.')
+
+side_audit = json.loads((ROOT / 'data/41_corner_side_evidence.json').read_text())
+assert side_audit['source_path'] == 'data/39_corner_delivery_profiles_evidence.json'
+assert hashlib.sha256((ROOT / side_audit['source_path']).read_bytes()).hexdigest() == side_audit['source_sha256']
+side_rows = side_audit['deliveries']
+assert len(side_rows) == len(profile_rows)
+side_labels = ['Near y=0 touchline', 'Near y=80 touchline', 'Side unknown']
+for row, original in zip(side_rows, profile_rows):
+    assert {k: v for k, v in row.items() if k not in ('start_location', 'corner_side')} == original
+    point = row['start_location']
+    valid = isinstance(point, list) and len(point) >= 2 and all(isinstance(v, (int, float)) and math.isfinite(v) for v in point[:2]) and 0 <= point[0] <= 120 and 0 <= point[1] <= 80
+    expected = side_labels[0] if valid and point[1] < 40 else side_labels[1] if valid and point[1] > 40 else side_labels[2]
+    assert row['corner_side'] == expected
+for record in study['matches']:
+    cached = ROOT / record['raw_input']['relative_path']
+    if cached.exists():
+        assert hashlib.sha256(cached.read_bytes()).hexdigest() == record['raw_input']['sha256']
+        lookup = {r['id']: r for r in json.loads(cached.read_text())}
+        for row in side_rows:
+            if row['match_id'] == record['fixture']['match_id']:
+                assert row['start_location'] == lookup[row['corner_id']].get('location')
+expected_taker_sides = [(name, side) for name in dict.fromkeys(r['passer'] for r in side_rows) for side in side_labels]
+assert [(r['passer'], r['corner_side']) for r in side_audit['taker_sides']] == expected_taker_sides
+for record in side_audit['taker_sides']:
+    rows = [r for r in side_rows if r['passer'] == record['passer'] and r['corner_side'] == record['corner_side']]
+    assert record['deliveries'] == len(rows)
+    assert [g['category'] for g in record['groups']] == category_labels
+    for group in record['groups']:
+        selected = [r for r in rows if r['category'] == group['category']]
+        n = len(selected); positive = sum(r['phase_has_shot'] for r in selected)
+        assert group['corner_keys'] == [{'match_id': r['match_id'], 'corner_id': r['corner_id']} for r in selected]
+        assert group['deliveries'] == n
+        assert group['corners_with_phase_shot'] == positive
+        assert group['phase_shots'] == sum(r['phase_shots'] for r in selected)
+        assert group['phase_shot_goals'] == sum(r['phase_shot_goals'] for r in selected)
+        if n:
+            assert math.isclose(group['phase_shot_rate'], positive / n)
+        else:
+            assert group['phase_shot_rate'] is None
+    assert record['both_recorded_types'] == all(any(r['category'] == label for r in rows) for label in ['Inswinging', 'Outswinging'])
+context_keys = list(dict.fromkeys((r['match_id'], r['passer'], r['corner_side']) for r in side_rows))
+assert [(r['match_id'], r['passer'], r['corner_side']) for r in side_audit['taker_side_match_contexts']] == context_keys
+for context in side_audit['taker_side_match_contexts']:
+    rows = [r for r in side_rows if (r['match_id'], r['passer'], r['corner_side']) == (context['match_id'], context['passer'], context['corner_side'])]
+    assert context['corner_keys'] == [{'match_id': r['match_id'], 'corner_id': r['corner_id']} for r in rows]
+    assert all(r['opponent'] == context['opponent'] for r in rows)
+    assert context['both_recorded_types'] == all(any(r['category'] == label for r in rows) for label in ['Inswinging', 'Outswinging'])
+assert side_audit['contexts_with_both_types'] == sum(r['both_recorded_types'] for r in side_audit['taker_side_match_contexts'])
+assert sum(r['deliveries'] for r in side_audit['taker_sides']) == pooled['deliveries']
+print('PASS: recorded corner sides, taker/side groups and exact-context comparison support reconcile.')
