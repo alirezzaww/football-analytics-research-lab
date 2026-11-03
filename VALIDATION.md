@@ -150,3 +150,7 @@ Executed the timeline from the committed lesson-29 ledger without downloads or f
 ### Lesson 31 (2026-11-03)
 
 Executed the map from the saved match ledger, verified all 26 shots fit the displayed half, and inspected panel layout and common marker-size legend. Evidence checker reconciles source digest, unique panel membership, counts, average distances, xG and prior timeline totals. No new fitting or validation data.
+
+### Lesson 32 (2026-11-03)
+
+Executed the volume/quality calculation from the saved ledger. Tests cover multiplicative changes, undefined empty-half means and saved-artifact reconciliation. Evidence checks independently reconcile counts, half xG and ratios to the existing map records. Chart visually inspected. No refitting or new evaluation.

@@ -109,3 +109,7 @@ Run `30_cumulative_xg_timeline.py` in Spyder and use [the timeline lesson](../le
 ## Lesson 31: connect the pitch and timeline
 
 Run `31_shot_location_maps.py` and read [the shot-map lesson](../lessons/0013-shot-location-maps.html). Describe changes in volume and average distance, then formulate a video question. Keep distance-only model limitations visible.
+
+## Lesson 32: explain a changing xG total
+
+Run `32_shot_volume_quality.py` and use [the volume/quality lesson](../lessons/0014-shot-volume-and-quality.html). Distinguish count, average and total; multiply retained proportions rather than adding percentage reductions.

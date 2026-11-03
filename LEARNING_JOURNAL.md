@@ -506,3 +506,7 @@ Prepared assisted cumulative-xG lesson and script using the existing match ledge
 ### 2026-11-03 · Lesson 31: shot locations
 
 Prepared assisted four-panel shot map, retaining the same 26 shots and frozen probabilities. France average reference distance: 16.16 m before halftime, 20.12 afterward. Covered normalized attacking direction, circle area, goal markers and description versus tactical cause. Independent interpretation/video question pending.
+
+### 2026-11-03 · Lesson 32: shot volume and mean quality
+
+Prepared assisted arithmetic comparison: France retained 31.25% of shot count and 43.82% of average model quality, yielding 13.69% of total model npxG. Covered multiplicative ratios, zero denominators and avoiding causal interpretation. Independent explanation remains pending.

@@ -861,3 +861,24 @@ for panel in location['panels']:
 assert len(seen) == len(set(seen)) == len(match['shots'])
 assert set(seen) == {r['id'] for r in match['shots']}
 print('PASS: shot-map membership, display bounds and half summaries reconcile with the existing ledger and timeline.')
+
+volume_quality = json.loads((ROOT / 'data/32_volume_quality_evidence.json').read_text())
+assert volume_quality['source_path'] == location['source_path']
+assert volume_quality['source_sha256'] == location['source_sha256']
+assert volume_quality['fixture'] == match['fixture']
+assert [r['team'] for r in volume_quality['comparisons']] == [r['team'] for r in match['teams']]
+for comparison in volume_quality['comparisons']:
+    for half, key in [(1, 'first_half'), (2, 'second_half')]:
+        panel = next(r for r in location['panels'] if r['team'] == comparison['team'] and r['period'] == half)
+        group = comparison[key]
+        assert group['shots'] == panel['shots']
+        assert group['shot_ids'] == panel['shot_ids']
+        assert math.isclose(group['model_npxg'], panel['model_npxg'])
+        assert math.isclose(group['model_npxg_per_shot'], panel['model_npxg'] / panel['shots'])
+    first, second = comparison['first_half'], comparison['second_half']
+    for field, value in [('second_over_first_shot_ratio', second['shots'] / first['shots']),
+                         ('second_over_first_mean_quality_ratio', second['model_npxg_per_shot'] / first['model_npxg_per_shot']),
+                         ('second_over_first_total_npxg_ratio', second['model_npxg'] / first['model_npxg'])]:
+        assert math.isclose(comparison[field], value)
+    assert math.isclose(comparison['second_over_first_shot_ratio'] * comparison['second_over_first_mean_quality_ratio'], comparison['second_over_first_total_npxg_ratio'])
+print('PASS: volume-quality factors reconcile to the same half-specific shots and xG.')

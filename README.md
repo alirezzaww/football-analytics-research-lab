@@ -240,3 +240,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Connect chance timing with shot locations
 
 [Lesson 31](lessons/0013-shot-location-maps.html) adds [shot maps by team and half](reports/14_shot_location_maps.md) for the same fixture. Circle areas share one frozen-model xG scale and stars mark goals. Run `python 31_shot_location_maps.py` without downloads. Descriptive locations do not establish tactical causes.
+
+## Separate shot volume from average quality
+
+[Lesson 32](lessons/0014-shot-volume-and-quality.html) explains the identity `total npxG = shots × mean npxG per shot`. [The report](reports/15_shot_volume_quality.md) shows how the two half-to-half ratios multiply and why percentage reductions should not be added. Run `python 32_shot_volume_quality.py`; no new fitting or downloads.
