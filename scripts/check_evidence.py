@@ -1119,3 +1119,67 @@ for result in window['results']:
         assert summary['phase_shot_goals'] == sum(s['goal'] for r in rows for s in r['shots'])
         assert math.isclose(summary['corner_shot_rate'], count / len(rows))
 print('PASS: all corner-window definitions, nested shot memberships and reference-window results reconcile.')
+
+study = json.loads((ROOT / 'data/38_france_corner_study_evidence.json').read_text())
+study_protocol_path = ROOT / study['protocol_path']
+assert hashlib.sha256(study_protocol_path.read_bytes()).hexdigest() == study['protocol_sha256']
+study_protocol = json.loads(study_protocol_path.read_text())
+manifest_path = ROOT / study['raw_manifest_path']
+assert hashlib.sha256(manifest_path.read_bytes()).hexdigest() == study['raw_manifest_sha256']
+study_manifest = json.loads(manifest_path.read_text())
+fixture_metadata = json.loads((ROOT / 'data/27_evaluation_protocol.json').read_text())['fixture_metadata']
+expected_fixtures = [r for r in fixture_metadata if study_protocol['team'] in (r['home_team'], r['away_team'])]
+assert study_protocol['fixtures'] == expected_fixtures
+assert [r['fixture'] for r in study['matches']] == expected_fixtures
+assert study_protocol['periods_included'] == [1, 2, 3, 4]
+assert study_protocol['maximum_seconds_inclusive'] == 15
+import importlib.util
+spec = importlib.util.spec_from_file_location('tournament_phase_audit', ROOT / '36_corner_phase_analysis.py')
+study_helper = importlib.util.module_from_spec(spec); spec.loader.exec_module(study_helper)
+for record in study['matches']:
+    assert record['raw_input'] in study_manifest['raw_inputs']
+    assert record['raw_input']['match_id'] == record['fixture']['match_id']
+    fixture = record['fixture']
+    assert record['opponent'] == (fixture['away_team'] if fixture['home_team'] == study_protocol['team'] else fixture['home_team'])
+    rows = record['phases']
+    assert len({r['corner_id'] for r in rows}) == record['deliveries'] == len(rows)
+    shot_ids = [s['shot_id'] for r in rows for s in r['shots']]
+    assert len(set(shot_ids)) == len(shot_ids) == record['phase_shots']
+    assert record['corners_with_phase_shot'] == sum(bool(r['shots']) for r in rows)
+    assert record['phase_shot_goals'] == sum(s['goal'] for r in rows for s in r['shots'])
+    assert record['direct_linked_shots'] == sum(r['direct_shot_id'] is not None for r in rows)
+    assert record['extra_time_deliveries'] == sum(r['period'] in (3, 4) for r in rows)
+    assert math.isclose(record['phase_shot_rate'], record['corners_with_phase_shot'] / record['deliveries'])
+    cached = ROOT / record['raw_input']['relative_path']
+    if cached.exists():
+        assert hashlib.sha256(cached.read_bytes()).hexdigest() == record['raw_input']['sha256']
+        events = sorted(json.loads(cached.read_text()), key=lambda r: r['index'])
+        event_lookup = {r['id']: r for r in events}
+        corners_raw = [r for r in events if r['type']['name'] == 'Pass' and r['period'] in study_protocol['periods_included'] and r['team']['name'] == study_protocol['team'] and r['pass'].get('type', {}).get('name') == 'Corner']
+        assert [r['corner_id'] for r in rows] == [r['id'] for r in corners_raw]
+        included = {r['id']: {'goal': int(r['shot']['outcome']['name'] == 'Goal'), 'model_probability': None} for r in events if r['type']['name'] == 'Shot' and r['period'] in study_protocol['periods_included'] and r['team']['name'] == study_protocol['team'] and r['shot']['type']['name'] != 'Penalty'}
+        for row, event in zip(rows, corners_raw):
+            for key in ['period', 'minute', 'second']:
+                assert row[key] == event[key]
+            assert row['direct_shot_id'] == event['pass'].get('assisted_shot_id')
+            replay = study_helper.phase_after(event, events, included, study_protocol)
+            for shot in replay['shots']:
+                del shot['model_probability']
+            assert row['shots'] == replay['shots']
+            assert row['stop_reason'] == replay['stop_reason']
+            if row['direct_shot_id']:
+                shot_event = event_lookup[row['direct_shot_id']]
+                assert shot_event['type']['name'] == 'Shot'
+                assert shot_event['shot']['key_pass_id'] == event['id']
+                assert shot_event['team']['id'] == event['team']['id']
+                assert shot_event['period'] == event['period']
+                assert shot_event['possession'] == event['possession']
+                assert shot_event['index'] > event['index']
+pooled = study['pooled']
+assert pooled['matches'] == len(study['matches'])
+for field in ['deliveries', 'corners_with_phase_shot', 'phase_shots', 'phase_shot_goals']:
+    assert pooled[field] == sum(r[field] for r in study['matches'])
+assert math.isclose(pooled['phase_shot_rate'], pooled['corners_with_phase_shot'] / pooled['deliveries'])
+original_fixture = next(r for r in study['matches'] if r['fixture']['match_id'] == phase['fixture']['match_id'])
+assert [[s['shot_id'] for s in r['shots']] for r in original_fixture['phases']] == [[s['shot_id'] for s in r['shots']] for r in phase['phases'] if r['team'] == study_protocol['team']]
+print('PASS: five-fixture France selection, corner-phase replay, extra time and pooled delivery rates reconcile.')

@@ -1,0 +1,666 @@
+{
+  "protocol_path": "data/38_france_corner_study_protocol.json",
+  "protocol_sha256": "cc3ccea7a1e19bbbe9ee941b0f5aceef623a719091f7d16d7e59ba8bc3bf0fab",
+  "raw_manifest_path": "data/27_frozen_evaluation_evidence.json",
+  "raw_manifest_sha256": "97364e0ad89199d38198589aca9ff2eb6a37bf20053bdc8de2437d270045dbda",
+  "matches": [
+    {
+      "fixture": {
+        "match_id": 22921,
+        "match_date": "2019-06-07",
+        "home_team": "France Women's",
+        "away_team": "Korea Republic Women's"
+      },
+      "opponent": "Korea Republic Women's",
+      "raw_input": {
+        "match_id": 22921,
+        "relative_path": "data/cache_2019_events/22921.json",
+        "sha256": "4fdbe28dc3e5828b12e97228e7d6a35736a9c78d08e3566089feb2f0fbea62cf",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22921.json"
+      },
+      "deliveries": 13,
+      "direct_linked_shots": 2,
+      "corners_with_phase_shot": 6,
+      "phase_shots": 7,
+      "phase_shot_goals": 2,
+      "phase_shot_rate": 0.46153846153846156,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+          "period": 1,
+          "minute": 8,
+          "second": 10,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+          "period": 1,
+          "minute": 12,
+          "second": 11,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "75e60ccb-117b-425d-b961-5f39cc93c8e6",
+              "elapsed_seconds": 4.929,
+              "goal": 0
+            },
+            {
+              "shot_id": "57e846fc-1136-4212-a2bc-9009581f1725",
+              "elapsed_seconds": 10.282,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+          "period": 1,
+          "minute": 21,
+          "second": 29,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "9d561bcf-e043-40e6-8255-0d9f31c52093",
+              "elapsed_seconds": 4.346,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+          "period": 1,
+          "minute": 23,
+          "second": 51,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+          "period": 1,
+          "minute": 26,
+          "second": 16,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+          "period": 1,
+          "minute": 32,
+          "second": 28,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "95319c05-4c68-46f2-ac16-d9c38c8cedb3",
+              "elapsed_seconds": 6.324,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+          "period": 1,
+          "minute": 33,
+          "second": 50,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+          "period": 1,
+          "minute": 34,
+          "second": 52,
+          "direct_shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+          "shots": [
+            {
+              "shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+              "elapsed_seconds": 1.935,
+              "goal": 1
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+          "period": 1,
+          "minute": 45,
+          "second": 17,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+          "period": 1,
+          "minute": 46,
+          "second": 55,
+          "direct_shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+          "shots": [
+            {
+              "shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+              "elapsed_seconds": 1.87,
+              "goal": 1
+            }
+          ],
+          "stop_reason": "Goal"
+        },
+        {
+          "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+          "period": 2,
+          "minute": 53,
+          "second": 0,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+          "period": 2,
+          "minute": 53,
+          "second": 20,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+          "period": 2,
+          "minute": 53,
+          "second": 40,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "f3ee572a-8e76-4c2f-86bd-fc46ba75a96d",
+              "elapsed_seconds": 5.003,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Time limit"
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "match_id": 22948,
+        "match_date": "2019-06-12",
+        "home_team": "France Women's",
+        "away_team": "Norway Women's"
+      },
+      "opponent": "Norway Women's",
+      "raw_input": {
+        "match_id": 22948,
+        "relative_path": "data/cache_2019_events/22948.json",
+        "sha256": "3da6f672d52c6b8221bbd9c020d33b9f9d9524462f879c65cfcd9da4914a64db",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22948.json"
+      },
+      "deliveries": 9,
+      "direct_linked_shots": 1,
+      "corners_with_phase_shot": 3,
+      "phase_shots": 4,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.3333333333333333,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "706ed468-34b9-4562-8dfa-fa03c2f58cf2",
+          "period": 1,
+          "minute": 4,
+          "second": 32,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "d2bf6141-e552-4b71-aa71-c53d6392a8d4",
+          "period": 1,
+          "minute": 16,
+          "second": 53,
+          "direct_shot_id": "1a54ddba-26fd-489f-9039-8e62c03b0a6a",
+          "shots": [
+            {
+              "shot_id": "1a54ddba-26fd-489f-9039-8e62c03b0a6a",
+              "elapsed_seconds": 2.522,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "53cfdc02-7047-42ef-bcbd-efa23cd52551",
+          "period": 1,
+          "minute": 25,
+          "second": 25,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "22f7992f-bb00-4480-b63f-0baa08fcae8e",
+              "elapsed_seconds": 6.225,
+              "goal": 0
+            },
+            {
+              "shot_id": "14a27279-2c0b-4458-b0e0-91f3629b9f2a",
+              "elapsed_seconds": 9.876,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "37f27fcd-70b1-4e4a-987e-d86589934554",
+          "period": 1,
+          "minute": 38,
+          "second": 42,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "3aa1ac58-5703-4826-8cc4-66de93b93cf9",
+          "period": 1,
+          "minute": 44,
+          "second": 59,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "959db788-b5b0-4e3d-b8b5-453ab33bc243",
+          "period": 2,
+          "minute": 50,
+          "second": 5,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "cd284f1b-ead2-47f7-9262-37ecd86a01ea",
+          "period": 2,
+          "minute": 59,
+          "second": 34,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e58a4fd7-0074-4807-bc3d-433f22794dd1",
+          "period": 2,
+          "minute": 61,
+          "second": 57,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "8cb62810-88cb-4f2f-8d54-c313587ef57f",
+              "elapsed_seconds": 4.504,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "aa1bba1a-49f0-446a-aa0c-7ae995edbc61",
+          "period": 2,
+          "minute": 91,
+          "second": 34,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "match_id": 22980,
+        "match_date": "2019-06-17",
+        "home_team": "Nigeria Women's",
+        "away_team": "France Women's"
+      },
+      "opponent": "Nigeria Women's",
+      "raw_input": {
+        "match_id": 22980,
+        "relative_path": "data/cache_2019_events/22980.json",
+        "sha256": "1d9c36f6dc0cebb678d0cbd0391c9fe42f64ee9795575d18b44764f971c26e34",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22980.json"
+      },
+      "deliveries": 9,
+      "direct_linked_shots": 2,
+      "corners_with_phase_shot": 4,
+      "phase_shots": 4,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.4444444444444444,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "d562d240-7ca7-42ca-b070-1903214b7d78",
+          "period": 1,
+          "minute": 9,
+          "second": 50,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e626c1b0-270b-4dae-ac24-2ce37bb98fe5",
+          "period": 1,
+          "minute": 11,
+          "second": 15,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "ae380cd4-124e-42b5-a1cd-7d15453249ba",
+              "elapsed_seconds": 5.005,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "3c23ffce-1c2e-4957-81f5-fc8dad0e7846",
+          "period": 1,
+          "minute": 16,
+          "second": 40,
+          "direct_shot_id": "49f0b9f7-63e6-4c27-9652-d6fc6cf189e2",
+          "shots": [
+            {
+              "shot_id": "49f0b9f7-63e6-4c27-9652-d6fc6cf189e2",
+              "elapsed_seconds": 2.336,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "858e59fe-db8a-423d-9632-fd2dc09c032e",
+          "period": 1,
+          "minute": 32,
+          "second": 30,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e3c4cf98-37f0-46ae-bf3e-463c4267e490",
+          "period": 2,
+          "minute": 55,
+          "second": 51,
+          "direct_shot_id": "9bf492ad-34a4-43bc-854b-fcd89067b935",
+          "shots": [
+            {
+              "shot_id": "9bf492ad-34a4-43bc-854b-fcd89067b935",
+              "elapsed_seconds": 1.976,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "09403170-a74c-4173-9621-74819b9396ea",
+          "period": 2,
+          "minute": 64,
+          "second": 5,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "ffafc7c9-788a-4021-82f1-59589217428e",
+              "elapsed_seconds": 4.783,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "82c00f82-bc17-4969-8411-eb4e3250f6d5",
+          "period": 2,
+          "minute": 71,
+          "second": 3,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "eab50457-0960-44cf-a56d-6df840ce8f49",
+          "period": 2,
+          "minute": 94,
+          "second": 15,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "79313db5-366f-422f-b6fc-20905849e2cc",
+          "period": 2,
+          "minute": 95,
+          "second": 15,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "match_id": 69137,
+        "match_date": "2019-06-23",
+        "home_team": "France Women's",
+        "away_team": "Brazil Women's"
+      },
+      "opponent": "Brazil Women's",
+      "raw_input": {
+        "match_id": 69137,
+        "relative_path": "data/cache_2019_events/69137.json",
+        "sha256": "45f2798d4c0a301d2e9625a050994818a0c81c3b135caeb8d2c8135636be2cc6",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/69137.json"
+      },
+      "deliveries": 7,
+      "direct_linked_shots": 0,
+      "corners_with_phase_shot": 2,
+      "phase_shots": 2,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.2857142857142857,
+      "extra_time_deliveries": 3,
+      "phases": [
+        {
+          "corner_id": "6b9af7a2-b0a3-4349-811f-d676391b77b5",
+          "period": 1,
+          "minute": 3,
+          "second": 22,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "309c806b-9222-42ac-aa5c-3d5d9fd2d111",
+          "period": 1,
+          "minute": 5,
+          "second": 24,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "0466f6e9-18f1-437b-b87a-c72fafe60bfc",
+          "period": 1,
+          "minute": 19,
+          "second": 53,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "407c30fc-6dbf-4657-a24b-91c9262f1bb0",
+          "period": 2,
+          "minute": 56,
+          "second": 42,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "16f3b0b7-358e-4e38-b72e-36bdeaea9b3e",
+              "elapsed_seconds": 2.035,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "46008074-50c0-4e07-a2f0-5fa4bfe5ff60",
+          "period": 3,
+          "minute": 99,
+          "second": 20,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "d0251944-2271-4cb7-ba76-5d94d896067d",
+          "period": 3,
+          "minute": 104,
+          "second": 3,
+          "direct_shot_id": null,
+          "shots": [
+            {
+              "shot_id": "bee17925-d447-493c-a812-a53dd26f2557",
+              "elapsed_seconds": 5.063,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "7c2b073d-bcaa-4a16-87e8-df8aa2cee49d",
+          "period": 4,
+          "minute": 118,
+          "second": 45,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "match_id": 69202,
+        "match_date": "2019-06-28",
+        "home_team": "France Women's",
+        "away_team": "United States Women's"
+      },
+      "opponent": "United States Women's",
+      "raw_input": {
+        "match_id": 69202,
+        "relative_path": "data/cache_2019_events/69202.json",
+        "sha256": "81a073e48d192fdd02d6662fbc5d5be8a4be17a01ebe4d7517ef2200b91a5f94",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/69202.json"
+      },
+      "deliveries": 7,
+      "direct_linked_shots": 4,
+      "corners_with_phase_shot": 4,
+      "phase_shots": 4,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.5714285714285714,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "98ca6d2c-85e1-42d6-8848-cf2299f70dfe",
+          "period": 1,
+          "minute": 28,
+          "second": 47,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "270adf53-14f0-41a0-839b-3b8454cd02b8",
+          "period": 1,
+          "minute": 31,
+          "second": 54,
+          "direct_shot_id": "2af5f207-579e-4d24-838c-ae00ae3a070e",
+          "shots": [
+            {
+              "shot_id": "2af5f207-579e-4d24-838c-ae00ae3a070e",
+              "elapsed_seconds": 1.582,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "5d27dcd4-3e21-45ee-a6a3-dbb0ed3c942b",
+          "period": 2,
+          "minute": 52,
+          "second": 13,
+          "direct_shot_id": "0bd59b56-97ea-443b-a519-dfb56cf1b23f",
+          "shots": [
+            {
+              "shot_id": "0bd59b56-97ea-443b-a519-dfb56cf1b23f",
+              "elapsed_seconds": 1.519,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "3f8c36b4-0aaf-4bdd-9929-e022320c074a",
+          "period": 2,
+          "minute": 56,
+          "second": 18,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "a7b5b310-6608-4df1-b03b-6979b6e37242",
+          "period": 2,
+          "minute": 72,
+          "second": 56,
+          "direct_shot_id": "8b89b3d4-01a7-4cb4-bcd0-c0a3b1a9bbfb",
+          "shots": [
+            {
+              "shot_id": "8b89b3d4-01a7-4cb4-bcd0-c0a3b1a9bbfb",
+              "elapsed_seconds": 2.29,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "b7dfeb21-5bab-4404-9b9f-14fddfd51c48",
+          "period": 2,
+          "minute": 79,
+          "second": 7,
+          "direct_shot_id": null,
+          "shots": [],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "4b180bab-1634-40db-8482-7f4ac852b437",
+          "period": 2,
+          "minute": 83,
+          "second": 13,
+          "direct_shot_id": "489e1b6b-2749-417b-9d4a-f646a7c540c4",
+          "shots": [
+            {
+              "shot_id": "489e1b6b-2749-417b-9d4a-f646a7c540c4",
+              "elapsed_seconds": 2.085,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        }
+      ]
+    }
+  ],
+  "pooled": {
+    "matches": 5,
+    "deliveries": 45,
+    "corners_with_phase_shot": 19,
+    "phase_shots": 21,
+    "phase_shot_goals": 2,
+    "phase_shot_rate": 0.4222222222222222
+  },
+  "scope": "Descriptive extension on five already inspected fixtures, including extra time. Not fresh validation or causal team ranking."
+}

@@ -174,3 +174,7 @@ Executed the fixed-rule phase scan, preserving millisecond timing and unique sho
 ### Lesson 37 (2026-11-03)
 
 Executed four chosen windows with all other phase rules unchanged. Unit check covers a shot 5.003 seconds after delivery. Evidence checks reconcile hashes, denominators, unique/nested shot memberships, aggregate rates and exact 15-second reproduction; cached raw replay verifies every window membership and stop. Chart inspected. No new data or model fitting.
+
+### Phase 2 / Lesson 38 (2026-11-03)
+
+Executed the five-fixture study from SHA256-verified raw events. Verified all France fixtures from the existing metadata, unique assignment within each fixture, explicit extra-time counts, pooled denominators and exact original-fixture memberships. Cached raw replay checks each phase. Unit tests cover delivery-weighted pooling and undefined empty exposure. Chart inspected; no xG inference or new validation.

@@ -183,3 +183,7 @@ distance bands and actual frozen-model predictions. It flags 36 evaluation shots
 outside the observed training distance range, while retaining all 1,131 shots in
 the evaluation. This is one-feature coverage inspection, not another fit or fresh
 validation. See [the report](reports/11_training_distance_support.md).
+
+## Phase 2: France tournament corner phases
+
+The first multi-match set-piece block applies a fixed 15-second, same-possession phase rule to all five France fixtures, including extra time: 45 recorded deliveries, 19 associated with shots, 21 unique associated attempts and two goals. [The report](reports/21_france_tournament_corner_study.md) documents fixture selection, boundaries, pooled denominators and small-sample limitations. This is an assisted descriptive study, not causal set-piece valuation.

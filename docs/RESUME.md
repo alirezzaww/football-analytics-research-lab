@@ -75,3 +75,11 @@ The fixed model has lower log loss than the fixed constant baseline in this set
 (0.2696 versus 0.3052). Do not describe it as trained on 1,131 shots, validated across
 seasons or ready for professional use. Explain the 114-shot training sample and the
 same-tournament, non-England evaluation scope accurately.
+
+## Multi-match set-piece extension
+
+Supported wording in the guided-project context:
+
+> Extended a reproducible event-data portfolio with a five-match France corner-phase study, using explicit possession/time/restart boundaries, unique shot assignments, match-level reporting and pooled delivery denominators; documented extra-time exposure and definition sensitivity.
+
+This describes the assisted implementation. It does not imply independent authorship, causal corner valuation, video scouting or professional club impact.

@@ -275,3 +275,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Check sensitivity to the corner-phase time limit
 
 [Lesson 37](lessons/0019-corner-window-sensitivity.html) completes a [four-window robustness assignment](reports/20_corner_window_sensitivity.md) while keeping delivery and phase boundaries fixed. France has 4/13 shot-associated corners at five seconds and 6/13 at 10, 15 and 20 seconds. Run `python 37_corner_window_sensitivity.py`; this is definition sensitivity, not fresh validation.
+
+## Phase 2: multi-match set-piece research
+
+[Lesson 38](lessons/0020-france-tournament-corners.html) applies the fixed corner-phase method to [all five France tournament fixtures](reports/21_france_tournament_corner_study.md): 19 of 45 deliveries associate with 21 shots, with two goals. Match variation, pooled denominators and extra-time exposure are explicit. Run `python 38_france_tournament_corners.py`; missing raw caches download with hash verification. No xG inference or fresh validation.

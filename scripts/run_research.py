@@ -32,6 +32,7 @@ STAGES = [
     "35_corner_delivery_rates.py",
     "36_corner_phase_analysis.py",
     "37_corner_window_sensitivity.py",
+    "38_france_tournament_corners.py",
     "scripts/check_evidence.py",
 ]
 

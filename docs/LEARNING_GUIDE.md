@@ -133,3 +133,7 @@ Run `36_corner_phase_analysis.py`; [the compact lesson](../lessons/0018-corner-p
 ## Lesson 37: challenge an analysis assumption
 
 Run `37_corner_window_sensitivity.py`. [The compact lesson](../lessons/0019-corner-window-sensitivity.html) and [completed worked assignment](../reports/20_corner_window_sensitivity.md) compare fixed-boundary 5/10/15/20-second windows. Separate definition sensitivity from sampling uncertainty.
+
+## Phase 2 / Lesson 38: repeat a fixed method across fixtures
+
+Run `38_france_tournament_corners.py`. [The lesson](../lessons/0020-france-tournament-corners.html) and [completed study](../reports/21_france_tournament_corner_study.md) cover complete fixture selection, pooled exposure, match variation and explicit extra-time inclusion.

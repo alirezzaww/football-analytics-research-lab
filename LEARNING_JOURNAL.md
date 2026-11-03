@@ -538,3 +538,7 @@ Completed assisted assignment with explicit phase protocol written before this c
 ### 2026-11-03 · Lesson 37: corner-window sensitivity
 
 Completed assisted four-window assignment: France 4/13 at 5 seconds, 6/13 at 10/15/20; shot counts 4/6/7/7. Covered limited robustness, repeated definitions versus independent samples, millisecond thresholds and avoiding selection of the most flattering definition. User restated that a corner can lead into multiple attacking events; broader independent code/analysis mastery is not assumed.
+
+### 2026-11-03 · Phase 2 / Lesson 38: multi-match research
+
+Completed assisted five-match France corner study with unchanged phase boundaries: 19/45 deliveries with shots (42.22%), 21 associated shots and 2 goals, both in Korea Republic match. Brazil includes 3 extra-time deliveries. Covered pooled counts versus equal-match means and single-match versus campaign descriptions. No model inference, fresh validation or independent-mastery claim.

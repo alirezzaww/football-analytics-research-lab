@@ -1,0 +1,55 @@
+{
+  "defined_on": "2026-11-03",
+  "team": "France Women's",
+  "selection": "All France fixtures in the existing 2019 tournament metadata; no opponent or result exclusions",
+  "fixtures": [
+    {
+      "match_id": 22921,
+      "match_date": "2019-06-07",
+      "home_team": "France Women's",
+      "away_team": "Korea Republic Women's"
+    },
+    {
+      "match_id": 22948,
+      "match_date": "2019-06-12",
+      "home_team": "France Women's",
+      "away_team": "Norway Women's"
+    },
+    {
+      "match_id": 22980,
+      "match_date": "2019-06-17",
+      "home_team": "Nigeria Women's",
+      "away_team": "France Women's"
+    },
+    {
+      "match_id": 69137,
+      "match_date": "2019-06-23",
+      "home_team": "France Women's",
+      "away_team": "Brazil Women's"
+    },
+    {
+      "match_id": 69202,
+      "match_date": "2019-06-28",
+      "home_team": "France Women's",
+      "away_team": "United States Women's"
+    }
+  ],
+  "maximum_seconds_inclusive": 15,
+  "restart_pass_types": [
+    "Corner",
+    "Free Kick",
+    "Throw-in",
+    "Goal Kick",
+    "Kick Off"
+  ],
+  "periods_included": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "shot_eligibility": "All non-penalty Shot events by France; no location/geometry filter needed for counts. Shootouts excluded.",
+  "phase_rule": "Same-possession, at most 15 seconds; stop at new restart, period/possession change, shot goal or own-goal event. Unique assignment.",
+  "aggregation": "Pool corners-with-shots over all deliveries; also show each match. Do not average match percentages as the pooled rate.",
+  "scope": "Descriptive extension on five already inspected fixtures, including extra time. Not fresh validation or causal team ranking."
+}
