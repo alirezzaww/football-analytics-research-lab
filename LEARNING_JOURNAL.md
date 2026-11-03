@@ -546,3 +546,7 @@ Completed assisted five-match France corner study with unchanged phase boundarie
 ### 2026-11-03 · Lesson 39: delivery profiles
 
 Completed assisted technique stratification: inswinging 9/17, outswinging 5/10, straight 3/9, unrecorded 2/9 corners associated with phase shots. Retained 9 missing labels (20% coverage gap), unchanged phase outcomes and sample size. Covered category denominators, confounding and descriptive versus tactical recommendations. Independent mastery not claimed.
+
+### 2026-11-03 · Lesson 40: taker mix and overlap
+
+Completed assisted overlap audit: Majri took 15/17 inswingers; Thiney 8/10 outswingers. Only two taker/match contexts have both types, each with one outswinger. Covered sparse comparison support, different taker mixtures and why within-taker stratification is not full causal adjustment. No independent-mastery claim.

@@ -283,3 +283,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Compare recorded corner-delivery profiles
 
 [Lesson 39](lessons/0021-corner-delivery-profiles.html) adds [delivery-technique groups](reports/22_corner_delivery_profiles.md) to the five-match study, retaining missing labels and all phase outcomes. Inswinging and outswinging rates are descriptive, not a causal tactical ranking. Run `python 39_corner_delivery_profiles.py`.
+
+## Audit taker and opponent overlap
+
+[Lesson 40](lessons/0022-corner-taker-overlap.html) checks [who supplied each technique](reports/23_corner_taker_overlap.md), retaining empty cells and missing labels. Different taker mixtures and sparse same-taker/match overlap limit tactical interpretation. Run `python 40_corner_taker_overlap.py`; no downloads or causal modelling.

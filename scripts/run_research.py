@@ -34,6 +34,7 @@ STAGES = [
     "37_corner_window_sensitivity.py",
     "38_france_tournament_corners.py",
     "39_corner_delivery_profiles.py",
+    "40_corner_taker_overlap.py",
     "scripts/check_evidence.py",
 ]
 

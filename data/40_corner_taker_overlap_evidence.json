@@ -1,0 +1,1101 @@
+{
+  "source_path": "data/39_corner_delivery_profiles_evidence.json",
+  "source_sha256": "2065064f43e5b68948ee1a03e4165660eccae26bd206d12afaebf7d1dd5d77c6",
+  "takers": [
+    {
+      "passer": "Ga\u00ebtane Thiney",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 2,
+          "corners_with_phase_shot": 2,
+          "phase_shot_rate": 1.0,
+          "phase_shots": 2,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69202,
+              "corner_id": "270adf53-14f0-41a0-839b-3b8454cd02b8"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "5d27dcd4-3e21-45ee-a6a3-dbb0ed3c942b"
+            }
+          ]
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 8,
+          "corners_with_phase_shot": 4,
+          "phase_shot_rate": 0.5,
+          "phase_shots": 4,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "d2bf6141-e552-4b71-aa71-c53d6392a8d4"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "37f27fcd-70b1-4e4a-987e-d86589934554"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "e626c1b0-270b-4dae-ac24-2ce37bb98fe5"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "e3c4cf98-37f0-46ae-bf3e-463c4267e490"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "09403170-a74c-4173-9621-74819b9396ea"
+            },
+            {
+              "match_id": 69137,
+              "corner_id": "46008074-50c0-4e07-a2f0-5fa4bfe5ff60"
+            }
+          ]
+        },
+        {
+          "category": "Straight",
+          "deliveries": 5,
+          "corners_with_phase_shot": 2,
+          "phase_shot_rate": 0.4,
+          "phase_shots": 2,
+          "phase_shot_goals": 1,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "3c23ffce-1c2e-4957-81f5-fc8dad0e7846"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "3f8c36b4-0aaf-4bdd-9929-e022320c074a"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "b7dfeb21-5bab-4404-9b9f-14fddfd51c48"
+            }
+          ]
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 3,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "d562d240-7ca7-42ca-b070-1903214b7d78"
+            },
+            {
+              "match_id": 69137,
+              "corner_id": "7c2b073d-bcaa-4a16-87e8-df8aa2cee49d"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": true
+    },
+    {
+      "passer": "Amel Majri",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 15,
+          "corners_with_phase_shot": 7,
+          "phase_shot_rate": 0.4666666666666667,
+          "phase_shots": 9,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "706ed468-34b9-4562-8dfa-fa03c2f58cf2"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "53cfdc02-7047-42ef-bcbd-efa23cd52551"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "959db788-b5b0-4e3d-b8b5-453ab33bc243"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "858e59fe-db8a-423d-9632-fd2dc09c032e"
+            },
+            {
+              "match_id": 69137,
+              "corner_id": "309c806b-9222-42ac-aa5c-3d5d9fd2d111"
+            },
+            {
+              "match_id": 69137,
+              "corner_id": "407c30fc-6dbf-4657-a24b-91c9262f1bb0"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "98ca6d2c-85e1-42d6-8848-cf2299f70dfe"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "a7b5b310-6608-4df1-b03b-6979b6e37242"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "4b180bab-1634-40db-8482-7f4ac852b437"
+            }
+          ]
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 2,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 0.5,
+          "phase_shots": 1,
+          "phase_shot_goals": 1,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "82c00f82-bc17-4969-8411-eb4e3250f6d5"
+            }
+          ]
+        },
+        {
+          "category": "Straight",
+          "deliveries": 4,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 0.25,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22948,
+              "corner_id": "cd284f1b-ead2-47f7-9262-37ecd86a01ea"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "e58a4fd7-0074-4807-bc3d-433f22794dd1"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "aa1bba1a-49f0-446a-aa0c-7ae995edbc61"
+            },
+            {
+              "match_id": 69137,
+              "corner_id": "6b9af7a2-b0a3-4349-811f-d676391b77b5"
+            }
+          ]
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 3,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 0.3333333333333333,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "3aa1ac58-5703-4826-8cc4-66de93b93cf9"
+            },
+            {
+              "match_id": 69137,
+              "corner_id": "0466f6e9-18f1-437b-b87a-c72fafe60bfc"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": true
+    },
+    {
+      "passer": "Onema Grace Geyoro",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 2,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22980,
+              "corner_id": "eab50457-0960-44cf-a56d-6df840ce8f49"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "79313db5-366f-422f-b6fc-20905849e2cc"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "passer": "Elise Bussaglia",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 1,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 1.0,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69137,
+              "corner_id": "d0251944-2271-4cb7-ba76-5d94d896067d"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    }
+  ],
+  "taker_match_contexts": [
+    {
+      "match_id": 22921,
+      "passer": "Ga\u00ebtane Thiney",
+      "opponent": "Korea Republic Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 2,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263"
+            }
+          ]
+        },
+        {
+          "category": "Straight",
+          "deliveries": 2,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 0.5,
+          "phase_shots": 1,
+          "phase_shot_goals": 1,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf"
+            }
+          ]
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 22921,
+      "passer": "Amel Majri",
+      "opponent": "Korea Republic Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 6,
+          "corners_with_phase_shot": 3,
+          "phase_shot_rate": 0.5,
+          "phase_shots": 4,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24"
+            },
+            {
+              "match_id": 22921,
+              "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef"
+            }
+          ]
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 1,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 1.0,
+          "phase_shots": 1,
+          "phase_shot_goals": 1,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956"
+            }
+          ]
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 1,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 1.0,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22921,
+              "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": true
+    },
+    {
+      "match_id": 22948,
+      "passer": "Amel Majri",
+      "opponent": "Norway Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 3,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 0.3333333333333333,
+          "phase_shots": 2,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22948,
+              "corner_id": "706ed468-34b9-4562-8dfa-fa03c2f58cf2"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "53cfdc02-7047-42ef-bcbd-efa23cd52551"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "959db788-b5b0-4e3d-b8b5-453ab33bc243"
+            }
+          ]
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Straight",
+          "deliveries": 3,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 0.3333333333333333,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22948,
+              "corner_id": "cd284f1b-ead2-47f7-9262-37ecd86a01ea"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "e58a4fd7-0074-4807-bc3d-433f22794dd1"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "aa1bba1a-49f0-446a-aa0c-7ae995edbc61"
+            }
+          ]
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22948,
+              "corner_id": "3aa1ac58-5703-4826-8cc4-66de93b93cf9"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 22948,
+      "passer": "Ga\u00ebtane Thiney",
+      "opponent": "Norway Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 2,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 0.5,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22948,
+              "corner_id": "d2bf6141-e552-4b71-aa71-c53d6392a8d4"
+            },
+            {
+              "match_id": 22948,
+              "corner_id": "37f27fcd-70b1-4e4a-987e-d86589934554"
+            }
+          ]
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 22980,
+      "passer": "Ga\u00ebtane Thiney",
+      "opponent": "Nigeria Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 3,
+          "corners_with_phase_shot": 3,
+          "phase_shot_rate": 1.0,
+          "phase_shots": 3,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22980,
+              "corner_id": "e626c1b0-270b-4dae-ac24-2ce37bb98fe5"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "e3c4cf98-37f0-46ae-bf3e-463c4267e490"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "09403170-a74c-4173-9621-74819b9396ea"
+            }
+          ]
+        },
+        {
+          "category": "Straight",
+          "deliveries": 1,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 1.0,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22980,
+              "corner_id": "3c23ffce-1c2e-4957-81f5-fc8dad0e7846"
+            }
+          ]
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22980,
+              "corner_id": "d562d240-7ca7-42ca-b070-1903214b7d78"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 22980,
+      "passer": "Amel Majri",
+      "opponent": "Nigeria Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22980,
+              "corner_id": "858e59fe-db8a-423d-9632-fd2dc09c032e"
+            }
+          ]
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22980,
+              "corner_id": "82c00f82-bc17-4969-8411-eb4e3250f6d5"
+            }
+          ]
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        }
+      ],
+      "both_recorded_types": true
+    },
+    {
+      "match_id": 22980,
+      "passer": "Onema Grace Geyoro",
+      "opponent": "Nigeria Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 2,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 22980,
+              "corner_id": "eab50457-0960-44cf-a56d-6df840ce8f49"
+            },
+            {
+              "match_id": 22980,
+              "corner_id": "79313db5-366f-422f-b6fc-20905849e2cc"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 69137,
+      "passer": "Amel Majri",
+      "opponent": "Brazil Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 2,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 0.5,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69137,
+              "corner_id": "309c806b-9222-42ac-aa5c-3d5d9fd2d111"
+            },
+            {
+              "match_id": 69137,
+              "corner_id": "407c30fc-6dbf-4657-a24b-91c9262f1bb0"
+            }
+          ]
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Straight",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69137,
+              "corner_id": "6b9af7a2-b0a3-4349-811f-d676391b77b5"
+            }
+          ]
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69137,
+              "corner_id": "0466f6e9-18f1-437b-b87a-c72fafe60bfc"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 69137,
+      "passer": "Ga\u00ebtane Thiney",
+      "opponent": "Brazil Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69137,
+              "corner_id": "46008074-50c0-4e07-a2f0-5fa4bfe5ff60"
+            }
+          ]
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 1,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69137,
+              "corner_id": "7c2b073d-bcaa-4a16-87e8-df8aa2cee49d"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 69137,
+      "passer": "Elise Bussaglia",
+      "opponent": "Brazil Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 1,
+          "corners_with_phase_shot": 1,
+          "phase_shot_rate": 1.0,
+          "phase_shots": 1,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69137,
+              "corner_id": "d0251944-2271-4cb7-ba76-5d94d896067d"
+            }
+          ]
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 69202,
+      "passer": "Amel Majri",
+      "opponent": "United States Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 3,
+          "corners_with_phase_shot": 2,
+          "phase_shot_rate": 0.6666666666666666,
+          "phase_shots": 2,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69202,
+              "corner_id": "98ca6d2c-85e1-42d6-8848-cf2299f70dfe"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "a7b5b310-6608-4df1-b03b-6979b6e37242"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "4b180bab-1634-40db-8482-7f4ac852b437"
+            }
+          ]
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Straight",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        }
+      ],
+      "both_recorded_types": false
+    },
+    {
+      "match_id": 69202,
+      "passer": "Ga\u00ebtane Thiney",
+      "opponent": "United States Women's",
+      "groups": [
+        {
+          "category": "Inswinging",
+          "deliveries": 2,
+          "corners_with_phase_shot": 2,
+          "phase_shot_rate": 1.0,
+          "phase_shots": 2,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69202,
+              "corner_id": "270adf53-14f0-41a0-839b-3b8454cd02b8"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "5d27dcd4-3e21-45ee-a6a3-dbb0ed3c942b"
+            }
+          ]
+        },
+        {
+          "category": "Outswinging",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        },
+        {
+          "category": "Straight",
+          "deliveries": 2,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": 0.0,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": [
+            {
+              "match_id": 69202,
+              "corner_id": "3f8c36b4-0aaf-4bdd-9929-e022320c074a"
+            },
+            {
+              "match_id": 69202,
+              "corner_id": "b7dfeb21-5bab-4404-9b9f-14fddfd51c48"
+            }
+          ]
+        },
+        {
+          "category": "Other / unrecorded",
+          "deliveries": 0,
+          "corners_with_phase_shot": 0,
+          "phase_shot_rate": null,
+          "phase_shots": 0,
+          "phase_shot_goals": 0,
+          "corner_keys": []
+        }
+      ],
+      "both_recorded_types": false
+    }
+  ],
+  "contexts_with_both_types": 2,
+  "scope": "Descriptive overlap audit of the same 45 deliveries. Positive counts indicate observed overlap, not adequate sample size, full matching or causal adjustment."
+}

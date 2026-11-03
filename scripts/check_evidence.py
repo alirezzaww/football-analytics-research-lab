@@ -1224,3 +1224,34 @@ for group in profiles['groups']:
 assert sum(g['deliveries'] for g in profiles['groups']) == pooled['deliveries']
 assert sum(g['corners_with_phase_shot'] for g in profiles['groups']) == pooled['corners_with_phase_shot']
 print('PASS: delivery-technique labels, unknown coverage and unchanged corner-phase groups reconcile.')
+
+overlap = json.loads((ROOT / 'data/40_corner_taker_overlap_evidence.json').read_text())
+assert overlap['source_path'] == 'data/39_corner_delivery_profiles_evidence.json'
+assert hashlib.sha256((ROOT / overlap['source_path']).read_bytes()).hexdigest() == overlap['source_sha256']
+assert [r['passer'] for r in overlap['takers']] == list(dict.fromkeys(r['passer'] for r in profile_rows))
+assert [(r['match_id'], r['passer']) for r in overlap['taker_match_contexts']] == list(dict.fromkeys((r['match_id'], r['passer']) for r in profile_rows))
+for collection, by_match in [(overlap['takers'], False), (overlap['taker_match_contexts'], True)]:
+    for record in collection:
+        rows = [r for r in profile_rows if r['passer'] == record['passer'] and (not by_match or r['match_id'] == record['match_id'])]
+        if by_match:
+            assert all(r['opponent'] == record['opponent'] for r in rows)
+        assert [g['category'] for g in record['groups']] == category_labels
+        for group in record['groups']:
+            selected = [r for r in rows if r['category'] == group['category']]
+            n = len(selected)
+            count = sum(r['phase_has_shot'] for r in selected)
+            assert group['corner_keys'] == [{'match_id': r['match_id'], 'corner_id': r['corner_id']} for r in selected]
+            assert group['deliveries'] == n
+            assert group['corners_with_phase_shot'] == count
+            assert group['phase_shots'] == sum(r['phase_shots'] for r in selected)
+            assert group['phase_shot_goals'] == sum(r['phase_shot_goals'] for r in selected)
+            if n:
+                assert math.isclose(group['phase_shot_rate'], count / n)
+            else:
+                assert group['phase_shot_rate'] is None
+        assert record['both_recorded_types'] == all(next(g['deliveries'] for g in record['groups'] if g['category'] == label) > 0 for label in ['Inswinging', 'Outswinging'])
+assert overlap['contexts_with_both_types'] == sum(r['both_recorded_types'] for r in overlap['taker_match_contexts'])
+for collection in [overlap['takers'], overlap['taker_match_contexts']]:
+    assert sum(g['deliveries'] for r in collection for g in r['groups']) == pooled['deliveries']
+    assert sum(g['corners_with_phase_shot'] for r in collection for g in r['groups']) == pooled['corners_with_phase_shot']
+print('PASS: taker mixtures, match-context overlap, empty groups and original corner outcomes reconcile.')

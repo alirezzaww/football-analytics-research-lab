@@ -141,3 +141,7 @@ Run `38_france_tournament_corners.py`. [The lesson](../lessons/0020-france-tourn
 ## Lesson 39: compare a tactical category
 
 Run `39_corner_delivery_profiles.py`. [The lesson](../lessons/0021-corner-delivery-profiles.html) and [completed report](../reports/22_corner_delivery_profiles.md) cover inswinging/outswinging groups, missing labels and confounding.
+
+## Lesson 40: check comparison support
+
+Run `40_corner_taker_overlap.py`; [the compact lesson](../lessons/0022-corner-taker-overlap.html) and [worked audit](../reports/23_corner_taker_overlap.md) explain taker mix, confounding and sparse overlap.

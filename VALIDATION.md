@@ -182,3 +182,7 @@ Executed the five-fixture study from SHA256-verified raw events. Verified all Fr
 ### Lesson 39 (2026-11-03)
 
 Executed technique join on all five hash-verified raw files. Unit tests cover category/missing-label handling and all-delivery denominators. Evidence checks preserve exact source corner order, original phase outcomes, group IDs and totals; cached raw labels and takers reconcile. Chart inspected. No new model or causal comparison.
+
+### Lesson 40 (2026-11-03)
+
+Executed cache-free overlap audit from committed technique records. Tests cover positive exposure to both types and exact saved-artifact reproduction. Evidence checks independently reconcile every taker and taker/match subgroup, rates, empty cells and original 45-delivery/19-outcome totals. Heatmap inspected. No new fitting or validation.
