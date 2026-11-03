@@ -522,3 +522,7 @@ England passing research, multi-team tournament xG evaluation and the France–K
 Republic match analysis. Updated citation metadata, résumé wording and repository
 links. Original study-specific titles and frozen research artifacts remain scoped
 to the teams and data actually analysed.
+
+### 2026-11-03 · Lesson 34: explicit assisting-pass joins
+
+Prepared assisted inspection of all three existing headers. Two Renard goals follow linked corner passes; Thiney off-target header follows a cross-flagged pass. Covered reciprocal IDs, missing-link handling, added-time periods, shot type versus attacking phase, and the denominator needed for corner efficiency. No video reviewed or model changed; independent interpretation pending.

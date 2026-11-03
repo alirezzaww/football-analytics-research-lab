@@ -259,3 +259,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Add body-part context to the match brief
 
 [Lesson 33](lessons/0015-shot-body-part-context.html) separates headers from foot shots using hash-verified event labels. [The report](reports/16_shot_body_part_context.md) distinguishes reporting tags from model features, and contact foot from preferred-foot status. Run `python 33_shot_body_part_context.py`; the frozen distance model is unchanged.
+
+## Inspect the passes behind the headers
+
+[Lesson 34](lessons/0016-header-assisting-passes.html) uses explicit reciprocal shot/pass IDs to inspect all three headers. [The report](reports/17_header_assisting_passes.md) separates corner deliveries, crossed passes, shot type and play pattern without guessing from location alone. Run `python 34_header_assisting_passes.py`; frozen probabilities remain unchanged.

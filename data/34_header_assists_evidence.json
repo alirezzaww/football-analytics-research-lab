@@ -1,0 +1,124 @@
+{
+  "source_path": "data/33_body_part_evidence.json",
+  "source_sha256": "40f20aea779679c21e33742b0d5a41be09642df2f8e29c95198e770b9a6ea355",
+  "fixture": {
+    "match_id": 22921,
+    "match_date": "2019-06-07",
+    "home_team": "France Women's",
+    "away_team": "Korea Republic Women's"
+  },
+  "raw_input": {
+    "match_id": 22921,
+    "relative_path": "data/cache_2019_events/22921.json",
+    "sha256": "4fdbe28dc3e5828b12e97228e7d6a35736a9c78d08e3566089feb2f0fbea62cf",
+    "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22921.json"
+  },
+  "headers": [
+    {
+      "shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 34,
+      "second": 54,
+      "shooter": "Wendie Renard",
+      "shot_location": [
+        113.3,
+        35.8
+      ],
+      "shot_outcome": "Goal",
+      "shot_type": "Open Play",
+      "play_pattern": "From Corner",
+      "model_probability_unchanged": 0.21649471040182458,
+      "link_status": "Verified reciprocal link",
+      "pass": {
+        "id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+        "passer": "Ga\u00ebtane Thiney",
+        "minute": 34,
+        "second": 52,
+        "start": [
+          120.0,
+          80.0
+        ],
+        "end": [
+          112.4,
+          37.2
+        ],
+        "type": "Corner",
+        "cross_flag": null,
+        "height": "High Pass",
+        "assisted_shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec"
+      }
+    },
+    {
+      "shot_id": "ea7b7375-f033-4fb0-88f3-0eb709d6d229",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 37,
+      "second": 52,
+      "shooter": "Ga\u00ebtane Thiney",
+      "shot_location": [
+        109.9,
+        36.5
+      ],
+      "shot_outcome": "Off T",
+      "shot_type": "Open Play",
+      "play_pattern": "Regular Play",
+      "model_probability_unchanged": 0.16228145687413023,
+      "link_status": "Verified reciprocal link",
+      "pass": {
+        "id": "0b9446c5-a5b6-4870-8c81-e09a839872e2",
+        "passer": "Elise Bussaglia",
+        "minute": 37,
+        "second": 50,
+        "start": [
+          90.8,
+          70.5
+        ],
+        "end": [
+          109.8,
+          35.2
+        ],
+        "type": null,
+        "cross_flag": true,
+        "height": "High Pass",
+        "assisted_shot_id": "ea7b7375-f033-4fb0-88f3-0eb709d6d229"
+      }
+    },
+    {
+      "shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 46,
+      "second": 57,
+      "shooter": "Wendie Renard",
+      "shot_location": [
+        109.5,
+        41.6
+      ],
+      "shot_outcome": "Goal",
+      "shot_type": "Open Play",
+      "play_pattern": "From Corner",
+      "model_probability_unchanged": 0.16301249622984576,
+      "link_status": "Verified reciprocal link",
+      "pass": {
+        "id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+        "passer": "Amel Majri",
+        "minute": 46,
+        "second": 55,
+        "start": [
+          120.0,
+          0.1
+        ],
+        "end": [
+          106.8,
+          37.0
+        ],
+        "type": "Corner",
+        "cross_flag": null,
+        "height": "High Pass",
+        "assisted_shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec"
+      }
+    }
+  ],
+  "scope": "All headers in the existing 26-shot match ledger. Explicit assisting pass only, not a complete sequence, crossing-success rate, causal credit or fresh validation."
+}

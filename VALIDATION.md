@@ -158,3 +158,7 @@ Executed the volume/quality calculation from the saved ledger. Tests cover multi
 ### Lesson 33 (2026-11-03)
 
 Reconstructed the existing match ledger against hash-verified raw events, then joined body-part labels by shot ID. Evidence checker reconciles tags, full original probabilities, counts, goal outcomes, memberships and group means; raw label checks run when cached. Unit tests cover explicit contact categories, unknown labels and absent groups. Chart inspected. No fitting or new validation.
+
+### Lesson 34 (2026-11-03)
+
+Executed all-three-header pass inspection with raw SHA256 verification. Tests cover valid reciprocal links, absent/unavailable links and mismatched type/team/period/order/possession/shot IDs. Saved evidence reconciliation checks header identity and unchanged probabilities; cached raw events additionally verify pass attributes and context. Inspected the three-panel chart. No new model or video review.

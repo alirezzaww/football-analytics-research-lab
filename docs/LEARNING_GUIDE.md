@@ -117,3 +117,7 @@ Run `32_shot_volume_quality.py` and use [the volume/quality lesson](../lessons/0
 ## Lesson 33: add football context carefully
 
 Run `33_shot_body_part_context.py` and read [the body-part lesson](../lessons/0015-shot-body-part-context.html). Explain why a reporting column does not change model predictions and why Left Foot does not establish weak-foot status.
+
+## Lesson 34: trace a chance through linked event IDs
+
+Run `34_header_assisting_passes.py` and read [the header-link lesson](../lessons/0016-header-assisting-passes.html). Explain the reciprocal ID join and why selecting headers cannot establish corner conversion efficiency.

@@ -46,3 +46,5 @@ video review remain future project work. No community participation has been req
 - [mplsoccer official scatter example](https://mplsoccer.readthedocs.io/en/latest/gallery/pitch_plots/plot_scatter.html) — vertical shot maps and probability-sized markers; lesson 31 uses proportional circle area with a common scale (2026-11-03).
 
 - [Hudl StatsBomb xG: body-part context](https://www.hudl.com/blog/expected-goals-xg-explained) — revisited for lesson 33, distinguishing general model features from a single-match descriptive split (2026-11-03).
+
+- [StatsBomb Open Data specification](https://raw.githubusercontent.com/statsbomb/open-data/master/doc/StatsBomb%20Open%20Data%20Specification%20v1.1.pdf) — revisited for lesson 34: key-pass links, assisted-shot IDs, pass type and shot type. Historical raw fields are retained separately from phase interpretation.

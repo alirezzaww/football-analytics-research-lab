@@ -916,3 +916,36 @@ if raw_path.exists():
     for row in body['shots']:
         assert row['body_part'] == raw_events[row['id']]['shot'].get('body_part', {}).get('name')
 print('PASS: body-part tags, group membership and unchanged probabilities reconcile.')
+
+header = json.loads((ROOT / 'data/34_header_assists_evidence.json').read_text())
+header_source_path = ROOT / header['source_path']
+assert header['source_path'] == 'data/33_body_part_evidence.json'
+assert hashlib.sha256(header_source_path.read_bytes()).hexdigest() == header['source_sha256']
+assert header['fixture'] == body['fixture']
+assert header['raw_input'] == body['raw_input']
+expected_headers = [r for r in body['shots'] if r['body_part'] == 'Head']
+assert [r['shot_id'] for r in header['headers']] == [r['id'] for r in expected_headers]
+for row, original in zip(header['headers'], expected_headers):
+    assert (row['team'], row['period'], row['minute'], row['second']) == (original['team'], original['period'], original['minute'], original['second'])
+    assert row['shot_location'][:2] == [original['x'], original['y']]
+    assert row['model_probability_unchanged'] == original['model_probability']
+    assert (row['shot_outcome'] == 'Goal') == bool(original['goal'])
+    assert row['link_status'] == 'Verified reciprocal link'
+    assert row['pass']['assisted_shot_id'] == row['shot_id']
+    if raw_path.exists():
+        shot_event = raw_events[row['shot_id']]
+        pass_event = raw_events[shot_event['shot']['key_pass_id']]
+        p = pass_event['pass']
+        assert pass_event['type']['name'] == 'Pass'
+        assert pass_event['index'] < shot_event['index']
+        assert pass_event['team']['id'] == shot_event['team']['id']
+        assert pass_event['period'] == shot_event['period']
+        assert pass_event['possession'] == shot_event['possession']
+        assert row['shooter'] == shot_event['player']['name']
+        assert row['shot_type'] == shot_event['shot']['type']['name']
+        assert row['play_pattern'] == shot_event['play_pattern']['name']
+        assert row['pass'] == {'id': pass_event['id'], 'passer': pass_event['player']['name'],
+            'minute': pass_event['minute'], 'second': pass_event['second'], 'start': pass_event['location'],
+            'end': p['end_location'], 'type': p.get('type', {}).get('name'), 'cross_flag': p.get('cross'),
+            'height': p.get('height', {}).get('name'), 'assisted_shot_id': p['assisted_shot_id']}
+print('PASS: header identities, reciprocal assisting-pass links and raw context reconcile.')
