@@ -263,3 +263,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Inspect the passes behind the headers
 
 [Lesson 34](lessons/0016-header-assisting-passes.html) uses explicit reciprocal shot/pass IDs to inspect all three headers. [The report](reports/17_header_assisting_passes.md) separates corner deliveries, crossed passes, shot type and play pattern without guessing from location alone. Run `python 34_header_assisting_passes.py`; frozen probabilities remain unchanged.
+
+## Count the corner-delivery denominator
+
+[Lesson 35](lessons/0017-corner-delivery-rates.html) counts every recorded corner pass event, including incomplete deliveries, before calculating direct shot/goal link rates. [The report](reports/18_corner_delivery_rates.md) distinguishes direct links from later corner-phase chances. Run `python 35_corner_delivery_rates.py`; the model remains unchanged.

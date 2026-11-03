@@ -949,3 +949,55 @@ for row, original in zip(header['headers'], expected_headers):
             'end': p['end_location'], 'type': p.get('type', {}).get('name'), 'cross_flag': p.get('cross'),
             'height': p.get('height', {}).get('name'), 'assisted_shot_id': p['assisted_shot_id']}
 print('PASS: header identities, reciprocal assisting-pass links and raw context reconcile.')
+
+corner = json.loads((ROOT / 'data/35_corner_delivery_evidence.json').read_text())
+assert corner['source_path'] == location['source_path']
+assert corner['source_sha256'] == location['source_sha256']
+assert corner['fixture'] == match['fixture']
+assert corner['raw_input'] == match['raw_input']
+corner_rows = corner['corner_deliveries']
+assert len({r['id'] for r in corner_rows}) == len(corner_rows)
+assert [r['team'] for r in corner['teams']] == [r['team'] for r in match['teams']]
+for team in corner['teams']:
+    team_rows = [r for r in corner_rows if r['team'] == team['team']]
+    assert [h['period'] for h in team['halves']] == [1, 2]
+    for summary, selected in [(team, team_rows)] + [(h, [r for r in team_rows if r['period'] == h['period']]) for h in team['halves']]:
+        n = len(selected)
+        linked = sum(r['link_status'] == 'Verified reciprocal link' for r in selected)
+        goals = sum(r['linked_shot_goal'] is True for r in selected)
+        assert summary['delivery_ids'] == [r['id'] for r in selected]
+        assert (summary['deliveries'], summary['direct_linked_shots'], summary['direct_linked_goals']) == (n, linked, goals)
+        assert 0 <= goals <= linked <= n
+        for key, count in [('recorded_direct_shot_link_rate', linked), ('recorded_direct_goal_link_rate', goals)]:
+            if n:
+                assert math.isclose(summary[key], count / n)
+            else:
+                assert summary[key] is None
+for row in corner_rows:
+    assert row['team'] in {r['team'] for r in match['teams']}
+    if row['assisted_shot_id']:
+        assert row['link_status'] == 'Verified reciprocal link'
+        assert row['linked_shot_goal'] in (True, False)
+    else:
+        assert row['link_status'] == 'No assisted-shot link recorded'
+        assert row['linked_shot_goal'] is None
+if raw_path.exists():
+    raw_corners = [r for r in raw_events.values() if r['period'] in (1, 2) and r['type']['name'] == 'Pass' and r['pass'].get('type', {}).get('name') == 'Corner']
+    assert [r['id'] for r in corner_rows] == [r['id'] for r in raw_corners]
+    for row, event in zip(corner_rows, raw_corners):
+        assert row['team'] == event['team']['name']
+        assert row['passer'] == event['player']['name']
+        for key in ['period', 'minute', 'second']:
+            assert row[key] == event[key]
+        assert row['pass_outcome'] == event['pass'].get('outcome', {}).get('name')
+        assert row['assisted_shot_id'] == event['pass'].get('assisted_shot_id')
+        if row['assisted_shot_id']:
+            shot = raw_events[row['assisted_shot_id']]
+            assert shot['type']['name'] == 'Shot'
+            assert shot['shot']['key_pass_id'] == row['id']
+            assert shot['team']['id'] == event['team']['id']
+            assert shot['period'] == event['period']
+            assert shot['possession'] == event['possession']
+            assert shot['index'] > event['index']
+            assert row['linked_shot_goal'] == (shot['shot']['outcome']['name'] == 'Goal')
+print('PASS: every corner delivery, direct shot links and explicit rate denominators reconcile.')

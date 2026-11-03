@@ -1,0 +1,280 @@
+{
+  "source_path": "data/29_match_xg_evidence.json",
+  "source_sha256": "379db13a86ba557a2b04738e88f78fcfa4248d7e6e132131b288acad89768066",
+  "fixture": {
+    "match_id": 22921,
+    "match_date": "2019-06-07",
+    "home_team": "France Women's",
+    "away_team": "Korea Republic Women's"
+  },
+  "raw_input": {
+    "match_id": 22921,
+    "relative_path": "data/cache_2019_events/22921.json",
+    "sha256": "4fdbe28dc3e5828b12e97228e7d6a35736a9c78d08e3566089feb2f0fbea62cf",
+    "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22921.json"
+  },
+  "corner_deliveries": [
+    {
+      "id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 8,
+      "second": 10,
+      "passer": "Ga\u00ebtane Thiney",
+      "pass_outcome": "Incomplete",
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 12,
+      "second": 11,
+      "passer": "Amel Majri",
+      "pass_outcome": null,
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "e1fc2300-9add-448c-aaa3-d3cd811eabfb",
+      "team": "Korea Republic Women's",
+      "period": 1,
+      "minute": 19,
+      "second": 47,
+      "passer": "Seol-Bin Jung",
+      "pass_outcome": "Out",
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 21,
+      "second": 29,
+      "passer": "Amel Majri",
+      "pass_outcome": "Incomplete",
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 23,
+      "second": 51,
+      "passer": "Ga\u00ebtane Thiney",
+      "pass_outcome": "Incomplete",
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "ff903588-8838-492a-8487-31f98f3ad03f",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 26,
+      "second": 16,
+      "passer": "Ga\u00ebtane Thiney",
+      "pass_outcome": null,
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 32,
+      "second": 28,
+      "passer": "Amel Majri",
+      "pass_outcome": null,
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 33,
+      "second": 50,
+      "passer": "Amel Majri",
+      "pass_outcome": "Incomplete",
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 34,
+      "second": 52,
+      "passer": "Ga\u00ebtane Thiney",
+      "pass_outcome": null,
+      "assisted_shot_id": "03d36e9d-f65b-4bd4-b0c6-25aaef30fcec",
+      "link_status": "Verified reciprocal link",
+      "linked_shot_goal": true
+    },
+    {
+      "id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 45,
+      "second": 17,
+      "passer": "Ga\u00ebtane Thiney",
+      "pass_outcome": null,
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+      "team": "France Women's",
+      "period": 1,
+      "minute": 46,
+      "second": 55,
+      "passer": "Amel Majri",
+      "pass_outcome": null,
+      "assisted_shot_id": "77d54b1d-9be2-4585-a2cf-437cd06e72ec",
+      "link_status": "Verified reciprocal link",
+      "linked_shot_goal": true
+    },
+    {
+      "id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+      "team": "France Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 0,
+      "passer": "Amel Majri",
+      "pass_outcome": "Incomplete",
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+      "team": "France Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 20,
+      "passer": "Amel Majri",
+      "pass_outcome": "Incomplete",
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    },
+    {
+      "id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+      "team": "France Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 40,
+      "passer": "Amel Majri",
+      "pass_outcome": "Incomplete",
+      "assisted_shot_id": null,
+      "link_status": "No assisted-shot link recorded",
+      "linked_shot_goal": null
+    }
+  ],
+  "teams": [
+    {
+      "team": "France Women's",
+      "deliveries": 13,
+      "direct_linked_shots": 2,
+      "direct_linked_goals": 2,
+      "recorded_direct_shot_link_rate": 0.15384615384615385,
+      "recorded_direct_goal_link_rate": 0.15384615384615385,
+      "delivery_ids": [
+        "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+        "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+        "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+        "2ad14217-1259-4422-9abe-2cc927ca1344",
+        "ff903588-8838-492a-8487-31f98f3ad03f",
+        "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+        "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+        "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+        "ec9993d9-53a4-4138-8469-ff141b9ce263",
+        "e3c44f60-372f-4e80-a007-14447e0e4956",
+        "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+        "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+        "c1a39826-a54d-4d58-9acf-b4647d7cc7ef"
+      ],
+      "halves": [
+        {
+          "period": 1,
+          "deliveries": 10,
+          "direct_linked_shots": 2,
+          "direct_linked_goals": 2,
+          "recorded_direct_shot_link_rate": 0.2,
+          "recorded_direct_goal_link_rate": 0.2,
+          "delivery_ids": [
+            "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+            "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+            "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+            "2ad14217-1259-4422-9abe-2cc927ca1344",
+            "ff903588-8838-492a-8487-31f98f3ad03f",
+            "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+            "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+            "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+            "ec9993d9-53a4-4138-8469-ff141b9ce263",
+            "e3c44f60-372f-4e80-a007-14447e0e4956"
+          ]
+        },
+        {
+          "period": 2,
+          "deliveries": 3,
+          "direct_linked_shots": 0,
+          "direct_linked_goals": 0,
+          "recorded_direct_shot_link_rate": 0.0,
+          "recorded_direct_goal_link_rate": 0.0,
+          "delivery_ids": [
+            "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+            "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+            "c1a39826-a54d-4d58-9acf-b4647d7cc7ef"
+          ]
+        }
+      ]
+    },
+    {
+      "team": "Korea Republic Women's",
+      "deliveries": 1,
+      "direct_linked_shots": 0,
+      "direct_linked_goals": 0,
+      "recorded_direct_shot_link_rate": 0.0,
+      "recorded_direct_goal_link_rate": 0.0,
+      "delivery_ids": [
+        "e1fc2300-9add-448c-aaa3-d3cd811eabfb"
+      ],
+      "halves": [
+        {
+          "period": 1,
+          "deliveries": 1,
+          "direct_linked_shots": 0,
+          "direct_linked_goals": 0,
+          "recorded_direct_shot_link_rate": 0.0,
+          "recorded_direct_goal_link_rate": 0.0,
+          "delivery_ids": [
+            "e1fc2300-9add-448c-aaa3-d3cd811eabfb"
+          ]
+        },
+        {
+          "period": 2,
+          "deliveries": 0,
+          "direct_linked_shots": 0,
+          "direct_linked_goals": 0,
+          "recorded_direct_shot_link_rate": null,
+          "recorded_direct_goal_link_rate": null,
+          "delivery_ids": []
+        }
+      ]
+    }
+  ],
+  "scope": "All period-1/2 corner pass events, including incomplete/out. Recorded direct assisting links only; not all corner-phase shots or goals, corners awarded, causal effectiveness or fresh model validation."
+}

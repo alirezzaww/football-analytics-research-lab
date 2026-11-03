@@ -526,3 +526,7 @@ to the teams and data actually analysed.
 ### 2026-11-03 · Lesson 34: explicit assisting-pass joins
 
 Prepared assisted inspection of all three existing headers. Two Renard goals follow linked corner passes; Thiney off-target header follows a cross-flagged pass. Covered reciprocal IDs, missing-link handling, added-time periods, shot type versus attacking phase, and the denominator needed for corner efficiency. No video reviewed or model changed; independent interpretation pending.
+
+### 2026-11-03 · Lesson 35: corner denominators
+
+Prepared assisted count of all corner deliveries: France 13 (10 first half, 3 second half), Korea Republic 1. France has 2 verified direct shot links, both goals: 2/13=15.38%. Covered inclusion of incomplete deliveries, direct links versus later phase chances, selected-chance versus delivery denominators, and small-sample limits. Independent explanation pending.

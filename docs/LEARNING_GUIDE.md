@@ -121,3 +121,7 @@ Run `33_shot_body_part_context.py` and read [the body-part lesson](../lessons/00
 ## Lesson 34: trace a chance through linked event IDs
 
 Run `34_header_assisting_passes.py` and read [the header-link lesson](../lessons/0016-header-assisting-passes.html). Explain the reciprocal ID join and why selecting headers cannot establish corner conversion efficiency.
+
+## Lesson 35: define a corner rate
+
+Run `35_corner_delivery_rates.py` and read [the denominator lesson](../lessons/0017-corner-delivery-rates.html). Explain why 2/2 and 2/13 answer different questions, and why no direct shot link does not prove no later chance.

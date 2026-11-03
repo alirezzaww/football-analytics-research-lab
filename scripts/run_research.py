@@ -29,6 +29,7 @@ STAGES = [
     "32_shot_volume_quality.py",
     "33_shot_body_part_context.py",
     "34_header_assisting_passes.py",
+    "35_corner_delivery_rates.py",
     "scripts/check_evidence.py",
 ]
 

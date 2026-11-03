@@ -162,3 +162,7 @@ Reconstructed the existing match ledger against hash-verified raw events, then j
 ### Lesson 34 (2026-11-03)
 
 Executed all-three-header pass inspection with raw SHA256 verification. Tests cover valid reciprocal links, absent/unavailable links and mismatched type/team/period/order/possession/shot IDs. Saved evidence reconciliation checks header identity and unchanged probabilities; cached raw events additionally verify pass attributes and context. Inspected the three-panel chart. No new model or video review.
+
+### Lesson 35 (2026-11-03)
+
+Executed all-corner selection with the existing raw hash check. Unit tests verify inclusion of unlinked deliveries and distinguish zero observed rates from undefined empty exposure. Evidence checker reconstructs all raw corner IDs, direct reciprocal links, team/half summaries and denominators when cached; saved aggregate reconciliation is cache-free. Chart inspected. No xG model changes.
