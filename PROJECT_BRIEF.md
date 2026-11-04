@@ -187,3 +187,7 @@ validation. See [the report](reports/11_training_distance_support.md).
 ## Phase 2: France tournament corner phases
 
 The first multi-match set-piece block applies a fixed 15-second, same-possession phase rule to all five France fixtures, including extra time: 45 recorded deliveries, 19 associated with shots, 21 unique associated attempts and two goals. [The report](reports/21_france_tournament_corner_study.md) documents fixture selection, boundaries, pooled denominators and small-sample limitations. This is an assisted descriptive study, not causal set-piece valuation.
+
+## Phase 3: value ball progression
+
+The first expected-threat exercise fits a coarse 6×4 location model from both teams in the five existing France fixtures. It demonstrates fitted zone values, successful movement transitions and signed completed-pass changes. [The report](reports/27_first_expected_threat.md) preserves all selection rules and training-only limits; no new-season reliability or causal player-value claim is made.

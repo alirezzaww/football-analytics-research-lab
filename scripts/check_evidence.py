@@ -1390,3 +1390,82 @@ for cell in review['review_queue']:
         selected_keys.append((expected_example['match_id'], expected_example['corner_id']))
 assert len(set(selected_keys)) == len(selected_keys)
 print('PASS: review queue candidates, source timing, deliberate example selection and unreviewed status reconcile.')
+
+xt = json.loads((ROOT / 'data/44_first_xt_evidence.json').read_text())
+assert xt['source_path'] == 'data/38_france_corner_study_evidence.json'
+assert hashlib.sha256((ROOT / xt['source_path']).read_bytes()).hexdigest() == xt['source_sha256']
+assert xt['raw_inputs'] == [m['raw_input'] for m in study['matches']]
+assert xt['grid'] == {'nx': 6, 'ny': 4, 'row_direction': 'y=0 to y=80', 'attack_direction': 'x=0 to x=120'}
+def xt_cell(point):
+    if not isinstance(point, list) or len(point) < 2 or not all(isinstance(v, (int, float)) and math.isfinite(v) for v in point[:2]):
+        return None
+    x, y = point[:2]
+    return min(int(y / 20), 3) * 6 + min(int(x / 20), 5) if 0 <= x <= 120 and 0 <= y <= 80 else None
+actions = xt['actions']
+assert len({(r['match_id'], r['id']) for r in actions}) == len(actions)
+counts = [0] * 24; goals = [0] * 24; transition_counts = [[0] * 24 for _ in range(24)]
+for row in actions:
+    i = row['start_cell']; counts[i] += 1; goals[i] += row['goal']
+    assert i == xt_cell(row['start']) and i is not None
+    assert row['end_cell'] == xt_cell(row['end'])
+    assert row['type'] in ['Pass', 'Carry', 'Shot']
+    assert row['goal'] in (0, 1)
+    if row['type'] != 'Shot':
+        assert row['goal'] == 0
+    if row['successful_move']:
+        assert row['type'] != 'Shot' and row['end_cell'] is not None
+        transition_counts[i][row['end_cell']] += 1
+model = xt['model']; values = model['zone_values']
+assert model['action_counts'] == counts
+assert model['goal_counts'] == goals
+assert model['successful_move_counts'] == transition_counts
+assert len(values) == 24 and all(0 <= v <= 1 for v in values)
+for i in range(24):
+    reward = goals[i] / counts[i] if counts[i] else 0
+    assert math.isclose(model['immediate_goal_per_action'][i], reward, abs_tol=1e-15)
+    for j in range(24):
+        expected = transition_counts[i][j] / counts[i] if counts[i] else 0
+        assert math.isclose(model['successful_transition_per_action'][i][j], expected, abs_tol=1e-15)
+    assert reward + sum(model['successful_transition_per_action'][i]) <= 1 + 1e-12
+residual = max(abs(values[i] - model['immediate_goal_per_action'][i] - sum(model['successful_transition_per_action'][i][j] * values[j] for j in range(24))) for i in range(24))
+assert math.isclose(residual, model['fixed_point_residual'], abs_tol=1e-15) and residual < 1e-12
+assert 1 <= model['iterations'] <= 10000 and model['max_update'] <= 1e-12
+assert [r['label'] for r in xt['examples']] == ['Positive', 'Zero', 'Negative']
+for example in xt['examples']:
+    original = next(r for r in actions if (r['match_id'], r['id']) == (example['match_id'], example['id']))
+    assert {k: v for k, v in example.items() if k not in ['label', 'start_xt', 'end_xt', 'added_xt']} == original
+    assert original['type'] == 'Pass' and original['successful_move']
+    assert example['start_xt'] == values[original['start_cell']]
+    assert example['end_xt'] == values[original['end_cell']]
+    assert math.isclose(example['added_xt'], example['end_xt'] - example['start_xt'], abs_tol=1e-15)
+    sign = 'Positive' if example['added_xt'] > 1e-12 else 'Negative' if example['added_xt'] < -1e-12 else 'Zero'
+    assert example['label'] == sign
+all_raw_available = all((ROOT / record['relative_path']).exists() for record in xt['raw_inputs'])
+if all_raw_available:
+    reconstructed = []; excluded_counts = {}
+    for record in xt['raw_inputs']:
+        raw = ROOT / record['relative_path']
+        assert hashlib.sha256(raw.read_bytes()).hexdigest() == record['sha256']
+        for event in sorted(json.loads(raw.read_text()), key=lambda r: r['index']):
+            kind = event['type']['name']
+            if kind not in ['Pass', 'Carry', 'Shot']:
+                continue
+            reason = None
+            if event['period'] not in (1, 2, 3, 4): reason = 'shootout_or_other_period'
+            elif event['team']['id'] != event['possession_team']['id']: reason = 'event_team_not_possession_team'
+            elif kind == 'Pass' and event['pass'].get('type', {}).get('name') in ['Corner', 'Free Kick', 'Throw-in', 'Goal Kick', 'Kick Off']: reason = 'restart_pass'
+            elif kind == 'Shot' and event['shot']['type']['name'] == 'Penalty': reason = 'penalty_shot'
+            elif xt_cell(event.get('location')) is None: reason = 'invalid_or_outside_start'
+            if reason:
+                excluded_counts[reason] = excluded_counts.get(reason, 0) + 1; continue
+            end = event.get(kind.lower(), {}).get('end_location') if kind != 'Shot' else None
+            destination = xt_cell(end)
+            reconstructed.append({'match_id': record['match_id'], 'id': event['id'], 'index': event['index'],
+                'team': event['team']['name'], 'player': event['player']['name'], 'type': kind,
+                'start': event['location'][:2], 'end': end[:2] if isinstance(end, list) else None,
+                'start_cell': xt_cell(event['location']), 'end_cell': destination,
+                'successful_move': kind != 'Shot' and destination is not None and (kind == 'Carry' or 'outcome' not in event['pass']),
+                'goal': int(kind == 'Shot' and event['shot']['outcome']['name'] == 'Goal')})
+    assert reconstructed == actions
+    assert excluded_counts == xt['excluded_action_counts']
+print('PASS: first xT action selection, failed-move denominators, transition counts, fixed point and pass examples reconcile.')

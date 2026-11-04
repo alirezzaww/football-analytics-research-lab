@@ -299,3 +299,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Turn the event study into a video-review brief
 
 [Lesson 43](lessons/0025-corner-video-review-brief.html) prepares [six sourced review examples](reports/26_corner_video_review_brief.md) across five opponents, covering endpoint zones and phase-shot outcomes. Run `python 43_corner_video_review_brief.py` to regenerate the queue and report. The brief is complete; video observations remain unreviewed and the purposive examples are not an estimation sample.
+
+## Phase 3: expected threat and ball progression
+
+[Lesson 44](lessons/0026-first-expected-threat.html) fits a [first educational position-based xT model](reports/27_first_expected_threat.md) using 6,770 selected actions from both teams in five fixtures. The 6×4 grid values completed passes as destination value minus starting value. Run `python 44_first_expected_threat.py`. This is a training exercise, without independent validation or player-ranking claims.

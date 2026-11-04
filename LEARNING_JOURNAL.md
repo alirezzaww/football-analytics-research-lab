@@ -562,3 +562,7 @@ Completed assisted endpoint join and map: six-yard box 15 deliveries / 5 with ph
 ### 2026-11-04 · Lesson 43: evidence to review brief
 
 Completed assisted preparation of six corner examples across all five opponents, one phase-shot and one no-phase-shot example per endpoint zone, preferring fixture variety. Generated exact event references and observation questions, with video observations explicitly unknown. Covered deliberate selection versus representative sampling and event-clock versus video-file time. No footage accessed or reviewed; independent mastery not claimed.
+
+### 2026-11-04 · Phase 3 / Lesson 44: expected threat
+
+Completed assisted first position-based xT fit: 6×4 zones, 6,770 selected actions (3,447 passes, 3,204 carries, 119 shots/11 goals), both teams in five fixtures. Preserved failed moves in denominators, verified convergence and saved actual positive/zero/negative completed-pass examples. Covered zone-value changes versus shot xG, coarse-cell limitations and training-only scope. Independent understanding pending.

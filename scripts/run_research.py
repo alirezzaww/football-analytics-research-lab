@@ -38,6 +38,7 @@ STAGES = [
     "41_corner_side_context.py",
     "42_corner_endpoint_zones.py",
     "43_corner_video_review_brief.py",
+    "44_first_expected_threat.py",
     "scripts/check_evidence.py",
 ]
 

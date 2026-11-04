@@ -52,3 +52,5 @@ video review remain future project work. No community participation has been req
 - [Whitecaps analysts: attacking corners](https://www.whitecapsfc.com/news/analysts-corner-attacking-corners) — club analyst definitions of inswinging and outswinging deliveries; used in lesson 39 alongside the StatsBomb technique specification.
 
 - [StatsBomb Working with R](https://blogarchive.statsbomb.com/uploads/2021/11/Working-with-R.pdf) — provider coordinate reference with penalty-area and six-yard-box rectangles; used for lesson 42 spatial bins.
+
+- [Soccermatics: position-based expected threat](https://soccermatics.readthedocs.io/en/latest/gallery/lesson4/plot_ExpectedThreat.html) and [mplsoccer xT tutorial](https://mplsoccer.readthedocs.io/en/latest/gallery/tutorials/plot_xt.html) — primary method sources for lesson 44; our model uses its own coarse grid, action scope and saved evidence.

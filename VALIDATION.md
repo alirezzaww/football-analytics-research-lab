@@ -198,3 +198,7 @@ Executed hash-verified endpoint join. Tests cover nested box boundaries, unknown
 ### Lesson 43 (2026-11-04)
 
 Executed hash-verified candidate timing join and deliberate six-cell selection. Unit tests check fixture-variety preference, explicit missing cells and exact report regeneration without network. Evidence checks reconcile all 45 original records, cached raw event times, source/protocol digests and selected event IDs; unreviewed video status is explicit. No footage or tactical coding was fabricated.
+
+### Phase 3 / Lesson 44 (2026-11-04)
+
+Executed the first coarse xT fit with all five raw hashes verified. Unit tests cover coordinate edges, failed-move denominators and known fixed-point solutions. Evidence checks reconstruct raw action selection when cached, counts, goal rewards and transition weights; verify probability mass, fixed-point residual and exact signed pass scores. Figure inspected. Numerical convergence is not an independent reliability test.
