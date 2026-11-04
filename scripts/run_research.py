@@ -40,6 +40,7 @@ STAGES = [
     "43_corner_video_review_brief.py",
     "44_first_expected_threat.py",
     "45_failed_pass_value.py",
+    "46_pass_decision_expected_value.py",
     "scripts/check_evidence.py",
 ]
 

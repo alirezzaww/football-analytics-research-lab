@@ -206,3 +206,7 @@ Executed the first coarse xT fit with all five raw hashes verified. Unit tests c
 ### Lesson 45 (2026-11-04)
 
 Executed outcome join after reproducing/verifying the source xT fit. Tests cover signed completed scores, no failed-endpoint credit, unknown/injury-clearance exclusions and zero versus unscorable values. Evidence checks reconcile all original passes, cached raw outcomes, formula/status, coverage and aggregate sums. Figure inspected. Failure cost is a diagnostic assumption, not a validated complete action-value model.
+
+### Lesson 46 (2026-11-04)
+
+Executed cache-free weighted-value exercise. Tests verify probability endpoints, nonzero failure continuation, invalid probabilities and equality thresholds. Evidence checks reconcile fixed source cells/values, assumed probabilities and weighted expectations. Chart inspected. No fitted completion model, observed-option reconstruction or tactical recommendation.

@@ -570,3 +570,7 @@ Completed assisted first position-based xT fit: 6×4 zones, 6,770 selected actio
 ### 2026-11-04 · Lesson 45: unsuccessful attempts
 
 Completed assisted outcome join and explicit zero-continuation diagnostic. France selected passes: 1,723 completed, 367 unsuccessful scored under the assumption, 7 Unknown excluded. Standard completed-pass sum +3.767; combined scenario -4.341. Covered endpoint credit, outcome coverage and distinction between a diagnostic extension and standard successful-move xT. Independent mastery not claimed.
+
+### 2026-11-04 · Lesson 46: expected decision value
+
+Completed assisted hypothetical pass-choice exercise with actual fitted zone values, assumed completion probabilities and zero failure continuation. Covered weighted expectations, break-even comparisons and decision quality versus realized outcome. No completion model or actual passing alternatives were inferred. Independent mastery not claimed.

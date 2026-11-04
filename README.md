@@ -307,3 +307,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Check what successful-pass xT omits
 
 [Lesson 45](lessons/0027-failed-pass-value.html) adds a [clearly labelled failure-cost scenario](reports/28_failed_pass_value.md), alongside standard completed-pass xT. Unknown outcomes remain excluded, and zero continuation is an assumption rather than verified possession loss. Run `python 45_failed_pass_value.py`; this is not a complete performance rating or a new model.
+
+## Compare hypothetical pass risk and reward
+
+[Lesson 46](lessons/0028-pass-decision-expected-value.html) completes a [probability-weighted decision exercise](reports/29_pass_decision_expected_value.md) using saved grid values and explicitly assumed completion probabilities. Run `python 46_pass_decision_expected_value.py` without downloads. This is not an observed-options analysis or a trained pass-completion model.

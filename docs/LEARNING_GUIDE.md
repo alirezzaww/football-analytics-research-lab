@@ -165,3 +165,7 @@ Run `44_first_expected_threat.py`. [The lesson](../lessons/0026-first-expected-t
 ## Lesson 45: outcome coverage in pass valuation
 
 Run `45_failed_pass_value.py`. [The lesson](../lessons/0027-failed-pass-value.html) and [worked report](../reports/28_failed_pass_value.md) compare successful-pass scoring with an explicit assumed-loss scenario, preserving unknown outcomes and interpretation limits.
+
+## Lesson 46: probability-weighted options
+
+Run `46_pass_decision_expected_value.py`; [the lesson](../lessons/0028-pass-decision-expected-value.html) and [worked report](../reports/29_pass_decision_expected_value.md) compare a safer and riskier hypothetical option. Completion probabilities are assumptions, not learned predictions.

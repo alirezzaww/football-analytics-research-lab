@@ -1512,3 +1512,22 @@ for record in xt['raw_inputs']:
 expected_failure_example = next((r for r in scored_passes if r['team'] == "France Women's" and r['pass_outcome'] in ['Incomplete', 'Out', 'Pass Offside'] and r['recorded_endpoint_xt'] is not None and r['recorded_endpoint_xt'] > r['start_xt']), None)
 assert pass_value['illustrative_failed_pass'] == expected_failure_example
 print('PASS: completed-pass xT, raw outcomes, excluded coverage and explicit failure-cost scenario reconcile.')
+
+decision = json.loads((ROOT / 'data/46_pass_decision_evidence.json').read_text())
+assert decision['source_path'] == 'data/44_first_xt_evidence.json'
+assert hashlib.sha256((ROOT / decision['source_path']).read_bytes()).hexdigest() == decision['source_sha256']
+assert (decision['start_cell'], decision['safe_destination_cell'], decision['risky_destination_cell']) == (8, 9, 11)
+assert decision['start_value'] == values[8]
+assert decision['safe_destination_value'] == values[9]
+assert decision['risky_destination_value'] == values[11]
+assert decision['assumed_failure_value'] == 0
+assert [r['assumed_completion_probability'] for r in decision['options']] == [.9, .15, .2]
+for i, option in enumerate(decision['options']):
+    destination = values[9] if i == 0 else values[11]
+    assert option['destination_value'] == destination
+    p = option['assumed_completion_probability']
+    expected = p * destination + (1 - p) * decision['assumed_failure_value'] - values[8]
+    assert math.isclose(option['expected_value_change'], expected, abs_tol=1e-15)
+assert math.isclose(decision['riskier_probability_to_break_even_with_start'], values[8] / values[11])
+assert math.isclose(decision['riskier_probability_to_match_safer_option'], .9 * values[9] / values[11])
+print('PASS: hypothetical pass-choice probabilities, fitted source values, expected changes and equality thresholds reconcile.')

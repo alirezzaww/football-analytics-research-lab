@@ -1,0 +1,34 @@
+{
+  "source_path": "data/44_first_xt_evidence.json",
+  "source_sha256": "650afeb085369b9d2934814dafe7376ce5c4cae88876266b147c2cdadc5c1960",
+  "start_cell": 8,
+  "safe_destination_cell": 9,
+  "risky_destination_cell": 11,
+  "start_value": 0.013003533915021886,
+  "safe_destination_value": 0.018158387692363755,
+  "risky_destination_value": 0.10365248455114941,
+  "assumed_failure_value": 0,
+  "options": [
+    {
+      "name": "Safer option",
+      "destination_value": 0.018158387692363755,
+      "assumed_completion_probability": 0.9,
+      "expected_value_change": 0.0033390150081054927
+    },
+    {
+      "name": "Riskier option at 15%",
+      "destination_value": 0.10365248455114941,
+      "assumed_completion_probability": 0.15,
+      "expected_value_change": 0.002544338767650525
+    },
+    {
+      "name": "Riskier option at 20%",
+      "destination_value": 0.10365248455114941,
+      "assumed_completion_probability": 0.2,
+      "expected_value_change": 0.007726962995207996
+    }
+  ],
+  "riskier_probability_to_break_even_with_start": 0.1254531810919113,
+  "riskier_probability_to_match_safer_option": 0.1576667360545788,
+  "scope": "Hypothetical decision arithmetic, not observed passing alternatives or estimated completion probabilities. Zero failure continuation is assumed; grid values are training-only estimates. No real decision-quality judgment or live recommendation."
+}
