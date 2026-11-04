@@ -327,3 +327,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Test a recorded-pressure feature
 
 [Lesson 50](lessons/0032-pass-completion-pressure-feature.html) evaluates [origin plus recorded pressure](reports/33_pass_completion_pressure_feature.md) on the same folds. Pooled log loss changes only from 0.480395 to 0.479978, with two folds worsening. Run `python 50_pass_completion_pressure_feature.py`; the small exploratory difference is documented without a practical-upgrade claim.
+
+## Audit the data supporting each prediction
+
+[Lesson 51](lessons/0033-completion-group-support.html) audits [local fitting sample sizes and smoothing weights](reports/34_completion_group_support.md) without changing the pressure model. Of 444 flagged predictions, 224 use fewer than 20 local fitting examples. Run `python 51_completion_group_support.py`; counts and formula weights are not confidence guarantees.

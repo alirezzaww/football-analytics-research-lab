@@ -590,3 +590,7 @@ Completed assisted grouped calibration check of 3,430 existing out-of-fold proba
 ### 2026-11-04 · Lesson 50: pressure-feature experiment
 
 Completed assisted hierarchical origin/pressure model with fixed strengths 20/20. Same 3,430 passes, 444 pressure flags; pooled log loss .479978 vs .480395 origin-only. Three folds improve and two worsen. Covered feature experimentation, sparse groups, recorded-flag meaning and honest tiny-result reporting. No causal pressure effect, verified live feature availability or independent-mastery claim.
+
+### 2026-11-04 · Lesson 51: fitting support and smoothing
+
+Completed assisted support audit: 224/444 pressure-flagged predictions use subgroups with 1–19 training passes; 220 use 20–49. Familiar origin cell has 184 not-flagged versus 10 flagged fitting attempts; origin-reference weights are 9.80% versus 66.67%. Covered data fragmentation and formula weight versus confidence. No cause of score changes established; independent mastery not claimed.

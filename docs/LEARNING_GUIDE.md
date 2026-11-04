@@ -185,3 +185,7 @@ Run `49_completion_probability_calibration.py`; [the lesson](../lessons/0031-com
 ## Lesson 50: evaluate an extra feature
 
 Run `50_pass_completion_pressure_feature.py`. [The lesson](../lessons/0032-pass-completion-pressure-feature.html) and [worked report](../reports/33_pass_completion_pressure_feature.md) compare the same passes/folds with a recorded-pressure feature and hierarchical smoothing. Report the tiny, inconsistent result honestly.
+
+## Lesson 51: inspect local data support
+
+Run `51_completion_group_support.py`; [the lesson](../lessons/0033-completion-group-support.html) and [worked report](../reports/34_completion_group_support.md) explain sparse fitting groups and the existing smoothing formula.

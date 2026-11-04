@@ -226,3 +226,7 @@ Executed cache-free grouping of existing out-of-fold probabilities. Tests cover 
 ### Lesson 50 (2026-11-04)
 
 Executed raw pressure-flag join with all five SHA256 checks. Tests cover strict flag parsing, empty/sparse groups and held-out label isolation. Evidence checks reconcile exact source passes, cached raw flags, every fold-local count/prior, probabilities, origin-model reproduction and candidate metrics. Chart inspected. Exploratory feature experiment; no causal pressure effect or fresh validation.
+
+### Lesson 51 (2026-11-04)
+
+Executed cache-free diagnostic of existing pressure predictions. Tests cover count bands, reference weights and weighted-average equivalence. Evidence checks reconcile each original pass to its training subgroup, counts, raw rate, prior and unchanged probability; group memberships and examples reproduce. Figure inspected. No new fit, confidence interval or causal explanation.

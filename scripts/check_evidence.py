@@ -1730,3 +1730,43 @@ for metric_key, prediction_key in [('pooled_origin_metrics','origin_probability'
     assert math.isclose(metric['log_loss'], ll) and math.isclose(metric['brier_score'], bs)
 assert pressure['pooled_origin_metrics'] == completion_cv['pooled_zone_metrics']
 print('PASS: recorded-pressure tags, fold-local hierarchical counts, origin reproduction and candidate errors reconcile.')
+
+support_audit = json.loads((ROOT / 'data/51_completion_group_support_evidence.json').read_text())
+assert support_audit['source_path'] == 'data/50_pressure_feature_evidence.json'
+assert hashlib.sha256((ROOT / support_audit['source_path']).read_bytes()).hexdigest() == support_audit['source_sha256']
+support_rows = support_audit['predictions']
+assert [(r['match_id'], r['id']) for r in support_rows] == [(r['match_id'], r['id']) for r in pressure_rows]
+support_labels = ['No fitting passes','1–19 fitting passes','20–49 fitting passes','50+ fitting passes']
+pressure_fold_lookup = {f['held_out_match_id']: f for f in pressure['folds']}
+for row, original in zip(support_rows, pressure_rows):
+    fold = pressure_fold_lookup[row['match_id']]
+    group = next(g for g in fold['model']['groups'] if (g['cell'],g['pressure_flag']) == (original['start_cell'],original['pressure_flag']))
+    n = group['attempts']; count = group['completions']; strength = fold['model']['pressure_strength']
+    band = support_labels[0] if n==0 else support_labels[1] if n<20 else support_labels[2] if n<50 else support_labels[3]
+    assert row['pressure_flag'] == original['pressure_flag']
+    assert row['training_group_attempts'] == n and row['training_group_completions'] == count
+    assert row['support_band'] == band and row['smoothing_strength'] == strength
+    assert row['raw_group_completion_rate'] == (count/n if n else None)
+    assert row['origin_prior'] == group['origin_prior']
+    weight = strength/(n+strength)
+    assert math.isclose(row['prior_weight'], weight)
+    assert row['pressure_probability'] == original['pressure_probability']
+    expected = (1-weight)*(count/n) + weight*group['origin_prior'] if n else group['origin_prior']
+    assert math.isclose(row['pressure_probability'], expected)
+assert [g['support_band'] for g in support_audit['support_groups']] == support_labels
+for group in support_audit['support_groups']:
+    selected = [r for r in support_rows if r['support_band']==group['support_band']]
+    assert group['predictions'] == len(selected)
+    assert group['pressure_flagged_predictions'] == sum(r['pressure_flag'] for r in selected)
+    assert group['pass_keys'] == [{'match_id': r['match_id'],'id': r['id']} for r in selected]
+    if selected:
+        assert math.isclose(group['mean_prior_weight'], sum(r['prior_weight'] for r in selected)/len(selected))
+    else:
+        assert group['mean_prior_weight'] is None
+usa_fold = pressure_fold_lookup[69202]
+expected_examples = [g for g in usa_fold['model']['groups'] if g['cell']==8]
+assert len(support_audit['usa_cell_8_examples']) == len(expected_examples)
+for example, original in zip(support_audit['usa_cell_8_examples'],expected_examples):
+    assert {k:v for k,v in example.items() if k!='prior_weight'} == original
+    assert math.isclose(example['prior_weight'],20/(original['attempts']+20))
+print('PASS: fitting-group support, smoothing weights, complete membership and unchanged probabilities reconcile.')
