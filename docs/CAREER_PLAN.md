@@ -18,12 +18,12 @@ These few sources illustrate requirements, not a complete labour-market survey o
 
 The repository contains guided implementations in Python, event filtering, spatial reporting, model checking and documented limitations. The [concise France corner case study](../reports/36_france_corner_portfolio_case_study.md) is a readable work sample; it links to the code and evidence. Prepared work is not the same as independently demonstrated skill.
 
-Independent Python fluency is still to demonstrate. SQL/database work, completed video observation, BI tools and live club experience have not been established by this project. Do not add them as mastered skills to a CV. Do not equate saved automated tests with independent analyst judgment.
+Independent Python fluency is still to demonstrate. A first guided SQLite exercise is now implemented; independent SQL competence, completed video observation, BI tools and live club experience have not been demonstrated. Do not add them as mastered skills to a CV. Do not equate saved automated tests with independent analyst judgment.
 
 ## Next employment milestones
 
 1. **Explain and reproduce one case study.** Alireza should run it, explain its denominator and one finding, and make a small documented change without having the assistant perform every step. Record that evidence after completion.
-2. **Add a practical SQL block.** Use the existing football dataset to create tables and query match/team/player aggregates, joins and denominators. A small reproducible database exercise gives a concrete skill beyond model experiments. This is the proposed next technical lesson, not a completed skill.
+2. **Develop the practical SQL block.** Lesson 54 now implements a guided table/load/query exercise on existing corner data. Independently reproduce it, then extend to joins, match/team/player aggregates and denominators. A first implementation is not completed SQL competence.
 3. **Complete a video observation exercise when footage is available.** Use the sourced six-event review brief, record actual video references and observable actions. The existing queue is preparation only.
 4. **Build an independent second case study.** Choose a bounded question on unfamiliar matches, define rules, implement the core analysis, and write a concise audience-focused report. Preserve assistant contribution honestly.
 5. **Prepare targeted application materials.** Use an accurate CV and two defensible work samples, plus a short explanation of methods and findings. Tailor to a verified role rather than claiming every analyst title fits.

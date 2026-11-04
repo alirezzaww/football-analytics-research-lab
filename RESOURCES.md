@@ -64,3 +64,5 @@ video review remain future project work. No community participation has been req
 - StatsBomb Open Data specification revisited for lesson 50 event-level `under_pressure` field. The model treats only explicit true as flagged; absent/null/false is not verified absence of real defensive pressure.
 
 - Employer requirements reviewed 4 November 2026: [Pluto careers](https://www.plutodata.co.uk/careers), [Newcastle scouting role, expired 2 November](https://careers.newcastleunited.com/job/scouting-analyst-africa-6063955), and [Blackburn lead academy role via UK Sport, listed deadline 10 November](https://www.uksport.gov.uk/global/jobs/blackburn-rovers-football--athletic-ltd/2026/11/10/lead-academy-analyst--youth-development-phase). Used as skill/role references with status and seniority distinctions in the employment plan, not as a suitable-job shortlist.
+
+- [SQLite SELECT](https://www.sqlite.org/lang_select.html) and [Python 3.11 sqlite3 tutorial](https://docs.python.org/3.11/library/sqlite3.html) — primary sources for lesson 54 database loading, read queries, filters and aggregates.

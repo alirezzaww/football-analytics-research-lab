@@ -238,3 +238,7 @@ Executed four grid candidates from committed pass starts/outcomes without downlo
 ### Lesson 53 (2026-11-04)
 
 Generated concise GitHub-readable and styled HTML case-study views from source-hashed corner evidence. Reconciled all headline facts, source/figure digests, output reproduction and local links. Inspected desktop layout at 1280 pixels and narrow layout in a 390-pixel iframe using headless Chrome; adjusted grid sizing to avoid overflow. Employer-source dates/status/seniority are documented in the career plan. Existing 104 unit tests and evidence/web checks passed. No new football model, completed video review or job application is implied.
+
+### Lesson 54 (2026-11-04)
+
+Built and queried the SQLite database locally. Tests cover all-corner denominators with multiple shots, apostrophe-safe value binding, duplicate primary keys, inconsistent indicators and undefined empty rates. Evidence checks reconcile schema/query/source hashes, every source row, original aggregates, extra-time IDs and fresh in-memory query execution; optional generated database integrity/results are checked read-only. No raw downloads or new model.

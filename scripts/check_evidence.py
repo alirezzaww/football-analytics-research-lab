@@ -1868,3 +1868,47 @@ print('PASS: portfolio case-study facts, source references, generated report and
 
 assert (ROOT/'reports/36_france_corner_portfolio_case_study.md').read_text() == case_renderer.render_markdown(portfolio_case)
 print('PASS: GitHub-readable case-study version reproduces from the same evidence.')
+
+first_sql=json.loads((ROOT/'data/54_first_sql_evidence.json').read_text())
+assert first_sql['source_path']=='data/38_france_corner_study_evidence.json'
+assert hashlib.sha256((ROOT/first_sql['source_path']).read_bytes()).hexdigest()==first_sql['source_sha256']
+for record in first_sql['sql_files'].values():
+    assert hashlib.sha256((ROOT/record['path']).read_bytes()).hexdigest()==record['sha256']
+expected_sql_rows=[]
+for match_record in study['matches']:
+    for phase_record in match_record['phases']:
+        expected_sql_rows.append({'match_id':match_record['fixture']['match_id'],'corner_id':phase_record['corner_id'],
+            'match_date':match_record['fixture']['match_date'],'opponent':match_record['opponent'],
+            'period':phase_record['period'],'minute':phase_record['minute'],'second':phase_record['second'],
+            'phase_shots':len(phase_record['shots']),'phase_goals':sum(s['goal'] for s in phase_record['shots']),
+            'has_phase_shot':int(bool(phase_record['shots']))})
+assert first_sql['rows']==expected_sql_rows
+assert len({(r['match_id'],r['corner_id']) for r in first_sql['rows']})==len(first_sql['rows'])
+first_sql_total=first_sql['queries']['overall'][0]
+assert first_sql_total['deliveries']==study['pooled']['deliveries']
+assert first_sql_total['corners_with_shot']==study['pooled']['corners_with_phase_shot']
+assert first_sql_total['phase_shots']==study['pooled']['phase_shots']
+assert first_sql_total['phase_goals']==study['pooled']['phase_shot_goals']
+assert math.isclose(first_sql_total['corner_shot_rate_pct'],study['pooled']['phase_shot_rate']*100)
+assert len(first_sql['queries']['by_opponent'])==len(study['matches'])
+for row,match_record in zip(first_sql['queries']['by_opponent'],study['matches']):
+    assert row['opponent']==match_record['opponent']
+    assert row['deliveries']==match_record['deliveries']
+    assert row['corners_with_shot']==match_record['corners_with_phase_shot']
+    assert row['phase_shots']==match_record['phase_shots']
+    assert row['phase_goals']==match_record['phase_shot_goals']
+    assert math.isclose(row['corner_shot_rate_pct'],match_record['phase_shot_rate']*100)
+expected_extra=[{k:r[k] for k in ['match_id','corner_id','opponent','period','minute','second']} for r in sorted(expected_sql_rows,key=lambda r:(r['match_date'],r['period'],r['minute'],r['second'],r['corner_id'])) if r['period'] in (3,4)]
+assert first_sql['queries']['extra_time']==expected_extra
+spec=importlib.util.spec_from_file_location('football_sql_audit',ROOT/'54_first_football_sql.py')
+sql_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(sql_module)
+assert first_sql==sql_module.build_evidence()
+import sqlite3
+from contextlib import closing
+local_database=ROOT/first_sql['generated_database']
+if local_database.exists():
+    with closing(sqlite3.connect(local_database.as_uri()+'?mode=ro',uri=True)) as con:
+        assert con.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+        assert sql_module.query_results(con)==first_sql['queries']
+        assert [dict(r) for r in con.execute('SELECT * FROM corners ORDER BY match_id,corner_id')] == sorted(expected_sql_rows,key=lambda r:(r['match_id'],r['corner_id']))
+print('PASS: SQL schema/query hashes, corner row grain, grouped denominators and optional local database reconcile.')

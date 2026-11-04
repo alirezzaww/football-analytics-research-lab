@@ -1,0 +1,692 @@
+{
+  "source_path": "data/38_france_corner_study_evidence.json",
+  "source_sha256": "353929aa215afb1f8bd39ee7c4ebb08b5cc554d1c78cb506d50bb55ec5db13e5",
+  "sql_files": {
+    "schema": {
+      "path": "sql/54_schema.sql",
+      "sha256": "3021f83b8bd46977b1e808c2c9b0f575a04bcabf3f388e2f50ed5836f0d9df3e"
+    },
+    "overall": {
+      "path": "sql/54_overall.sql",
+      "sha256": "5e57307defb20593e2a68c5b354f2a575fdbaf30284d989db7a867f137c5f06b"
+    },
+    "by_opponent": {
+      "path": "sql/54_by_opponent.sql",
+      "sha256": "ea6cb7f7c80e61fbc407495f934ae621eb9aa2cac9c66ba29dcf342c05569a82"
+    },
+    "extra_time": {
+      "path": "sql/54_extra_time.sql",
+      "sha256": "94a559c22f3d6ccc6566ccd8c5570d07452b91d66bde1ad266972223ceafdeea"
+    },
+    "sample": {
+      "path": "sql/54_sample.sql",
+      "sha256": "65c98c104f088cc84a04dfebfb8f5905e0bb65c3713eb02bb518137239eb7a66"
+    }
+  },
+  "row_definition": "One row per recorded France corner delivery; includes incomplete and no-shot deliveries. Existing phase rules unchanged.",
+  "rows": [
+    {
+      "match_id": 22921,
+      "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 8,
+      "second": 10,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 12,
+      "second": 11,
+      "phase_shots": 2,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 21,
+      "second": 29,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 23,
+      "second": 51,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 26,
+      "second": 16,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 32,
+      "second": 28,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 33,
+      "second": 50,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 34,
+      "second": 52,
+      "phase_shots": 1,
+      "phase_goals": 1,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 45,
+      "second": 17,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 1,
+      "minute": 46,
+      "second": 55,
+      "phase_shots": 1,
+      "phase_goals": 1,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 0,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 20,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+      "match_date": "2019-06-07",
+      "opponent": "Korea Republic Women's",
+      "period": 2,
+      "minute": 53,
+      "second": 40,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "706ed468-34b9-4562-8dfa-fa03c2f58cf2",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 1,
+      "minute": 4,
+      "second": 32,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "d2bf6141-e552-4b71-aa71-c53d6392a8d4",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 1,
+      "minute": 16,
+      "second": 53,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "53cfdc02-7047-42ef-bcbd-efa23cd52551",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 1,
+      "minute": 25,
+      "second": 25,
+      "phase_shots": 2,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "37f27fcd-70b1-4e4a-987e-d86589934554",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 1,
+      "minute": 38,
+      "second": 42,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "3aa1ac58-5703-4826-8cc4-66de93b93cf9",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 1,
+      "minute": 44,
+      "second": 59,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "959db788-b5b0-4e3d-b8b5-453ab33bc243",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 2,
+      "minute": 50,
+      "second": 5,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "cd284f1b-ead2-47f7-9262-37ecd86a01ea",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 2,
+      "minute": 59,
+      "second": 34,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "e58a4fd7-0074-4807-bc3d-433f22794dd1",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 2,
+      "minute": 61,
+      "second": 57,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "aa1bba1a-49f0-446a-aa0c-7ae995edbc61",
+      "match_date": "2019-06-12",
+      "opponent": "Norway Women's",
+      "period": 2,
+      "minute": 91,
+      "second": 34,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "d562d240-7ca7-42ca-b070-1903214b7d78",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 1,
+      "minute": 9,
+      "second": 50,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "e626c1b0-270b-4dae-ac24-2ce37bb98fe5",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 1,
+      "minute": 11,
+      "second": 15,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "3c23ffce-1c2e-4957-81f5-fc8dad0e7846",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 1,
+      "minute": 16,
+      "second": 40,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "858e59fe-db8a-423d-9632-fd2dc09c032e",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 1,
+      "minute": 32,
+      "second": 30,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "e3c4cf98-37f0-46ae-bf3e-463c4267e490",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 2,
+      "minute": 55,
+      "second": 51,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "09403170-a74c-4173-9621-74819b9396ea",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 2,
+      "minute": 64,
+      "second": 5,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "82c00f82-bc17-4969-8411-eb4e3250f6d5",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 2,
+      "minute": 71,
+      "second": 3,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "eab50457-0960-44cf-a56d-6df840ce8f49",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 2,
+      "minute": 94,
+      "second": 15,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "79313db5-366f-422f-b6fc-20905849e2cc",
+      "match_date": "2019-06-17",
+      "opponent": "Nigeria Women's",
+      "period": 2,
+      "minute": 95,
+      "second": 15,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "6b9af7a2-b0a3-4349-811f-d676391b77b5",
+      "match_date": "2019-06-23",
+      "opponent": "Brazil Women's",
+      "period": 1,
+      "minute": 3,
+      "second": 22,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "309c806b-9222-42ac-aa5c-3d5d9fd2d111",
+      "match_date": "2019-06-23",
+      "opponent": "Brazil Women's",
+      "period": 1,
+      "minute": 5,
+      "second": 24,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "0466f6e9-18f1-437b-b87a-c72fafe60bfc",
+      "match_date": "2019-06-23",
+      "opponent": "Brazil Women's",
+      "period": 1,
+      "minute": 19,
+      "second": 53,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "407c30fc-6dbf-4657-a24b-91c9262f1bb0",
+      "match_date": "2019-06-23",
+      "opponent": "Brazil Women's",
+      "period": 2,
+      "minute": 56,
+      "second": 42,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "46008074-50c0-4e07-a2f0-5fa4bfe5ff60",
+      "match_date": "2019-06-23",
+      "opponent": "Brazil Women's",
+      "period": 3,
+      "minute": 99,
+      "second": 20,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "d0251944-2271-4cb7-ba76-5d94d896067d",
+      "match_date": "2019-06-23",
+      "opponent": "Brazil Women's",
+      "period": 3,
+      "minute": 104,
+      "second": 3,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "7c2b073d-bcaa-4a16-87e8-df8aa2cee49d",
+      "match_date": "2019-06-23",
+      "opponent": "Brazil Women's",
+      "period": 4,
+      "minute": 118,
+      "second": 45,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "98ca6d2c-85e1-42d6-8848-cf2299f70dfe",
+      "match_date": "2019-06-28",
+      "opponent": "United States Women's",
+      "period": 1,
+      "minute": 28,
+      "second": 47,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "270adf53-14f0-41a0-839b-3b8454cd02b8",
+      "match_date": "2019-06-28",
+      "opponent": "United States Women's",
+      "period": 1,
+      "minute": 31,
+      "second": 54,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "5d27dcd4-3e21-45ee-a6a3-dbb0ed3c942b",
+      "match_date": "2019-06-28",
+      "opponent": "United States Women's",
+      "period": 2,
+      "minute": 52,
+      "second": 13,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "3f8c36b4-0aaf-4bdd-9929-e022320c074a",
+      "match_date": "2019-06-28",
+      "opponent": "United States Women's",
+      "period": 2,
+      "minute": 56,
+      "second": 18,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "a7b5b310-6608-4df1-b03b-6979b6e37242",
+      "match_date": "2019-06-28",
+      "opponent": "United States Women's",
+      "period": 2,
+      "minute": 72,
+      "second": 56,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "b7dfeb21-5bab-4404-9b9f-14fddfd51c48",
+      "match_date": "2019-06-28",
+      "opponent": "United States Women's",
+      "period": 2,
+      "minute": 79,
+      "second": 7,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "has_phase_shot": 0
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "4b180bab-1634-40db-8482-7f4ac852b437",
+      "match_date": "2019-06-28",
+      "opponent": "United States Women's",
+      "period": 2,
+      "minute": 83,
+      "second": 13,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "has_phase_shot": 1
+    }
+  ],
+  "queries": {
+    "overall": [
+      {
+        "deliveries": 45,
+        "corners_with_shot": 19,
+        "phase_shots": 21,
+        "phase_goals": 2,
+        "corner_shot_rate_pct": 42.22222222222222
+      }
+    ],
+    "by_opponent": [
+      {
+        "opponent": "Korea Republic Women's",
+        "deliveries": 13,
+        "corners_with_shot": 6,
+        "phase_shots": 7,
+        "phase_goals": 2,
+        "corner_shot_rate_pct": 46.15384615384615
+      },
+      {
+        "opponent": "Norway Women's",
+        "deliveries": 9,
+        "corners_with_shot": 3,
+        "phase_shots": 4,
+        "phase_goals": 0,
+        "corner_shot_rate_pct": 33.333333333333336
+      },
+      {
+        "opponent": "Nigeria Women's",
+        "deliveries": 9,
+        "corners_with_shot": 4,
+        "phase_shots": 4,
+        "phase_goals": 0,
+        "corner_shot_rate_pct": 44.44444444444444
+      },
+      {
+        "opponent": "Brazil Women's",
+        "deliveries": 7,
+        "corners_with_shot": 2,
+        "phase_shots": 2,
+        "phase_goals": 0,
+        "corner_shot_rate_pct": 28.571428571428573
+      },
+      {
+        "opponent": "United States Women's",
+        "deliveries": 7,
+        "corners_with_shot": 4,
+        "phase_shots": 4,
+        "phase_goals": 0,
+        "corner_shot_rate_pct": 57.142857142857146
+      }
+    ],
+    "extra_time": [
+      {
+        "match_id": 69137,
+        "corner_id": "46008074-50c0-4e07-a2f0-5fa4bfe5ff60",
+        "opponent": "Brazil Women's",
+        "period": 3,
+        "minute": 99,
+        "second": 20
+      },
+      {
+        "match_id": 69137,
+        "corner_id": "d0251944-2271-4cb7-ba76-5d94d896067d",
+        "opponent": "Brazil Women's",
+        "period": 3,
+        "minute": 104,
+        "second": 3
+      },
+      {
+        "match_id": 69137,
+        "corner_id": "7c2b073d-bcaa-4a16-87e8-df8aa2cee49d",
+        "opponent": "Brazil Women's",
+        "period": 4,
+        "minute": 118,
+        "second": 45
+      }
+    ],
+    "sample": [
+      {
+        "opponent": "Korea Republic Women's",
+        "period": 1,
+        "minute": 8,
+        "second": 10,
+        "phase_shots": 0,
+        "has_phase_shot": 0
+      },
+      {
+        "opponent": "Korea Republic Women's",
+        "period": 1,
+        "minute": 12,
+        "second": 11,
+        "phase_shots": 2,
+        "has_phase_shot": 1
+      },
+      {
+        "opponent": "Korea Republic Women's",
+        "period": 1,
+        "minute": 21,
+        "second": 29,
+        "phase_shots": 1,
+        "has_phase_shot": 1
+      },
+      {
+        "opponent": "Korea Republic Women's",
+        "period": 1,
+        "minute": 23,
+        "second": 51,
+        "phase_shots": 0,
+        "has_phase_shot": 0
+      },
+      {
+        "opponent": "Korea Republic Women's",
+        "period": 1,
+        "minute": 26,
+        "second": 16,
+        "phase_shots": 0,
+        "has_phase_shot": 0
+      }
+    ]
+  },
+  "generated_database": "data/local/54_corners.sqlite3",
+  "scope": "SQL reproduces existing audited counts; it does not add observations, fit a model or establish independent SQL proficiency."
+}

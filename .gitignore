@@ -10,3 +10,6 @@ data/cache_2019_events/
 .env.*
 !.env.example
 *.log
+
+# Rebuildable local lesson databases; source SQL and evidence stay in Git.
+data/local/

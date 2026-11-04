@@ -602,3 +602,7 @@ Completed assisted fixed-settings grid comparison: pooled log loss 1 cell .50588
 ### 2026-11-04 · Lesson 53: portfolio communication and employment focus
 
 Completed assisted concise case study generated from existing corner evidence, with a supported review action and direct source/code links. Reviewed employer role descriptions and documented SQL, independent Python work, video observation and communication milestones. User is open to any location/remote/on-site; work rights and sponsorship needs remain unknown. No applications sent or independent mastery assumed.
+
+### 2026-11-04 · Lesson 54: first football SQL
+
+Completed assisted SQLite table/load/query exercise using one row per France corner delivery. SQL reproduces 45 deliveries, 19 shot-associated corners and 3 extra-time deliveries. Covered SELECT/FROM/COUNT/WHERE and provided grouped queries, parameterized loading and primary-key/check constraints. Independent first-half query remains pending; no SQL proficiency claim.

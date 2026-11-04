@@ -21,8 +21,8 @@
 
 These describe a guided project. Keep course/assistance attribution on the project
 page and explain your own contribution accurately. Do not claim independently written
-assistant-authored code, a production-quality xG model, causal inference, club impact, SQL or
-machine learning that this project has not demonstrated.
+assistant-authored code, a production-quality xG model, causal inference, club impact, SQL proficiency or broad
+machine-learning proficiency that this project has not demonstrated.
 
 Before presenting it as independently completed, reproduce the pipeline, explain the
 join and duplicate handling, justify denominators, interpret a figure, identify a
@@ -95,3 +95,7 @@ Do not describe this as completed video scouting: no footage has been reviewed i
 ## Concise case study for applications
 
 Use [France corner phases across five matches](../reports/36_france_corner_portfolio_case_study.md) as a readable work sample alongside the full source. It contains a football question, evidence, figure, review priority and limitations. Present it as guided research and distinguish your independent contribution. [The employment plan](CAREER_PLAN.md) records skills still to demonstrate; SQL, video observation and club work are not added as completed skills.
+
+## First guided SQL exercise
+
+Implemented a small SQLite load/query example reproducing corner counts, filters and opponent-group rates from existing evidence. This can be described as introductory guided SQL practice; it does not establish SQL proficiency, joins or production database experience. See [the worked exercise](../reports/37_first_football_sql.md).

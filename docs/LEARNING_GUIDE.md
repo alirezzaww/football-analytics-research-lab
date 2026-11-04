@@ -197,3 +197,7 @@ Run `52_completion_grid_resolution.py`. [The lesson](../lessons/0034-completion-
 ## Lesson 53: package a coach/employer case study
 
 Run `53_portfolio_case_study.py`. [The lesson](../lessons/0035-employer-facing-case-study.html) creates a concise [work sample](../reports/36_france_corner_portfolio_case_study.html) and connects it to [employment milestones](CAREER_PLAN.md). The report is assisted; independent explanation and implementation remain separate milestones.
+
+## Lesson 54: first football database query
+
+Run `54_first_football_sql.py` in Spyder. [The lesson](../lessons/0036-first-football-sql.html), [SQL reference](../reference/football-sql.html) and [worked report](../reports/37_first_football_sql.md) introduce one-corner row grain, counts, filters and grouped rates. No new package is required in the existing environment.

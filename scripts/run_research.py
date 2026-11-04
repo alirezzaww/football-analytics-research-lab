@@ -48,6 +48,7 @@ STAGES = [
     "51_completion_group_support.py",
     "52_completion_grid_resolution.py",
     "53_portfolio_case_study.py",
+    "54_first_football_sql.py",
     "scripts/check_evidence.py",
 ]
 
