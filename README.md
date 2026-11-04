@@ -353,3 +353,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## SQL grouping: compare opponent corner rates
 
 [Lesson 56](lessons/0038-sql-opponent-comparison.html) uses a [join-safe grouped query](reports/39_sql_opponent_comparison.md) to reproduce the five opponent rates. Run `python 56_sql_opponent_comparison.py`. Counts remain visible beside percentages; these single-match groups do not establish opponent defensive strength.
+
+## SQL match phases: label and compare corners
+
+[Lesson 57](lessons/0039-sql-match-phase-comparison.html) uses SQL CASE and recorded periods to [compare first-half, second-half and extra-time corner rates](reports/40_sql_match_phase_comparison.md). Run `python 57_sql_match_phase_comparison.py`. First half: 10/24 (41.7%); second half: 8/18 (44.4%). This small descriptive gap does not establish improvement after half-time.

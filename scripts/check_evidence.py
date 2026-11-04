@@ -1957,3 +1957,25 @@ for row in opponent_sql['rows']:
 assert sum(r['deliveries'] for r in opponent_sql['rows'])==45
 assert sum(r['corners_with_shot'] for r in opponent_sql['rows'])==19
 print('PASS: join-safe SQL opponent groups reproduce all five football match summaries.')
+
+phase_sql=json.loads((ROOT/'data/57_sql_match_phase_evidence.json').read_text())
+spec=importlib.util.spec_from_file_location('phase_sql_audit',ROOT/'57_sql_match_phase_comparison.py')
+phase_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(phase_module)
+assert phase_sql==phase_module.build_evidence()
+assert (ROOT/'reports/40_sql_match_phase_comparison.md').read_text()==phase_module.render_report(phase_sql)
+expected_phase_groups={}
+for match_record in study['matches']:
+    for corner_phase in match_record['phases']:
+        phase_order=min(corner_phase['period'],3)
+        counts=expected_phase_groups.setdefault(phase_order,[0,0,0])
+        counts[0]+=1
+        counts[1]+=int(bool(corner_phase['shots']))
+        counts[2]+=len(corner_phase['shots'])
+assert len(phase_sql['rows'])==len(expected_phase_groups)
+for row in phase_sql['rows']:
+    assert [row['deliveries'],row['corners_with_shot'],row['phase_shots']]==expected_phase_groups[row['phase_order']]
+    assert math.isclose(row['corner_shot_rate_pct'],100*row['corners_with_shot']/row['deliveries'])
+assert sum(r['deliveries'] for r in phase_sql['rows'])==study['pooled']['deliveries']
+assert sum(r['corners_with_shot'] for r in phase_sql['rows'])==study['pooled']['corners_with_phase_shot']
+assert sum(r['phase_shots'] for r in phase_sql['rows'])==study['pooled']['phase_shots']
+print('PASS: period-based SQL match phases reconcile to raw study memberships and pooled corner counts.')

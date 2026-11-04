@@ -1,0 +1,33 @@
+{
+  "source_path": "data/38_france_corner_study_evidence.json",
+  "source_sha256": "353929aa215afb1f8bd39ee7c4ebb08b5cc554d1c78cb506d50bb55ec5db13e5",
+  "query_path": "sql/57_corner_half_rates.sql",
+  "query_sha256": "cdc0f078096f2cf9e414afd701b978acbd9681521a49f395ac8d1d377f24b4e8",
+  "rows": [
+    {
+      "match_phase": "First half",
+      "phase_order": 1,
+      "deliveries": 24,
+      "corners_with_shot": 10,
+      "phase_shots": 12,
+      "corner_shot_rate_pct": 41.666666666666664
+    },
+    {
+      "match_phase": "Second half",
+      "phase_order": 2,
+      "deliveries": 18,
+      "corners_with_shot": 8,
+      "phase_shots": 8,
+      "corner_shot_rate_pct": 44.44444444444444
+    },
+    {
+      "match_phase": "Extra time",
+      "phase_order": 3,
+      "deliveries": 3,
+      "corners_with_shot": 1,
+      "phase_shots": 1,
+      "corner_shot_rate_pct": 33.333333333333336
+    }
+  ],
+  "scope": "Existing France five-match corner sample; periods 1 and 2 separate, periods 3 and 4 pooled as extra time. Empty groups are absent, not zero-rate rows. Assisted descriptive SQL exercise; no causal or significance claim."
+}

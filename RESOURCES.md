@@ -68,3 +68,5 @@ video review remain future project work. No community participation has been req
 - [SQLite SELECT](https://www.sqlite.org/lang_select.html) and [Python 3.11 sqlite3 tutorial](https://docs.python.org/3.11/library/sqlite3.html) — primary sources for lesson 54 database loading, read queries, filters and aggregates.
 
 - [SQLite join processing](https://www.sqlite.org/lang_select.html) and [foreign-key support](https://www.sqlite.org/foreignkeys.html) — primary references for lesson 55 relational keys, LEFT JOIN and parent-child integrity.
+
+- [SQLite CASE expressions](https://www.sqlite.org/lang_expr.html#the_case_expression) — primary source for lesson 57 conditional labels before grouped match-phase summaries.

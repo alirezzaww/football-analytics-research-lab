@@ -1,6 +1,6 @@
 # Football analyst employment plan
 
-Updated 4 November 2026. The goal is employment supported by work Alireza can reproduce and explain. Location preference: open to any location and remote/on-site options. Work authorization, relocation feasibility and sponsorship needs remain unconfirmed; openness does not establish eligibility.
+Updated 5 November 2026. The goal is employment supported by work Alireza can reproduce and explain. Location preference: open to any location and remote/on-site options. Work authorization, relocation feasibility and sponsorship needs remain unconfirmed; openness does not establish eligibility.
 
 ## Role direction and evidence from employers
 
@@ -23,7 +23,7 @@ Independent Python fluency is still to demonstrate. A first guided SQLite exerci
 ## Next employment milestones
 
 1. **Explain and reproduce one case study.** Alireza should run it, explain its denominator and one finding, and make a small documented change without having the assistant perform every step. Record that evidence after completion.
-2. **Develop the practical SQL block.** Lessons 54–55 implement guided table/load/query and relational-join exercises on existing corner data. Independently reproduce and explain them, then extend to match/team/player aggregates and more database tasks. A first implementation is not completed SQL competence.
+2. **Develop the practical SQL block.** Lessons 54–57 implement guided table/load/query, relational joins, opponent grouping and match-phase comparisons on existing corner data. Independently reproduce and explain them, then extend to match/team/player aggregates and more database tasks. A first implementation is not completed SQL competence.
 3. **Complete a video observation exercise when footage is available.** Use the sourced six-event review brief, record actual video references and observable actions. The existing queue is preparation only.
 4. **Build an independent second case study.** Choose a bounded question on unfamiliar matches, define rules, implement the core analysis, and write a concise audience-focused report. Preserve assistant contribution honestly.
 5. **Prepare targeted application materials.** Use an accurate CV and two defensible work samples, plus a short explanation of methods and findings. Tailor to a verified role rather than claiming every analyst title fits.

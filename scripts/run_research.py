@@ -51,6 +51,7 @@ STAGES = [
     "54_first_football_sql.py",
     "55_football_sql_joins.py",
     "56_sql_opponent_comparison.py",
+    "57_sql_match_phase_comparison.py",
     "scripts/check_evidence.py",
 ]
 

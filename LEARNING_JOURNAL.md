@@ -614,3 +614,7 @@ Completed assisted relational exercise: 45 corner rows, 21 phase-shot rows and 4
 ### 2026-11-05 · Lesson 56: SQL opponent groups
 
 Completed assisted GROUP BY/ORDER BY exercise from relational corner/shot tables, reproducing all five match rates and pooled 19/45. User requested concrete before/after join examples and reported understanding; independent query construction remains unverified. Covered rate versus shot volume and descriptive match comparison versus defensive-strength inference.
+
+### 2026-11-05 · Lesson 57: SQL match-phase comparison
+
+Completed assisted CASE-label exercise with period-based first-half, second-half and pooled extra-time groups. Results: 10/24, 8/18 and 1/3 corners with a shot; counts reconcile to all 45 deliveries. Added-time membership uses period rather than minute. Covered rate versus volume and why a small descriptive difference does not prove improvement. Independent explanation and query editing remain to demonstrate.
