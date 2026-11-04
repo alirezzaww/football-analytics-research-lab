@@ -193,3 +193,7 @@ Run `51_completion_group_support.py`; [the lesson](../lessons/0033-completion-gr
 ## Lesson 52: test how many boxes to use
 
 Run `52_completion_grid_resolution.py`. [The lesson](../lessons/0034-completion-grid-resolution.html) and [worked comparison](../reports/35_completion_grid_resolution.md) test grid detail with all other completion-model rules held fixed.
+
+## Lesson 53: package a coach/employer case study
+
+Run `53_portfolio_case_study.py`. [The lesson](../lessons/0035-employer-facing-case-study.html) creates a concise [work sample](../reports/36_france_corner_portfolio_case_study.html) and connects it to [employment milestones](CAREER_PLAN.md). The report is assisted; independent explanation and implementation remain separate milestones.

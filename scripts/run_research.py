@@ -47,6 +47,7 @@ STAGES = [
     "50_pass_completion_pressure_feature.py",
     "51_completion_group_support.py",
     "52_completion_grid_resolution.py",
+    "53_portfolio_case_study.py",
     "scripts/check_evidence.py",
 ]
 

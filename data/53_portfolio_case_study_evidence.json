@@ -1,0 +1,85 @@
+{
+  "source_files": {
+    "study": {
+      "path": "data/38_france_corner_study_evidence.json",
+      "sha256": "353929aa215afb1f8bd39ee7c4ebb08b5cc554d1c78cb506d50bb55ec5db13e5"
+    },
+    "windows": {
+      "path": "data/37_corner_window_evidence.json",
+      "sha256": "c05723a7848ec14cf3f818c92c2e025dd5713680aeca1e4b1a93c2e96e33cd2c"
+    },
+    "profiles": {
+      "path": "data/39_corner_delivery_profiles_evidence.json",
+      "sha256": "2065064f43e5b68948ee1a03e4165660eccae26bd206d12afaebf7d1dd5d77c6"
+    },
+    "side": {
+      "path": "data/41_corner_side_evidence.json",
+      "sha256": "a72c5dc91f783e33632ab94f865f23f3f1b1f70c6f233986624d3bd79d72ca51"
+    },
+    "review": {
+      "path": "data/43_corner_review_queue_evidence.json",
+      "sha256": "182844d47d54c42eea6f87c3ae524c3de789313a96a3e98e05a4359f5b6102c4"
+    }
+  },
+  "facts": {
+    "matches": 5,
+    "deliveries": 45,
+    "corners_with_shot": 19,
+    "corner_shot_rate": 0.4222222222222222,
+    "phase_shots": 21,
+    "phase_shot_goals": 2,
+    "goals_by_match": [
+      {
+        "opponent": "Korea Republic Women's",
+        "phase_shot_goals": 2
+      },
+      {
+        "opponent": "Norway Women's",
+        "phase_shot_goals": 0
+      },
+      {
+        "opponent": "Nigeria Women's",
+        "phase_shot_goals": 0
+      },
+      {
+        "opponent": "Brazil Women's",
+        "phase_shot_goals": 0
+      },
+      {
+        "opponent": "United States Women's",
+        "phase_shot_goals": 0
+      }
+    ],
+    "unrecorded_technique_deliveries": 9,
+    "same_taker_side_match_contexts_with_both_types": 0,
+    "review_examples": 6,
+    "korea_window_results": [
+      {
+        "seconds": 5,
+        "corners_with_shot": 4,
+        "deliveries": 13
+      },
+      {
+        "seconds": 10,
+        "corners_with_shot": 6,
+        "deliveries": 13
+      },
+      {
+        "seconds": 15,
+        "corners_with_shot": 6,
+        "deliveries": 13
+      },
+      {
+        "seconds": 20,
+        "corners_with_shot": 6,
+        "deliveries": 13
+      }
+    ]
+  },
+  "figure": {
+    "path": "figures/41_france_corner_match_variation.png",
+    "sha256": "cb0fc3c3fdc5f507b02607ba3a898a370a7b9697cdb6e4ecd5fc1d7fb4533f82"
+  },
+  "authorship": "Guided research and implementation prepared with AI assistance. Independent reproduction and interpretation remain separate milestones.",
+  "video_status": "Review brief prepared; no footage reviewed."
+}

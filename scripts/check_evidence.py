@@ -1832,3 +1832,39 @@ for candidate in grid_study['candidates']:
     if (nx,ny)==(1,1):
         assert math.isclose(metric['log_loss'],completion_cv['pooled_baseline_metrics']['log_loss'])
 print('PASS: all grid resolutions, identical pass coverage, fold-local counts and baseline/original-model reproduction reconcile.')
+
+portfolio_case = json.loads((ROOT / 'data/53_portfolio_case_study_evidence.json').read_text())
+for source_record in portfolio_case['source_files'].values():
+    assert hashlib.sha256((ROOT / source_record['path']).read_bytes()).hexdigest() == source_record['sha256']
+case_facts = portfolio_case['facts']
+assert case_facts['matches'] == study['pooled']['matches']
+for output_key, source_key in [('deliveries','deliveries'),('corners_with_shot','corners_with_phase_shot'),('corner_shot_rate','phase_shot_rate'),('phase_shots','phase_shots'),('phase_shot_goals','phase_shot_goals')]:
+    assert case_facts[output_key] == study['pooled'][source_key]
+assert case_facts['goals_by_match'] == [{'opponent':r['opponent'],'phase_shot_goals':r['phase_shot_goals']} for r in study['matches']]
+assert [(r['opponent'],r['phase_shot_goals']) for r in case_facts['goals_by_match'] if r['phase_shot_goals']] == [("Korea Republic Women's",2)]
+assert case_facts['unrecorded_technique_deliveries'] == next(g['deliveries'] for g in profiles['groups'] if g['category']=='Other / unrecorded')
+assert case_facts['same_taker_side_match_contexts_with_both_types'] == side_audit['contexts_with_both_types']
+assert case_facts['review_examples'] == sum(r['example'] is not None for r in review['review_queue'])
+assert case_facts['korea_window_results'] == [{'seconds':r['window_seconds'],'corners_with_shot':r['teams'][0]['corners_with_shot'],'deliveries':r['teams'][0]['deliveries']} for r in window['results']]
+assert hashlib.sha256((ROOT / portfolio_case['figure']['path']).read_bytes()).hexdigest() == portfolio_case['figure']['sha256']
+spec=importlib.util.spec_from_file_location('portfolio_case_render',ROOT/'53_portfolio_case_study.py')
+case_renderer=importlib.util.module_from_spec(spec);spec.loader.exec_module(case_renderer)
+assert portfolio_case == case_renderer.build_evidence()
+assert (ROOT/'reports/36_france_corner_portfolio_case_study.html').read_text() == case_renderer.render_report(portfolio_case)
+from html.parser import HTMLParser
+class CaseLinkParser(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.links=[]
+    def handle_starttag(self,tag,attrs):
+        self.links.extend(v for k,v in attrs if k in ('href','src') and v)
+for relative in ['reports/36_france_corner_portfolio_case_study.html','lessons/0035-employer-facing-case-study.html']:
+    page_path=ROOT/relative;parser=CaseLinkParser();parser.feed(page_path.read_text())
+    for link in parser.links:
+        if link.startswith(('http://','https://','#')):
+            continue
+        assert (page_path.parent/link.split('#',1)[0]).exists(), 'Missing case-study link: '+link
+assert (ROOT/'assets/report.css').exists() and (ROOT/'assets/lesson.css').exists()
+print('PASS: portfolio case-study facts, source references, generated report and local resource links reconcile.')
+
+assert (ROOT/'reports/36_france_corner_portfolio_case_study.md').read_text() == case_renderer.render_markdown(portfolio_case)
+print('PASS: GitHub-readable case-study version reproduces from the same evidence.')

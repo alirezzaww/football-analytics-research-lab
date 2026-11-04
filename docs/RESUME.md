@@ -91,3 +91,7 @@ A supported guided-project statement:
 > Prepared reproducible corner-event review briefs with exact source IDs, match-clock references, deliberate zone/outcome coverage and observation questions, while distinguishing event-data findings from unperformed video review.
 
 Do not describe this as completed video scouting: no footage has been reviewed in this assignment.
+
+## Concise case study for applications
+
+Use [France corner phases across five matches](../reports/36_france_corner_portfolio_case_study.md) as a readable work sample alongside the full source. It contains a football question, evidence, figure, review priority and limitations. Present it as guided research and distinguish your independent contribution. [The employment plan](CAREER_PLAN.md) records skills still to demonstrate; SQL, video observation and club work are not added as completed skills.
