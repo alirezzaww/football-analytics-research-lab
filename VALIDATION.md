@@ -202,3 +202,7 @@ Executed hash-verified candidate timing join and deliberate six-cell selection. 
 ### Phase 3 / Lesson 44 (2026-11-04)
 
 Executed the first coarse xT fit with all five raw hashes verified. Unit tests cover coordinate edges, failed-move denominators and known fixed-point solutions. Evidence checks reconstruct raw action selection when cached, counts, goal rewards and transition weights; verify probability mass, fixed-point residual and exact signed pass scores. Figure inspected. Numerical convergence is not an independent reliability test.
+
+### Lesson 45 (2026-11-04)
+
+Executed outcome join after reproducing/verifying the source xT fit. Tests cover signed completed scores, no failed-endpoint credit, unknown/injury-clearance exclusions and zero versus unscorable values. Evidence checks reconcile all original passes, cached raw outcomes, formula/status, coverage and aggregate sums. Figure inspected. Failure cost is a diagnostic assumption, not a validated complete action-value model.

@@ -54,3 +54,5 @@ video review remain future project work. No community participation has been req
 - [StatsBomb Working with R](https://blogarchive.statsbomb.com/uploads/2021/11/Working-with-R.pdf) — provider coordinate reference with penalty-area and six-yard-box rectangles; used for lesson 42 spatial bins.
 
 - [Soccermatics: position-based expected threat](https://soccermatics.readthedocs.io/en/latest/gallery/lesson4/plot_ExpectedThreat.html) and [mplsoccer xT tutorial](https://mplsoccer.readthedocs.io/en/latest/gallery/tutorials/plot_xt.html) — primary method sources for lesson 44; our model uses its own coarse grid, action scope and saved evidence.
+
+- [socceraction xT documentation](https://socceraction.readthedocs.io/en/stable/documentation/valuing_actions/xT.html) — standard application to successful ball-moving actions; lesson 45 separately labels its project-specific unsuccessful-pass diagnostic.

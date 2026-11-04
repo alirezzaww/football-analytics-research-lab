@@ -1469,3 +1469,46 @@ if all_raw_available:
     assert reconstructed == actions
     assert excluded_counts == xt['excluded_action_counts']
 print('PASS: first xT action selection, failed-move denominators, transition counts, fixed point and pass examples reconcile.')
+
+pass_value = json.loads((ROOT / 'data/45_failed_pass_value_evidence.json').read_text())
+assert pass_value['source_path'] == 'data/44_first_xt_evidence.json'
+assert hashlib.sha256((ROOT / pass_value['source_path']).read_bytes()).hexdigest() == pass_value['source_sha256']
+source_passes = [r for r in xt['actions'] if r['type'] == 'Pass']
+scored_passes = pass_value['passes']
+assert len(scored_passes) == len(source_passes)
+for row, original in zip(scored_passes, source_passes):
+    assert {k: v for k, v in row.items() if k not in ['pass_outcome', 'start_xt', 'recorded_endpoint_xt', 'score_status', 'scenario_value']} == original
+    start = values[row['start_cell']]
+    end = values[row['end_cell']] if row['end_cell'] is not None else None
+    assert row['start_xt'] == start and row['recorded_endpoint_xt'] == end
+    if row['pass_outcome'] is None:
+        status = 'Completed' if end is not None else 'Unscorable completed endpoint'
+        score = end - start if end is not None else None
+    elif row['pass_outcome'] in ['Incomplete', 'Out', 'Pass Offside']:
+        status = 'Unsuccessful: assumed zero continuation'; score = -start
+    else:
+        status = 'Excluded unknown or injury-clearance outcome'; score = None
+    assert row['score_status'] == status
+    assert row['scenario_value'] == score
+for key, rows in [('all_selected_teams_summary', scored_passes), ('france_summary', [r for r in scored_passes if r['team'] == "France Women's"])]:
+    summary = pass_value[key]
+    completed = [r for r in rows if r['score_status'] == 'Completed']
+    failed = [r for r in rows if r['score_status'] == 'Unsuccessful: assumed zero continuation']
+    assert summary['pass_attempts'] == len(rows)
+    assert summary['scored_completed'] == len(completed)
+    assert summary['scored_unsuccessful'] == len(failed)
+    assert summary['excluded_or_unscorable'] == sum(r['scenario_value'] is None for r in rows)
+    assert math.isclose(summary['completed_pass_xt_sum'], sum(r['scenario_value'] for r in completed))
+    assert math.isclose(summary['assumed_failure_cost_sum'], sum(r['scenario_value'] for r in failed))
+    assert math.isclose(summary['combined_scenario_sum'], summary['completed_pass_xt_sum'] + summary['assumed_failure_cost_sum'])
+for record in xt['raw_inputs']:
+    cached = ROOT / record['relative_path']
+    if cached.exists():
+        assert hashlib.sha256(cached.read_bytes()).hexdigest() == record['sha256']
+        lookup = {r['id']: r for r in json.loads(cached.read_text())}
+        for row in scored_passes:
+            if row['match_id'] == record['match_id']:
+                assert row['pass_outcome'] == lookup[row['id']]['pass'].get('outcome', {}).get('name')
+expected_failure_example = next((r for r in scored_passes if r['team'] == "France Women's" and r['pass_outcome'] in ['Incomplete', 'Out', 'Pass Offside'] and r['recorded_endpoint_xt'] is not None and r['recorded_endpoint_xt'] > r['start_xt']), None)
+assert pass_value['illustrative_failed_pass'] == expected_failure_example
+print('PASS: completed-pass xT, raw outcomes, excluded coverage and explicit failure-cost scenario reconcile.')

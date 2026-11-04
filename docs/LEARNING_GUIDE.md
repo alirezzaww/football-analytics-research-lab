@@ -161,3 +161,7 @@ Run `43_corner_video_review_brief.py` and read [the compact lesson](../lessons/0
 ## Phase 3 / Lesson 44: value a pass with expected threat
 
 Run `44_first_expected_threat.py`. [The lesson](../lessons/0026-first-expected-threat.html), [worked report](../reports/27_first_expected_threat.md) and [reference](../reference/expected-threat.html) introduce location value and end-minus-start pass scoring. The model is a descriptive training fit, not independently validated.
+
+## Lesson 45: outcome coverage in pass valuation
+
+Run `45_failed_pass_value.py`. [The lesson](../lessons/0027-failed-pass-value.html) and [worked report](../reports/28_failed_pass_value.md) compare successful-pass scoring with an explicit assumed-loss scenario, preserving unknown outcomes and interpretation limits.

@@ -303,3 +303,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Phase 3: expected threat and ball progression
 
 [Lesson 44](lessons/0026-first-expected-threat.html) fits a [first educational position-based xT model](reports/27_first_expected_threat.md) using 6,770 selected actions from both teams in five fixtures. The 6×4 grid values completed passes as destination value minus starting value. Run `python 44_first_expected_threat.py`. This is a training exercise, without independent validation or player-ranking claims.
+
+## Check what successful-pass xT omits
+
+[Lesson 45](lessons/0027-failed-pass-value.html) adds a [clearly labelled failure-cost scenario](reports/28_failed_pass_value.md), alongside standard completed-pass xT. Unknown outcomes remain excluded, and zero continuation is an assumption rather than verified possession loss. Run `python 45_failed_pass_value.py`; this is not a complete performance rating or a new model.
