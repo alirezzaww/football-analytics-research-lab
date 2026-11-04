@@ -349,3 +349,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## SQL joins: preserve the corner denominator
 
 [Lesson 55](lessons/0037-football-sql-joins.html) separates corners and phase shots into [related tables](reports/38_football_sql_joins.md), demonstrates why a left join produces 47 rows from 45 deliveries, and reproduces the correct summary by grouping shots per corner first. Run `python 55_football_sql_joins.py`; schema and queries are committed, generated database ignored.
+
+## SQL grouping: compare opponent corner rates
+
+[Lesson 56](lessons/0038-sql-opponent-comparison.html) uses a [join-safe grouped query](reports/39_sql_opponent_comparison.md) to reproduce the five opponent rates. Run `python 56_sql_opponent_comparison.py`. Counts remain visible beside percentages; these single-match groups do not establish opponent defensive strength.

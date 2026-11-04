@@ -67,3 +67,5 @@ The user explicitly requests faster, compact explanations for familiar/easy conc
 The user needed repeated concrete explanations of baseline versus zone completion probabilities: show all-training counts versus one-zone counts, keep training data distinct from checked outcomes, and state that we use all 24 zones while focusing on one example for teaching. Avoid jumping from zone context to a specific pass-option probability.
 
 Employment remains central. On 2026-11-04 the user answered “anything” for job location/remote/on-site/sponsorship targeting: treat location preferences as broad, not as evidence of work authorization or no sponsorship need. Pair future technical lessons with job-relevant deliverables; SQL and independent reproduction are next practical gaps.
+
+For joins, show separate corner and shot tables before the joined rows. User found the two-corner example helpful; carry that row-grain explanation into grouped queries.

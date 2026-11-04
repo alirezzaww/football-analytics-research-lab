@@ -610,3 +610,7 @@ Completed assisted SQLite table/load/query exercise using one row per France cor
 ### 2026-11-04 · Lesson 55: SQL joins and row grain
 
 Completed assisted relational exercise: 45 corner rows, 21 phase-shot rows and 47 direct left-joined rows. Grouping shots per corner before joining preserves 45 deliveries and 19 positive corners. Covered composite identities, no-shot retention, NULL shot fields and foreign-key enforcement. Independent explanation/proficiency remains pending.
+
+### 2026-11-05 · Lesson 56: SQL opponent groups
+
+Completed assisted GROUP BY/ORDER BY exercise from relational corner/shot tables, reproducing all five match rates and pooled 19/45. User requested concrete before/after join examples and reported understanding; independent query construction remains unverified. Covered rate versus shot volume and descriptive match comparison versus defensive-strength inference.

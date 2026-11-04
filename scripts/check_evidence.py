@@ -1941,3 +1941,19 @@ if join_database.exists():
         assert [dict(r) for r in con.execute('SELECT * FROM corners ORDER BY match_id,corner_id')]==sorted(expected_join_corners,key=lambda r:(r['match_id'],r['corner_id']))
         assert [dict(r) for r in con.execute('SELECT * FROM phase_shots ORDER BY match_id,shot_id')]==sorted(expected_join_shots,key=lambda r:(r['match_id'],r['shot_id']))
 print('PASS: related corner/shot tables, composite keys, join expansion and preserved delivery denominator reconcile.')
+
+opponent_sql=json.loads((ROOT/'data/56_sql_opponent_evidence.json').read_text())
+spec=importlib.util.spec_from_file_location('opponent_sql_audit',ROOT/'56_sql_opponent_comparison.py')
+opponent_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(opponent_module)
+assert opponent_sql==opponent_module.build_evidence()
+expected_opponents={m['opponent']:m for m in study['matches']}
+assert len(opponent_sql['rows'])==len(expected_opponents)
+for row in opponent_sql['rows']:
+    match_record=expected_opponents[row['opponent']]
+    assert row['deliveries']==match_record['deliveries']
+    assert row['corners_with_shot']==match_record['corners_with_phase_shot']
+    assert row['phase_shots']==match_record['phase_shots']
+    assert math.isclose(row['corner_shot_rate_pct'],100*match_record['phase_shot_rate'])
+assert sum(r['deliveries'] for r in opponent_sql['rows'])==45
+assert sum(r['corners_with_shot'] for r in opponent_sql['rows'])==19
+print('PASS: join-safe SQL opponent groups reproduce all five football match summaries.')

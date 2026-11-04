@@ -1,0 +1,44 @@
+{
+  "source_path": "data/38_france_corner_study_evidence.json",
+  "source_sha256": "353929aa215afb1f8bd39ee7c4ebb08b5cc554d1c78cb506d50bb55ec5db13e5",
+  "query_path": "sql/56_opponent_corner_rates.sql",
+  "query_sha256": "b744caa2b876c3dd50f331b8dd699a39cacf8fb05172f2bbeecf55ef59bef408",
+  "rows": [
+    {
+      "opponent": "United States Women's",
+      "deliveries": 7,
+      "corners_with_shot": 4,
+      "phase_shots": 4,
+      "corner_shot_rate_pct": 57.142857142857146
+    },
+    {
+      "opponent": "Korea Republic Women's",
+      "deliveries": 13,
+      "corners_with_shot": 6,
+      "phase_shots": 7,
+      "corner_shot_rate_pct": 46.15384615384615
+    },
+    {
+      "opponent": "Nigeria Women's",
+      "deliveries": 9,
+      "corners_with_shot": 4,
+      "phase_shots": 4,
+      "corner_shot_rate_pct": 44.44444444444444
+    },
+    {
+      "opponent": "Norway Women's",
+      "deliveries": 9,
+      "corners_with_shot": 3,
+      "phase_shots": 4,
+      "corner_shot_rate_pct": 33.333333333333336
+    },
+    {
+      "opponent": "Brazil Women's",
+      "deliveries": 7,
+      "corners_with_shot": 2,
+      "phase_shots": 2,
+      "corner_shot_rate_pct": 28.571428571428573
+    }
+  ],
+  "scope": "Existing five France fixtures; 15-second same-possession corner phases. Descriptive opponent groups, not opponent strength estimates. Assisted SQL exercise."
+}

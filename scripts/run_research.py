@@ -50,6 +50,7 @@ STAGES = [
     "53_portfolio_case_study.py",
     "54_first_football_sql.py",
     "55_football_sql_joins.py",
+    "56_sql_opponent_comparison.py",
     "scripts/check_evidence.py",
 ]
 

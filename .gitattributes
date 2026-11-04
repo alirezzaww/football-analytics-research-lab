@@ -1,3 +1,4 @@
 # Frozen code/protocol digests must stay identical on every checkout platform.
 *.py text eol=lf
 *.json text eol=lf
+*.sql text eol=lf
