@@ -177,3 +177,7 @@ Run `47_first_pass_completion_model.py`. [The lesson](../lessons/0029-first-pass
 ## Lesson 48: repeat whole-match checks
 
 Run `48_completion_match_cross_validation.py`. [The lesson](../lessons/0030-completion-match-cross-validation.html) and [worked report](../reports/31_completion_match_cross_validation.md) cover fold-local counts, whole-fixture exclusion and pooled out-of-fold metrics.
+
+## Lesson 49: inspect numerical probabilities
+
+Run `49_completion_probability_calibration.py`; [the lesson](../lessons/0031-completion-probability-calibration.html) and [worked report](../reports/32_completion_probability_calibration.md) compare average predictions with completed/attempted counts in groups. No recalibration is fitted.

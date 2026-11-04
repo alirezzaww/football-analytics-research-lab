@@ -218,3 +218,7 @@ Executed a cache-free completion-count model with fixed four/one fixture split a
 ### Lesson 48 (2026-11-04)
 
 Executed cache-free five-match cross-validation. Tests change held-out labels to verify its model/predictions remain unchanged, and check group exclusion, unique predictions and invalid fixture lists. Evidence checks reconstruct every fold and pooled score, with exact reproduction of lesson 47. Chart inspected. Fixed model setting, no fresh-data or chronological-validation claim.
+
+### Lesson 49 (2026-11-04)
+
+Executed cache-free grouping of existing out-of-fold probabilities. Tests cover boundaries including p=1, invalid inputs, empty/zero outcomes and mean prediction versus observed frequency. Evidence checks reconcile complete unique membership, source digest, counts, prediction sums and all group/overall rates. Chart inspected. No model changes, confidence interval or fresh validation.

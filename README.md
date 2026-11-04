@@ -319,3 +319,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Validate completion estimates across all five fixtures
 
 [Lesson 48](lessons/0030-completion-match-cross-validation.html) completes [leave-one-match-out checks](reports/31_completion_match_cross_validation.md), refitting both zone counts and baseline within each fold. All 3,430 passes receive one out-of-fold prediction. Run `python 48_completion_match_cross_validation.py` without downloads; this is exploratory grouped validation of already inspected fixtures.
+
+## Check the meaning of predicted completion percentages
+
+[Lesson 49](lessons/0031-completion-probability-calibration.html) adds a [group calibration diagnostic](reports/32_completion_probability_calibration.md) using existing held-out predictions. The highest group averages 90.6% predicted completion versus 189/215 = 87.9% observed. Run `python 49_completion_probability_calibration.py`; predictions are unchanged and no calibrator is fitted.

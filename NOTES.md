@@ -63,3 +63,5 @@ xG; independent explanation remains pending. Training-support plots are in-sampl
 and the evaluation coverage audit reuses already inspected data.
 
 The user explicitly requests faster, compact explanations for familiar/easy concepts, without skipping lessons or assignments. Complete assignments as assisted worked examples and document that status; do not imply independent user mastery. Use deeper explanation when concepts are new or requested.
+
+The user needed repeated concrete explanations of baseline versus zone completion probabilities: show all-training counts versus one-zone counts, keep training data distinct from checked outcomes, and state that we use all 24 zones while focusing on one example for teaching. Avoid jumping from zone context to a specific pass-option probability.

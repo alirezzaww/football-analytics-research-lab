@@ -1635,3 +1635,31 @@ for metrics_key, prediction_key in [('pooled_zone_metrics', 'zone_probability'),
     bs = sum((r[prediction_key] - r['completed'])**2 for r in cv_predictions) / len(cv_predictions)
     assert math.isclose(metrics['log_loss'], ll) and math.isclose(metrics['brier_score'], bs)
 print('PASS: whole-match completion folds, fold-local baselines, unique predictions and pooled probability errors reconcile.')
+
+completion_calibration = json.loads((ROOT / 'data/49_completion_calibration_evidence.json').read_text())
+assert completion_calibration['source_path'] == 'data/48_completion_match_cv_evidence.json'
+assert hashlib.sha256((ROOT / completion_calibration['source_path']).read_bytes()).hexdigest() == completion_calibration['source_sha256']
+assert completion_calibration['bin_edges'] == [0, .6, .7, .8, .9, 1]
+calibration_edges = completion_calibration['bin_edges']
+assert len(completion_calibration['groups']) == len(calibration_edges) - 1
+calibration_seen = []
+def check_completion_group(group, rows):
+    n = len(rows); count = sum(r['completed'] for r in rows); predicted_sum = sum(r['zone_probability'] for r in rows)
+    assert group['passes'] == n and group['completions'] == count
+    assert math.isclose(group['predicted_completion_sum'], predicted_sum, abs_tol=1e-12)
+    assert group['pass_keys'] == [{'match_id': r['match_id'], 'id': r['id']} for r in rows]
+    if n:
+        assert math.isclose(group['mean_prediction'], predicted_sum / n)
+        assert math.isclose(group['observed_completion_rate'], count / n)
+    else:
+        assert group['mean_prediction'] is None and group['observed_completion_rate'] is None
+for i, group in enumerate(completion_calibration['groups']):
+    lower, upper = calibration_edges[i], calibration_edges[i+1]
+    assert (group['lower_inclusive'], group['upper'], group['upper_inclusive']) == (lower, upper, i == len(calibration_edges)-2)
+    rows = [r for r in cv_predictions if lower <= r['zone_probability'] and (r['zone_probability'] < upper or (group['upper_inclusive'] and r['zone_probability'] == upper))]
+    check_completion_group(group, rows)
+    calibration_seen.extend((r['match_id'], r['id']) for r in rows)
+assert len(calibration_seen) == len(set(calibration_seen)) == len(cv_predictions)
+assert set(calibration_seen) == {(r['match_id'], r['id']) for r in cv_predictions}
+check_completion_group(completion_calibration['overall'], cv_predictions)
+print('PASS: completion calibration group boundaries, unique membership, prediction averages and actual frequencies reconcile.')

@@ -582,3 +582,7 @@ Completed assisted training-only smoothed start-zone completion model: 2,808 tra
 ### 2026-11-04 · Lesson 48: completion match cross-validation
 
 Completed assisted five-fold whole-match check with fixed strength 20, training-only counts and fold-local constant baselines. Zone log loss is lower in all five folds; pooled 3,430-pass log loss .480395 vs .505889. Covered fixture leakage, one prediction per pass, pooled weighting and already-inspected/nonchronological limits. Independent mastery not claimed.
+
+### 2026-11-04 · Lesson 49: completion calibration
+
+Completed assisted grouped calibration check of 3,430 existing out-of-fold probabilities. Highest group: 215 attempts, 189 completions, mean prediction 90.56%, observed 87.91%. Covered predicted average versus observed fraction, relative model errors versus calibration, and group frequencies versus unknown individual probabilities. Independent mastery not claimed.
