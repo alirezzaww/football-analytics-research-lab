@@ -1,0 +1,10 @@
+{
+  "defined_on": "2026-11-04",
+  "grids": [[1, 1], [3, 2], [6, 4], [12, 8]],
+  "smoothing_strength": 20,
+  "features": "Starting coordinates converted to the candidate grid cell only; no pressure, endpoints or xT values.",
+  "validation": "Same eligible passes and five whole-match folds as lesson 48; all cell counts and global reference rates fitted within each fold.",
+  "primary_metric": "Pooled out-of-fold log loss",
+  "secondary_metric": "Brier score",
+  "purpose": "Report all chosen resolutions on already inspected development data. Lowest observed error is a development result, not a new independent performance claim. No smoothing search or other feature changes."
+}

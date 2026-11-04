@@ -46,6 +46,7 @@ STAGES = [
     "49_completion_probability_calibration.py",
     "50_pass_completion_pressure_feature.py",
     "51_completion_group_support.py",
+    "52_completion_grid_resolution.py",
     "scripts/check_evidence.py",
 ]
 

@@ -230,3 +230,7 @@ Executed raw pressure-flag join with all five SHA256 checks. Tests cover strict 
 ### Lesson 51 (2026-11-04)
 
 Executed cache-free diagnostic of existing pressure predictions. Tests cover count bands, reference weights and weighted-average equivalence. Evidence checks reconcile each original pass to its training subgroup, counts, raw rate, prior and unchanged probability; group memberships and examples reproduce. Figure inspected. No new fit, confidence interval or causal explanation.
+
+### Lesson 52 (2026-11-04)
+
+Executed four grid candidates from committed pass starts/outcomes without downloads. Tests cover grid edges, empty cells, one-cell baseline equivalence and held-out label isolation. Evidence checks reconstruct all mappings, fold counts, probabilities and scores; 24-cell predictions and baseline reproduce previous results. Chart inspected. No smoothing tuning, model promotion or fresh-validation claim.

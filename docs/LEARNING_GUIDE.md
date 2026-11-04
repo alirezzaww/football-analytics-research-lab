@@ -189,3 +189,7 @@ Run `50_pass_completion_pressure_feature.py`. [The lesson](../lessons/0032-pass-
 ## Lesson 51: inspect local data support
 
 Run `51_completion_group_support.py`; [the lesson](../lessons/0033-completion-group-support.html) and [worked report](../reports/34_completion_group_support.md) explain sparse fitting groups and the existing smoothing formula.
+
+## Lesson 52: test how many boxes to use
+
+Run `52_completion_grid_resolution.py`. [The lesson](../lessons/0034-completion-grid-resolution.html) and [worked comparison](../reports/35_completion_grid_resolution.md) test grid detail with all other completion-model rules held fixed.

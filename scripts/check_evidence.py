@@ -1770,3 +1770,65 @@ for example, original in zip(support_audit['usa_cell_8_examples'],expected_examp
     assert {k:v for k,v in example.items() if k!='prior_weight'} == original
     assert math.isclose(example['prior_weight'],20/(original['attempts']+20))
 print('PASS: fitting-group support, smoothing weights, complete membership and unchanged probabilities reconcile.')
+
+grid_study = json.loads((ROOT / 'data/52_completion_grid_evidence.json').read_text())
+assert grid_study['source_path'] == 'data/45_failed_pass_value_evidence.json'
+assert hashlib.sha256((ROOT / grid_study['source_path']).read_bytes()).hexdigest() == grid_study['source_sha256']
+assert grid_study['reference_path'] == 'data/48_completion_match_cv_evidence.json'
+assert hashlib.sha256((ROOT / grid_study['reference_path']).read_bytes()).hexdigest() == grid_study['reference_sha256']
+grid_protocol_path=ROOT/grid_study['protocol_path']
+assert hashlib.sha256(grid_protocol_path.read_bytes()).hexdigest() == grid_study['protocol_sha256']
+grid_protocol=json.loads(grid_protocol_path.read_text())
+assert grid_protocol['grids']==[[1,1],[3,2],[6,4],[12,8]] and grid_protocol['smoothing_strength']==20
+expected_input=[{'match_id':r['match_id'],'id':r['id'],'start':r['start'],'completed':int(r['pass_outcome'] is None)} for r in scored_passes if r['pass_outcome'] is None or r['pass_outcome'] in ['Incomplete','Out','Pass Offside']]
+assert grid_study['input_passes']==expected_input
+assert grid_study['match_ids']==cv_ids
+assert [(c['nx'],c['ny']) for c in grid_study['candidates']]==[(1,1),(3,2),(6,4),(12,8)]
+for candidate in grid_study['candidates']:
+    nx,ny=candidate['nx'],candidate['ny'];nc=nx*ny
+    assert candidate['cells']==nc
+    mapped=[{**r,'cell':min(int(r['start'][1]/80*ny),ny-1)*nx+min(int(r['start'][0]/120*nx),nx-1)} for r in expected_input]
+    input_lookup={(r['match_id'],r['id']):r for r in mapped}
+    predicted=candidate['predictions']
+    assert len(predicted)==len(input_lookup)
+    assert len({(r['match_id'],r['id']) for r in predicted})==len(input_lookup)
+    for row in predicted:
+        original=input_lookup[(row['match_id'],row['id'])]
+        assert row['cell']==original['cell'] and row['completed']==original['completed']
+    assert [f['held_out_match_id'] for f in candidate['folds']]==cv_ids
+    for fold in candidate['folds']:
+        omitted=fold['held_out_match_id']
+        assert fold['training_match_ids']==[m for m in cv_ids if m!=omitted]
+        train=[r for r in mapped if r['match_id']!=omitted]
+        n=[0]*nc;success=[0]*nc
+        for row in train:
+            n[row['cell']]+=1;success[row['cell']]+=row['completed']
+        reference=sum(success)/len(train)
+        fitted=fold['model']
+        assert fitted['training_attempts']==len(train) and fitted['global_training_rate']==reference
+        assert fitted['attempts_by_cell']==n and fitted['completions_by_cell']==success
+        assert len(fitted['probabilities'])==nc
+        for i,p in enumerate(fitted['probabilities']):
+            assert math.isclose(p,(success[i]+20*reference)/(n[i]+20))
+        check=[r for r in predicted if r['match_id']==omitted]
+        for row in check:
+            assert row['probability']==fitted['probabilities'][row['cell']]
+            if (nx,ny)==(6,4):
+                assert row['probability']==cv_lookup[(row['match_id'],row['id'])]['zone_probability']
+            if (nx,ny)==(1,1):
+                assert math.isclose(row['probability'],cv_lookup[(row['match_id'],row['id'])]['baseline_probability'])
+        metric=fold['metrics']
+        assert metric['passes']==len(check) and metric['completions']==sum(r['completed'] for r in check)
+        ll=sum(-(r['completed']*math.log(r['probability'])+(1-r['completed'])*math.log1p(-r['probability'])) for r in check)/len(check)
+        bs=sum((r['probability']-r['completed'])**2 for r in check)/len(check)
+        assert math.isclose(metric['log_loss'],ll) and math.isclose(metric['brier_score'],bs)
+    metric=candidate['pooled_metrics']
+    assert metric['passes']==len(predicted) and metric['completions']==sum(r['completed'] for r in predicted)
+    ll=sum(-(r['completed']*math.log(r['probability'])+(1-r['completed'])*math.log1p(-r['probability'])) for r in predicted)/len(predicted)
+    bs=sum((r['probability']-r['completed'])**2 for r in predicted)/len(predicted)
+    assert math.isclose(metric['log_loss'],ll) and math.isclose(metric['brier_score'],bs)
+    if (nx,ny)==(6,4):
+        assert metric==completion_cv['pooled_zone_metrics']
+    if (nx,ny)==(1,1):
+        assert math.isclose(metric['log_loss'],completion_cv['pooled_baseline_metrics']['log_loss'])
+print('PASS: all grid resolutions, identical pass coverage, fold-local counts and baseline/original-model reproduction reconcile.')

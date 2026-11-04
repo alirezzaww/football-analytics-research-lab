@@ -594,3 +594,7 @@ Completed assisted hierarchical origin/pressure model with fixed strengths 20/20
 ### 2026-11-04 · Lesson 51: fitting support and smoothing
 
 Completed assisted support audit: 224/444 pressure-flagged predictions use subgroups with 1–19 training passes; 220 use 20–49. Familiar origin cell has 184 not-flagged versus 10 flagged fitting attempts; origin-reference weights are 9.80% versus 66.67%. Covered data fragmentation and formula weight versus confidence. No cause of score changes established; independent mastery not claimed.
+
+### 2026-11-04 · Lesson 52: completion-grid resolution
+
+Completed assisted fixed-settings grid comparison: pooled log loss 1 cell .505889, 6 cells .486997, 24 cells .480395, 96 cells .481989. Covered spatial detail versus local sample size and why grid boundaries are tested choices. Original 24-cell predictions reproduced; no universal optimality or independent-mastery claim.

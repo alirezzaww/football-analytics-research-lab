@@ -331,3 +331,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Audit the data supporting each prediction
 
 [Lesson 51](lessons/0033-completion-group-support.html) audits [local fitting sample sizes and smoothing weights](reports/34_completion_group_support.md) without changing the pressure model. Of 444 flagged predictions, 224 use fewer than 20 local fitting examples. Run `python 51_completion_group_support.py`; counts and formula weights are not confidence guarantees.
+
+## Test the pitch-grid resolution choice
+
+[Lesson 52](lessons/0034-completion-grid-resolution.html) compares [one, six, 24 and 96 origin cells](reports/35_completion_grid_resolution.md) using the same passes, folds and smoothing. The original 24-cell model has the lowest observed error among these settings; the finer grid does not improve it. Run `python 52_completion_grid_resolution.py`; this is development-data sensitivity, not a universal optimal grid.
