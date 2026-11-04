@@ -66,3 +66,5 @@ video review remain future project work. No community participation has been req
 - Employer requirements reviewed 4 November 2026: [Pluto careers](https://www.plutodata.co.uk/careers), [Newcastle scouting role, expired 2 November](https://careers.newcastleunited.com/job/scouting-analyst-africa-6063955), and [Blackburn lead academy role via UK Sport, listed deadline 10 November](https://www.uksport.gov.uk/global/jobs/blackburn-rovers-football--athletic-ltd/2026/11/10/lead-academy-analyst--youth-development-phase). Used as skill/role references with status and seniority distinctions in the employment plan, not as a suitable-job shortlist.
 
 - [SQLite SELECT](https://www.sqlite.org/lang_select.html) and [Python 3.11 sqlite3 tutorial](https://docs.python.org/3.11/library/sqlite3.html) — primary sources for lesson 54 database loading, read queries, filters and aggregates.
+
+- [SQLite join processing](https://www.sqlite.org/lang_select.html) and [foreign-key support](https://www.sqlite.org/foreignkeys.html) — primary references for lesson 55 relational keys, LEFT JOIN and parent-child integrity.

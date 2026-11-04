@@ -606,3 +606,7 @@ Completed assisted concise case study generated from existing corner evidence, w
 ### 2026-11-04 · Lesson 54: first football SQL
 
 Completed assisted SQLite table/load/query exercise using one row per France corner delivery. SQL reproduces 45 deliveries, 19 shot-associated corners and 3 extra-time deliveries. Covered SELECT/FROM/COUNT/WHERE and provided grouped queries, parameterized loading and primary-key/check constraints. Independent first-half query remains pending; no SQL proficiency claim.
+
+### 2026-11-04 · Lesson 55: SQL joins and row grain
+
+Completed assisted relational exercise: 45 corner rows, 21 phase-shot rows and 47 direct left-joined rows. Grouping shots per corner before joining preserves 45 deliveries and 19 positive corners. Covered composite identities, no-shot retention, NULL shot fields and foreign-key enforcement. Independent explanation/proficiency remains pending.

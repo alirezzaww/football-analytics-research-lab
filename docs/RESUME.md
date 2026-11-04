@@ -99,3 +99,7 @@ Use [France corner phases across five matches](../reports/36_france_corner_portf
 ## First guided SQL exercise
 
 Implemented a small SQLite load/query example reproducing corner counts, filters and opponent-group rates from existing evidence. This can be described as introductory guided SQL practice; it does not establish SQL proficiency, joins or production database experience. See [the worked exercise](../reports/37_first_football_sql.md).
+
+## Guided relational SQL extension
+
+Implemented a two-table SQLite example linking corner deliveries and phase shots with composite keys, enforced foreign keys and a denominator-preserving summary. Demonstrated the difference between joined rows and source deliveries. This is guided SQL work; independent reproduction and explanation remain to demonstrate.

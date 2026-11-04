@@ -201,3 +201,7 @@ Run `53_portfolio_case_study.py`. [The lesson](../lessons/0035-employer-facing-c
 ## Lesson 54: first football database query
 
 Run `54_first_football_sql.py` in Spyder. [The lesson](../lessons/0036-first-football-sql.html), [SQL reference](../reference/football-sql.html) and [worked report](../reports/37_first_football_sql.md) introduce one-corner row grain, counts, filters and grouped rates. No new package is required in the existing environment.
+
+## Lesson 55: connect related event tables
+
+Run `55_football_sql_joins.py`. [The lesson](../lessons/0037-football-sql-joins.html) and [worked report](../reports/38_football_sql_joins.md) explain LEFT JOIN, one-to-many expansion and denominator preservation.

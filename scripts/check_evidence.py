@@ -1912,3 +1912,32 @@ if local_database.exists():
         assert sql_module.query_results(con)==first_sql['queries']
         assert [dict(r) for r in con.execute('SELECT * FROM corners ORDER BY match_id,corner_id')] == sorted(expected_sql_rows,key=lambda r:(r['match_id'],r['corner_id']))
 print('PASS: SQL schema/query hashes, corner row grain, grouped denominators and optional local database reconcile.')
+
+join_evidence=json.loads((ROOT/'data/55_sql_join_evidence.json').read_text())
+assert join_evidence['source_path']=='data/38_france_corner_study_evidence.json'
+assert hashlib.sha256((ROOT/join_evidence['source_path']).read_bytes()).hexdigest()==join_evidence['source_sha256']
+for record in join_evidence['sql_files'].values():
+    assert hashlib.sha256((ROOT/record['path']).read_bytes()).hexdigest()==record['sha256']
+expected_join_corners=[{k:r[k] for k in ['match_id','corner_id','match_date','opponent','period','minute','second']} for r in expected_sql_rows]
+expected_join_shots=[{'match_id':m['fixture']['match_id'],'shot_id':s['shot_id'],'corner_id':p['corner_id'],'elapsed_seconds':s['elapsed_seconds'],'goal':s['goal']} for m in study['matches'] for p in m['phases'] for s in p['shots']]
+assert join_evidence['corner_rows']==expected_join_corners
+assert join_evidence['shot_rows']==expected_join_shots
+assert len({(r['match_id'],r['corner_id']) for r in join_evidence['corner_rows']})==len(expected_join_corners)
+assert len({(r['match_id'],r['shot_id']) for r in join_evidence['shot_rows']})==len(expected_join_shots)
+diagnostic=join_evidence['queries']['diagnostic'][0]
+assert diagnostic['joined_rows']==sum(max(1,len(p['shots'])) for m in study['matches'] for p in m['phases'])
+assert diagnostic['linked_shot_rows']==study['pooled']['phase_shots']
+assert diagnostic['corners_without_phase_shot']==study['pooled']['deliveries']-study['pooled']['corners_with_phase_shot']
+assert join_evidence['queries']['summary']==first_sql['queries']['overall']
+spec=importlib.util.spec_from_file_location('football_join_audit',ROOT/'55_football_sql_joins.py')
+join_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(join_module)
+assert join_evidence==join_module.build_evidence()
+join_database=ROOT/join_evidence['generated_database']
+if join_database.exists():
+    with closing(sqlite3.connect(join_database.as_uri()+'?mode=ro',uri=True)) as con:
+        assert con.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
+        assert con.execute('PRAGMA foreign_key_check').fetchall()==[]
+        assert join_module.query_results(con)==join_evidence['queries']
+        assert [dict(r) for r in con.execute('SELECT * FROM corners ORDER BY match_id,corner_id')]==sorted(expected_join_corners,key=lambda r:(r['match_id'],r['corner_id']))
+        assert [dict(r) for r in con.execute('SELECT * FROM phase_shots ORDER BY match_id,shot_id')]==sorted(expected_join_shots,key=lambda r:(r['match_id'],r['shot_id']))
+print('PASS: related corner/shot tables, composite keys, join expansion and preserved delivery denominator reconcile.')

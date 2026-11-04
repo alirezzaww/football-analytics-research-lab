@@ -242,3 +242,7 @@ Generated concise GitHub-readable and styled HTML case-study views from source-h
 ### Lesson 54 (2026-11-04)
 
 Built and queried the SQLite database locally. Tests cover all-corner denominators with multiple shots, apostrophe-safe value binding, duplicate primary keys, inconsistent indicators and undefined empty rates. Evidence checks reconcile schema/query/source hashes, every source row, original aggregates, extra-time IDs and fresh in-memory query execution; optional generated database integrity/results are checked read-only. No raw downloads or new model.
+
+### Lesson 55 (2026-11-04)
+
+Built separate corner/phase-shot tables with foreign keys enabled. Tests cover multi-shot expansion, zero-shot retention, complete composite joins, orphan rejection and duplicate shots. Evidence checks reconcile both tables to source records, join diagnostics, original summary and fresh in-memory queries; optional local database integrity/foreign keys/records checked read-only. No new football findings.

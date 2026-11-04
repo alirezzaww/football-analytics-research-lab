@@ -345,3 +345,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## SQL block: query the football evidence
 
 [Lesson 54](lessons/0036-first-football-sql.html) builds a [first SQLite database and query exercise](reports/37_first_football_sql.md) from the 45 corner deliveries. Run `python 54_first_football_sql.py`; inspect the committed `sql/54_*.sql` files for counts, filters and grouped rates. The generated database is ignored by Git and rebuildable from source. Guided first exercise, not independent SQL proficiency.
+
+## SQL joins: preserve the corner denominator
+
+[Lesson 55](lessons/0037-football-sql-joins.html) separates corners and phase shots into [related tables](reports/38_football_sql_joins.md), demonstrates why a left join produces 47 rows from 45 deliveries, and reproduces the correct summary by grouping shots per corner first. Run `python 55_football_sql_joins.py`; schema and queries are committed, generated database ignored.
