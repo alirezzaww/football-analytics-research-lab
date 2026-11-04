@@ -41,6 +41,7 @@ STAGES = [
     "44_first_expected_threat.py",
     "45_failed_pass_value.py",
     "46_pass_decision_expected_value.py",
+    "47_first_pass_completion_model.py",
     "scripts/check_evidence.py",
 ]
 

@@ -311,3 +311,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Compare hypothetical pass risk and reward
 
 [Lesson 46](lessons/0028-pass-decision-expected-value.html) completes a [probability-weighted decision exercise](reports/29_pass_decision_expected_value.md) using saved grid values and explicitly assumed completion probabilities. Run `python 46_pass_decision_expected_value.py` without downloads. This is not an observed-options analysis or a trained pass-completion model.
+
+## Learn a first pass-completion model
+
+[Lesson 47](lessons/0029-first-pass-completion-model.html) estimates [smoothed origin-zone completion probabilities](reports/30_first_pass_completion_model.md) from four fixtures and checks them on the already inspected fifth. Run `python 47_first_pass_completion_model.py` without downloads. This estimates zone context, not completion of a specific proposed passing option.

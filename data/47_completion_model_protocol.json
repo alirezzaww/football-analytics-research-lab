@@ -1,0 +1,21 @@
+{
+  "defined_on": "2026-11-04",
+  "training_match_ids": [
+    22921,
+    22948,
+    22980,
+    69137
+  ],
+  "exploratory_check_match_ids": [
+    69202
+  ],
+  "split_rule": "First four France fixtures fit counts; fifth fixture checks probabilities, both teams. Match events already inspected in earlier work; this is not fresh validation.",
+  "features": "Starting grid cell only; same fixed 6x4 geometry. No xT zone values, endpoints, pass outcomes or test counts as prediction features.",
+  "labels": "Missing pass-outcome label = completed; Incomplete/Out/Pass Offside = unsuccessful; Unknown/Injury Clearance/other labels excluded. Existing selected non-restart possession-team pass sample.",
+  "smoothing_strength": 20,
+  "smoothing_rule": "(training zone completions + strength * global training completion rate) / (training zone attempts + strength)",
+  "baseline": "Global training completion rate for every check pass",
+  "primary_metric": "Log loss",
+  "secondary_metric": "Brier score",
+  "interpretation": "A zone-context estimate, not a conditional completion model for a specific passing option. Strength 20 fixed for this exercise, not tuned on check results."
+}

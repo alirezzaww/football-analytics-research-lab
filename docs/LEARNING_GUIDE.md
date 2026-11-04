@@ -169,3 +169,7 @@ Run `45_failed_pass_value.py`. [The lesson](../lessons/0027-failed-pass-value.ht
 ## Lesson 46: probability-weighted options
 
 Run `46_pass_decision_expected_value.py`; [the lesson](../lessons/0028-pass-decision-expected-value.html) and [worked report](../reports/29_pass_decision_expected_value.md) compare a safer and riskier hypothetical option. Completion probabilities are assumptions, not learned predictions.
+
+## Lesson 47: learn completion from training counts
+
+Run `47_first_pass_completion_model.py`. [The lesson](../lessons/0029-first-pass-completion-model.html) and [worked report](../reports/30_first_pass_completion_model.md) cover empirical probabilities, training-only smoothing and exploratory fixture-separated scoring.

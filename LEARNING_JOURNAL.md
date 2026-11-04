@@ -574,3 +574,7 @@ Completed assisted outcome join and explicit zero-continuation diagnostic. Franc
 ### 2026-11-04 · Lesson 46: expected decision value
 
 Completed assisted hypothetical pass-choice exercise with actual fitted zone values, assumed completion probabilities and zero failure continuation. Covered weighted expectations, break-even comparisons and decision quality versus realized outcome. No completion model or actual passing alternatives were inferred. Independent mastery not claimed.
+
+### 2026-11-04 · Lesson 47: learned completion probabilities
+
+Completed assisted training-only smoothed start-zone completion model: 2,808 training passes / 2,253 completions; 622 check passes / 488 completions. Zone check log loss .501806 vs .522044 constant training-rate reference. Covered learned versus assumed probabilities, smoothing and origin-only versus option-specific estimates. Fifth match already inspected, so no fresh-validation claim. Independent mastery not claimed.

@@ -210,3 +210,7 @@ Executed outcome join after reproducing/verifying the source xT fit. Tests cover
 ### Lesson 46 (2026-11-04)
 
 Executed cache-free weighted-value exercise. Tests verify probability endpoints, nonzero failure continuation, invalid probabilities and equality thresholds. Evidence checks reconcile fixed source cells/values, assumed probabilities and weighted expectations. Chart inspected. No fitted completion model, observed-option reconstruction or tactical recommendation.
+
+### Lesson 47 (2026-11-04)
+
+Executed a cache-free completion-count model with fixed four/one fixture split and smoothing strength. Tests cover sparse/empty cells, scoring inputs, proper errors and training-only reconstruction. Evidence checks independently reconcile all selected labels/exclusions, split IDs, counts, smoothing, predictions and log-loss/Brier scores. Map inspected. No xT values/endpoints are prediction inputs; check fixture already inspected.

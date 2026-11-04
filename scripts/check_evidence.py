@@ -1531,3 +1531,51 @@ for i, option in enumerate(decision['options']):
 assert math.isclose(decision['riskier_probability_to_break_even_with_start'], values[8] / values[11])
 assert math.isclose(decision['riskier_probability_to_match_safer_option'], .9 * values[9] / values[11])
 print('PASS: hypothetical pass-choice probabilities, fitted source values, expected changes and equality thresholds reconcile.')
+
+completion = json.loads((ROOT / 'data/47_completion_model_evidence.json').read_text())
+assert completion['source_path'] == 'data/45_failed_pass_value_evidence.json'
+assert hashlib.sha256((ROOT / completion['source_path']).read_bytes()).hexdigest() == completion['source_sha256']
+completion_protocol_path = ROOT / completion['protocol_path']
+assert hashlib.sha256(completion_protocol_path.read_bytes()).hexdigest() == completion['protocol_sha256']
+completion_protocol = json.loads(completion_protocol_path.read_text())
+assert completion_protocol['training_match_ids'] == [r['fixture']['match_id'] for r in study['matches'][:4]]
+assert completion_protocol['exploratory_check_match_ids'] == [study['matches'][4]['fixture']['match_id']]
+train_ids = set(completion_protocol['training_match_ids']); check_ids = set(completion_protocol['exploratory_check_match_ids'])
+assert not train_ids & check_ids
+expected_completion_rows = []; expected_excluded = []
+for row in scored_passes:
+    outcome = row['pass_outcome']
+    if outcome is not None and outcome not in ['Incomplete', 'Out', 'Pass Offside']:
+        expected_excluded.append({'match_id': row['match_id'], 'id': row['id'], 'outcome': outcome}); continue
+    expected_completion_rows.append({'match_id': row['match_id'], 'id': row['id'], 'team': row['team'], 'start_cell': row['start_cell'], 'completed': int(outcome is None), 'split': 'train' if row['match_id'] in train_ids else 'exploratory_check'})
+assert completion['excluded'] == expected_excluded
+assert [{k: v for k, v in r.items() if k not in ['zone_probability', 'baseline_probability']} for r in completion['passes']] == expected_completion_rows
+fit_rows = [r for r in completion['passes'] if r['split'] == 'train']
+check_rows = [r for r in completion['passes'] if r['split'] == 'exploratory_check']
+assert {r['match_id'] for r in fit_rows} == train_ids
+assert {r['match_id'] for r in check_rows} == check_ids
+completion_fit = completion['model']
+reference_rate = sum(r['completed'] for r in fit_rows) / len(fit_rows)
+assert completion_fit['training_attempts'] == len(fit_rows)
+assert completion_fit['training_completions'] == sum(r['completed'] for r in fit_rows)
+assert completion_fit['global_training_rate'] == reference_rate
+assert completion_fit['smoothing_strength'] == completion_protocol['smoothing_strength'] == 20
+assert [z['cell'] for z in completion_fit['zones']] == list(range(24))
+for zone in completion_fit['zones']:
+    rows = [r for r in fit_rows if r['start_cell'] == zone['cell']]
+    n = len(rows); successes = sum(r['completed'] for r in rows)
+    assert zone['attempts'] == n and zone['completions'] == successes
+    assert zone['raw_completion_rate'] == (successes / n if n else None)
+    assert math.isclose(zone['smoothed_probability'], (successes + 20 * reference_rate) / (n + 20))
+for row in completion['passes']:
+    assert row['zone_probability'] == completion_fit['zones'][row['start_cell']]['smoothed_probability']
+    assert row['baseline_probability'] == reference_rate
+for metric_key, prediction_key in [('zone_model_check_metrics', 'zone_probability'), ('constant_baseline_check_metrics', 'baseline_probability')]:
+    metrics = completion[metric_key]
+    assert metrics['passes'] == len(check_rows)
+    assert metrics['completions'] == sum(r['completed'] for r in check_rows)
+    ll = sum(-(r['completed'] * math.log(r[prediction_key]) + (1 - r['completed']) * math.log1p(-r[prediction_key])) for r in check_rows) / len(check_rows)
+    brier = sum((r[prediction_key] - r['completed']) ** 2 for r in check_rows) / len(check_rows)
+    assert math.isclose(metrics['log_loss'], ll)
+    assert math.isclose(metrics['brier_score'], brier)
+print('PASS: training-only completion counts, excluded outcomes, smoothing, fixture split and probability errors reconcile.')
