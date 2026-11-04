@@ -586,3 +586,7 @@ Completed assisted five-fold whole-match check with fixed strength 20, training-
 ### 2026-11-04 · Lesson 49: completion calibration
 
 Completed assisted grouped calibration check of 3,430 existing out-of-fold probabilities. Highest group: 215 attempts, 189 completions, mean prediction 90.56%, observed 87.91%. Covered predicted average versus observed fraction, relative model errors versus calibration, and group frequencies versus unknown individual probabilities. Independent mastery not claimed.
+
+### 2026-11-04 · Lesson 50: pressure-feature experiment
+
+Completed assisted hierarchical origin/pressure model with fixed strengths 20/20. Same 3,430 passes, 444 pressure flags; pooled log loss .479978 vs .480395 origin-only. Three folds improve and two worsen. Covered feature experimentation, sparse groups, recorded-flag meaning and honest tiny-result reporting. No causal pressure effect, verified live feature availability or independent-mastery claim.

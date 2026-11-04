@@ -181,3 +181,7 @@ Run `48_completion_match_cross_validation.py`. [The lesson](../lessons/0030-comp
 ## Lesson 49: inspect numerical probabilities
 
 Run `49_completion_probability_calibration.py`; [the lesson](../lessons/0031-completion-probability-calibration.html) and [worked report](../reports/32_completion_probability_calibration.md) compare average predictions with completed/attempted counts in groups. No recalibration is fitted.
+
+## Lesson 50: evaluate an extra feature
+
+Run `50_pass_completion_pressure_feature.py`. [The lesson](../lessons/0032-pass-completion-pressure-feature.html) and [worked report](../reports/33_pass_completion_pressure_feature.md) compare the same passes/folds with a recorded-pressure feature and hierarchical smoothing. Report the tiny, inconsistent result honestly.

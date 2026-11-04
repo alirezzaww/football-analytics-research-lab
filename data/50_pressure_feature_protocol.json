@@ -1,0 +1,13 @@
+{
+  "defined_on": "2026-11-04",
+  "source_predictions": "data/48_completion_match_cv_evidence.json",
+  "features": ["starting_cell", "recorded_under_pressure_flag"],
+  "pressure_rule": "True only when event.under_pressure is explicitly true; absent/null/false means not flagged, not verified absence of defensive pressure. Reject unexpected nonboolean values.",
+  "origin_smoothing_strength": 20,
+  "pressure_group_smoothing_strength": 20,
+  "pressure_model": "Within each training fold, smooth each origin/flag group toward that fold's smoothed origin probability: (group completions + 20 * origin probability) / (group attempts + 20).",
+  "validation": "Same five whole-match folds and eligible labels as lesson 48. Refit every count/prior in the training fold; retain all outcomes and sample IDs.",
+  "primary_metric": "Pooled out-of-fold log loss; compare pressure model with origin-only model",
+  "secondary_metric": "Brier score",
+  "interpretation": "Exploratory feature experiment on already inspected development matches, not fresh evaluation or causal pressure effects. No tuning based on results."
+}

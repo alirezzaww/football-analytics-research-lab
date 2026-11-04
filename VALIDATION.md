@@ -222,3 +222,7 @@ Executed cache-free five-match cross-validation. Tests change held-out labels to
 ### Lesson 49 (2026-11-04)
 
 Executed cache-free grouping of existing out-of-fold probabilities. Tests cover boundaries including p=1, invalid inputs, empty/zero outcomes and mean prediction versus observed frequency. Evidence checks reconcile complete unique membership, source digest, counts, prediction sums and all group/overall rates. Chart inspected. No model changes, confidence interval or fresh validation.
+
+### Lesson 50 (2026-11-04)
+
+Executed raw pressure-flag join with all five SHA256 checks. Tests cover strict flag parsing, empty/sparse groups and held-out label isolation. Evidence checks reconcile exact source passes, cached raw flags, every fold-local count/prior, probabilities, origin-model reproduction and candidate metrics. Chart inspected. Exploratory feature experiment; no causal pressure effect or fresh validation.

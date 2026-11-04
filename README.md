@@ -323,3 +323,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Check the meaning of predicted completion percentages
 
 [Lesson 49](lessons/0031-completion-probability-calibration.html) adds a [group calibration diagnostic](reports/32_completion_probability_calibration.md) using existing held-out predictions. The highest group averages 90.6% predicted completion versus 189/215 = 87.9% observed. Run `python 49_completion_probability_calibration.py`; predictions are unchanged and no calibrator is fitted.
+
+## Test a recorded-pressure feature
+
+[Lesson 50](lessons/0032-pass-completion-pressure-feature.html) evaluates [origin plus recorded pressure](reports/33_pass_completion_pressure_feature.md) on the same folds. Pooled log loss changes only from 0.480395 to 0.479978, with two folds worsening. Run `python 50_pass_completion_pressure_feature.py`; the small exploratory difference is documented without a practical-upgrade claim.

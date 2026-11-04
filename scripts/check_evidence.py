@@ -1663,3 +1663,70 @@ assert len(calibration_seen) == len(set(calibration_seen)) == len(cv_predictions
 assert set(calibration_seen) == {(r['match_id'], r['id']) for r in cv_predictions}
 check_completion_group(completion_calibration['overall'], cv_predictions)
 print('PASS: completion calibration group boundaries, unique membership, prediction averages and actual frequencies reconcile.')
+
+pressure = json.loads((ROOT / 'data/50_pressure_feature_evidence.json').read_text())
+assert pressure['source_path'] == 'data/48_completion_match_cv_evidence.json'
+assert hashlib.sha256((ROOT / pressure['source_path']).read_bytes()).hexdigest() == pressure['source_sha256']
+pressure_protocol_path = ROOT / pressure['protocol_path']
+assert hashlib.sha256(pressure_protocol_path.read_bytes()).hexdigest() == pressure['protocol_sha256']
+pressure_protocol = json.loads(pressure_protocol_path.read_text())
+assert pressure_protocol['origin_smoothing_strength'] == pressure_protocol['pressure_group_smoothing_strength'] == 20
+assert pressure['raw_manifest_path'] == 'data/44_first_xt_evidence.json'
+assert hashlib.sha256((ROOT / pressure['raw_manifest_path']).read_bytes()).hexdigest() == pressure['raw_manifest_sha256']
+assert pressure['match_ids'] == cv_ids
+pressure_rows = pressure['predictions']
+cv_lookup = {(r['match_id'], r['id']): r for r in cv_predictions}
+assert len(pressure_rows) == len(cv_lookup)
+assert len({(r['match_id'], r['id']) for r in pressure_rows}) == len(cv_lookup)
+for row in pressure_rows:
+    original = cv_lookup[(row['match_id'], row['id'])]
+    for key in ['match_id', 'id', 'team', 'start_cell', 'completed']:
+        assert row[key] == original[key]
+    assert row['raw_pressure_value'] is None or type(row['raw_pressure_value']) is bool
+    assert row['pressure_flag'] == (row['raw_pressure_value'] is True)
+    assert row['origin_probability'] == original['zone_probability']
+for record in xt['raw_inputs']:
+    cached = ROOT / record['relative_path']
+    if cached.exists():
+        assert hashlib.sha256(cached.read_bytes()).hexdigest() == record['sha256']
+        lookup = {r['id']: r for r in json.loads(cached.read_text())}
+        for row in pressure_rows:
+            if row['match_id'] == record['match_id']:
+                event = lookup[row['id']]
+                assert row['raw_pressure_value'] == event.get('under_pressure')
+                assert row['pressure_field_present'] == ('under_pressure' in event)
+assert [r['held_out_match_id'] for r in pressure['folds']] == cv_ids
+for fold, reference_fold in zip(pressure['folds'], completion_cv['folds']):
+    omitted = fold['held_out_match_id']
+    assert fold['training_match_ids'] == reference_fold['training_match_ids']
+    fitted = fold['model']
+    assert fitted['origin_model'] == reference_fold['model']
+    assert fitted['pressure_strength'] == 20
+    train = [r for r in pressure_rows if r['match_id'] != omitted]
+    predicted = [r for r in pressure_rows if r['match_id'] == omitted]
+    assert [(g['cell'], g['pressure_flag']) for g in fitted['groups']] == [(z, flag) for z in range(24) for flag in (False, True)]
+    for group in fitted['groups']:
+        selected = [r for r in train if r['start_cell'] == group['cell'] and r['pressure_flag'] == group['pressure_flag']]
+        n = len(selected); count = sum(r['completed'] for r in selected)
+        prior = fitted['origin_model']['zones'][group['cell']]['smoothed_probability']
+        assert group['attempts'] == n and group['completions'] == count
+        assert group['origin_prior'] == prior
+        assert math.isclose(group['probability'], (count + 20 * prior) / (n + 20))
+    for row in predicted:
+        group = next(g for g in fitted['groups'] if (g['cell'], g['pressure_flag']) == (row['start_cell'], row['pressure_flag']))
+        assert row['pressure_probability'] == group['probability']
+    for metric_key, prediction_key in [('origin_metrics', 'origin_probability'), ('pressure_metrics', 'pressure_probability')]:
+        metric = fold[metric_key]
+        assert metric['passes'] == len(predicted) and metric['completions'] == sum(r['completed'] for r in predicted)
+        ll = sum(-(r['completed']*math.log(r[prediction_key])+(1-r['completed'])*math.log1p(-r[prediction_key])) for r in predicted)/len(predicted)
+        bs = sum((r[prediction_key]-r['completed'])**2 for r in predicted)/len(predicted)
+        assert math.isclose(metric['log_loss'], ll) and math.isclose(metric['brier_score'], bs)
+    assert fold['origin_metrics'] == reference_fold['zone_metrics']
+for metric_key, prediction_key in [('pooled_origin_metrics','origin_probability'),('pooled_pressure_metrics','pressure_probability')]:
+    metric = pressure[metric_key]
+    assert metric['passes'] == len(pressure_rows) and metric['completions'] == sum(r['completed'] for r in pressure_rows)
+    ll = sum(-(r['completed']*math.log(r[prediction_key])+(1-r['completed'])*math.log1p(-r[prediction_key])) for r in pressure_rows)/len(pressure_rows)
+    bs = sum((r[prediction_key]-r['completed'])**2 for r in pressure_rows)/len(pressure_rows)
+    assert math.isclose(metric['log_loss'], ll) and math.isclose(metric['brier_score'], bs)
+assert pressure['pooled_origin_metrics'] == completion_cv['pooled_zone_metrics']
+print('PASS: recorded-pressure tags, fold-local hierarchical counts, origin reproduction and candidate errors reconcile.')

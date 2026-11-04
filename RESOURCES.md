@@ -60,3 +60,5 @@ video review remain future project work. No community participation has been req
 - [Karun Singh: Introducing Expected Threat](https://karun.in/blog/expected-threat.html) — original explanation of probability-weighted location value; lesson 46 derives a separately labelled hypothetical pass-choice exercise with assumed probabilities.
 
 - [scikit-learn LeaveOneGroupOut](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneGroupOut.html) — general method for omitting one group per fold; lesson 48 uses match IDs with a standard-library implementation.
+
+- StatsBomb Open Data specification revisited for lesson 50 event-level `under_pressure` field. The model treats only explicit true as flagged; absent/null/false is not verified absence of real defensive pressure.
