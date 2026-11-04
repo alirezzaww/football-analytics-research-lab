@@ -37,6 +37,7 @@ STAGES = [
     "40_corner_taker_overlap.py",
     "41_corner_side_context.py",
     "42_corner_endpoint_zones.py",
+    "43_corner_video_review_brief.py",
     "scripts/check_evidence.py",
 ]
 

@@ -1349,3 +1349,44 @@ for group in endpoint['groups']:
 assert sum(g['deliveries'] for g in endpoint['groups']) == pooled['deliveries']
 assert sum(g['corners_with_phase_shot'] for g in endpoint['groups']) == pooled['corners_with_phase_shot']
 print('PASS: recorded corner endpoints, disjoint spatial bins and unchanged phase outcomes reconcile.')
+
+review = json.loads((ROOT / 'data/43_corner_review_queue_evidence.json').read_text())
+assert review['source_path'] == 'data/42_corner_endpoint_evidence.json'
+assert hashlib.sha256((ROOT / review['source_path']).read_bytes()).hexdigest() == review['source_sha256']
+review_protocol_path = ROOT / review['protocol_path']
+assert hashlib.sha256(review_protocol_path.read_bytes()).hexdigest() == review['protocol_sha256']
+review_protocol = json.loads(review_protocol_path.read_text())
+assert review['questions'] == review_protocol['questions']
+assert review['video_status'] == review_protocol['video_status']
+assert review['scope'] == review_protocol['purpose']
+candidates = review['candidate_deliveries']
+assert len(candidates) == len(endpoint_rows)
+fixtures_by_id = {r['fixture']['match_id']: r for r in study['matches']}
+for row, original in zip(candidates, endpoint_rows):
+    assert {k: v for k, v in row.items() if k not in ('match_date', 'event_index', 'period', 'minute', 'second', 'event_timestamp')} == original
+    match_record = fixtures_by_id[row['match_id']]
+    assert row['match_date'] == match_record['fixture']['match_date']
+    cached = ROOT / match_record['raw_input']['relative_path']
+    if cached.exists():
+        assert hashlib.sha256(cached.read_bytes()).hexdigest() == match_record['raw_input']['sha256']
+        lookup = {r['id']: r for r in json.loads(cached.read_text())}
+        event = lookup[row['corner_id']]
+        assert row['event_index'] == event['index']
+        assert row['event_timestamp'] == event['timestamp']
+        for key in ['period', 'minute', 'second']:
+            assert row[key] == event[key]
+expected_cells = [(zone, status) for zone in review_protocol['zones'] for status in review_protocol['phase_outcome_order']]
+assert [(r['endpoint_zone'], r['phase_has_shot']) for r in review['review_queue']] == expected_cells
+used_matches = set()
+selected_keys = []
+ordered = sorted(candidates, key=lambda r: (r['match_date'], r['match_id'], r['event_index']))
+for cell in review['review_queue']:
+    eligible = [r for r in ordered if r['endpoint_zone'] == cell['endpoint_zone'] and r['phase_has_shot'] == cell['phase_has_shot']]
+    preferred = [r for r in eligible if r['match_id'] not in used_matches]
+    expected_example = (preferred or eligible)[0] if eligible else None
+    assert cell['example'] == expected_example
+    if expected_example:
+        used_matches.add(expected_example['match_id'])
+        selected_keys.append((expected_example['match_id'], expected_example['corner_id']))
+assert len(set(selected_keys)) == len(selected_keys)
+print('PASS: review queue candidates, source timing, deliberate example selection and unreviewed status reconcile.')

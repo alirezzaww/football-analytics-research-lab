@@ -1,0 +1,14 @@
+{
+  "defined_on": "2026-11-04",
+  "zones": ["Six-yard box", "Rest of penalty area", "Outside penalty area"],
+  "phase_outcome_order": [false, true],
+  "selection_rule": "For each zone and phase-shot status, select the chronologically earliest candidate from a fixture not yet selected if possible, otherwise the earliest available candidate. Never duplicate a corner. Preserve empty cells explicitly.",
+  "purpose": "Six purposively selected examples for qualitative review, not a representative sample or an evaluation set",
+  "video_status": "Not reviewed; no video source or video timestamps supplied",
+  "questions": [
+    "Who makes the first visible contact, if the footage shows it?",
+    "Is an attacking receiver clearly in control after the delivery?",
+    "What observable movement, marking or goalkeeper action precedes the outcome?",
+    "Does the visible sequence agree with the logged endpoint and phase boundary?"
+  ]
+}

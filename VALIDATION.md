@@ -194,3 +194,7 @@ Executed source-location join after verifying the five-fixture source. Tests cov
 ### Lesson 42 (2026-11-03)
 
 Executed hash-verified endpoint join. Tests cover nested box boundaries, unknown/off-pitch locations, all-delivery denominators and empty groups. Evidence checks preserve every original field and phase outcome, independently classify each endpoint, reconcile totals and verify cached raw endpoints/outcome labels. Map inspected. No new model or causal targeting claim.
+
+### Lesson 43 (2026-11-04)
+
+Executed hash-verified candidate timing join and deliberate six-cell selection. Unit tests check fixture-variety preference, explicit missing cells and exact report regeneration without network. Evidence checks reconcile all 45 original records, cached raw event times, source/protocol digests and selected event IDs; unreviewed video status is explicit. No footage or tactical coding was fabricated.

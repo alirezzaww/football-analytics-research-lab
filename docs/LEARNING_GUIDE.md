@@ -153,3 +153,7 @@ Run `41_corner_side_context.py`. [The lesson](../lessons/0023-corner-side-contex
 ## Lesson 42: spatial binning
 
 Run `42_corner_endpoint_zones.py`. [The lesson](../lessons/0024-corner-endpoint-zones.html) and [completed report](../reports/25_corner_endpoint_zones.md) cover disjoint nested boxes, missing points and careful endpoint interpretation.
+
+## Lesson 43: prepare a practical review brief
+
+Run `43_corner_video_review_brief.py` and read [the compact lesson](../lessons/0025-corner-video-review-brief.html). [The generated brief](../reports/26_corner_video_review_brief.md) completes example selection and observation-question preparation; actual video review requires footage and remains unperformed.

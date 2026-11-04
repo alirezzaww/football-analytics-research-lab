@@ -558,3 +558,7 @@ Completed assisted source-location join for all 45 deliveries. Majri inswingers 
 ### 2026-11-03 · Lesson 42: spatial endpoint bins
 
 Completed assisted endpoint join and map: six-yard box 15 deliveries / 5 with phase shot; rest of penalty area 19/11; outside 11/3; missing 0. Covered nested-region priority, coordinate boundaries and endpoint versus intention/control. Original 45-delivery/19-positive totals preserved. No independent-mastery claim.
+
+### 2026-11-04 · Lesson 43: evidence to review brief
+
+Completed assisted preparation of six corner examples across all five opponents, one phase-shot and one no-phase-shot example per endpoint zone, preferring fixture variety. Generated exact event references and observation questions, with video observations explicitly unknown. Covered deliberate selection versus representative sampling and event-clock versus video-file time. No footage accessed or reviewed; independent mastery not claimed.

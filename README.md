@@ -295,3 +295,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Map recorded corner endpoints into pitch zones
 
 [Lesson 42](lessons/0024-corner-endpoint-zones.html) classifies [corner pass endpoints](reports/25_corner_endpoint_zones.md) into disjoint six-yard, remaining penalty-area and outside zones. All 45 deliveries remain included. Run `python 42_corner_endpoint_zones.py`; recorded endpoints do not establish intended targets or controlled receptions.
+
+## Turn the event study into a video-review brief
+
+[Lesson 43](lessons/0025-corner-video-review-brief.html) prepares [six sourced review examples](reports/26_corner_video_review_brief.md) across five opponents, covering endpoint zones and phase-shot outcomes. Run `python 43_corner_video_review_brief.py` to regenerate the queue and report. The brief is complete; video observations remain unreviewed and the purposive examples are not an estimation sample.

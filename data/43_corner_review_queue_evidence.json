@@ -1,0 +1,1470 @@
+{
+  "source_path": "data/42_corner_endpoint_evidence.json",
+  "source_sha256": "ae9fd6bdfbb5fe63a24438a8df5d699371c2214e5777bfabca3201b324c4c661",
+  "protocol_path": "data/43_review_queue_protocol.json",
+  "protocol_sha256": "70c31389832c758efd57ee18ab3014c0de252041909b8785cb4f7c1e3e0a99bf",
+  "candidate_deliveries": [
+    {
+      "match_id": 22921,
+      "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+      "opponent": "Korea Republic Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        111.0,
+        44.0
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-07",
+      "event_index": 317,
+      "period": 1,
+      "minute": 8,
+      "second": 10,
+      "event_timestamp": "00:08:10.106"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+      "opponent": "Korea Republic Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 2,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        113.5,
+        37.0
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-07",
+      "event_index": 421,
+      "period": 1,
+      "minute": 12,
+      "second": 11,
+      "event_timestamp": "00:12:11.339"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+      "opponent": "Korea Republic Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        115.6,
+        43.4
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-07",
+      "event_index": 815,
+      "period": 1,
+      "minute": 21,
+      "second": 29,
+      "event_timestamp": "00:21:29.021"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+      "opponent": "Korea Republic Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        112.8,
+        46.7
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-07",
+      "event_index": 911,
+      "period": 1,
+      "minute": 23,
+      "second": 51,
+      "event_timestamp": "00:23:51.623"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+      "opponent": "Korea Republic Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        112.4,
+        4.9
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-07",
+      "event_index": 973,
+      "period": 1,
+      "minute": 26,
+      "second": 16,
+      "event_timestamp": "00:26:16.448"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+      "opponent": "Korea Republic Women's",
+      "passer": "Amel Majri",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        108.8,
+        75.4
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-07",
+      "event_index": 1086,
+      "period": 1,
+      "minute": 32,
+      "second": 28,
+      "event_timestamp": "00:32:28.900"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+      "opponent": "Korea Republic Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        117.9,
+        40.9
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-07",
+      "event_index": 1111,
+      "period": 1,
+      "minute": 33,
+      "second": 50,
+      "event_timestamp": "00:33:50.694"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+      "opponent": "Korea Republic Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 1,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        112.4,
+        37.2
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-07",
+      "event_index": 1132,
+      "period": 1,
+      "minute": 34,
+      "second": 52,
+      "event_timestamp": "00:34:52.811"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+      "opponent": "Korea Republic Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        109.6,
+        34.9
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-07",
+      "event_index": 1538,
+      "period": 1,
+      "minute": 45,
+      "second": 17,
+      "event_timestamp": "00:45:17.453"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+      "opponent": "Korea Republic Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 1,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        106.8,
+        37.0
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-07",
+      "event_index": 1595,
+      "period": 1,
+      "minute": 46,
+      "second": 55,
+      "event_timestamp": "00:46:55.373"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+      "opponent": "Korea Republic Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        118.5,
+        47.4
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-07",
+      "event_index": 1944,
+      "period": 2,
+      "minute": 53,
+      "second": 0,
+      "event_timestamp": "00:08:00.123"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+      "opponent": "Korea Republic Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        117.1,
+        47.4
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-07",
+      "event_index": 1946,
+      "period": 2,
+      "minute": 53,
+      "second": 20,
+      "event_timestamp": "00:08:20.829"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+      "opponent": "Korea Republic Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        116.0,
+        40.0
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-07",
+      "event_index": 1948,
+      "period": 2,
+      "minute": 53,
+      "second": 40,
+      "event_timestamp": "00:08:40.577"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "706ed468-34b9-4562-8dfa-fa03c2f58cf2",
+      "opponent": "Norway Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        119.6,
+        16.9
+      ],
+      "pass_outcome": "Out",
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-12",
+      "event_index": 104,
+      "period": 1,
+      "minute": 4,
+      "second": 32,
+      "event_timestamp": "00:04:32.104"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "d2bf6141-e552-4b71-aa71-c53d6392a8d4",
+      "opponent": "Norway Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        99.9,
+        36.4
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-12",
+      "event_index": 413,
+      "period": 1,
+      "minute": 16,
+      "second": 53,
+      "event_timestamp": "00:16:53.932"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "53cfdc02-7047-42ef-bcbd-efa23cd52551",
+      "opponent": "Norway Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 2,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        114.2,
+        38.5
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-12",
+      "event_index": 703,
+      "period": 1,
+      "minute": 25,
+      "second": 25,
+      "event_timestamp": "00:25:25.206"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "37f27fcd-70b1-4e4a-987e-d86589934554",
+      "opponent": "Norway Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        114.9,
+        35.1
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-12",
+      "event_index": 1217,
+      "period": 1,
+      "minute": 38,
+      "second": 42,
+      "event_timestamp": "00:38:42.390"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "3aa1ac58-5703-4826-8cc4-66de93b93cf9",
+      "opponent": "Norway Women's",
+      "passer": "Amel Majri",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        113.3,
+        75.0
+      ],
+      "pass_outcome": "Unknown",
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-12",
+      "event_index": 1479,
+      "period": 1,
+      "minute": 44,
+      "second": 59,
+      "event_timestamp": "00:44:59.729"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "959db788-b5b0-4e3d-b8b5-453ab33bc243",
+      "opponent": "Norway Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        114.2,
+        46.5
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-12",
+      "event_index": 1722,
+      "period": 2,
+      "minute": 50,
+      "second": 5,
+      "event_timestamp": "00:05:05.673"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "cd284f1b-ead2-47f7-9262-37ecd86a01ea",
+      "opponent": "Norway Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        112.5,
+        45.2
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-12",
+      "event_index": 1969,
+      "period": 2,
+      "minute": 59,
+      "second": 34,
+      "event_timestamp": "00:14:34.644"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "e58a4fd7-0074-4807-bc3d-433f22794dd1",
+      "opponent": "Norway Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        114.5,
+        40.1
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-12",
+      "event_index": 2028,
+      "period": 2,
+      "minute": 61,
+      "second": 57,
+      "event_timestamp": "00:16:57.975"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "aa1bba1a-49f0-446a-aa0c-7ae995edbc61",
+      "opponent": "Norway Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        112.5,
+        46.8
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-12",
+      "event_index": 2883,
+      "period": 2,
+      "minute": 91,
+      "second": 34,
+      "event_timestamp": "00:46:34.621"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "d562d240-7ca7-42ca-b070-1903214b7d78",
+      "opponent": "Nigeria Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        110.4,
+        2.2
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-17",
+      "event_index": 428,
+      "period": 1,
+      "minute": 9,
+      "second": 50,
+      "event_timestamp": "00:09:50.347"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "e626c1b0-270b-4dae-ac24-2ce37bb98fe5",
+      "opponent": "Nigeria Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        108.8,
+        28.7
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-17",
+      "event_index": 499,
+      "period": 1,
+      "minute": 11,
+      "second": 15,
+      "event_timestamp": "00:11:15.284"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "3c23ffce-1c2e-4957-81f5-fc8dad0e7846",
+      "opponent": "Nigeria Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        108.1,
+        32.5
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-17",
+      "event_index": 656,
+      "period": 1,
+      "minute": 16,
+      "second": 40,
+      "event_timestamp": "00:16:40.094"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "858e59fe-db8a-423d-9632-fd2dc09c032e",
+      "opponent": "Nigeria Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        116.4,
+        35.5
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-17",
+      "event_index": 1166,
+      "period": 1,
+      "minute": 32,
+      "second": 30,
+      "event_timestamp": "00:32:30.983"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "e3c4cf98-37f0-46ae-bf3e-463c4267e490",
+      "opponent": "Nigeria Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        107.1,
+        36.5
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-17",
+      "event_index": 1943,
+      "period": 2,
+      "minute": 55,
+      "second": 51,
+      "event_timestamp": "00:10:51.361"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "09403170-a74c-4173-9621-74819b9396ea",
+      "opponent": "Nigeria Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        104.8,
+        40.9
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-17",
+      "event_index": 2265,
+      "period": 2,
+      "minute": 64,
+      "second": 5,
+      "event_timestamp": "00:19:05.990"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "82c00f82-bc17-4969-8411-eb4e3250f6d5",
+      "opponent": "Nigeria Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        110.9,
+        39.2
+      ],
+      "pass_outcome": "Unknown",
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-17",
+      "event_index": 2528,
+      "period": 2,
+      "minute": 71,
+      "second": 3,
+      "event_timestamp": "00:26:03.495"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "eab50457-0960-44cf-a56d-6df840ce8f49",
+      "opponent": "Nigeria Women's",
+      "passer": "Onema Grace Geyoro",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        102.8,
+        15.9
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-17",
+      "event_index": 2996,
+      "period": 2,
+      "minute": 94,
+      "second": 15,
+      "event_timestamp": "00:49:15.218"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "79313db5-366f-422f-b6fc-20905849e2cc",
+      "opponent": "Nigeria Women's",
+      "passer": "Onema Grace Geyoro",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        113.3,
+        4.4
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-17",
+      "event_index": 3025,
+      "period": 2,
+      "minute": 95,
+      "second": 15,
+      "event_timestamp": "00:50:15.712"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "6b9af7a2-b0a3-4349-811f-d676391b77b5",
+      "opponent": "Brazil Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        114.2,
+        39.0
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-23",
+      "event_index": 101,
+      "period": 1,
+      "minute": 3,
+      "second": 22,
+      "event_timestamp": "00:03:22.215"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "309c806b-9222-42ac-aa5c-3d5d9fd2d111",
+      "opponent": "Brazil Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        115.5,
+        40.9
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-23",
+      "event_index": 168,
+      "period": 1,
+      "minute": 5,
+      "second": 24,
+      "event_timestamp": "00:05:24.011"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "0466f6e9-18f1-437b-b87a-c72fafe60bfc",
+      "opponent": "Brazil Women's",
+      "passer": "Amel Majri",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        113.5,
+        75.1
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-23",
+      "event_index": 646,
+      "period": 1,
+      "minute": 19,
+      "second": 53,
+      "event_timestamp": "00:19:53.429"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "407c30fc-6dbf-4657-a24b-91c9262f1bb0",
+      "opponent": "Brazil Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        116.9,
+        40.6
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-23",
+      "event_index": 1633,
+      "period": 2,
+      "minute": 56,
+      "second": 42,
+      "event_timestamp": "00:11:42.195"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "46008074-50c0-4e07-a2f0-5fa4bfe5ff60",
+      "opponent": "Brazil Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Outswinging",
+      "category": "Outswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        106.5,
+        33.2
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-23",
+      "event_index": 2994,
+      "period": 3,
+      "minute": 99,
+      "second": 20,
+      "event_timestamp": "00:09:20.285"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "d0251944-2271-4cb7-ba76-5d94d896067d",
+      "opponent": "Brazil Women's",
+      "passer": "Elise Bussaglia",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        115.9,
+        1.4
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-23",
+      "event_index": 3090,
+      "period": 3,
+      "minute": 104,
+      "second": 3,
+      "event_timestamp": "00:14:03.951"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "7c2b073d-bcaa-4a16-87e8-df8aa2cee49d",
+      "opponent": "Brazil Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": null,
+      "category": "Other / unrecorded",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        111.2,
+        4.4
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Outside penalty area",
+      "match_date": "2019-06-23",
+      "event_index": 3551,
+      "period": 4,
+      "minute": 118,
+      "second": 45,
+      "event_timestamp": "00:13:45.997"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "98ca6d2c-85e1-42d6-8848-cf2299f70dfe",
+      "opponent": "United States Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        111.7,
+        36.1
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-28",
+      "event_index": 933,
+      "period": 1,
+      "minute": 28,
+      "second": 47,
+      "event_timestamp": "00:28:47.473"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "270adf53-14f0-41a0-839b-3b8454cd02b8",
+      "opponent": "United States Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        107.3,
+        42.4
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-28",
+      "event_index": 970,
+      "period": 1,
+      "minute": 31,
+      "second": 54,
+      "event_timestamp": "00:31:54.905"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "5d27dcd4-3e21-45ee-a6a3-dbb0ed3c942b",
+      "opponent": "United States Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        113.0,
+        38.8
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-28",
+      "event_index": 1728,
+      "period": 2,
+      "minute": 52,
+      "second": 13,
+      "event_timestamp": "00:07:13.940"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "3f8c36b4-0aaf-4bdd-9929-e022320c074a",
+      "opponent": "United States Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        116.4,
+        42.4
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-28",
+      "event_index": 1864,
+      "period": 2,
+      "minute": 56,
+      "second": 18,
+      "event_timestamp": "00:11:18.841"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "a7b5b310-6608-4df1-b03b-6979b6e37242",
+      "opponent": "United States Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        107.0,
+        32.7
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-28",
+      "event_index": 2490,
+      "period": 2,
+      "minute": 72,
+      "second": 56,
+      "event_timestamp": "00:27:56.948"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "b7dfeb21-5bab-4404-9b9f-14fddfd51c48",
+      "opponent": "United States Women's",
+      "passer": "Ga\u00ebtane Thiney",
+      "raw_technique": "Straight",
+      "category": "Straight",
+      "phase_has_shot": false,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        0.1
+      ],
+      "corner_side": "Near y=0 touchline",
+      "end_location": [
+        116.6,
+        34.2
+      ],
+      "pass_outcome": "Incomplete",
+      "endpoint_zone": "Six-yard box",
+      "match_date": "2019-06-28",
+      "event_index": 2706,
+      "period": 2,
+      "minute": 79,
+      "second": 7,
+      "event_timestamp": "00:34:07.355"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "4b180bab-1634-40db-8482-7f4ac852b437",
+      "opponent": "United States Women's",
+      "passer": "Amel Majri",
+      "raw_technique": "Inswinging",
+      "category": "Inswinging",
+      "phase_has_shot": true,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "start_location": [
+        120.0,
+        80.0
+      ],
+      "corner_side": "Near y=80 touchline",
+      "end_location": [
+        109.3,
+        32.8
+      ],
+      "pass_outcome": null,
+      "endpoint_zone": "Rest of penalty area",
+      "match_date": "2019-06-28",
+      "event_index": 2793,
+      "period": 2,
+      "minute": 83,
+      "second": 13,
+      "event_timestamp": "00:38:13.956"
+    }
+  ],
+  "review_queue": [
+    {
+      "endpoint_zone": "Six-yard box",
+      "phase_has_shot": false,
+      "example": {
+        "match_id": 22921,
+        "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+        "opponent": "Korea Republic Women's",
+        "passer": "Amel Majri",
+        "raw_technique": "Inswinging",
+        "category": "Inswinging",
+        "phase_has_shot": false,
+        "phase_shots": 0,
+        "phase_shot_goals": 0,
+        "start_location": [
+          120.0,
+          80.0
+        ],
+        "corner_side": "Near y=80 touchline",
+        "end_location": [
+          117.9,
+          40.9
+        ],
+        "pass_outcome": "Incomplete",
+        "endpoint_zone": "Six-yard box",
+        "match_date": "2019-06-07",
+        "event_index": 1111,
+        "period": 1,
+        "minute": 33,
+        "second": 50,
+        "event_timestamp": "00:33:50.694"
+      }
+    },
+    {
+      "endpoint_zone": "Six-yard box",
+      "phase_has_shot": true,
+      "example": {
+        "match_id": 22948,
+        "corner_id": "53cfdc02-7047-42ef-bcbd-efa23cd52551",
+        "opponent": "Norway Women's",
+        "passer": "Amel Majri",
+        "raw_technique": "Inswinging",
+        "category": "Inswinging",
+        "phase_has_shot": true,
+        "phase_shots": 2,
+        "phase_shot_goals": 0,
+        "start_location": [
+          120.0,
+          80.0
+        ],
+        "corner_side": "Near y=80 touchline",
+        "end_location": [
+          114.2,
+          38.5
+        ],
+        "pass_outcome": "Incomplete",
+        "endpoint_zone": "Six-yard box",
+        "match_date": "2019-06-12",
+        "event_index": 703,
+        "period": 1,
+        "minute": 25,
+        "second": 25,
+        "event_timestamp": "00:25:25.206"
+      }
+    },
+    {
+      "endpoint_zone": "Rest of penalty area",
+      "phase_has_shot": false,
+      "example": {
+        "match_id": 22980,
+        "corner_id": "82c00f82-bc17-4969-8411-eb4e3250f6d5",
+        "opponent": "Nigeria Women's",
+        "passer": "Amel Majri",
+        "raw_technique": "Outswinging",
+        "category": "Outswinging",
+        "phase_has_shot": false,
+        "phase_shots": 0,
+        "phase_shot_goals": 0,
+        "start_location": [
+          120.0,
+          0.1
+        ],
+        "corner_side": "Near y=0 touchline",
+        "end_location": [
+          110.9,
+          39.2
+        ],
+        "pass_outcome": "Unknown",
+        "endpoint_zone": "Rest of penalty area",
+        "match_date": "2019-06-17",
+        "event_index": 2528,
+        "period": 2,
+        "minute": 71,
+        "second": 3,
+        "event_timestamp": "00:26:03.495"
+      }
+    },
+    {
+      "endpoint_zone": "Rest of penalty area",
+      "phase_has_shot": true,
+      "example": {
+        "match_id": 69202,
+        "corner_id": "270adf53-14f0-41a0-839b-3b8454cd02b8",
+        "opponent": "United States Women's",
+        "passer": "Ga\u00ebtane Thiney",
+        "raw_technique": "Inswinging",
+        "category": "Inswinging",
+        "phase_has_shot": true,
+        "phase_shots": 1,
+        "phase_shot_goals": 0,
+        "start_location": [
+          120.0,
+          80.0
+        ],
+        "corner_side": "Near y=80 touchline",
+        "end_location": [
+          107.3,
+          42.4
+        ],
+        "pass_outcome": null,
+        "endpoint_zone": "Rest of penalty area",
+        "match_date": "2019-06-28",
+        "event_index": 970,
+        "period": 1,
+        "minute": 31,
+        "second": 54,
+        "event_timestamp": "00:31:54.905"
+      }
+    },
+    {
+      "endpoint_zone": "Outside penalty area",
+      "phase_has_shot": false,
+      "example": {
+        "match_id": 69137,
+        "corner_id": "0466f6e9-18f1-437b-b87a-c72fafe60bfc",
+        "opponent": "Brazil Women's",
+        "passer": "Amel Majri",
+        "raw_technique": null,
+        "category": "Other / unrecorded",
+        "phase_has_shot": false,
+        "phase_shots": 0,
+        "phase_shot_goals": 0,
+        "start_location": [
+          120.0,
+          80.0
+        ],
+        "corner_side": "Near y=80 touchline",
+        "end_location": [
+          113.5,
+          75.1
+        ],
+        "pass_outcome": null,
+        "endpoint_zone": "Outside penalty area",
+        "match_date": "2019-06-23",
+        "event_index": 646,
+        "period": 1,
+        "minute": 19,
+        "second": 53,
+        "event_timestamp": "00:19:53.429"
+      }
+    },
+    {
+      "endpoint_zone": "Outside penalty area",
+      "phase_has_shot": true,
+      "example": {
+        "match_id": 22921,
+        "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+        "opponent": "Korea Republic Women's",
+        "passer": "Amel Majri",
+        "raw_technique": null,
+        "category": "Other / unrecorded",
+        "phase_has_shot": true,
+        "phase_shots": 1,
+        "phase_shot_goals": 0,
+        "start_location": [
+          120.0,
+          80.0
+        ],
+        "corner_side": "Near y=80 touchline",
+        "end_location": [
+          108.8,
+          75.4
+        ],
+        "pass_outcome": null,
+        "endpoint_zone": "Outside penalty area",
+        "match_date": "2019-06-07",
+        "event_index": 1086,
+        "period": 1,
+        "minute": 32,
+        "second": 28,
+        "event_timestamp": "00:32:28.900"
+      }
+    }
+  ],
+  "questions": [
+    "Who makes the first visible contact, if the footage shows it?",
+    "Is an attacking receiver clearly in control after the delivery?",
+    "What observable movement, marking or goalkeeper action precedes the outcome?",
+    "Does the visible sequence agree with the logged endpoint and phase boundary?"
+  ],
+  "video_status": "Not reviewed; no video source or video timestamps supplied",
+  "scope": "Six purposively selected examples for qualitative review, not a representative sample or an evaluation set"
+}

@@ -83,3 +83,11 @@ Supported wording in the guided-project context:
 > Extended a reproducible event-data portfolio with a five-match France corner-phase study, using explicit possession/time/restart boundaries, unique shot assignments, match-level reporting and pooled delivery denominators; documented extra-time exposure and definition sensitivity.
 
 This describes the assisted implementation. It does not imply independent authorship, causal corner valuation, video scouting or professional club impact.
+
+## Review-brief preparation
+
+A supported guided-project statement:
+
+> Prepared reproducible corner-event review briefs with exact source IDs, match-clock references, deliberate zone/outcome coverage and observation questions, while distinguishing event-data findings from unperformed video review.
+
+Do not describe this as completed video scouting: no footage has been reviewed in this assignment.
