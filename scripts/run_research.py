@@ -42,6 +42,7 @@ STAGES = [
     "45_failed_pass_value.py",
     "46_pass_decision_expected_value.py",
     "47_first_pass_completion_model.py",
+    "48_completion_match_cross_validation.py",
     "scripts/check_evidence.py",
 ]
 

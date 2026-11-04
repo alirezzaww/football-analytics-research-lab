@@ -58,3 +58,5 @@ video review remain future project work. No community participation has been req
 - [socceraction xT documentation](https://socceraction.readthedocs.io/en/stable/documentation/valuing_actions/xT.html) — standard application to successful ball-moving actions; lesson 45 separately labels its project-specific unsuccessful-pass diagnostic.
 
 - [Karun Singh: Introducing Expected Threat](https://karun.in/blog/expected-threat.html) — original explanation of probability-weighted location value; lesson 46 derives a separately labelled hypothetical pass-choice exercise with assumed probabilities.
+
+- [scikit-learn LeaveOneGroupOut](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneGroupOut.html) — general method for omitting one group per fold; lesson 48 uses match IDs with a standard-library implementation.

@@ -1579,3 +1579,59 @@ for metric_key, prediction_key in [('zone_model_check_metrics', 'zone_probabilit
     assert math.isclose(metrics['log_loss'], ll)
     assert math.isclose(metrics['brier_score'], brier)
 print('PASS: training-only completion counts, excluded outcomes, smoothing, fixture split and probability errors reconcile.')
+
+completion_cv = json.loads((ROOT / 'data/48_completion_match_cv_evidence.json').read_text())
+assert completion_cv['source_path'] == 'data/47_completion_model_evidence.json'
+assert hashlib.sha256((ROOT / completion_cv['source_path']).read_bytes()).hexdigest() == completion_cv['source_sha256']
+cv_ids = completion_protocol['training_match_ids'] + completion_protocol['exploratory_check_match_ids']
+assert completion_cv['match_ids'] == cv_ids
+assert completion_cv['smoothing_strength'] == completion_fit['smoothing_strength']
+assert [f['held_out_match_id'] for f in completion_cv['folds']] == cv_ids
+cv_predictions = completion_cv['predictions']
+original_completion = {(r['match_id'], r['id']): r for r in completion['passes']}
+assert len(cv_predictions) == len(original_completion)
+assert len({(r['match_id'], r['id']) for r in cv_predictions}) == len(original_completion)
+assert {(r['match_id'], r['id']) for r in cv_predictions} == set(original_completion)
+for row in cv_predictions:
+    original = original_completion[(row['match_id'], row['id'])]
+    assert {k: row[k] for k in ['match_id', 'id', 'team', 'start_cell', 'completed']} == {k: original[k] for k in ['match_id', 'id', 'team', 'start_cell', 'completed']}
+for fold in completion_cv['folds']:
+    omitted = fold['held_out_match_id']
+    assert fold['training_match_ids'] == [m for m in cv_ids if m != omitted]
+    train_rows = [r for r in completion['passes'] if r['match_id'] != omitted]
+    predicted = [r for r in cv_predictions if r['match_id'] == omitted]
+    fitted = fold['model']
+    baseline = sum(r['completed'] for r in train_rows) / len(train_rows)
+    assert fitted['training_attempts'] == len(train_rows)
+    assert fitted['training_completions'] == sum(r['completed'] for r in train_rows)
+    assert fitted['global_training_rate'] == baseline
+    assert fitted['smoothing_strength'] == 20
+    assert [z['cell'] for z in fitted['zones']] == list(range(24))
+    for zone in fitted['zones']:
+        selected = [r for r in train_rows if r['start_cell'] == zone['cell']]
+        n = len(selected); count = sum(r['completed'] for r in selected)
+        assert zone['attempts'] == n and zone['completions'] == count
+        assert zone['raw_completion_rate'] == (count / n if n else None)
+        assert math.isclose(zone['smoothed_probability'], (count + 20 * baseline) / (n + 20))
+    for row in predicted:
+        assert row['baseline_probability'] == baseline
+        assert row['zone_probability'] == fitted['zones'][row['start_cell']]['smoothed_probability']
+    for metrics_key, prediction_key in [('zone_metrics', 'zone_probability'), ('baseline_metrics', 'baseline_probability')]:
+        metrics = fold[metrics_key]
+        assert metrics['passes'] == len(predicted)
+        assert metrics['completions'] == sum(r['completed'] for r in predicted)
+        ll = sum(-(r['completed'] * math.log(r[prediction_key]) + (1-r['completed']) * math.log1p(-r[prediction_key])) for r in predicted) / len(predicted)
+        bs = sum((r[prediction_key] - r['completed'])**2 for r in predicted) / len(predicted)
+        assert math.isclose(metrics['log_loss'], ll) and math.isclose(metrics['brier_score'], bs)
+    if omitted == completion_protocol['exploratory_check_match_ids'][0]:
+        assert fitted == completion['model']
+        assert fold['zone_metrics'] == completion['zone_model_check_metrics']
+        assert fold['baseline_metrics'] == completion['constant_baseline_check_metrics']
+for metrics_key, prediction_key in [('pooled_zone_metrics', 'zone_probability'), ('pooled_baseline_metrics', 'baseline_probability')]:
+    metrics = completion_cv[metrics_key]
+    assert metrics['passes'] == len(cv_predictions)
+    assert metrics['completions'] == sum(r['completed'] for r in cv_predictions)
+    ll = sum(-(r['completed'] * math.log(r[prediction_key]) + (1-r['completed']) * math.log1p(-r[prediction_key])) for r in cv_predictions) / len(cv_predictions)
+    bs = sum((r[prediction_key] - r['completed'])**2 for r in cv_predictions) / len(cv_predictions)
+    assert math.isclose(metrics['log_loss'], ll) and math.isclose(metrics['brier_score'], bs)
+print('PASS: whole-match completion folds, fold-local baselines, unique predictions and pooled probability errors reconcile.')

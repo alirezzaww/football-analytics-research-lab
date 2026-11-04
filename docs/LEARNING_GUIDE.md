@@ -173,3 +173,7 @@ Run `46_pass_decision_expected_value.py`; [the lesson](../lessons/0028-pass-deci
 ## Lesson 47: learn completion from training counts
 
 Run `47_first_pass_completion_model.py`. [The lesson](../lessons/0029-first-pass-completion-model.html) and [worked report](../reports/30_first_pass_completion_model.md) cover empirical probabilities, training-only smoothing and exploratory fixture-separated scoring.
+
+## Lesson 48: repeat whole-match checks
+
+Run `48_completion_match_cross_validation.py`. [The lesson](../lessons/0030-completion-match-cross-validation.html) and [worked report](../reports/31_completion_match_cross_validation.md) cover fold-local counts, whole-fixture exclusion and pooled out-of-fold metrics.

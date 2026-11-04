@@ -315,3 +315,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Learn a first pass-completion model
 
 [Lesson 47](lessons/0029-first-pass-completion-model.html) estimates [smoothed origin-zone completion probabilities](reports/30_first_pass_completion_model.md) from four fixtures and checks them on the already inspected fifth. Run `python 47_first_pass_completion_model.py` without downloads. This estimates zone context, not completion of a specific proposed passing option.
+
+## Validate completion estimates across all five fixtures
+
+[Lesson 48](lessons/0030-completion-match-cross-validation.html) completes [leave-one-match-out checks](reports/31_completion_match_cross_validation.md), refitting both zone counts and baseline within each fold. All 3,430 passes receive one out-of-fold prediction. Run `python 48_completion_match_cross_validation.py` without downloads; this is exploratory grouped validation of already inspected fixtures.

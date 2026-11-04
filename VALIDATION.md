@@ -214,3 +214,7 @@ Executed cache-free weighted-value exercise. Tests verify probability endpoints,
 ### Lesson 47 (2026-11-04)
 
 Executed a cache-free completion-count model with fixed four/one fixture split and smoothing strength. Tests cover sparse/empty cells, scoring inputs, proper errors and training-only reconstruction. Evidence checks independently reconcile all selected labels/exclusions, split IDs, counts, smoothing, predictions and log-loss/Brier scores. Map inspected. No xT values/endpoints are prediction inputs; check fixture already inspected.
+
+### Lesson 48 (2026-11-04)
+
+Executed cache-free five-match cross-validation. Tests change held-out labels to verify its model/predictions remain unchanged, and check group exclusion, unique predictions and invalid fixture lists. Evidence checks reconstruct every fold and pooled score, with exact reproduction of lesson 47. Chart inspected. Fixed model setting, no fresh-data or chronological-validation claim.

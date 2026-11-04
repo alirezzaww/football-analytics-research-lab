@@ -578,3 +578,7 @@ Completed assisted hypothetical pass-choice exercise with actual fitted zone val
 ### 2026-11-04 · Lesson 47: learned completion probabilities
 
 Completed assisted training-only smoothed start-zone completion model: 2,808 training passes / 2,253 completions; 622 check passes / 488 completions. Zone check log loss .501806 vs .522044 constant training-rate reference. Covered learned versus assumed probabilities, smoothing and origin-only versus option-specific estimates. Fifth match already inspected, so no fresh-validation claim. Independent mastery not claimed.
+
+### 2026-11-04 · Lesson 48: completion match cross-validation
+
+Completed assisted five-fold whole-match check with fixed strength 20, training-only counts and fold-local constant baselines. Zone log loss is lower in all five folds; pooled 3,430-pass log loss .480395 vs .505889. Covered fixture leakage, one prediction per pass, pooled weighting and already-inspected/nonchronological limits. Independent mastery not claimed.
