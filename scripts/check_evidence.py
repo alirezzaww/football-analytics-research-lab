@@ -2055,3 +2055,28 @@ if all((ROOT/r['raw_input']['relative_path']).exists() for r in defensive['match
             assert replay[key]==old[key]
         assert [(p['corner_id'],p['shots'],p['stop_reason']) for p in replay['phases']]==[(p['corner_id'],p['shots'],p['stop_reason']) for p in old['phases']]
 print('PASS: defensive-team selection, phase memberships, pooled counts and optional raw replay reconcile.')
+
+quality=read('61_defensive_corner_quality_evidence.json')
+assert quality['source_path']=='data/60_france_defensive_corner_evidence.json'
+assert hashlib.sha256((ROOT/quality['source_path']).read_bytes()).hexdigest()==quality['source_sha256']
+spec=importlib.util.spec_from_file_location('defensive_quality_audit',ROOT/'61_defensive_corner_shot_quality.py')
+quality_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(quality_module)
+assert (ROOT/'reports/44_defensive_corner_shot_quality.md').read_text()==quality_module.render_report(quality)
+expected_quality_keys=[(m['fixture']['match_id'],p['corner_id'],s['shot_id']) for m in defensive['matches'] for p in m['phases'] for s in p['shots']]
+assert [(s['match_id'],s['corner_id'],s['shot_id']) for s in quality['shots']]==expected_quality_keys
+assert len({(s['match_id'],s['shot_id']) for s in quality['shots']})==len(quality['shots'])
+assert all(0<=s['provider_xg']<=1 and 0<=s['x']<=120 and 0<=s['y']<=80 for s in quality['shots'])
+assert len(quality['matches'])==len(defensive['matches'])
+for row,source_match in zip(quality['matches'],defensive['matches']):
+    assert row['fixture']==source_match['fixture'] and row['raw_input']==source_match['raw_input']
+    assert row['opponent']==source_match['opponent']
+    selected=[s for s in quality['shots'] if s['match_id']==row['fixture']['match_id']]
+    expected=quality_module.summarize(selected,source_match['deliveries'])
+    assert all(row[k]==v for k,v in expected.items())
+assert quality['pooled']==quality_module.summarize(quality['shots'],defensive['pooled']['deliveries'])
+assert quality['pooled']['corners_with_shot']==defensive['pooled']['corners_with_phase_shot']
+assert quality['pooled']['shots']==defensive['pooled']['phase_shots']
+assert quality['pooled']['shot_goals']==defensive['pooled']['phase_shot_goals']
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in defensive['matches']):
+    assert quality==quality_module.build_evidence(allow_download=False)
+print('PASS: defensive shot membership, raw supplied xG, per-shot/per-corner denominators and report reconcile.')

@@ -1,0 +1,206 @@
+{
+  "source_path": "data/60_france_defensive_corner_evidence.json",
+  "source_sha256": "4596a51d9971d0a4b0fdc6df22aac03d28c7a5e4de9041ef3932e602f25b5719",
+  "xg_source": "Raw shot.statsbomb_xg from the recorded StatsBomb snapshots, not our educational distance model. Provider model version is not identified in these snapshots.",
+  "matches": [
+    {
+      "fixture": {
+        "match_id": 22921,
+        "match_date": "2019-06-07",
+        "home_team": "France Women's",
+        "away_team": "Korea Republic Women's"
+      },
+      "opponent": "Korea Republic Women's",
+      "raw_input": {
+        "match_id": 22921,
+        "relative_path": "data/cache_2019_events/22921.json",
+        "sha256": "4fdbe28dc3e5828b12e97228e7d6a35736a9c78d08e3566089feb2f0fbea62cf",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22921.json"
+      },
+      "deliveries": 1,
+      "corners_with_shot": 0,
+      "shots": 0,
+      "shot_goals": 0,
+      "provider_xg": 0.0,
+      "corner_shot_rate": 0.0,
+      "shots_per_corner": 0.0,
+      "provider_xg_per_shot": null,
+      "provider_xg_per_corner": 0.0
+    },
+    {
+      "fixture": {
+        "match_id": 22948,
+        "match_date": "2019-06-12",
+        "home_team": "France Women's",
+        "away_team": "Norway Women's"
+      },
+      "opponent": "Norway Women's",
+      "raw_input": {
+        "match_id": 22948,
+        "relative_path": "data/cache_2019_events/22948.json",
+        "sha256": "3da6f672d52c6b8221bbd9c020d33b9f9d9524462f879c65cfcd9da4914a64db",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22948.json"
+      },
+      "deliveries": 5,
+      "corners_with_shot": 1,
+      "shots": 1,
+      "shot_goals": 0,
+      "provider_xg": 0.06517772,
+      "corner_shot_rate": 0.2,
+      "shots_per_corner": 0.2,
+      "provider_xg_per_shot": 0.06517772,
+      "provider_xg_per_corner": 0.013035544
+    },
+    {
+      "fixture": {
+        "match_id": 22980,
+        "match_date": "2019-06-17",
+        "home_team": "Nigeria Women's",
+        "away_team": "France Women's"
+      },
+      "opponent": "Nigeria Women's",
+      "raw_input": {
+        "match_id": 22980,
+        "relative_path": "data/cache_2019_events/22980.json",
+        "sha256": "1d9c36f6dc0cebb678d0cbd0391c9fe42f64ee9795575d18b44764f971c26e34",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22980.json"
+      },
+      "deliveries": 2,
+      "corners_with_shot": 1,
+      "shots": 1,
+      "shot_goals": 0,
+      "provider_xg": 0.1470171,
+      "corner_shot_rate": 0.5,
+      "shots_per_corner": 0.5,
+      "provider_xg_per_shot": 0.1470171,
+      "provider_xg_per_corner": 0.07350855
+    },
+    {
+      "fixture": {
+        "match_id": 69137,
+        "match_date": "2019-06-23",
+        "home_team": "France Women's",
+        "away_team": "Brazil Women's"
+      },
+      "opponent": "Brazil Women's",
+      "raw_input": {
+        "match_id": 69137,
+        "relative_path": "data/cache_2019_events/69137.json",
+        "sha256": "45f2798d4c0a301d2e9625a050994818a0c81c3b135caeb8d2c8135636be2cc6",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/69137.json"
+      },
+      "deliveries": 4,
+      "corners_with_shot": 1,
+      "shots": 1,
+      "shot_goals": 0,
+      "provider_xg": 0.072495505,
+      "corner_shot_rate": 0.25,
+      "shots_per_corner": 0.25,
+      "provider_xg_per_shot": 0.072495505,
+      "provider_xg_per_corner": 0.01812387625
+    },
+    {
+      "fixture": {
+        "match_id": 69202,
+        "match_date": "2019-06-28",
+        "home_team": "France Women's",
+        "away_team": "United States Women's"
+      },
+      "opponent": "United States Women's",
+      "raw_input": {
+        "match_id": 69202,
+        "relative_path": "data/cache_2019_events/69202.json",
+        "sha256": "81a073e48d192fdd02d6662fbc5d5be8a4be17a01ebe4d7517ef2200b91a5f94",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/69202.json"
+      },
+      "deliveries": 3,
+      "corners_with_shot": 1,
+      "shots": 1,
+      "shot_goals": 0,
+      "provider_xg": 0.094727926,
+      "corner_shot_rate": 0.3333333333333333,
+      "shots_per_corner": 0.3333333333333333,
+      "provider_xg_per_shot": 0.094727926,
+      "provider_xg_per_corner": 0.03157597533333333
+    }
+  ],
+  "shots": [
+    {
+      "match_id": 22948,
+      "corner_id": "f5eb07c6-0240-42ca-857f-45fc46b35a57",
+      "shot_id": "1dcd2c64-3591-45b8-b2dc-38f0eef2cfea",
+      "opponent": "Norway Women's",
+      "period": 1,
+      "minute": 14,
+      "second": 5,
+      "elapsed_seconds": 1.465,
+      "x": 116.0,
+      "y": 49.1,
+      "provider_xg": 0.06517772,
+      "goal": 0,
+      "body_part": "Head",
+      "outcome": "Blocked"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "6d275c9f-6fbb-49b1-b6cd-fdd15d75eab5",
+      "shot_id": "815c03cb-37fb-46e4-b1ce-7fcadad72aa0",
+      "opponent": "Nigeria Women's",
+      "period": 1,
+      "minute": 2,
+      "second": 57,
+      "elapsed_seconds": 1.842,
+      "x": 115.8,
+      "y": 41.7,
+      "provider_xg": 0.1470171,
+      "goal": 0,
+      "body_part": "Head",
+      "outcome": "Saved"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "f1d05013-1b17-4ec7-a6f6-f53f62476eb4",
+      "shot_id": "46a578f4-a7a9-4700-9ef9-f38cc687aa2c",
+      "opponent": "Brazil Women's",
+      "period": 1,
+      "minute": 37,
+      "second": 21,
+      "elapsed_seconds": 1.167,
+      "x": 111.9,
+      "y": 35.2,
+      "provider_xg": 0.072495505,
+      "goal": 0,
+      "body_part": "Head",
+      "outcome": "Saved"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "9b2a72cc-d3b1-476f-aab4-ec3c26a0ea43",
+      "shot_id": "6ea0867e-e912-4768-a02a-528302a6103e",
+      "opponent": "United States Women's",
+      "period": 2,
+      "minute": 45,
+      "second": 45,
+      "elapsed_seconds": 2.763,
+      "x": 110.4,
+      "y": 44.2,
+      "provider_xg": 0.094727926,
+      "goal": 0,
+      "body_part": "Left Foot",
+      "outcome": "Blocked"
+    }
+  ],
+  "pooled": {
+    "deliveries": 15,
+    "corners_with_shot": 4,
+    "shots": 4,
+    "shot_goals": 0,
+    "provider_xg": 0.37941825100000004,
+    "corner_shot_rate": 0.26666666666666666,
+    "shots_per_corner": 0.26666666666666666,
+    "provider_xg_per_shot": 0.09485456275000001,
+    "provider_xg_per_corner": 0.025294550066666668
+  },
+  "display_rule": "Original StatsBomb coordinates; all attacking teams face the top in vertical pitch panels. Circle area = supplied xG * 1800 points squared. Every selected shot displayed.",
+  "scope": "Same four defensive corner-phase shots and 15 opposition deliveries. Descriptive provider-xG enrichment, no model fitting, new selection, causal attribution or independent validation."
+}

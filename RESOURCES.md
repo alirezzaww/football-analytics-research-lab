@@ -70,3 +70,5 @@ video review remain future project work. No community participation has been req
 - [SQLite join processing](https://www.sqlite.org/lang_select.html) and [foreign-key support](https://www.sqlite.org/foreignkeys.html) — primary references for lesson 55 relational keys, LEFT JOIN and parent-child integrity.
 
 - [SQLite CASE expressions](https://www.sqlite.org/lang_expr.html#the_case_expression) — primary source for lesson 57 conditional labels before grouped match-phase summaries.
+
+- [Hudl StatsBomb xG glossary](https://support.hudl.com/s/article/expected-goals?language=en_US&topic=Statsbomb_Global_Football_Data_Glossary) — provider definition revisited for lesson 61. The analysis reads the archived shot.statsbomb_xg values rather than claiming the current provider model version generated them.

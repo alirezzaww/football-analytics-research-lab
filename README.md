@@ -369,3 +369,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Defensive set pieces: opposition corners against France
 
 [Lesson 60](lessons/0042-france-defensive-corners.html) switches the attacking team to France's opponent and applies the same phase rule in a [defensive report](reports/43_france_defensive_corners.md). Run `python 60_france_defensive_corners.py`. France faced 15 corners; four were associated with an opposition shot (26.7%), with four shots and no shot goals. This descriptive sample is not a defensive ability ranking.
+
+## Defensive chance quality: supplied xG
+
+[Lesson 61](lessons/0043-defensive-corner-shot-quality.html) enriches the same four selected shots with [supplied StatsBomb xG](reports/44_defensive_corner_shot_quality.md): total 0.379418, mean 0.094855 per shot, zero actual shot goals. Run `python 61_defensive_corner_shot_quality.py`. No practice-model inference or refitting; shot IDs and raw hashes are preserved.

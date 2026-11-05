@@ -630,3 +630,7 @@ Completed assisted staging-table audit on 45 corner, 21 shot and 45 taker record
 ### 2026-11-05 · Lesson 60: defensive corners
 
 Completed assisted defensive extension on the same five already inspected fixtures. Switched attacking-team selection to each France opponent; same phase rule gives 15 corners faced, four positive corners, four shots and zero shot goals. Covered for/against perspectives, separate denominators and event counts versus video-based defensive explanations. No independent mastery, fresh validation or video review claimed.
+
+### 2026-11-05 · Lesson 61: defensive chance quality
+
+Completed assisted enrichment of the same four opposition corner-phase shots using raw shot.statsbomb_xg, not our earlier educational model. Total 0.379418251 xG, mean 0.094854563 per shot, zero actual goals. Covered frequency, estimated quality and outcomes; expected-goal sums versus at-least-one-goal probabilities; shot versus corner denominators. No provider calibration, causal defensive claim or independent mastery established.

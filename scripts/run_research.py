@@ -55,6 +55,7 @@ STAGES = [
     "59_corner_data_quality.py",  # Validate relationships before the player report.
     "58_sql_corner_taker_report.py",
     "60_france_defensive_corners.py",
+    "61_defensive_corner_shot_quality.py",
     "scripts/check_evidence.py",
 ]
 
