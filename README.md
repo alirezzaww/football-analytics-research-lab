@@ -381,3 +381,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment phase: define a fullback profiling pool
 
 [Lesson 63](lessons/0045-recruitment-fullback-cohort.html) starts a historical recruitment exercise aligned with Soccermatics statistical scouting. Across all 52 fixtures, 75 player/team identities have at least one recorded fullback start; [35 meet the chosen three-start filter](reports/46_fullback_recruitment_cohort.md). Run `python 63_fullback_recruitment_cohort.py`. This establishes eligibility, not performance rankings, minutes or present-day transfer suitability.
+
+## Recruitment denominator: reconstructed playing time
+
+[Lesson 64](lessons/0046-fullback-playing-time.html) audits [registered minutes](reports/47_fullback_playing_time.md) for the 35-player pool in qualifying starting-role fixtures. Data: **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Statistical scouting, Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation). Run `python 64_fullback_playing_time.py`. Recorded added/extra time is included; these are not official minute totals or verified position-specific minutes.

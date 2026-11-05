@@ -2139,3 +2139,38 @@ assert (ROOT/'reports/46_fullback_recruitment_cohort.md').read_text()==cohort_mo
 if all((ROOT/r['relative_path']).exists() for r in cohort['raw_inputs']+[cohort['metadata_input']]):
     assert cohort==cohort_module.build_evidence(allow_download=False)
 print('PASS: full-tournament starting-lineup coverage, stable player identities and fullback eligibility rules reconcile.')
+
+playing_time=read('64_fullback_playing_time_evidence.json')
+assert playing_time['competition_id']==cohort_protocol['competition_id']==72
+assert playing_time['season_id']==cohort_protocol['season_id']==30
+assert playing_time['season']=='2019'
+assert playing_time['source_path']=='data/63_fullback_cohort_evidence.json'
+assert hashlib.sha256((ROOT/playing_time['source_path']).read_bytes()).hexdigest()==playing_time['source_sha256']
+assert playing_time['course_reading']['url']=='https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation'
+spec=importlib.util.spec_from_file_location('playing_time_audit',ROOT/'64_fullback_playing_time.py')
+time_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(time_module)
+assert [m['raw_input'] for m in playing_time['match_audits']]==cohort['raw_inputs']
+assert playing_time['players']==time_module.aggregate_players(cohort['eligible_players'],playing_time['match_audits'])
+for match in playing_time['match_audits']:
+    assert [p['period'] for p in match['periods']] in ([1,2],[1,2,3,4])
+    assert match['match_duration_ms']==sum(p['length_ms'] for p in match['periods'])
+    assert len(match['team_audits'])==len({r['team_id'] for r in match['team_audits']})==2
+    assert len({(r['team_id'],r['player_id']) for r in match['intervals']})==len(match['intervals'])
+    for interval in match['intervals']:
+        assert 0<=interval['start_ms']<=interval['end_ms']<=match['match_duration_ms']
+        assert interval['duration_ms']==interval['end_ms']-interval['start_ms']
+        assert math.isclose(interval['minutes'],interval['duration_ms']/60000)
+    for audit in match['team_audits']:
+        intervals=[r for r in match['intervals'] if r['team_id']==audit['team_id']]
+        assert audit['interval_count']==len(intervals)
+        assert audit['registered_player_ms']==sum(r['duration_ms'] for r in intervals)
+        assert audit['permanent_absence_ms']==sum(match['match_duration_ms']-r['elapsed_ms'] for r in audit['departures'] if r['changed_active_registration'])
+        assert audit['registered_player_ms']==audit['expected_player_ms']==11*match['match_duration_ms']-audit['permanent_absence_ms']
+assert playing_time['summary']=={'matches_audited':len(playing_time['match_audits']),
+    'teams_audited':sum(len(m['team_audits']) for m in playing_time['match_audits']),
+    'players':len(playing_time['players']),'selected_starts':sum(p['role_starts'] for p in playing_time['players']),
+    'selected_duration_ms':sum(p['duration_ms'] for p in playing_time['players'])}
+assert (ROOT/'reports/47_fullback_playing_time.md').read_text()==time_module.render_report(playing_time)
+if all((ROOT/r['relative_path']).exists() for r in cohort['raw_inputs']):
+    assert playing_time==time_module.build_evidence(allow_download=False)
+print('PASS: registered playing intervals, team time balances, selected fixture denominators and season/course references reconcile.')

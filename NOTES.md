@@ -69,3 +69,5 @@ The user needed repeated concrete explanations of baseline versus zone completio
 Employment remains central. On 2026-11-04 the user answered “anything” for job location/remote/on-site/sponsorship targeting: treat location preferences as broad, not as evidence of work authorization or no sponsorship need. Pair future technical lessons with job-relevant deliverables; SQL and independent reproduction are next practical gaps.
 
 For joins, show separate corner and shot tables before the joined rows. User found the two-corner example helpful; carry that row-grain explanation into grouped queries.
+
+The user requests that references always identify the competition and season being studied so they can read alongside the practice. Include the exact Soccermatics lesson/section and its link as well, to make the course reading location clear. Current dataset: 2019 Women’s World Cup, StatsBomb competition 72 / season 30; recruitment phase reading: Lesson 3, Statistical scouting → Normalisation.

@@ -642,3 +642,7 @@ Completed assisted plotting and geometric counting for the same four shots. Reco
 ### 2026-11-05 · Lesson 63: new recruitment-analysis phase
 
 User requested the next phase. Started assisted historical fullback profiling aligned with Soccermatics statistical scouting: 52 matches, 104 lineups, 1,144 starter rows; 75 player/team identities with a Left Back/Right Back start, 35 meeting the fixed three-start filter. Preserved side splits and ID-based identities. Covered cohort selection versus ability, starts versus minutes, and historical data versus current recruitment claims. Performance metrics and independent skill remain to demonstrate.
+
+### 2026-11-05 · Lesson 64: playing-time denominators and explicit reading references
+
+User requested competition/season references for follow-along reading; added prominent 2019 Women’s World Cup and Soccermatics Lesson 3 → Normalisation links to current references. Completed assisted registered-time reconstruction across 52 fixtures and 104 team audits, selecting 145 qualifying-start intervals for the unchanged 35-player pool. Bronze 691.1842 minutes, Majri 504.22985, with recorded added/extra time included. Covered substitutions, dismissals, permanent/temporary departures and matching future action-count scope to minutes. No official-total validation, role-specific duration claim, new per-90 performance result or independent mastery established.

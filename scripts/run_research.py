@@ -58,6 +58,7 @@ STAGES = [
     "61_defensive_corner_shot_quality.py",
     "62_defensive_shot_freeze_frames.py",
     "63_fullback_recruitment_cohort.py",
+    "64_fullback_playing_time.py",
     "scripts/check_evidence.py",
 ]
 
