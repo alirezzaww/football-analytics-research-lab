@@ -4,7 +4,7 @@
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
 - **Course:** [Soccermatics Lesson 3 — Statistical scouting, Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation).
-- **Current practice:** [Lesson 64 — playing-time denominators](lessons/0046-fullback-playing-time.html), a custom historical exercise preparing per-90 player comparisons.
+- **Current practice:** [Lesson 65 — passing activity per 90](lessons/0047-fullback-passing-per90.html), a custom historical exercise using the audited playing-time denominators.
 
 ## Knowledge
 

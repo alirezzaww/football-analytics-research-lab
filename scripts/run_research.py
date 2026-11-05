@@ -59,6 +59,7 @@ STAGES = [
     "62_defensive_shot_freeze_frames.py",
     "63_fullback_recruitment_cohort.py",
     "64_fullback_playing_time.py",
+    "65_fullback_passing_per90.py",
     "scripts/check_evidence.py",
 ]
 

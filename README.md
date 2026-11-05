@@ -385,3 +385,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment denominator: reconstructed playing time
 
 [Lesson 64](lessons/0046-fullback-playing-time.html) audits [registered minutes](reports/47_fullback_playing_time.md) for the 35-player pool in qualifying starting-role fixtures. Data: **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Statistical scouting, Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation). Run `python 64_fullback_playing_time.py`. Recorded added/extra time is included; these are not official minute totals or verified position-specific minutes.
+
+## Recruitment activity: passing per 90
+
+[Lesson 65](lessons/0047-fullback-passing-per90.html) calculates [35 matched-scope passing profiles](reports/48_fullback_passing_per90.md) for the **2019 Women’s World Cup**, using the registered-minute convention from lesson 64. Run `python 65_fullback_passing_per90.py`. Bronze: 350 eligible completions, 45.57 per 90; Majri: 172, 30.70 per 90. Reading: [Soccermatics Lesson 3 — Statistical scouting, Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation). Activity rates are not possession/difficulty-adjusted ability measures.

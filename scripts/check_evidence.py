@@ -2174,3 +2174,32 @@ assert (ROOT/'reports/47_fullback_playing_time.md').read_text()==time_module.ren
 if all((ROOT/r['relative_path']).exists() for r in cohort['raw_inputs']):
     assert playing_time==time_module.build_evidence(allow_download=False)
 print('PASS: registered playing intervals, team time balances, selected fixture denominators and season/course references reconcile.')
+
+passing_profile=read('65_fullback_passing_per90_evidence.json')
+assert passing_profile['source_path']=='data/64_fullback_playing_time_evidence.json'
+assert hashlib.sha256((ROOT/passing_profile['source_path']).read_bytes()).hexdigest()==passing_profile['source_sha256']
+assert passing_profile['competition_id']==72 and passing_profile['season_id']==30 and passing_profile['season']=='2019'
+assert passing_profile['course_reading']==playing_time['course_reading']
+spec=importlib.util.spec_from_file_location('passing_per90_audit',ROOT/'65_fullback_passing_per90.py')
+passing_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(passing_module)
+assert len(passing_profile['players'])==len(playing_time['players'])
+ledger=passing_profile['pass_ledger']
+assert len({(r['match_id'],r['team_id'],r['player_id']) for r in ledger})==len(ledger)
+assert len(ledger)==playing_time['summary']['selected_starts']
+all_pass_keys=[]
+for row in ledger:
+    assert len(set(row['attempt_ids']))==len(row['attempt_ids'])
+    assert len(set(row['completed_ids']))==len(row['completed_ids'])
+    assert set(row['completed_ids'])<=set(row['attempt_ids'])
+    assert row['candidate_passes']==len(row['attempt_ids'])+sum(row['excluded'].values())
+    all_pass_keys.extend((row['match_id'],identifier) for identifier in row['attempt_ids'])
+assert len(set(all_pass_keys))==len(all_pass_keys)
+for player,source_player in zip(passing_profile['players'],playing_time['players']):
+    rows=[r for r in ledger if (r['team_id'],r['player_id'])==(player['team_id'],player['player_id'])]
+    assert {r['match_id'] for r in rows}==set(source_player['qualifying_match_ids'])
+    assert player==passing_module.player_summary(source_player,rows)
+    assert player['eligible_completed']<=player['eligible_attempts']
+assert (ROOT/'reports/48_fullback_passing_per90.md').read_text()==passing_module.render_report(passing_profile)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert passing_profile==passing_module.build_evidence(allow_download=False)
+print('PASS: matched-scope pass event ledgers, exclusion reconciliation, per-90 rates and completion denominators reproduce.')

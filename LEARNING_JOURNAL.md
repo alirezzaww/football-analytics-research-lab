@@ -646,3 +646,7 @@ User requested the next phase. Started assisted historical fullback profiling al
 ### 2026-11-05 · Lesson 64: playing-time denominators and explicit reading references
 
 User requested competition/season references for follow-along reading; added prominent 2019 Women’s World Cup and Soccermatics Lesson 3 → Normalisation links to current references. Completed assisted registered-time reconstruction across 52 fixtures and 104 team audits, selecting 145 qualifying-start intervals for the unchanged 35-player pool. Bronze 691.1842 minutes, Majri 504.22985, with recorded added/extra time included. Covered substitutions, dismissals, permanent/temporary departures and matching future action-count scope to minutes. No official-total validation, role-specific duration claim, new per-90 performance result or independent mastery established.
+
+### 2026-11-05 · Lesson 65: passing activity per 90
+
+Completed assisted matched-scope passing counts and rates for the unchanged 35-player cohort. Bronze 350/436 eligible passes, 691.1842 minutes, 45.573958 completions per 90; Majri 172/222, 504.22985 minutes, 30.700285 per 90. Saved per-match event-ID ledgers and exclusion counts. Covered time-standardized activity versus completion percentage and the remaining role, possession and difficulty context. References explicitly identify 2019 Women’s World Cup and Soccermatics Lesson 3 → Normalisation. Independent skill and player ability differences remain unestablished.
