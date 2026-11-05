@@ -2005,3 +2005,14 @@ assert sum(r['corners_with_shot'] for r in taker_sql['all_takers'])==study['pool
 assert sum(r['phase_shots'] for r in taker_sql['all_takers'])==study['pooled']['phase_shots']
 assert sum(r['phase_goals'] for r in taker_sql['all_takers'])==study['pooled']['phase_shot_goals']
 print('PASS: complete taker metadata, player groups, HAVING display filter and pooled corner counts reconcile.')
+
+audit_evidence=json.loads((ROOT/'data/59_corner_data_quality_evidence.json').read_text())
+spec=importlib.util.spec_from_file_location('corner_quality_audit',ROOT/'59_corner_data_quality.py')
+audit_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(audit_module)
+assert audit_evidence==audit_module.build_evidence()
+assert (ROOT/'reports/42_corner_data_quality.md').read_text()==audit_module.render_report(audit_evidence)
+assert audit_evidence['input_counts']=={'corners':len(expected_join_corners),'shots':len(expected_join_shots),'taker_records':len(expected_taker_rows)}
+assert audit_evidence['passed']
+assert len(audit_evidence['checks'])==9
+assert all(r['passed'] and r['violation_count']==0 for r in audit_evidence['checks'])
+print('PASS: corner relationship audit reproduces, all nine structural checks pass, report matches evidence.')

@@ -14,14 +14,14 @@ SOURCE_FILES = ['data/38_france_corner_study_evidence.json',
 SPEC = importlib.util.spec_from_file_location('joins55', ROOT / '55_football_sql_joins.py')
 joins = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(joins)
+AUDIT_SPEC = importlib.util.spec_from_file_location('corner_audit59', ROOT / '59_corner_data_quality.py')
+audit = importlib.util.module_from_spec(AUDIT_SPEC)
+AUDIT_SPEC.loader.exec_module(audit)
 
 
 def create_database(connection, corners, shots, takers):
     """Require complete one-to-one metadata before an inner join can be safe."""
-    corner_keys = {(r['match_id'], r['corner_id']) for r in corners}
-    taker_keys = [(r['match_id'], r['corner_id']) for r in takers]
-    if len(set(taker_keys)) != len(taker_keys) or set(taker_keys) != corner_keys:
-        raise ValueError('Taker records must cover every corner exactly once.')
+    audit.require_valid_relationships(corners, shots, takers)
     joins.create_database(connection, corners, shots)
     connection.executescript((ROOT / SQL_FILES['schema']).read_text())
     connection.executemany('INSERT INTO corner_takers VALUES (?, ?, ?)',

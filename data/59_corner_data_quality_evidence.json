@@ -1,0 +1,76 @@
+{
+  "sources": [
+    {
+      "path": "data/38_france_corner_study_evidence.json",
+      "sha256": "353929aa215afb1f8bd39ee7c4ebb08b5cc554d1c78cb506d50bb55ec5db13e5"
+    },
+    {
+      "path": "data/39_corner_delivery_profiles_evidence.json",
+      "sha256": "2065064f43e5b68948ee1a03e4165660eccae26bd206d12afaebf7d1dd5d77c6"
+    }
+  ],
+  "sql_files": {
+    "schema": {
+      "path": "sql/59_staging_schema.sql",
+      "sha256": "299afba302eb8b4233c5493f05f43066d926d97b90a7cfc85da45762155f694e"
+    },
+    "checks": {
+      "path": "sql/59_corner_relationship_audit.sql",
+      "sha256": "fc8f76e4bd0c4aad28f651fba10113cf43a268e69c4c82cff81dc767031770aa"
+    }
+  },
+  "input_counts": {
+    "corners": 45,
+    "shots": 21,
+    "taker_records": 45
+  },
+  "checks": [
+    {
+      "check_name": "nonempty_corners",
+      "violation_count": 0,
+      "passed": true
+    },
+    {
+      "check_name": "duplicate_corner_keys",
+      "violation_count": 0,
+      "passed": true
+    },
+    {
+      "check_name": "duplicate_shot_keys",
+      "violation_count": 0,
+      "passed": true
+    },
+    {
+      "check_name": "duplicate_taker_keys",
+      "violation_count": 0,
+      "passed": true
+    },
+    {
+      "check_name": "missing_taker_records",
+      "violation_count": 0,
+      "passed": true
+    },
+    {
+      "check_name": "unknown_taker_corners",
+      "violation_count": 0,
+      "passed": true
+    },
+    {
+      "check_name": "unknown_shot_corners",
+      "violation_count": 0,
+      "passed": true
+    },
+    {
+      "check_name": "blank_taker_names",
+      "violation_count": 0,
+      "passed": true
+    },
+    {
+      "check_name": "missing_identity_fields",
+      "violation_count": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "Nine structural checks on existing structured source ledgers. No automatic deletion or repair. Does not verify real-world event accuracy, raw-event completeness, all field types, timing, phase definitions or football conclusions."
+}

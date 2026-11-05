@@ -44,8 +44,8 @@ class CornerTakerSqlTests(unittest.TestCase):
 
     def test_invalid_threshold_is_rejected(self):
         with closing(sqlite3.connect(':memory:')) as con:
-            lesson.create_database(con,[],[],[])
-            self.assertEqual(lesson.query_report(con),[])
+            lesson.create_database(con,[corner('a')],[],[taker('a','Example')])
+            self.assertEqual(lesson.query_report(con,2),[])
             for value in (-1,1.5,True,'10'):
                 with self.subTest(value=value), self.assertRaises(ValueError):
                     lesson.query_report(con,value)

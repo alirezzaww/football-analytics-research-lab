@@ -361,3 +361,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## SQL player report: corner takers
 
 [Lesson 58](lessons/0040-sql-corner-taker-report.html) combines joins, grouping and HAVING into a [corner-taker report](reports/41_sql_corner_taker_report.md), with complete metadata coverage checked before joining. Run `python 58_sql_corner_taker_report.py`. Full counts remain visible; the optional 10-delivery display filter is not a reliability threshold or player ranking.
+
+## Data quality: audit before the player report
+
+[Lesson 59](lessons/0041-corner-data-quality.html) adds a [nine-check relationship audit](reports/42_corner_data_quality.md) for corner, shot and taker records. Run `python 59_corner_data_quality.py`; the player-report loader also requires it to pass. Current inputs pass. This validates specific keys and relationships, not all real-world annotation accuracy.

@@ -622,3 +622,7 @@ Completed assisted CASE-label exercise with period-based first-half, second-half
 ### 2026-11-05 · Lesson 58: SQL corner-taker report
 
 Completed assisted player report by joining complete one-to-one taker metadata to corner deliveries and pre-aggregated phase shots. Majri 10/24, Thiney 8/18, Geyoro 0/2 and Bussaglia 1/1 reproduce all 45 deliveries. Covered HAVING versus WHERE and why a display minimum does not establish reliability. Independent SQL construction remains unverified.
+
+### 2026-11-05 · Lesson 59: data relationship audit
+
+Completed assisted staging-table audit on 45 corner, 21 shot and 45 taker records: all nine structural checks pass. Added deliberate synthetic-defect tests and a validation gate in the player-report loader. Covered duplicate inflation, complete composite keys, required metadata versus valid zero-shot corners, and limited meaning of a passing audit. No actual source corruption found or independent mastery claimed.
