@@ -56,6 +56,7 @@ STAGES = [
     "58_sql_corner_taker_report.py",
     "60_france_defensive_corners.py",
     "61_defensive_corner_shot_quality.py",
+    "62_defensive_shot_freeze_frames.py",
     "scripts/check_evidence.py",
 ]
 

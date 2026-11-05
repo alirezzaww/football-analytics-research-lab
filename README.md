@@ -373,3 +373,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Defensive chance quality: supplied xG
 
 [Lesson 61](lessons/0043-defensive-corner-shot-quality.html) enriches the same four selected shots with [supplied StatsBomb xG](reports/44_defensive_corner_shot_quality.md): total 0.379418, mean 0.094855 per shot, zero actual shot goals. Run `python 61_defensive_corner_shot_quality.py`. No practice-model inference or refitting; shot IDs and raw hashes are preserved.
+
+## Defensive spatial context: shot freeze frames
+
+[Lesson 62](lessons/0044-defensive-shot-freeze-frames.html) plots the [recorded player positions](reports/45_defensive_shot_freeze_frames.md) for the same four shots and counts French outfield player centres in an explicitly defined shot-to-goalposts triangle. Run `python 62_defensive_shot_freeze_frames.py`. Geometry is descriptive; the report distinguishes goalkeeper roles, shooter-relative teammate labels, incomplete frame coverage and verified blocking ability.

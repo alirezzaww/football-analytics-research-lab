@@ -634,3 +634,7 @@ Completed assisted defensive extension on the same five already inspected fixtur
 ### 2026-11-05 · Lesson 61: defensive chance quality
 
 Completed assisted enrichment of the same four opposition corner-phase shots using raw shot.statsbomb_xg, not our earlier educational model. Total 0.379418251 xG, mean 0.094854563 per shot, zero actual goals. Covered frequency, estimated quality and outcomes; expected-goal sums versus at-least-one-goal probabilities; shot versus corner denominators. No provider calibration, causal defensive claim or independent mastery established.
+
+### 2026-11-05 · Lesson 62: shot freeze-frame context
+
+Completed assisted plotting and geometric counting for the same four shots. Recorded France outfield player centres in the closed goal triangle: Norway 1, Nigeria 2, Brazil 3, USA 5; keepers counted separately. Covered shooter-relative teammate flags, snapshot versus tracking, incomplete recorded-player coverage and geometric presence versus proven blocking ability. No marking assignment, causal xG explanation, video review or independent mastery claimed.

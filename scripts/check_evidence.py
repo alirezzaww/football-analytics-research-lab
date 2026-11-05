@@ -2080,3 +2080,33 @@ assert quality['pooled']['shot_goals']==defensive['pooled']['phase_shot_goals']
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in defensive['matches']):
     assert quality==quality_module.build_evidence(allow_download=False)
 print('PASS: defensive shot membership, raw supplied xG, per-shot/per-corner denominators and report reconcile.')
+
+frames=read('62_defensive_freeze_frame_evidence.json')
+assert frames['source_path']=='data/61_defensive_corner_quality_evidence.json'
+assert hashlib.sha256((ROOT/frames['source_path']).read_bytes()).hexdigest()==frames['source_sha256']
+spec=importlib.util.spec_from_file_location('shot_frames_audit',ROOT/'62_defensive_shot_freeze_frames.py')
+frame_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(frame_module)
+assert frames['goal_posts']==[[120.0,36.0],[120.0,44.0]]
+assert frames['raw_inputs']==[m['raw_input'] for m in quality['matches']]
+assert (ROOT/'reports/45_defensive_shot_freeze_frames.md').read_text()==frame_module.render_report(frames)
+assert len(frames['shots'])==len(quality['shots'])
+for row,old in zip(frames['shots'],quality['shots']):
+    assert all(row[k]==v for k,v in old.items())
+    if not row['frame_available']:
+        assert row['players']==[]
+        assert all(row[k] is None for k in ('recorded_players','recorded_defending_outfield','defending_outfield_in_triangle','recorded_defending_keepers','defending_keepers_in_triangle'))
+        continue
+    assert row['recorded_players']==len(row['players'])
+    assert len({p['player_id'] for p in row['players']})==row['recorded_players']
+    for player in row['players']:
+        assert type(player['teammate']) is bool and type(player['is_goalkeeper']) is bool
+        assert player['in_goal_triangle']==frame_module.in_goal_triangle([player['x'],player['y']],[row['x'],row['y']])
+    outfield=[p for p in row['players'] if not p['teammate'] and not p['is_goalkeeper']]
+    keepers=[p for p in row['players'] if not p['teammate'] and p['is_goalkeeper']]
+    assert row['recorded_defending_outfield']==len(outfield)
+    assert row['defending_outfield_in_triangle']==sum(p['in_goal_triangle'] for p in outfield)
+    assert row['recorded_defending_keepers']==len(keepers)
+    assert row['defending_keepers_in_triangle']==sum(p['in_goal_triangle'] for p in keepers)
+if all((ROOT/r['relative_path']).exists() for r in frames['raw_inputs']):
+    assert frames==frame_module.build_evidence(allow_download=False)
+print('PASS: selected shot snapshots, player roles, goal-triangle memberships and optional raw replay reconcile.')

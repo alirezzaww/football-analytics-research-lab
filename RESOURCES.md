@@ -72,3 +72,5 @@ video review remain future project work. No community participation has been req
 - [SQLite CASE expressions](https://www.sqlite.org/lang_expr.html#the_case_expression) — primary source for lesson 57 conditional labels before grouped match-phase summaries.
 
 - [Hudl StatsBomb xG glossary](https://support.hudl.com/s/article/expected-goals?language=en_US&topic=Statsbomb_Global_Football_Data_Glossary) — provider definition revisited for lesson 61. The analysis reads the archived shot.statsbomb_xg values rather than claiming the current provider model version generated them.
+
+- [StatsBomb freeze frames and defender locations](https://blogarchive.statsbomb.com/news/statsbomb-data-case-studies-freeze-frames-and-defender-locations/) and [Open Data specification Appendix 3](https://raw.githubusercontent.com/statsbomb/open-data/master/doc/StatsBomb%20Open%20Data%20Specification%20v1.1.pdf) — primary sources for lesson 62 shot-time snapshots, recorded player roles and spatial context. Project triangle counting is explicitly defined rather than asserted to reproduce the provider model.
