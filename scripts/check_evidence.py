@@ -2110,3 +2110,32 @@ for row,old in zip(frames['shots'],quality['shots']):
 if all((ROOT/r['relative_path']).exists() for r in frames['raw_inputs']):
     assert frames==frame_module.build_evidence(allow_download=False)
 print('PASS: selected shot snapshots, player roles, goal-triangle memberships and optional raw replay reconcile.')
+
+cohort=read('63_fullback_cohort_evidence.json')
+cohort_protocol=read('63_fullback_cohort_protocol.json')
+assert hashlib.sha256((ROOT/cohort['protocol_path']).read_bytes()).hexdigest()==cohort['protocol_sha256']
+for source in cohort['sources']:
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+expected_cohort_raw=read('source_manifest.json')['raw_inputs']+read('27_frozen_evaluation_evidence.json')['raw_inputs']
+assert cohort['raw_inputs']==sorted(expected_cohort_raw,key=lambda r:r['match_id'])
+assert cohort['metadata_input']==read('27_evaluation_protocol.json')['metadata_source']
+spec=importlib.util.spec_from_file_location('fullback_cohort_audit',ROOT/'63_fullback_recruitment_cohort.py')
+cohort_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(cohort_module)
+assert cohort['players_with_role_starts']==cohort_module.profile_pool(cohort['starter_rows'],cohort_protocol['starting_positions'],cohort_protocol['minimum_role_starts'])
+assert cohort['eligible_players']==[p for p in cohort['players_with_role_starts'] if p['eligible']]
+start_groups=defaultdict(list)
+for starter in cohort['starter_rows']:
+    start_groups[(starter['match_id'],starter['team_id'])].append(starter)
+assert len(start_groups)==104
+assert all(len(rows)==len({r['player_id'] for r in rows})==11 for rows in start_groups.values())
+assert {r['match_id'] for r in cohort['starter_rows']}=={r['match_id'] for r in cohort['raw_inputs']}
+assert all(len([key for key in start_groups if key[0]==record['match_id']])==2 for record in cohort['raw_inputs'])
+summary=cohort['summary']
+assert summary=={'matches':len(cohort['raw_inputs']),'team_lineups':len(start_groups),'starter_records':len(cohort['starter_rows']),
+                 'players_with_role_starts':len(cohort['players_with_role_starts']),'eligible_players':len(cohort['eligible_players']),
+                 'excluded_below_minimum':sum(not p['eligible'] for p in cohort['players_with_role_starts']),
+                 'qualifying_role_start_records':sum(r['position_name'] in cohort_protocol['starting_positions'] for r in cohort['starter_rows'])}
+assert (ROOT/'reports/46_fullback_recruitment_cohort.md').read_text()==cohort_module.render_report(cohort)
+if all((ROOT/r['relative_path']).exists() for r in cohort['raw_inputs']+[cohort['metadata_input']]):
+    assert cohort==cohort_module.build_evidence(allow_download=False)
+print('PASS: full-tournament starting-lineup coverage, stable player identities and fullback eligibility rules reconcile.')

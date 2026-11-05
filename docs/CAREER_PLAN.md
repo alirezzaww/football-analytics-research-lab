@@ -36,3 +36,7 @@ No completion date or job guarantee is assumed. Review progress using independen
 “Developing a guided, reproducible football analytics portfolio using Python and StatsBomb Open Data, including a five-match corner-phase case study with clear definitions, visual reporting and an auditable video-review brief.”
 
 Link the public [Football Analytics Research Lab](https://github.com/alirezzaww/football-analytics-research-lab). Explain which parts were assisted and which were implemented independently. Start upgrading this wording only when the independent milestones have actual evidence.
+
+## Historical recruitment case study started
+
+Lesson 63 defines a reproducible 35-player fullback profiling pool from all 52 2019 World Cup fixtures using a fixed three-start role filter. This extends the guided portfolio toward recruitment questions. It does not establish current player availability or independent scouting skill. Next: audited playing-time denominators, role-aware activity profiles and a concise evidence-based player brief.

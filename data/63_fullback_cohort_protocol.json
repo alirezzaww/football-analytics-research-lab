@@ -1,0 +1,13 @@
+{
+  "defined_on": "2026-11-05",
+  "competition_id": 72,
+  "season_id": 30,
+  "phase_goal": "Historical recruitment-analysis exercise: establish a reproducible pool for profiling fullbacks who support wide build-up and ball progression.",
+  "starting_positions": ["Left Back", "Right Back"],
+  "minimum_role_starts": 3,
+  "identity": "Group by team ID and player ID; retain all observed name labels and each qualifying start.",
+  "selection": "All 52 fixtures represented by the existing seven-match and 45-match raw manifests. Read each team's period-1 Starting XI event. Count at most one qualifying role start per player per match.",
+  "exclusions": "Wingback and other starting positions do not count. Substitute-only appearances and later role changes do not count toward this starting-role filter.",
+  "next_measurement": "Audit playing-time denominators before computing activity rates; profile passing volume, progression and completion by role/side with match context. These performance measures are not calculated in this eligibility lesson.",
+  "scope": "Fixed educational selection rule on already inspected 2019 data, not a preregistration, current transfer search, ability ranking or proof of stable role/minutes. Three starts is a sample filter, not a reliability threshold."
+}

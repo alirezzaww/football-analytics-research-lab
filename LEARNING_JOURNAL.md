@@ -638,3 +638,7 @@ Completed assisted enrichment of the same four opposition corner-phase shots usi
 ### 2026-11-05 · Lesson 62: shot freeze-frame context
 
 Completed assisted plotting and geometric counting for the same four shots. Recorded France outfield player centres in the closed goal triangle: Norway 1, Nigeria 2, Brazil 3, USA 5; keepers counted separately. Covered shooter-relative teammate flags, snapshot versus tracking, incomplete recorded-player coverage and geometric presence versus proven blocking ability. No marking assignment, causal xG explanation, video review or independent mastery claimed.
+
+### 2026-11-05 · Lesson 63: new recruitment-analysis phase
+
+User requested the next phase. Started assisted historical fullback profiling aligned with Soccermatics statistical scouting: 52 matches, 104 lineups, 1,144 starter rows; 75 player/team identities with a Left Back/Right Back start, 35 meeting the fixed three-start filter. Preserved side splits and ID-based identities. Covered cohort selection versus ability, starts versus minutes, and historical data versus current recruitment claims. Performance metrics and independent skill remain to demonstrate.

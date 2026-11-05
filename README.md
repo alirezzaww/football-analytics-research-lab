@@ -377,3 +377,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Defensive spatial context: shot freeze frames
 
 [Lesson 62](lessons/0044-defensive-shot-freeze-frames.html) plots the [recorded player positions](reports/45_defensive_shot_freeze_frames.md) for the same four shots and counts French outfield player centres in an explicitly defined shot-to-goalposts triangle. Run `python 62_defensive_shot_freeze_frames.py`. Geometry is descriptive; the report distinguishes goalkeeper roles, shooter-relative teammate labels, incomplete frame coverage and verified blocking ability.
+
+## Recruitment phase: define a fullback profiling pool
+
+[Lesson 63](lessons/0045-recruitment-fullback-cohort.html) starts a historical recruitment exercise aligned with Soccermatics statistical scouting. Across all 52 fixtures, 75 player/team identities have at least one recorded fullback start; [35 meet the chosen three-start filter](reports/46_fullback_recruitment_cohort.md). Run `python 63_fullback_recruitment_cohort.py`. This establishes eligibility, not performance rankings, minutes or present-day transfer suitability.
