@@ -2016,3 +2016,42 @@ assert audit_evidence['passed']
 assert len(audit_evidence['checks'])==9
 assert all(r['passed'] and r['violation_count']==0 for r in audit_evidence['checks'])
 print('PASS: corner relationship audit reproduces, all nine structural checks pass, report matches evidence.')
+
+defensive=read('60_france_defensive_corner_evidence.json')
+assert defensive['source_path']=='data/38_france_corner_study_evidence.json'
+assert hashlib.sha256((ROOT/defensive['source_path']).read_bytes()).hexdigest()==defensive['source_sha256']
+assert defensive['protocol_path']==study['protocol_path']
+assert hashlib.sha256((ROOT/defensive['protocol_path']).read_bytes()).hexdigest()==defensive['protocol_sha256']
+assert defensive['france_attacking_reference']==study['pooled']
+spec=importlib.util.spec_from_file_location('defensive_corner_audit',ROOT/'60_france_defensive_corners.py')
+defensive_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(defensive_module)
+assert (ROOT/'reports/43_france_defensive_corners.md').read_text()==defensive_module.render_report(defensive)
+assert len(defensive['matches'])==len(study['matches'])
+for row,old in zip(defensive['matches'],study['matches']):
+    assert row['fixture']==old['fixture'] and row['raw_input']==old['raw_input']
+    assert row['defending_team']=="France Women's"
+    assert row['attacking_team']==row['opponent']==old['opponent']
+    assert row['deliveries']==len(row['phases'])
+    assert len({p['corner_id'] for p in row['phases']})==row['deliveries']
+    assert row['corners_with_phase_shot']==sum(bool(p['shots']) for p in row['phases'])
+    shots=[s for p in row['phases'] for s in p['shots']]
+    assert row['phase_shots']==len(shots)==len({s['shot_id'] for s in shots})
+    assert row['phase_shot_goals']==sum(s['goal'] for s in shots)
+    assert row['extra_time_deliveries']==sum(p['period'] in (3,4) for p in row['phases'])
+    assert all(p['period'] in (1,2,3,4) for p in row['phases'])
+    assert all(0<=s['elapsed_seconds']<=15 for s in shots)
+    if row['deliveries']:
+        assert math.isclose(row['phase_shot_rate'],row['corners_with_phase_shot']/row['deliveries'])
+    else:
+        assert row['phase_shot_rate'] is None
+assert defensive['pooled']==defensive_module.study_helper.pool(defensive['matches'])
+if all((ROOT/r['raw_input']['relative_path']).exists() for r in defensive['matches']):
+    assert defensive==defensive_module.build_evidence(allow_download=False)
+    protocol=json.loads((ROOT/defensive['protocol_path']).read_text())
+    for old in study['matches']:
+        events=defensive_module.load_events(old['raw_input'],allow_download=False)
+        replay=defensive_module.analyze_team(events,"France Women's",protocol)
+        for key in ('deliveries','corners_with_phase_shot','phase_shots','phase_shot_goals','phase_shot_rate','extra_time_deliveries'):
+            assert replay[key]==old[key]
+        assert [(p['corner_id'],p['shots'],p['stop_reason']) for p in replay['phases']]==[(p['corner_id'],p['shots'],p['stop_reason']) for p in old['phases']]
+print('PASS: defensive-team selection, phase memberships, pooled counts and optional raw replay reconcile.')

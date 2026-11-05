@@ -365,3 +365,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Data quality: audit before the player report
 
 [Lesson 59](lessons/0041-corner-data-quality.html) adds a [nine-check relationship audit](reports/42_corner_data_quality.md) for corner, shot and taker records. Run `python 59_corner_data_quality.py`; the player-report loader also requires it to pass. Current inputs pass. This validates specific keys and relationships, not all real-world annotation accuracy.
+
+## Defensive set pieces: opposition corners against France
+
+[Lesson 60](lessons/0042-france-defensive-corners.html) switches the attacking team to France's opponent and applies the same phase rule in a [defensive report](reports/43_france_defensive_corners.md). Run `python 60_france_defensive_corners.py`. France faced 15 corners; four were associated with an opposition shot (26.7%), with four shots and no shot goals. This descriptive sample is not a defensive ability ranking.

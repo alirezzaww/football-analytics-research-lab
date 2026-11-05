@@ -1,0 +1,296 @@
+{
+  "source_path": "data/38_france_corner_study_evidence.json",
+  "source_sha256": "353929aa215afb1f8bd39ee7c4ebb08b5cc554d1c78cb506d50bb55ec5db13e5",
+  "protocol_path": "data/38_france_corner_study_protocol.json",
+  "protocol_sha256": "cc3ccea7a1e19bbbe9ee941b0f5aceef623a719091f7d16d7e59ba8bc3bf0fab",
+  "team_selection": "In each existing France fixture select the other team as attacking; France is defending. All five fixtures retained.",
+  "shot_eligibility": "Opponent non-penalty shots in periods 1\u20134, with the unchanged same-possession, at-most-15-second phase boundaries.",
+  "matches": [
+    {
+      "fixture": {
+        "match_id": 22921,
+        "match_date": "2019-06-07",
+        "home_team": "France Women's",
+        "away_team": "Korea Republic Women's"
+      },
+      "defending_team": "France Women's",
+      "opponent": "Korea Republic Women's",
+      "raw_input": {
+        "match_id": 22921,
+        "relative_path": "data/cache_2019_events/22921.json",
+        "sha256": "4fdbe28dc3e5828b12e97228e7d6a35736a9c78d08e3566089feb2f0fbea62cf",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22921.json"
+      },
+      "attacking_team": "Korea Republic Women's",
+      "deliveries": 1,
+      "corners_with_phase_shot": 0,
+      "phase_shots": 0,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.0,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "e1fc2300-9add-448c-aaa3-d3cd811eabfb",
+          "period": 1,
+          "minute": 19,
+          "second": 47,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "match_id": 22948,
+        "match_date": "2019-06-12",
+        "home_team": "France Women's",
+        "away_team": "Norway Women's"
+      },
+      "defending_team": "France Women's",
+      "opponent": "Norway Women's",
+      "raw_input": {
+        "match_id": 22948,
+        "relative_path": "data/cache_2019_events/22948.json",
+        "sha256": "3da6f672d52c6b8221bbd9c020d33b9f9d9524462f879c65cfcd9da4914a64db",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22948.json"
+      },
+      "attacking_team": "Norway Women's",
+      "deliveries": 5,
+      "corners_with_phase_shot": 1,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.2,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "f5eb07c6-0240-42ca-857f-45fc46b35a57",
+          "period": 1,
+          "minute": 14,
+          "second": 4,
+          "shots": [
+            {
+              "shot_id": "1dcd2c64-3591-45b8-b2dc-38f0eef2cfea",
+              "elapsed_seconds": 1.465,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "e920c39c-77d1-49f6-b591-825546209ee5",
+          "period": 1,
+          "minute": 14,
+          "second": 36,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "d8c88fa6-7904-4444-8653-41b74da38b10",
+          "period": 1,
+          "minute": 34,
+          "second": 45,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "0b36a6bd-b67d-493f-8059-e24306dc8b88",
+          "period": 2,
+          "minute": 63,
+          "second": 40,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "04b95b67-bba5-4792-b42a-312aa7fa82d8",
+          "period": 2,
+          "minute": 73,
+          "second": 59,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "match_id": 22980,
+        "match_date": "2019-06-17",
+        "home_team": "Nigeria Women's",
+        "away_team": "France Women's"
+      },
+      "defending_team": "France Women's",
+      "opponent": "Nigeria Women's",
+      "raw_input": {
+        "match_id": 22980,
+        "relative_path": "data/cache_2019_events/22980.json",
+        "sha256": "1d9c36f6dc0cebb678d0cbd0391c9fe42f64ee9795575d18b44764f971c26e34",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22980.json"
+      },
+      "attacking_team": "Nigeria Women's",
+      "deliveries": 2,
+      "corners_with_phase_shot": 1,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.5,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "6d275c9f-6fbb-49b1-b6cd-fdd15d75eab5",
+          "period": 1,
+          "minute": 2,
+          "second": 55,
+          "shots": [
+            {
+              "shot_id": "815c03cb-37fb-46e4-b1ce-7fcadad72aa0",
+              "elapsed_seconds": 1.842,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "a468d82f-855a-4125-89c7-39e00c5fdb8f",
+          "period": 1,
+          "minute": 47,
+          "second": 9,
+          "shots": [],
+          "stop_reason": "Time limit"
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "match_id": 69137,
+        "match_date": "2019-06-23",
+        "home_team": "France Women's",
+        "away_team": "Brazil Women's"
+      },
+      "defending_team": "France Women's",
+      "opponent": "Brazil Women's",
+      "raw_input": {
+        "match_id": 69137,
+        "relative_path": "data/cache_2019_events/69137.json",
+        "sha256": "45f2798d4c0a301d2e9625a050994818a0c81c3b135caeb8d2c8135636be2cc6",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/69137.json"
+      },
+      "attacking_team": "Brazil Women's",
+      "deliveries": 4,
+      "corners_with_phase_shot": 1,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.25,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "7fd154f9-418c-4962-81c2-e213afafb3c4",
+          "period": 1,
+          "minute": 15,
+          "second": 10,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "f1d05013-1b17-4ec7-a6f6-f53f62476eb4",
+          "period": 1,
+          "minute": 37,
+          "second": 20,
+          "shots": [
+            {
+              "shot_id": "46a578f4-a7a9-4700-9ef9-f38cc687aa2c",
+              "elapsed_seconds": 1.167,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "fd89eca7-fffe-406f-83de-39bd796b97f4",
+          "period": 1,
+          "minute": 43,
+          "second": 48,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "5804cecf-1e25-4c37-86dd-57f472a2032d",
+          "period": 2,
+          "minute": 88,
+          "second": 59,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "match_id": 69202,
+        "match_date": "2019-06-28",
+        "home_team": "France Women's",
+        "away_team": "United States Women's"
+      },
+      "defending_team": "France Women's",
+      "opponent": "United States Women's",
+      "raw_input": {
+        "match_id": 69202,
+        "relative_path": "data/cache_2019_events/69202.json",
+        "sha256": "81a073e48d192fdd02d6662fbc5d5be8a4be17a01ebe4d7517ef2200b91a5f94",
+        "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/69202.json"
+      },
+      "attacking_team": "United States Women's",
+      "deliveries": 3,
+      "corners_with_phase_shot": 1,
+      "phase_shots": 1,
+      "phase_shot_goals": 0,
+      "phase_shot_rate": 0.3333333333333333,
+      "extra_time_deliveries": 0,
+      "phases": [
+        {
+          "corner_id": "2aece969-5c81-4627-8fe1-4bf0268a7507",
+          "period": 1,
+          "minute": 8,
+          "second": 42,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        },
+        {
+          "corner_id": "9b2a72cc-d3b1-476f-aab4-ec3c26a0ea43",
+          "period": 2,
+          "minute": 45,
+          "second": 42,
+          "shots": [
+            {
+              "shot_id": "6ea0867e-e912-4768-a02a-528302a6103e",
+              "elapsed_seconds": 2.763,
+              "goal": 0
+            }
+          ],
+          "stop_reason": "Time limit"
+        },
+        {
+          "corner_id": "c93e09e5-2607-4419-a6bb-a193a35c1108",
+          "period": 2,
+          "minute": 47,
+          "second": 45,
+          "shots": [],
+          "stop_reason": "Possession changed"
+        }
+      ]
+    }
+  ],
+  "pooled": {
+    "matches": 5,
+    "deliveries": 15,
+    "corners_with_phase_shot": 4,
+    "phase_shots": 4,
+    "phase_shot_goals": 0,
+    "phase_shot_rate": 0.26666666666666666
+  },
+  "france_attacking_reference": {
+    "matches": 5,
+    "deliveries": 45,
+    "corners_with_phase_shot": 19,
+    "phase_shots": 21,
+    "phase_shot_goals": 2,
+    "phase_shot_rate": 0.4222222222222222
+  },
+  "scope": "Descriptive defensive view of already inspected fixtures. New aggregation, not fresh validation, causal attribution or a defensive ability ranking. Shot goals only; own goals and penalties are not counted as phase shot goals."
+}

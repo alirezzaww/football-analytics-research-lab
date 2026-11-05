@@ -626,3 +626,7 @@ Completed assisted player report by joining complete one-to-one taker metadata t
 ### 2026-11-05 · Lesson 59: data relationship audit
 
 Completed assisted staging-table audit on 45 corner, 21 shot and 45 taker records: all nine structural checks pass. Added deliberate synthetic-defect tests and a validation gate in the player-report loader. Covered duplicate inflation, complete composite keys, required metadata versus valid zero-shot corners, and limited meaning of a passing audit. No actual source corruption found or independent mastery claimed.
+
+### 2026-11-05 · Lesson 60: defensive corners
+
+Completed assisted defensive extension on the same five already inspected fixtures. Switched attacking-team selection to each France opponent; same phase rule gives 15 corners faced, four positive corners, four shots and zero shot goals. Covered for/against perspectives, separate denominators and event counts versus video-based defensive explanations. No independent mastery, fresh validation or video review claimed.
