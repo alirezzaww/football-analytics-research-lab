@@ -357,3 +357,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## SQL match phases: label and compare corners
 
 [Lesson 57](lessons/0039-sql-match-phase-comparison.html) uses SQL CASE and recorded periods to [compare first-half, second-half and extra-time corner rates](reports/40_sql_match_phase_comparison.md). Run `python 57_sql_match_phase_comparison.py`. First half: 10/24 (41.7%); second half: 8/18 (44.4%). This small descriptive gap does not establish improvement after half-time.
+
+## SQL player report: corner takers
+
+[Lesson 58](lessons/0040-sql-corner-taker-report.html) combines joins, grouping and HAVING into a [corner-taker report](reports/41_sql_corner_taker_report.md), with complete metadata coverage checked before joining. Run `python 58_sql_corner_taker_report.py`. Full counts remain visible; the optional 10-delivery display filter is not a reliability threshold or player ranking.

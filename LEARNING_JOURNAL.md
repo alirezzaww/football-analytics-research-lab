@@ -618,3 +618,7 @@ Completed assisted GROUP BY/ORDER BY exercise from relational corner/shot tables
 ### 2026-11-05 · Lesson 57: SQL match-phase comparison
 
 Completed assisted CASE-label exercise with period-based first-half, second-half and pooled extra-time groups. Results: 10/24, 8/18 and 1/3 corners with a shot; counts reconcile to all 45 deliveries. Added-time membership uses period rather than minute. Covered rate versus volume and why a small descriptive difference does not prove improvement. Independent explanation and query editing remain to demonstrate.
+
+### 2026-11-05 · Lesson 58: SQL corner-taker report
+
+Completed assisted player report by joining complete one-to-one taker metadata to corner deliveries and pre-aggregated phase shots. Majri 10/24, Thiney 8/18, Geyoro 0/2 and Bussaglia 1/1 reproduce all 45 deliveries. Covered HAVING versus WHERE and why a display minimum does not establish reliability. Independent SQL construction remains unverified.

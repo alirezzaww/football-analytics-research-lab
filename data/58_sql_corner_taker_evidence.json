@@ -1,0 +1,303 @@
+{
+  "sources": [
+    {
+      "path": "data/38_france_corner_study_evidence.json",
+      "sha256": "353929aa215afb1f8bd39ee7c4ebb08b5cc554d1c78cb506d50bb55ec5db13e5"
+    },
+    {
+      "path": "data/39_corner_delivery_profiles_evidence.json",
+      "sha256": "2065064f43e5b68948ee1a03e4165660eccae26bd206d12afaebf7d1dd5d77c6"
+    }
+  ],
+  "sql_files": {
+    "schema": {
+      "path": "sql/58_corner_takers_schema.sql",
+      "sha256": "d91db650827edb276654343bb6c5a0cd9bd7928c510e0c9d8a504e2926f76e6c"
+    },
+    "query": {
+      "path": "sql/58_corner_taker_report.sql",
+      "sha256": "a9125b73268d7b0c6b756b1bce5d9fe519baa2050151012b044b40f99ede5c88"
+    }
+  },
+  "taker_rows": [
+    {
+      "match_id": 22921,
+      "corner_id": "c18ad143-b9d3-4aaf-ad8f-469bb2c2272b",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "6e114624-3fd8-4d92-87e7-ee6a77ac340d",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "012304c4-7d5f-4f3a-b741-a8a2ed85dd6c",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "2ad14217-1259-4422-9abe-2cc927ca1344",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "ff903588-8838-492a-8487-31f98f3ad03f",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "5e672927-1b11-4a57-8f2a-0f93d907aa9b",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "1a92a4e1-a29c-43c6-966a-dc1a3cded70d",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "8ea1d87a-c639-45e0-9948-6f27d3938dcf",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "ec9993d9-53a4-4138-8469-ff141b9ce263",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "e3c44f60-372f-4e80-a007-14447e0e4956",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "efe43b64-1bf4-4d4c-a0f0-b8983d1c9c2d",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "63dde8f6-0cc6-4095-ab21-18da09a5ad24",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22921,
+      "corner_id": "c1a39826-a54d-4d58-9acf-b4647d7cc7ef",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "706ed468-34b9-4562-8dfa-fa03c2f58cf2",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "d2bf6141-e552-4b71-aa71-c53d6392a8d4",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "53cfdc02-7047-42ef-bcbd-efa23cd52551",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "37f27fcd-70b1-4e4a-987e-d86589934554",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "3aa1ac58-5703-4826-8cc4-66de93b93cf9",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "959db788-b5b0-4e3d-b8b5-453ab33bc243",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "cd284f1b-ead2-47f7-9262-37ecd86a01ea",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "e58a4fd7-0074-4807-bc3d-433f22794dd1",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22948,
+      "corner_id": "aa1bba1a-49f0-446a-aa0c-7ae995edbc61",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "d562d240-7ca7-42ca-b070-1903214b7d78",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "e626c1b0-270b-4dae-ac24-2ce37bb98fe5",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "3c23ffce-1c2e-4957-81f5-fc8dad0e7846",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "858e59fe-db8a-423d-9632-fd2dc09c032e",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "e3c4cf98-37f0-46ae-bf3e-463c4267e490",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "09403170-a74c-4173-9621-74819b9396ea",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "82c00f82-bc17-4969-8411-eb4e3250f6d5",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "eab50457-0960-44cf-a56d-6df840ce8f49",
+      "passer": "Onema Grace Geyoro"
+    },
+    {
+      "match_id": 22980,
+      "corner_id": "79313db5-366f-422f-b6fc-20905849e2cc",
+      "passer": "Onema Grace Geyoro"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "6b9af7a2-b0a3-4349-811f-d676391b77b5",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "309c806b-9222-42ac-aa5c-3d5d9fd2d111",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "0466f6e9-18f1-437b-b87a-c72fafe60bfc",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "407c30fc-6dbf-4657-a24b-91c9262f1bb0",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "46008074-50c0-4e07-a2f0-5fa4bfe5ff60",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "d0251944-2271-4cb7-ba76-5d94d896067d",
+      "passer": "Elise Bussaglia"
+    },
+    {
+      "match_id": 69137,
+      "corner_id": "7c2b073d-bcaa-4a16-87e8-df8aa2cee49d",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "98ca6d2c-85e1-42d6-8848-cf2299f70dfe",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "270adf53-14f0-41a0-839b-3b8454cd02b8",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "5d27dcd4-3e21-45ee-a6a3-dbb0ed3c942b",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "3f8c36b4-0aaf-4bdd-9929-e022320c074a",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "a7b5b310-6608-4df1-b03b-6979b6e37242",
+      "passer": "Amel Majri"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "b7dfeb21-5bab-4404-9b9f-14fddfd51c48",
+      "passer": "Ga\u00ebtane Thiney"
+    },
+    {
+      "match_id": 69202,
+      "corner_id": "4b180bab-1634-40db-8482-7f4ac852b437",
+      "passer": "Amel Majri"
+    }
+  ],
+  "all_takers": [
+    {
+      "passer": "Amel Majri",
+      "deliveries": 24,
+      "corners_with_shot": 10,
+      "phase_shots": 12,
+      "phase_goals": 1,
+      "corner_shot_rate_pct": 41.666666666666664
+    },
+    {
+      "passer": "Ga\u00ebtane Thiney",
+      "deliveries": 18,
+      "corners_with_shot": 8,
+      "phase_shots": 8,
+      "phase_goals": 1,
+      "corner_shot_rate_pct": 44.44444444444444
+    },
+    {
+      "passer": "Onema Grace Geyoro",
+      "deliveries": 2,
+      "corners_with_shot": 0,
+      "phase_shots": 0,
+      "phase_goals": 0,
+      "corner_shot_rate_pct": 0.0
+    },
+    {
+      "passer": "Elise Bussaglia",
+      "deliveries": 1,
+      "corners_with_shot": 1,
+      "phase_shots": 1,
+      "phase_goals": 0,
+      "corner_shot_rate_pct": 100.0
+    }
+  ],
+  "display_min_deliveries": 10,
+  "filtered_takers": [
+    {
+      "passer": "Amel Majri",
+      "deliveries": 24,
+      "corners_with_shot": 10,
+      "phase_shots": 12,
+      "phase_goals": 1,
+      "corner_shot_rate_pct": 41.666666666666664
+    },
+    {
+      "passer": "Ga\u00ebtane Thiney",
+      "deliveries": 18,
+      "corners_with_shot": 8,
+      "phase_shots": 8,
+      "phase_goals": 1,
+      "corner_shot_rate_pct": 44.44444444444444
+    }
+  ],
+  "scope": "Descriptive player-name groups in the same five France fixtures. Ten deliveries is an illustrative display filter, not a reliability threshold. Complete corner metadata checked before the inner join. No player ability ranking or independent SQL mastery claimed."
+}

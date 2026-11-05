@@ -1979,3 +1979,29 @@ assert sum(r['deliveries'] for r in phase_sql['rows'])==study['pooled']['deliver
 assert sum(r['corners_with_shot'] for r in phase_sql['rows'])==study['pooled']['corners_with_phase_shot']
 assert sum(r['phase_shots'] for r in phase_sql['rows'])==study['pooled']['phase_shots']
 print('PASS: period-based SQL match phases reconcile to raw study memberships and pooled corner counts.')
+
+taker_sql=json.loads((ROOT/'data/58_sql_corner_taker_evidence.json').read_text())
+spec=importlib.util.spec_from_file_location('taker_sql_audit',ROOT/'58_sql_corner_taker_report.py')
+taker_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(taker_module)
+assert taker_sql==taker_module.build_evidence()
+assert (ROOT/'reports/41_sql_corner_taker_report.md').read_text()==taker_module.render_report(taker_sql)
+taker_profiles=json.loads((ROOT/'data/39_corner_delivery_profiles_evidence.json').read_text())
+expected_taker_rows=[{k:r[k] for k in ('match_id','corner_id','passer')} for r in taker_profiles['deliveries']]
+assert taker_sql['taker_rows']==expected_taker_rows
+expected_taker_counts={}
+for delivery in taker_profiles['deliveries']:
+    counts=expected_taker_counts.setdefault(delivery['passer'],[0,0,0,0])
+    counts[0]+=1
+    counts[1]+=int(delivery['phase_has_shot'])
+    counts[2]+=delivery['phase_shots']
+    counts[3]+=delivery['phase_shot_goals']
+assert len(taker_sql['all_takers'])==len(expected_taker_counts)
+for row in taker_sql['all_takers']:
+    assert [row[k] for k in ('deliveries','corners_with_shot','phase_shots','phase_goals')]==expected_taker_counts[row['passer']]
+    assert math.isclose(row['corner_shot_rate_pct'],100*row['corners_with_shot']/row['deliveries'])
+assert taker_sql['filtered_takers']==[r for r in taker_sql['all_takers'] if r['deliveries']>=taker_sql['display_min_deliveries']]
+assert sum(r['deliveries'] for r in taker_sql['all_takers'])==study['pooled']['deliveries']
+assert sum(r['corners_with_shot'] for r in taker_sql['all_takers'])==study['pooled']['corners_with_phase_shot']
+assert sum(r['phase_shots'] for r in taker_sql['all_takers'])==study['pooled']['phase_shots']
+assert sum(r['phase_goals'] for r in taker_sql['all_takers'])==study['pooled']['phase_shot_goals']
+print('PASS: complete taker metadata, player groups, HAVING display filter and pooled corner counts reconcile.')
