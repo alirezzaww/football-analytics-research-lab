@@ -389,3 +389,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment activity: passing per 90
 
 [Lesson 65](lessons/0047-fullback-passing-per90.html) calculates [35 matched-scope passing profiles](reports/48_fullback_passing_per90.md) for the **2019 Women’s World Cup**, using the registered-minute convention from lesson 64. Run `python 65_fullback_passing_per90.py`. Bronze: 350 eligible completions, 45.57 per 90; Majri: 172, 30.70 per 90. Reading: [Soccermatics Lesson 3 — Statistical scouting, Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation). Activity rates are not possession/difficulty-adjusted ability measures.
+
+## Recruitment context: completed forward advancement
+
+[Lesson 66](lessons/0048-fullback-forward-advancement.html) adds a [documented spatial rule](reports/49_fullback_forward_advancement.md): completed eligible passes with end_x − start_x ≥ 20 on the 0–120 scale. Run `python 66_fullback_forward_advancement.py`. All 4,158 source completions are retained; Bronze has 34 qualifying passes (4.43/90), Majri 18 (3.21/90). Data: **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure). The threshold is a project definition, not a universal progressive-pass or ability measure.

@@ -1,0 +1,13 @@
+{
+  "defined_on": "2026-11-06",
+  "competition": "FIFA Women's World Cup",
+  "season": "2019",
+  "competition_id": 72,
+  "season_id": 30,
+  "source": "Lesson 65 completed eligible passes and unchanged lesson 64 minutes in qualifying fullback-start fixtures.",
+  "minimum_x_gain": 20,
+  "rule": "Count a completed eligible pass when end_x minus start_x is at least 20 on the StatsBomb 0–120 pitch-length coordinate scale, attacking towards x=120. Compare decimal coordinate values, including the exact threshold.",
+  "coordinate_policy": "Both start and end must be finite in-pitch x,y pairs. Missing/invalid coordinates stop enrichment rather than becoming zero or silently dropping a completion.",
+  "metrics": "Count; count per selected registered 90 minutes; count as a percentage of all eligible completed passes.",
+  "limitations": "A transparent project definition, not a universal progressive-pass standard. It ignores lateral movement, defender lines, pressure, starting-zone opportunity and resulting chance value. A valuable short pass near goal may not qualify. Historical already inspected data; no new ability ranking or model fitting."
+}

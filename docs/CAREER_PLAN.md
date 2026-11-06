@@ -1,6 +1,6 @@
 # Football analyst employment plan
 
-Updated 5 November 2026. The goal is employment supported by work Alireza can reproduce and explain. Location preference: open to any location and remote/on-site options. Work authorization, relocation feasibility and sponsorship needs remain unconfirmed; openness does not establish eligibility.
+Updated 6 November 2026. The goal is employment supported by work Alireza can reproduce and explain. Location preference: open to any location and remote/on-site options. Work authorization, relocation feasibility and sponsorship needs remain unconfirmed; openness does not establish eligibility.
 
 ## Role direction and evidence from employers
 
@@ -39,4 +39,4 @@ Link the public [Football Analytics Research Lab](https://github.com/alirezzaww/
 
 ## Historical recruitment case study started
 
-Lesson 63 defines a reproducible 35-player fullback profiling pool from all 52 2019 World Cup fixtures using a fixed three-start role filter. This extends the guided portfolio toward recruitment questions. It does not establish current player availability or independent scouting skill. Lesson 64 adds guided registered-time audits in qualifying starting-role fixtures, with an explicit added/extra-time convention; independent official minute totals and position-specific time were not validated. Lesson 65 adds initial passing activity per 90 on the same selected-fixture scope, without possession/difficulty adjustment or ability rankings. Next: contextual progression profiles and a concise evidence-based player brief.
+Lesson 63 defines a reproducible 35-player fullback profiling pool from all 52 2019 World Cup fixtures using a fixed three-start role filter. This extends the guided portfolio toward recruitment questions. It does not establish current player availability or independent scouting skill. Lesson 64 adds guided registered-time audits in qualifying starting-role fixtures, with an explicit added/extra-time convention; independent official minute totals and position-specific time were not validated. Lesson 65 adds initial passing activity per 90 on the same selected-fixture scope, without possession/difficulty adjustment or ability rankings. Lesson 66 adds a transparent completed-pass x-advancement definition, preserving the same sample and minutes; it is not a universal progression or action-value metric. Next: opportunity/context checks and a concise evidence-based player brief.

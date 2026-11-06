@@ -2203,3 +2203,29 @@ assert (ROOT/'reports/48_fullback_passing_per90.md').read_text()==passing_module
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert passing_profile==passing_module.build_evidence(allow_download=False)
 print('PASS: matched-scope pass event ledgers, exclusion reconciliation, per-90 rates and completion denominators reproduce.')
+
+advancement=read('66_fullback_advancement_evidence.json')
+advancement_protocol=read('66_forward_advancement_protocol.json')
+assert advancement['source_path']=='data/65_fullback_passing_per90_evidence.json'
+assert hashlib.sha256((ROOT/advancement['source_path']).read_bytes()).hexdigest()==advancement['source_sha256']
+assert hashlib.sha256((ROOT/advancement['protocol_path']).read_bytes()).hexdigest()==advancement['protocol_sha256']
+assert advancement['season']=='2019' and advancement['competition_id']==72 and advancement['season_id']==30
+assert advancement['minimum_x_gain']==advancement_protocol['minimum_x_gain']==20
+spec=importlib.util.spec_from_file_location('forward_advancement_audit',ROOT/'66_fullback_forward_advancement.py')
+advance_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(advance_module)
+expected_completion_keys=[(r['match_id'],r['team_id'],r['player_id'],identifier) for r in passing_profile['pass_ledger'] for identifier in r['completed_ids']]
+assert [(r['match_id'],r['team_id'],r['player_id'],r['pass_id']) for r in advancement['completions']]==expected_completion_keys
+assert len(set(expected_completion_keys))==len(expected_completion_keys)
+for row in advancement['completions']:
+    gain,qualifies=advance_module.advancement([row['x'],row['y']],[row['end_x'],row['end_y']],advancement['minimum_x_gain'])
+    assert row['x_gain']==gain and row['qualifies']==qualifies
+assert len(advancement['players'])==len(passing_profile['players'])
+for player,old in zip(advancement['players'],passing_profile['players']):
+    rows=[r for r in advancement['completions'] if (r['team_id'],r['player_id'])==(old['team_id'],old['player_id'])]
+    assert player==advance_module.summarize(old,rows)
+    assert player['qualifying_completions']<=player['eligible_completed']
+assert advancement['illustrative_ledger_examples']==[next(r for r in advancement['completions'] if r['player_id']==identifier and r['qualifies']) for identifier in (10178,15249)]
+assert (ROOT/'reports/49_fullback_forward_advancement.md').read_text()==advance_module.render_report(advancement)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert advancement==advance_module.build_evidence(allow_download=False)
+print('PASS: full completion coverage, exact forward-gain threshold, unchanged minute denominators and maps/report memberships reconcile.')

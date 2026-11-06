@@ -650,3 +650,7 @@ User requested competition/season references for follow-along reading; added pro
 ### 2026-11-05 · Lesson 65: passing activity per 90
 
 Completed assisted matched-scope passing counts and rates for the unchanged 35-player cohort. Bronze 350/436 eligible passes, 691.1842 minutes, 45.573958 completions per 90; Majri 172/222, 504.22985 minutes, 30.700285 per 90. Saved per-match event-ID ledgers and exclusion counts. Covered time-standardized activity versus completion percentage and the remaining role, possession and difficulty context. References explicitly identify 2019 Women’s World Cup and Soccermatics Lesson 3 → Normalisation. Independent skill and player ability differences remain unestablished.
+
+### 2026-11-06 · Lesson 66: completed forward advancement
+
+Completed assisted spatial enrichment of all 4,158 earlier eligible completions. Fixed project rule: end_x − start_x ≥ 20 coordinate units, with exact decimal threshold handling and no silently dropped locations. Bronze 34 qualifying passes, 4.427185/90, 9.7143% of completions; Majri 18, 3.212821/90, 10.4651%. Covered direction versus volume, share versus rate, and short valuable passes missed by a coarse rule. References identify 2019 Women’s World Cup and Soccermatics Lesson 3 → Context: what to measure. No universal progressive-pass standard, difficulty adjustment or independent mastery claimed.
