@@ -73,3 +73,5 @@ For joins, show separate corner and shot tables before the joined rows. User fou
 The user requests that references always identify the competition and season being studied so they can read alongside the practice. Include the exact Soccermatics lesson/section and its link as well, to make the course reading location clear. Current dataset: 2019 Women’s World Cup, StatsBomb competition 72 / season 30; recruitment phase reading: Lesson 3, Statistical scouting; use the current reference and RESOURCES.md for the latest section.
 
 User deferred manual/system data collection practice; continue analysis lessons. Lesson 74 adds opponent-attempt exposure context, not pressure success or individual opportunity measurement.
+
+Lesson 75 adds pressure location mix. Keep examples concrete: Bronze has more opponent-third pressures, Majri a larger share. User needed clarification that opponent passes are passes by the other team, anywhere on pitch during selected registered windows.

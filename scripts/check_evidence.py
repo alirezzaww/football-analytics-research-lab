@@ -2450,3 +2450,21 @@ assert (ROOT/'reports/57_fullback_opponent_pass_context.md').read_text()==contex
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert opponent_context==context_module.build_evidence(allow_download=False)
 print('PASS: same-window opponent attempts, preserved pressure counts and contextual exposure ratios reconcile.')
+
+pressure_areas=read('75_fullback_pressure_areas_evidence.json')
+assert hashlib.sha256((ROOT/pressure_areas['source_path']).read_bytes()).hexdigest()==pressure_areas['source_sha256']
+assert pressure_areas['season']=='2019' and pressure_areas['competition_id']==72 and pressure_areas['season_id']==30
+spec=importlib.util.spec_from_file_location('pressure_areas_audit',ROOT/'75_fullback_pressure_areas.py')
+area_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(area_module)
+assert pressure_areas==area_module.build_evidence()
+assert len(pressure_areas['players'])==35
+for player,old in zip(pressure_areas['players'],pressure_activity['players']):
+    assert all(player[k]==v for k,v in old.items())
+    assert sum(a['count'] for a in player['pressure_areas'])==player['mapped_pressures']
+    keys=[(k['match_id'],k['event_id']) for a in player['pressure_areas'] for k in a['event_keys']]
+    expected={(r['match_id'],r['event_id']) for r in pressure_activity['rows'] if (r['team_id'],r['player_id'])==(player['team_id'],player['player_id']) and r['location_valid']}
+    assert len(keys)==len(set(keys)) and set(keys)==expected
+    if player['mapped_pressures']:
+        assert math.isclose(sum(a['share_of_mapped_pressures_pct'] for a in player['pressure_areas']),100)
+assert (ROOT/'reports/58_fullback_pressure_areas.md').read_text()==area_module.render_report(pressure_areas)
+print('PASS: pressure thirds partition mapped starts, preserve source profiles and reconcile location denominators.')

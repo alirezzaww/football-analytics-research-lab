@@ -686,3 +686,7 @@ Completed assisted count/map of 2,034 recorded Pressure starts for all 35 player
 ### 2026-11-06 · Lesson 74: opponent passing exposure
 
 User deferred collection practice and requested continued lessons. Completed assisted opponent-attempt denominators for the same 35 players and 145 registered windows. Bronze 102/2,034 ×100 =5.014749 pressures per 100 opponent attempts; Majri 61/1,248 ×100 =4.887821. Preserved all pressure counts/minutes, included eligible attempted failures, excluded later opponent events by time and order. Covered changing denominators versus success percentages and a proxy versus actual possession time/individual opportunity. Reference: 2019 Women's World Cup; Soccermatics Lesson 3 → Normalisation. Independent mastery unverified.
+
+### 2026-11-07 · Lesson 75: pressure locations
+
+Completed assisted classification of the same 2,034 pressure starts across the 35 profiles into equal-length pitch thirds. Bronze own/middle/opponent 41/41/20; Majri 18/28/15. Opponent-third mapped shares 19.6078% and 24.5902%, despite Bronze's larger count. Preserved original counts/minutes and unmapped status; documented location-share versus per90 denominators and exact boundaries. Custom extension of Soccermatics Lesson 3 → Context: what to measure, using the 2019 Women's World Cup. No pressing success, tactical diagnosis, video observation or independent mastery claimed.
