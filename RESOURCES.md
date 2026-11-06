@@ -4,7 +4,7 @@
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
 - **Course:** [Soccermatics Lesson 3 — Statistical scouting, Comparison: percentile rankings](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings).
-- **Current practice:** [Lesson 71 — percentile comparisons](lessons/0053-fullback-percentile-comparisons.html), explicit ranks and tie handling within named overall and starting-side pools.
+- **Current practice:** [Lesson 72 — one-match sensitivity](lessons/0054-fullback-match-sensitivity.html), a custom check of observed profile/rank dependence with the original peer group held fixed.
 
 ## Knowledge
 

@@ -413,3 +413,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment comparison: name the percentile pool
 
 [Lesson 71](lessons/0053-fullback-percentile-comparisons.html) computes [cohort-relative percentiles](reports/54_fullback_percentile_comparisons.md) using explicit lower/tied/higher counts. Run `python 71_fullback_percentile_comparisons.py`. The full pool has 35 players; exclusive qualifying-side pools have 17 left-back and 14 right-back starters, with four mixed-side players retained overall. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Comparison: percentile rankings](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings). A percentile is not an overall player-quality grade.
+
+## Recruitment robustness: one-own-match sensitivity
+
+[Lesson 72](lessons/0054-fullback-match-sensitivity.html) runs [145 target-specific recalculations](reports/55_fullback_match_sensitivity.md) with each own qualifying match omitted once. Run `python 72_fullback_match_sensitivity.py`. Counts and minutes are removed together; other player values and original cohort eligibility remain fixed. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Comparison: percentile rankings](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings). These are descriptive sensitivity ranges, not confidence intervals or future predictions.

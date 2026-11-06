@@ -674,3 +674,7 @@ Completed assisted team-volume context for the unchanged 35-player sample. Appli
 ### 2026-11-06 · Lesson 71: percentile comparisons
 
 Completed assisted percentiles on unchanged activity and team-involvement values. Defined the other-player/tie convention explicitly; saved lower/tied/higher counts and pool identities. All 35 fullbacks remain overall; exclusive qualifying-side pools are 17 left and 14 right, with four mixed-side profiles left without an exclusive-side percentile. Majri activity 21/34 lower peers →61.7647; Bronze activity 100 within the selected pool. Covered reference-group dependence versus unchanged raw values and percentile versus accuracy/ability. References: 2019 Women’s World Cup and Soccermatics Lesson 3 → Comparison: percentile rankings. Independent mastery unverified.
+
+### 2026-11-06 · Lesson 72: one-own-match sensitivity
+
+Completed assisted 145-case sensitivity check for the original 35-player pool, removing each target’s own match counts and minutes together while holding all other profiles/eligibility fixed. Bronze activity cases 42.990874–47.359459/90; Majri 26.879238–34.772066/90. Saved remaining exposure, omitted IDs and fixed-peer rank counts. Covered observed dependence versus confidence intervals/future reliability, and conditional original-cohort membership after dropping a start. References retain 2019 Women’s World Cup and Soccermatics Lesson 3 → Comparison: percentile rankings. Independent mastery unverified.

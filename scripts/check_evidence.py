@@ -2369,3 +2369,30 @@ for player,old in zip(percentiles['players'],team_share['players']):
             assert 0<=result['percentile']<=100
 assert (ROOT/'reports/54_fullback_percentile_comparisons.md').read_text()==percentile_module.render_report(percentiles)
 print('PASS: unchanged metric values, explicit peer pools, percentile tie handling and rank-count evidence reconcile.')
+
+match_sensitivity=read('72_fullback_match_sensitivity_evidence.json')
+for source in match_sensitivity['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert match_sensitivity['season']=='2019' and match_sensitivity['competition_id']==72 and match_sensitivity['season_id']==30
+assert match_sensitivity['course_reading']==percentiles['course_reading']
+spec=importlib.util.spec_from_file_location('fullback_sensitivity_audit',ROOT/'72_fullback_match_sensitivity.py')
+sensitivity_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(sensitivity_module)
+assert match_sensitivity==sensitivity_module.build_evidence()
+assert len(match_sensitivity['players'])==len(team_share['players'])
+assert match_sensitivity['cases']==sum(len(p['cases']) for p in match_sensitivity['players'])==playing_time['summary']['selected_starts']
+for player,old in zip(match_sensitivity['players'],team_share['players']):
+    assert player['baseline']==old
+    assert [c['omitted_match_id'] for c in player['cases']]==old['qualifying_match_ids']
+    for case in player['cases']:
+        window=next(w for w in team_share['windows'] if (w['match_id'],w['team_id'],w['player_id'])==(case['omitted_match_id'],old['team_id'],old['player_id']))
+        assert case['remaining_duration_ms']+window['end_ms']-window['start_ms']==old['duration_ms']
+        assert case['remaining_completed']+len(window['player_completed_ids'])==old['eligible_completed']
+        assert case['remaining_team_completed']+len(window['team_completed_ids'])==old['team_completed_while_registered']
+        assert case['remaining_qualifying_starts']==len(old['qualifying_match_ids'])-1
+        assert case['remaining_match_ids']==[m for m in old['qualifying_match_ids'] if m!=case['omitted_match_id']]
+        for metric in percentile_module.METRICS:
+            result=case['percentiles_fixed_peers'][metric]
+            assert result['value']==case[metric]
+            if result['percentile'] is not None:assert result['other_players']==34
+assert (ROOT/'reports/55_fullback_match_sensitivity.md').read_text()==sensitivity_module.render_report(match_sensitivity)
+print('PASS: own-match deletions remove matched counts/exposure, preserve fixed peers and reproduce observed sensitivity ranges.')
