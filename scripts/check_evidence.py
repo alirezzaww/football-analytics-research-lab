@@ -2396,3 +2396,34 @@ for player,old in zip(match_sensitivity['players'],team_share['players']):
             if result['percentile'] is not None:assert result['other_players']==34
 assert (ROOT/'reports/55_fullback_match_sensitivity.md').read_text()==sensitivity_module.render_report(match_sensitivity)
 print('PASS: own-match deletions remove matched counts/exposure, preserve fixed peers and reproduce observed sensitivity ranges.')
+
+pressure_activity=read('73_fullback_pressure_activity_evidence.json')
+assert pressure_activity['source_path']=='data/64_fullback_playing_time_evidence.json'
+assert hashlib.sha256((ROOT/pressure_activity['source_path']).read_bytes()).hexdigest()==pressure_activity['source_sha256']
+assert pressure_activity['season']=='2019' and pressure_activity['competition_id']==72 and pressure_activity['season_id']==30
+assert pressure_activity['course_reading']['url']=='https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#counts-of-actions'
+spec=importlib.util.spec_from_file_location('fullback_pressure_audit',ROOT/'73_fullback_pressure_activity.py')
+pressure_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(pressure_module)
+assert len(pressure_activity['players'])==len(playing_time['players'])
+assert len(pressure_activity['windows'])==playing_time['summary']['selected_starts']
+assert len({(w['match_id'],w['team_id'],w['player_id']) for w in pressure_activity['windows']})==len(pressure_activity['windows'])
+assert len({(r['match_id'],r['event_id']) for r in pressure_activity['rows']})==len(pressure_activity['rows'])
+for row in pressure_activity['rows']:
+    assert row['period'] in (1,2,3,4)
+    assert (row['x'],row['y'])==pressure_module.location_or_none([row['x'],row['y']])
+    assert row['location_valid']==(row['x'] is not None)
+for player,old in zip(pressure_activity['players'],playing_time['players']):
+    rows=[r for r in pressure_activity['rows'] if (r['team_id'],r['player_id'])==(player['team_id'],player['player_id'])]
+    assert player==pressure_module.summarize(old,rows)
+    windows=[w for w in pressure_activity['windows'] if (w['team_id'],w['player_id'])==(player['team_id'],player['player_id'])]
+    assert {w['match_id'] for w in windows}==set(old['qualifying_match_ids'])
+    assert sum(w['end_ms']-w['start_ms'] for w in windows)==old['duration_ms']
+    assert player['recorded_pressures']==player['mapped_pressures']+player['unmapped_pressures']
+    for window in windows:
+        selected=[r['event_id'] for r in rows if r['match_id']==window['match_id']]
+        assert selected==window['pressure_ids']
+        assert all(window['start_ms']<=r['elapsed_ms']<=window['end_ms'] for r in rows if r['match_id']==window['match_id'])
+assert (ROOT/'reports/56_fullback_pressure_activity.md').read_text()==pressure_module.render_report(pressure_activity)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert pressure_activity==pressure_module.build_evidence(allow_download=False)
+print('PASS: recorded Pressure identity/scope, unchanged exposures, location coverage and per-90 activity reconcile.')

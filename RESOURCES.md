@@ -3,8 +3,8 @@
 ## Current study and reading
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
-- **Course:** [Soccermatics Lesson 3 — Statistical scouting, Comparison: percentile rankings](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings).
-- **Current practice:** [Lesson 72 — one-match sensitivity](lessons/0054-fullback-match-sensitivity.html), a custom check of observed profile/rank dependence with the original peer group held fixed.
+- **Course:** [Soccermatics Lesson 3 — Counts of actions](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#counts-of-actions) and [Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation).
+- **Current practice:** [Lesson 73 — recorded pressure activity](lessons/0055-fullback-pressure-activity.html), a defensive action count and location map in the same selected registered windows.
 
 ## Knowledge
 

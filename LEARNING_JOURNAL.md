@@ -678,3 +678,7 @@ Completed assisted percentiles on unchanged activity and team-involvement values
 ### 2026-11-06 · Lesson 72: one-own-match sensitivity
 
 Completed assisted 145-case sensitivity check for the original 35-player pool, removing each target’s own match counts and minutes together while holding all other profiles/eligibility fixed. Bronze activity cases 42.990874–47.359459/90; Majri 26.879238–34.772066/90. Saved remaining exposure, omitted IDs and fixed-peer rank counts. Covered observed dependence versus confidence intervals/future reliability, and conditional original-cohort membership after dropping a start. References retain 2019 Women’s World Cup and Soccermatics Lesson 3 → Comparison: percentile rankings. Independent mastery unverified.
+
+### 2026-11-06 · Lesson 73: defensive pressure participation
+
+Completed assisted count/map of 2,034 recorded Pressure starts for all 35 players in the unchanged selected registered windows. Bronze 102, 13.281554/90; Majri 61, 10.887892/90. Did not copy passing possession-team filters onto off-ball actions. Distinguished Pressure events from under_pressure pass flags and pressure activity from success/regains. Missing locations remain counted but unmapped. References: 2019 Women’s World Cup, Soccermatics Lesson 3 → Counts of actions / Normalisation, and StatsBomb event specification. Independent mastery and defensive ability differences unestablished.

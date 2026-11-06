@@ -417,3 +417,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment robustness: one-own-match sensitivity
 
 [Lesson 72](lessons/0054-fullback-match-sensitivity.html) runs [145 target-specific recalculations](reports/55_fullback_match_sensitivity.md) with each own qualifying match omitted once. Run `python 72_fullback_match_sensitivity.py`. Counts and minutes are removed together; other player values and original cohort eligibility remain fixed. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Comparison: percentile rankings](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings). These are descriptive sensitivity ranges, not confidence intervals or future predictions.
+
+## Defensive profile: recorded pressure activity
+
+[Lesson 73](lessons/0055-fullback-pressure-activity.html) adds [recorded pressures per 90 and location coverage](reports/56_fullback_pressure_activity.md) for all 35 players. Run `python 73_fullback_pressure_activity.py`. Bronze: 102 (13.28/90); Majri: 61 (10.89/90). The 2,034 selected events are actions, not verified wins or success. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Counts of actions](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#counts-of-actions) and Normalisation. Opponent possession is not adjusted for.
