@@ -1,0 +1,233 @@
+{
+  "competition": "FIFA Women\u2019s World Cup",
+  "season": "2019",
+  "competition_id": 72,
+  "season_id": 30,
+  "course_reading": {
+    "lesson": "Soccermatics Lesson 3: Statistical scouting",
+    "section": "Modesty",
+    "url": "https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#modesty"
+  },
+  "source_files": {
+    "cohort": {
+      "path": "data/63_fullback_cohort_evidence.json",
+      "sha256": "d58c806fdfb266c0a912c164e046b5d5cd4cbe904c50c4d964e29fc2cb5e4073"
+    },
+    "minutes": {
+      "path": "data/64_fullback_playing_time_evidence.json",
+      "sha256": "48b5ca0ebb8edc49d64bdfa21690bcc152365903878f8c79db6c0c74f7f5a0a4"
+    },
+    "passing": {
+      "path": "data/65_fullback_passing_per90_evidence.json",
+      "sha256": "9714020aa20a7b5a114e1cc2a7ce9f46fcd093ae865c467a342f05a4d1a43714"
+    },
+    "fixed": {
+      "path": "data/66_fullback_advancement_evidence.json",
+      "sha256": "056d3639f6e83f8ce692b0e255491619124f2861f1363767af9a4996bdb804ba"
+    },
+    "context": {
+      "path": "data/67_fullback_starting_context_evidence.json",
+      "sha256": "9763a1ebf9567baa0b2237af5ebeab85a6ba4d2aadba243a4fa5cdb70d26c13a"
+    },
+    "alternative": {
+      "path": "data/68_adaptive_advancement_evidence.json",
+      "sha256": "c21312a2c0e881da7816201b5769bcbd84d67ea49cbe9b00a7ed2752c456e5d2"
+    }
+  },
+  "selection": "Two familiar examples selected for communication practice, not top-ranked candidates. They have different starting sides. Review examples reuse the first fixed-positive and first newly included ledger examples per player, not representative samples.",
+  "cohort_size": 35,
+  "profiles": [
+    {
+      "team_id": 865,
+      "player_id": 10178,
+      "name": "Lucy Bronze",
+      "team": "England Women's",
+      "position_starts": {
+        "Left Back": 0,
+        "Right Back": 7
+      },
+      "role_starts": 7,
+      "minutes": 691.1842,
+      "completed": 350,
+      "attempted": 436,
+      "completion_pct": 80.27522935779817,
+      "completed_per90": 45.57395843249889,
+      "fixed_count": 34,
+      "fixed_per90": 4.427184533442749,
+      "fixed_share_pct": 9.714285714285714,
+      "alternative_count": 36,
+      "alternative_per90": 4.687607153057029,
+      "no_room_count": 20,
+      "no_room_pct": 5.714285714285714,
+      "middle_third": {
+        "third": "Middle third",
+        "completions": 174,
+        "qualifying_completions": 21,
+        "share_of_player_completions_pct": 49.714285714285715,
+        "within_third_qualifying_share_pct": 12.068965517241379
+      }
+    },
+    {
+      "team_id": 861,
+      "player_id": 15249,
+      "name": "Amel Majri",
+      "team": "France Women's",
+      "position_starts": {
+        "Left Back": 5,
+        "Right Back": 0
+      },
+      "role_starts": 5,
+      "minutes": 504.22985,
+      "completed": 172,
+      "attempted": 222,
+      "completion_pct": 77.47747747747748,
+      "completed_per90": 30.70028480067176,
+      "fixed_count": 18,
+      "fixed_per90": 3.212820502395882,
+      "fixed_share_pct": 10.465116279069768,
+      "alternative_count": 19,
+      "alternative_per90": 3.391310530306764,
+      "no_room_count": 20,
+      "no_room_pct": 11.627906976744185,
+      "middle_third": {
+        "third": "Middle third",
+        "completions": 104,
+        "qualifying_completions": 13,
+        "share_of_player_completions_pct": 60.46511627906977,
+        "within_third_qualifying_share_pct": 12.5
+      }
+    }
+  ],
+  "review_queue": [
+    {
+      "match_id": 22936,
+      "match_date": "2019-06-09",
+      "team_id": 865,
+      "player_id": 10178,
+      "player_name": "Lucy Bronze",
+      "opponent": "Scotland W",
+      "pass_id": "a4f3b3e8-e86d-4753-82e2-ab37fcbaeafe",
+      "category": "Fixed-rule example",
+      "period": 1,
+      "minute": 23,
+      "second": 43,
+      "period_timestamp": "00:23:43.899",
+      "recipient": "Nikita Parris",
+      "start": [
+        10.4,
+        75.1
+      ],
+      "end": [
+        32.5,
+        76.8
+      ],
+      "x_gain": 22.1,
+      "review_status": "Not reviewed",
+      "video_observation": null
+    },
+    {
+      "match_id": 22936,
+      "match_date": "2019-06-09",
+      "team_id": 865,
+      "player_id": 10178,
+      "player_name": "Lucy Bronze",
+      "opponent": "Scotland W",
+      "pass_id": "0c5e5756-2841-4f30-9635-7d7656e51871",
+      "category": "Additional alternative-rule example",
+      "period": 2,
+      "minute": 85,
+      "second": 2,
+      "period_timestamp": "00:40:02.457",
+      "recipient": "Georgia Stanway",
+      "start": [
+        95.6,
+        68.8
+      ],
+      "end": [
+        109.7,
+        63.1
+      ],
+      "x_gain": 14.1,
+      "review_status": "Not reviewed",
+      "video_observation": null
+    },
+    {
+      "match_id": 22921,
+      "match_date": "2019-06-07",
+      "team_id": 861,
+      "player_id": 15249,
+      "player_name": "Amel Majri",
+      "opponent": "Korea Republic Women's",
+      "pass_id": "1b526257-b7c8-4af3-955a-25bdff16fa99",
+      "category": "Fixed-rule example",
+      "period": 1,
+      "minute": 2,
+      "second": 30,
+      "period_timestamp": "00:02:30.477",
+      "recipient": "Kadidiatou Diani",
+      "start": [
+        53.9,
+        3.3
+      ],
+      "end": [
+        93.4,
+        8.8
+      ],
+      "x_gain": 39.5,
+      "review_status": "Not reviewed",
+      "video_observation": null
+    },
+    {
+      "match_id": 22980,
+      "match_date": "2019-06-17",
+      "team_id": 861,
+      "player_id": 15249,
+      "player_name": "Amel Majri",
+      "opponent": "Nigeria Women's",
+      "pass_id": "ad95822f-e335-4ae0-8316-50b4ab28fabb",
+      "category": "Additional alternative-rule example",
+      "period": 2,
+      "minute": 94,
+      "second": 48,
+      "period_timestamp": "00:49:48.019",
+      "recipient": "Eug\u00e9nie Le Sommer",
+      "start": [
+        106.9,
+        2.3
+      ],
+      "end": [
+        114.8,
+        6.0
+      ],
+      "x_gain": 7.9,
+      "review_status": "Not reviewed",
+      "video_observation": null
+    }
+  ],
+  "raw_inputs": [
+    {
+      "match_id": 22921,
+      "relative_path": "data/cache_2019_events/22921.json",
+      "sha256": "4fdbe28dc3e5828b12e97228e7d6a35736a9c78d08e3566089feb2f0fbea62cf",
+      "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22921.json"
+    },
+    {
+      "match_id": 22936,
+      "relative_path": "data/cache_2019_events/22936.json",
+      "sha256": "425fe527fbe498741ce98723854522c5317efc1bb26e0c86df7913f3f8d18b83",
+      "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22936.json"
+    },
+    {
+      "match_id": 22980,
+      "relative_path": "data/cache_2019_events/22980.json",
+      "sha256": "1d9c36f6dc0cebb678d0cbd0391c9fe42f64ee9795575d18b44764f971c26e34",
+      "source_url": "https://raw.githubusercontent.com/statsbomb/open-data/master/data/events/22980.json"
+    }
+  ],
+  "figure": {
+    "path": "figures/61_fullback_forward_advancement.png",
+    "sha256": "350f2863580e4edc91514563c266c3efe74b7cf42e11ebf0848e10e77f0bee82"
+  },
+  "authorship": "Guided analysis and report prepared with AI assistance. Independent reproduction, explanation and video observation remain separate milestones.",
+  "scope": "Historical descriptive fullback profiles and a prepared video-review queue. No footage watched, marking/pressure claim, ability ranking, current signability assessment or signing recommendation."
+}

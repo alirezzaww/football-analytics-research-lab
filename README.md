@@ -8,7 +8,7 @@
 **[Explore the live portfolio](https://alireza-england-2019-research.sara-erfania-6316.chatgpt.site)** ·
 [Study the source](https://github.com/alirezzaww/football-analytics-research-lab)
 
-**Start here:** [France corner case study](reports/36_france_corner_portfolio_case_study.md) · [Employment learning plan](docs/CAREER_PLAN.md)
+**Start here:** [France corner case study](reports/36_france_corner_portfolio_case_study.md) · [Fullback recruitment brief](reports/52_fullback_recruitment_brief.md) · [Employment learning plan](docs/CAREER_PLAN.md)
 
 A growing collection of reproducible football research using StatsBomb Open Data,
 covering passing involvement, expected-goals modelling and match analysis across
@@ -401,3 +401,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment definitions: test a near-goal alternative
 
 [Lesson 68](lessons/0050-adaptive-forward-advancement.html) implements a [conditional advancement comparison](reports/51_adaptive_forward_advancement.md): positive x gain ≥ min(20, half the remaining x distance). Run `python 68_adaptive_forward_advancement.py`. Across the same 4,158 completions, 488 fixed-rule cases become 534 under the alternative; Bronze 34→36 and Majri 18→19. Original results remain unchanged. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure). Increased counts are not proof of a better metric.
+
+## Recruitment communication sample
+
+[Lesson 69](lessons/0051-fullback-recruitment-brief.html) packages the work into a [GitHub-readable fullback brief](reports/52_fullback_recruitment_brief.md) and [styled local version](reports/52_fullback_recruitment_brief.html), with a four-event queue for future review. Run `python 69_fullback_recruitment_brief.py`. **2019 Women’s World Cup**; course reading: [Soccermatics Lesson 3 — Modesty](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#modesty). The brief identifies different starting roles and unadjusted context; no footage has been watched and no signing recommendation is made.

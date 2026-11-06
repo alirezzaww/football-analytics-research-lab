@@ -2284,3 +2284,32 @@ assert adaptive['summary']=={'completed_passes':len(adaptive['comparisons']),
 assert adaptive['summary']['alternative_qualifying']==adaptive['summary']['fixed_qualifying']+adaptive['summary']['newly_included']
 assert (ROOT/'reports/51_adaptive_forward_advancement.md').read_text()==adaptive_module.render_report(adaptive)
 print('PASS: near-goal alternative, fixed-positive retention, unchanged exposures and definition-change counts reconcile.')
+
+recruitment_brief=read('69_fullback_recruitment_brief_evidence.json')
+for source in recruitment_brief['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert recruitment_brief['season']=='2019' and recruitment_brief['competition_id']==72 and recruitment_brief['season_id']==30
+assert recruitment_brief['course_reading']['url']=='https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#modesty'
+spec=importlib.util.spec_from_file_location('recruitment_brief_audit',ROOT/'69_fullback_recruitment_brief.py')
+brief_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(brief_module)
+brief_sources={k:json.loads((ROOT/r['path']).read_text()) for k,r in recruitment_brief['source_files'].items()}
+assert recruitment_brief['profiles']==brief_module.compile_profiles(brief_sources)
+assert recruitment_brief['cohort_size']==len(cohort['eligible_players'])
+assert len(recruitment_brief['review_queue'])==4
+assert len({(r['match_id'],r['pass_id']) for r in recruitment_brief['review_queue']})==4
+expected_review_candidates={}
+for category,rows in [('Fixed-rule example',advancement['illustrative_ledger_examples']),('Additional alternative-rule example',adaptive['illustrative_new_passes'])]:
+    for row in rows:expected_review_candidates[(row['match_id'],row['pass_id'])]=(category,row)
+assert {(r['match_id'],r['pass_id']) for r in recruitment_brief['review_queue']}==set(expected_review_candidates)
+for row in recruitment_brief['review_queue']:
+    category,candidate=expected_review_candidates[(row['match_id'],row['pass_id'])]
+    assert row['category']==category
+    assert row['player_id']==candidate['player_id'] and row['team_id']==candidate['team_id']
+    assert row['start']==[candidate['x'],candidate['y']] and row['end']==[candidate['end_x'],candidate['end_y']]
+    assert row['review_status']=='Not reviewed' and row['video_observation'] is None
+assert hashlib.sha256((ROOT/recruitment_brief['figure']['path']).read_bytes()).hexdigest()==recruitment_brief['figure']['sha256']
+assert (ROOT/'reports/52_fullback_recruitment_brief.md').read_text()==brief_module.render_markdown(recruitment_brief)
+assert (ROOT/'reports/52_fullback_recruitment_brief.html').read_text()==brief_module.render_html(recruitment_brief)
+if all((ROOT/r['relative_path']).exists() for r in recruitment_brief['raw_inputs']):
+    assert recruitment_brief==brief_module.build_evidence(allow_download=False)
+print('PASS: recruitment-brief facts, player roles, four unreviewed event references and generated reports reconcile.')

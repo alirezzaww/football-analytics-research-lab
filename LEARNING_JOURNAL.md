@@ -662,3 +662,7 @@ Completed assisted audit across all 35 profiles and the unchanged 4,158 completi
 ### 2026-11-06 · Lesson 68: conditional near-goal definition
 
 User suggested if-rules for near-goal situations. Completed assisted alternative-definition comparison on the unchanged 4,158 completions: positive gain ≥ min(20, 0.5 × remaining x distance). Fixed 488 → alternative 534, adding 46; Bronze 34→36, Majri 18→19. Preserved old classifications and denominators; tested exact thresholds, positive-gain guard and goal-line behavior. Covered definition sensitivity versus validated metric improvement. References retain 2019 Women’s World Cup and Soccermatics Lesson 3 → Context: what to measure. No optimized fraction, action-value ground truth or independent mastery claimed.
+
+### 2026-11-06 · Lesson 69: recruitment communication milestone
+
+Completed assisted evidence-generated Markdown/HTML brief for two familiar fullback examples, with source hashes and four unreviewed pass references. Preserved right/left starting roles, rate/definition context and historical scope. Reused existing first fixed-positive and first newly included examples, not a representative performance sample. No footage watched or independent explanation claimed. Reading: Soccermatics Lesson 3 → Modesty; data: 2019 Women’s World Cup.
