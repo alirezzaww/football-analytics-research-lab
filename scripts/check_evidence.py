@@ -2427,3 +2427,26 @@ assert (ROOT/'reports/56_fullback_pressure_activity.md').read_text()==pressure_m
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert pressure_activity==pressure_module.build_evidence(allow_download=False)
 print('PASS: recorded Pressure identity/scope, unchanged exposures, location coverage and per-90 activity reconcile.')
+
+opponent_context=read('74_fullback_opponent_pass_context_evidence.json')
+for source in opponent_context['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert opponent_context['season']=='2019' and opponent_context['competition_id']==72 and opponent_context['season_id']==30
+spec=importlib.util.spec_from_file_location('opponent_context_audit',ROOT/'74_fullback_opponent_pass_context.py')
+context_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(context_module)
+assert len(opponent_context['players'])==35 and len(opponent_context['windows'])==145
+assert len({(w['match_id'],w['team_id'],w['player_id']) for w in opponent_context['windows']})==145
+pressure_windows={(w['match_id'],w['team_id'],w['player_id']):w for w in pressure_activity['windows']}
+for w in opponent_context['windows']:
+    old=pressure_windows[(w['match_id'],w['team_id'],w['player_id'])]
+    assert w['start_ms']==old['start_ms'] and w['end_ms']==old['end_ms']
+for player,old in zip(opponent_context['players'],pressure_activity['players']):
+    assert all(player[k]==v for k,v in old.items())
+    windows=[w for w in opponent_context['windows'] if (w['team_id'],w['player_id'])==(player['team_id'],player['player_id'])]
+    assert player==context_module.summarize(old,windows)
+    if player['opponent_eligible_attempts']:
+        assert math.isclose(player['pressures_per90'],player['opponent_attempts_per90']*player['pressures_per100_opponent_attempts']/100)
+assert (ROOT/'reports/57_fullback_opponent_pass_context.md').read_text()==context_module.render_report(opponent_context)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert opponent_context==context_module.build_evidence(allow_download=False)
+print('PASS: same-window opponent attempts, preserved pressure counts and contextual exposure ratios reconcile.')

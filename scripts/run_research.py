@@ -68,6 +68,7 @@ STAGES = [
     "71_fullback_percentile_comparisons.py",
     "72_fullback_match_sensitivity.py",
     "73_fullback_pressure_activity.py",
+    "74_fullback_opponent_pass_context.py",
     "scripts/check_evidence.py",
 ]
 

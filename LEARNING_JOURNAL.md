@@ -682,3 +682,7 @@ Completed assisted 145-case sensitivity check for the original 35-player pool, r
 ### 2026-11-06 · Lesson 73: defensive pressure participation
 
 Completed assisted count/map of 2,034 recorded Pressure starts for all 35 players in the unchanged selected registered windows. Bronze 102, 13.281554/90; Majri 61, 10.887892/90. Did not copy passing possession-team filters onto off-ball actions. Distinguished Pressure events from under_pressure pass flags and pressure activity from success/regains. Missing locations remain counted but unmapped. References: 2019 Women’s World Cup, Soccermatics Lesson 3 → Counts of actions / Normalisation, and StatsBomb event specification. Independent mastery and defensive ability differences unestablished.
+
+### 2026-11-06 · Lesson 74: opponent passing exposure
+
+User deferred collection practice and requested continued lessons. Completed assisted opponent-attempt denominators for the same 35 players and 145 registered windows. Bronze 102/2,034 ×100 =5.014749 pressures per 100 opponent attempts; Majri 61/1,248 ×100 =4.887821. Preserved all pressure counts/minutes, included eligible attempted failures, excluded later opponent events by time and order. Covered changing denominators versus success percentages and a proxy versus actual possession time/individual opportunity. Reference: 2019 Women's World Cup; Soccermatics Lesson 3 → Normalisation. Independent mastery unverified.

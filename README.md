@@ -421,3 +421,8 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Defensive profile: recorded pressure activity
 
 [Lesson 73](lessons/0055-fullback-pressure-activity.html) adds [recorded pressures per 90 and location coverage](reports/56_fullback_pressure_activity.md) for all 35 players. Run `python 73_fullback_pressure_activity.py`. Bronze: 102 (13.28/90); Majri: 61 (10.89/90). The 2,034 selected events are actions, not verified wins or success. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Counts of actions](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#counts-of-actions) and Normalisation. Opponent possession is not adjusted for.
+
+
+### Pressure activity with opponent passing context
+
+[Lesson 74](lessons/0056-fullback-opponent-pass-context.html) adds [pressures per 100 eligible opponent attempts](reports/57_fullback_opponent_pass_context.md) alongside per-90 activity. Bronze: 102/2,034 ×100 =5.01; Majri: 61/1,248 ×100 =4.89. All 35 profiles retain their original windows, minutes and pressure counts. Run `python 74_fullback_opponent_pass_context.py`. This custom exposure proxy is not possession time or pressing success; events are not paired. Data: **2019 Women's World Cup**. Reading: [Soccermatics Lesson 3 — Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation).

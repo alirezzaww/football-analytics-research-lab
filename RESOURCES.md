@@ -4,7 +4,7 @@
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
 - **Course:** [Soccermatics Lesson 3 — Counts of actions](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#counts-of-actions) and [Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation).
-- **Current practice:** [Lesson 73 — recorded pressure activity](lessons/0055-fullback-pressure-activity.html), a defensive action count and location map in the same selected registered windows.
+- **Current practice:** [Lesson 74 — opponent passing context](lessons/0056-fullback-opponent-pass-context.html): pressures per 100 eligible opponent attempts alongside pressures per 90. Custom exposure proxy, not a success percentage.
 
 ## Knowledge
 
