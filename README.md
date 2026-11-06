@@ -405,3 +405,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment communication sample
 
 [Lesson 69](lessons/0051-fullback-recruitment-brief.html) packages the work into a [GitHub-readable fullback brief](reports/52_fullback_recruitment_brief.md) and [styled local version](reports/52_fullback_recruitment_brief.html), with a four-event queue for future review. Run `python 69_fullback_recruitment_brief.py`. **2019 Women’s World Cup**; course reading: [Soccermatics Lesson 3 — Modesty](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#modesty). The brief identifies different starting roles and unadjusted context; no footage has been watched and no signing recommendation is made.
+
+## Recruitment team context: passing involvement
+
+[Lesson 70](lessons/0052-fullback-team-passing-share.html) adds [same-window team passing shares](reports/53_fullback_team_passing_share.md) for all 35 players. Run `python 70_fullback_team_passing_share.py`. Bronze contributes 350/2,837 team completions (12.34%); Majri 172/1,623 (10.60%), with team counts restricted to each player’s selected registered windows. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation). This is involvement, not possession percentage or adjusted ability.

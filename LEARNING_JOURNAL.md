@@ -666,3 +666,7 @@ User suggested if-rules for near-goal situations. Completed assisted alternative
 ### 2026-11-06 · Lesson 69: recruitment communication milestone
 
 Completed assisted evidence-generated Markdown/HTML brief for two familiar fullback examples, with source hashes and four unreviewed pass references. Preserved right/left starting roles, rate/definition context and historical scope. Reused existing first fixed-positive and first newly included examples, not a representative performance sample. No footage watched or independent explanation claimed. Reading: Soccermatics Lesson 3 → Modesty; data: 2019 Women’s World Cup.
+
+### 2026-11-06 · Lesson 70: team passing involvement
+
+Completed assisted team-volume context for the unchanged 35-player sample. Applied the same eligibility rules to all registered teammates, then restricted team denominators by each target’s clock and event-order bounds. Bronze 350/2,837 =12.336976%; Majri 172/1,623 =10.597659%. Preserved original counts/minutes and saved denominator event IDs. Covered same-window exposure, pooled counts and involvement share versus completion percentage or possession. No full possession adjustment, ability ranking or independent mastery claimed. References retain 2019 Women’s World Cup and Soccermatics Lesson 3 → Normalisation.

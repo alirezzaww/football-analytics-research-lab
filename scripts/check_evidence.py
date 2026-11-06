@@ -2313,3 +2313,33 @@ assert (ROOT/'reports/52_fullback_recruitment_brief.html').read_text()==brief_mo
 if all((ROOT/r['relative_path']).exists() for r in recruitment_brief['raw_inputs']):
     assert recruitment_brief==brief_module.build_evidence(allow_download=False)
 print('PASS: recruitment-brief facts, player roles, four unreviewed event references and generated reports reconcile.')
+
+team_share=read('70_fullback_team_passing_share_evidence.json')
+for source in team_share['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert team_share['season']=='2019' and team_share['competition_id']==72 and team_share['season_id']==30
+assert team_share['course_reading']['url']=='https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation'
+spec=importlib.util.spec_from_file_location('team_passing_share_audit',ROOT/'70_fullback_team_passing_share.py')
+share_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(share_module)
+assert len(team_share['players'])==len(passing_profile['players'])
+assert len(team_share['windows'])==playing_time['summary']['selected_starts']
+assert len({(w['match_id'],w['team_id'],w['player_id']) for w in team_share['windows']})==len(team_share['windows'])
+original_pass_windows={(r['match_id'],r['team_id'],r['player_id']):r for r in passing_profile['pass_ledger']}
+for window in team_share['windows']:
+    key=(window['match_id'],window['team_id'],window['player_id'])
+    assert window['player_completed_ids']==original_pass_windows[key]['completed_ids']
+    assert len(set(window['team_completed_ids']))==len(window['team_completed_ids'])
+    assert set(window['player_completed_ids'])<=set(window['team_completed_ids'])
+    match=next(m for m in playing_time['match_audits'] if m['match_id']==window['match_id'])
+    interval=next(r for r in match['intervals'] if (r['team_id'],r['player_id'])==(window['team_id'],window['player_id']))
+    assert window['start_ms']==interval['start_ms'] and window['end_ms']==interval['end_ms']
+for player,old in zip(team_share['players'],passing_profile['players']):
+    assert all(player[k]==v for k,v in old.items())
+    windows=[w for w in team_share['windows'] if (w['team_id'],w['player_id'])==(player['team_id'],player['player_id'])]
+    assert player==share_module.summarize(old,windows)
+    if player['share_of_team_completions_pct'] is not None:
+        assert math.isclose(player['completed_per90'],player['team_completions_per_player90']*player['share_of_team_completions_pct']/100)
+assert (ROOT/'reports/53_fullback_team_passing_share.md').read_text()==share_module.render_report(team_share)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert team_share==share_module.build_evidence(allow_download=False)
+print('PASS: same-window team denominators, player subsets, unchanged numerators and involvement shares reconcile.')
