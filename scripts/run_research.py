@@ -61,6 +61,7 @@ STAGES = [
     "64_fullback_playing_time.py",
     "65_fullback_passing_per90.py",
     "66_fullback_forward_advancement.py",
+    "67_fullback_starting_area_context.py",
     "scripts/check_evidence.py",
 ]
 

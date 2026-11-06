@@ -393,3 +393,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment context: completed forward advancement
 
 [Lesson 66](lessons/0048-fullback-forward-advancement.html) adds a [documented spatial rule](reports/49_fullback_forward_advancement.md): completed eligible passes with end_x − start_x ≥ 20 on the 0–120 scale. Run `python 66_fullback_forward_advancement.py`. All 4,158 source completions are retained; Bronze has 34 qualifying passes (4.43/90), Majri 18 (3.21/90). Data: **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure). The threshold is a project definition, not a universal progressive-pass or ability measure.
+
+## Recruitment context: where the passes start
+
+[Lesson 67](lessons/0049-fullback-starting-area-context.html) audits [starting thirds and geometric room](reports/50_fullback_starting_area_context.md) for the unchanged **2019 Women’s World Cup** completed-pass sample. Run `python 67_fullback_starting_area_context.py`. Both familiar players have 20 completions starting beyond x=100, but that is 5.7% of Bronze’s activity versus 11.6% of Majri’s. Original counts and per-90 results remain unchanged; this is descriptive context, not causal adjustment. Reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure).

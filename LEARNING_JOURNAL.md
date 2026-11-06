@@ -654,3 +654,7 @@ Completed assisted matched-scope passing counts and rates for the unchanged 35-p
 ### 2026-11-06 · Lesson 66: completed forward advancement
 
 Completed assisted spatial enrichment of all 4,158 earlier eligible completions. Fixed project rule: end_x − start_x ≥ 20 coordinate units, with exact decimal threshold handling and no silently dropped locations. Bronze 34 qualifying passes, 4.427185/90, 9.7143% of completions; Majri 18, 3.212821/90, 10.4651%. Covered direction versus volume, share versus rate, and short valuable passes missed by a coarse rule. References identify 2019 Women’s World Cup and Soccermatics Lesson 3 → Context: what to measure. No universal progressive-pass standard, difficulty adjustment or independent mastery claimed.
+
+### 2026-11-06 · Lesson 67: starting-area context
+
+Completed assisted audit across all 35 profiles and the unchanged 4,158 completions. Split starts into coarse pitch thirds; proved the geometric ceiling for the fixed 20-unit rule (x>100 cannot qualify, x=100 can). Bronze has 20/350 no-room starts, Majri 20/172; middle-third qualifying shares 21/174 and 13/104. Original rates remain unchanged. Covered composition, conditional denominators and geometric room versus feasible options; no causal adjustment, ability ranking or independent mastery claimed. References retain 2019 Women’s World Cup and Soccermatics Lesson 3 → Context: what to measure.

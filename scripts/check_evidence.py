@@ -2229,3 +2229,27 @@ assert (ROOT/'reports/49_fullback_forward_advancement.md').read_text()==advance_
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert advancement==advance_module.build_evidence(allow_download=False)
 print('PASS: full completion coverage, exact forward-gain threshold, unchanged minute denominators and maps/report memberships reconcile.')
+
+starting_context=read('67_fullback_starting_context_evidence.json')
+assert starting_context['source_path']=='data/66_fullback_advancement_evidence.json'
+assert hashlib.sha256((ROOT/starting_context['source_path']).read_bytes()).hexdigest()==starting_context['source_sha256']
+assert starting_context['season']=='2019' and starting_context['competition_id']==72 and starting_context['season_id']==30
+assert starting_context['minimum_x_gain']==advancement['minimum_x_gain']==20
+assert starting_context['course_reading']==advancement['course_reading']
+spec=importlib.util.spec_from_file_location('starting_context_audit',ROOT/'67_fullback_starting_area_context.py')
+context_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(context_module)
+assert starting_context==context_module.build_evidence()
+assert len(starting_context['players'])==len(advancement['players'])
+for player,old in zip(starting_context['players'],advancement['players']):
+    assert all(player[k]==v for k,v in old.items())
+    rows=[r for r in advancement['completions'] if (r['team_id'],r['player_id'])==(old['team_id'],old['player_id'])]
+    expected={(r['match_id'],r['pass_id']) for r in rows}
+    grouped=[(k['match_id'],k['pass_id']) for g in player['starting_thirds'] for k in g['pass_keys']]
+    assert len(grouped)==len(set(grouped))==len(rows) and set(grouped)==expected
+    assert sum(g['completions'] for g in player['starting_thirds'])==old['eligible_completed']
+    assert sum(g['qualifying_completions'] for g in player['starting_thirds'])==old['qualifying_completions']
+    impossible=[r for r in rows if r['x']>100]
+    assert player['no_coordinate_room_completions']==len(impossible)
+    assert not any(r['qualifies'] for r in impossible)
+assert (ROOT/'reports/50_fullback_starting_area_context.md').read_text()==context_module.render_report(starting_context)
+print('PASS: disjoint starting thirds, geometric ceiling, conditional denominators and unchanged source profiles reconcile.')
