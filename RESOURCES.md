@@ -4,7 +4,7 @@
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
 - **Course:** [Soccermatics Lesson 3 — Statistical scouting, Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure).
-- **Current practice:** [Lesson 67 — starting-area context](lessons/0049-fullback-starting-area-context.html), an audit of starting thirds and the geometric limit of our fixed forward-advancement rule.
+- **Current practice:** [Lesson 68 — near-goal alternative](lessons/0050-adaptive-forward-advancement.html), a definition-sensitivity exercise using the same passes and minutes.
 
 ## Knowledge
 

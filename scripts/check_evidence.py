@@ -2253,3 +2253,34 @@ for player,old in zip(starting_context['players'],advancement['players']):
     assert not any(r['qualifies'] for r in impossible)
 assert (ROOT/'reports/50_fullback_starting_area_context.md').read_text()==context_module.render_report(starting_context)
 print('PASS: disjoint starting thirds, geometric ceiling, conditional denominators and unchanged source profiles reconcile.')
+
+adaptive=read('68_adaptive_advancement_evidence.json')
+adaptive_protocol=read('68_adaptive_advancement_protocol.json')
+for source in adaptive['sources']:
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert hashlib.sha256((ROOT/adaptive['protocol_path']).read_bytes()).hexdigest()==adaptive['protocol_sha256']
+assert adaptive['season']=='2019' and adaptive['competition_id']==72 and adaptive['season_id']==30
+assert adaptive['course_reading']==advancement['course_reading']
+assert adaptive['base_x_gain']==adaptive_protocol['base_x_gain']==advancement['minimum_x_gain']==20
+assert adaptive['remaining_x_fraction']==adaptive_protocol['remaining_x_fraction']==.5
+spec=importlib.util.spec_from_file_location('adaptive_advancement_audit',ROOT/'68_adaptive_forward_advancement.py')
+adaptive_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(adaptive_module)
+assert adaptive==adaptive_module.build_evidence()
+assert len(adaptive['comparisons'])==len(advancement['completions'])
+for comparison,old in zip(adaptive['comparisons'],advancement['completions']):
+    assert (comparison['match_id'],comparison['pass_id'],comparison['team_id'],comparison['player_id'])==(old['match_id'],old['pass_id'],old['team_id'],old['player_id'])
+    assert comparison['fixed_qualifies']==old['qualifies']
+    assert not comparison['fixed_qualifies'] or comparison['alternative_qualifies']
+    if comparison['newly_included']:
+        assert old['x']>80 and old['end_x']>old['x']
+assert len(adaptive['players'])==len(advancement['players'])
+for player,old in zip(adaptive['players'],advancement['players']):
+    assert all(player[k]==v for k,v in old.items())
+    assert player['alternative_completions']==old['qualifying_completions']+player['newly_included_completions']
+assert adaptive['summary']=={'completed_passes':len(adaptive['comparisons']),
+    'fixed_qualifying':sum(r['fixed_qualifies'] for r in adaptive['comparisons']),
+    'alternative_qualifying':sum(r['alternative_qualifies'] for r in adaptive['comparisons']),
+    'newly_included':sum(r['newly_included'] for r in adaptive['comparisons'])}
+assert adaptive['summary']['alternative_qualifying']==adaptive['summary']['fixed_qualifying']+adaptive['summary']['newly_included']
+assert (ROOT/'reports/51_adaptive_forward_advancement.md').read_text()==adaptive_module.render_report(adaptive)
+print('PASS: near-goal alternative, fixed-positive retention, unchanged exposures and definition-change counts reconcile.')

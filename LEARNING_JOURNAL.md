@@ -658,3 +658,7 @@ Completed assisted spatial enrichment of all 4,158 earlier eligible completions.
 ### 2026-11-06 · Lesson 67: starting-area context
 
 Completed assisted audit across all 35 profiles and the unchanged 4,158 completions. Split starts into coarse pitch thirds; proved the geometric ceiling for the fixed 20-unit rule (x>100 cannot qualify, x=100 can). Bronze has 20/350 no-room starts, Majri 20/172; middle-third qualifying shares 21/174 and 13/104. Original rates remain unchanged. Covered composition, conditional denominators and geometric room versus feasible options; no causal adjustment, ability ranking or independent mastery claimed. References retain 2019 Women’s World Cup and Soccermatics Lesson 3 → Context: what to measure.
+
+### 2026-11-06 · Lesson 68: conditional near-goal definition
+
+User suggested if-rules for near-goal situations. Completed assisted alternative-definition comparison on the unchanged 4,158 completions: positive gain ≥ min(20, 0.5 × remaining x distance). Fixed 488 → alternative 534, adding 46; Bronze 34→36, Majri 18→19. Preserved old classifications and denominators; tested exact thresholds, positive-gain guard and goal-line behavior. Covered definition sensitivity versus validated metric improvement. References retain 2019 Women’s World Cup and Soccermatics Lesson 3 → Context: what to measure. No optimized fraction, action-value ground truth or independent mastery claimed.

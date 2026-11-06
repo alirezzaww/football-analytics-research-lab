@@ -62,6 +62,7 @@ STAGES = [
     "65_fullback_passing_per90.py",
     "66_fullback_forward_advancement.py",
     "67_fullback_starting_area_context.py",
+    "68_adaptive_forward_advancement.py",
     "scripts/check_evidence.py",
 ]
 

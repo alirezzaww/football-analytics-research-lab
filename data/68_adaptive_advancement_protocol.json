@@ -1,0 +1,13 @@
+{
+  "defined_on": "2026-11-06",
+  "competition": "FIFA Women's World Cup",
+  "season": "2019",
+  "competition_id": 72,
+  "season_id": 30,
+  "base_x_gain": 20,
+  "remaining_x_fraction": 0.5,
+  "alternative_rule": "Required gain = min(20, 0.5 * (120 - start_x)); count only completed eligible passes with strictly positive end_x-start_x that meet this required gain. Use decimal comparisons. At x=120, no positive in-pitch gain is possible.",
+  "comparison": "Apply both definitions to exactly the lesson 66 completed-pass sample and unchanged registered minutes. Keep original results and show newly included pass identities. No threshold search or performance-label evaluation.",
+  "motivation": "Lesson 67 showed the fixed 20-unit rule cannot qualify any pass starting beyond x=100. The alternative requires smaller gains near goal, with its breakpoint at x=80.",
+  "scope": "Descriptive definition-sensitivity exercise on already inspected 2019 data. The fraction one half is a transparent project choice, not an optimized or universal standard. More qualifying passes does not establish a better metric or better players. No model fitting or validated action-value labels."
+}

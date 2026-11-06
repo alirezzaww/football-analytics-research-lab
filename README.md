@@ -397,3 +397,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment context: where the passes start
 
 [Lesson 67](lessons/0049-fullback-starting-area-context.html) audits [starting thirds and geometric room](reports/50_fullback_starting_area_context.md) for the unchanged **2019 Women’s World Cup** completed-pass sample. Run `python 67_fullback_starting_area_context.py`. Both familiar players have 20 completions starting beyond x=100, but that is 5.7% of Bronze’s activity versus 11.6% of Majri’s. Original counts and per-90 results remain unchanged; this is descriptive context, not causal adjustment. Reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure).
+
+## Recruitment definitions: test a near-goal alternative
+
+[Lesson 68](lessons/0050-adaptive-forward-advancement.html) implements a [conditional advancement comparison](reports/51_adaptive_forward_advancement.md): positive x gain ≥ min(20, half the remaining x distance). Run `python 68_adaptive_forward_advancement.py`. Across the same 4,158 completions, 488 fixed-rule cases become 534 under the alternative; Bronze 34→36 and Majri 18→19. Original results remain unchanged. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure). Increased counts are not proof of a better metric.
