@@ -65,6 +65,7 @@ STAGES = [
     "68_adaptive_forward_advancement.py",
     "69_fullback_recruitment_brief.py",
     "70_fullback_team_passing_share.py",
+    "71_fullback_percentile_comparisons.py",
     "scripts/check_evidence.py",
 ]
 

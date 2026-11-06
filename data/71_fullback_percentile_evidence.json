@@ -1,0 +1,2471 @@
+{
+  "competition": "FIFA Women\u2019s World Cup",
+  "season": "2019",
+  "competition_id": 72,
+  "season_id": 30,
+  "course_reading": {
+    "lesson": "Soccermatics Lesson 3: Statistical scouting",
+    "section": "Comparison: percentile rankings",
+    "url": "https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings"
+  },
+  "source_files": {
+    "passing": {
+      "path": "data/70_fullback_team_passing_share_evidence.json",
+      "sha256": "58f695db526d7dd64cca84bb27f298a596353e113e0cccb496a6b7614dac07ce"
+    },
+    "cohort": {
+      "path": "data/63_fullback_cohort_evidence.json",
+      "sha256": "d58c806fdfb266c0a912c164e046b5d5cd4cbe904c50c4d964e29fc2cb5e4073"
+    }
+  },
+  "method": "100 \u00d7 (strictly lower other-player values + 0.5 \u00d7 equal other-player values) / valid other players. Exclude the target from the comparison denominator. Use unrounded metric values. Undefined with no valid peers or missing target metric. This is an explicit project percentile convention, not a claim that all software uses this formula.",
+  "side_rule": "Exclusive side means all qualifying starts were on that side, not every played minute. Mixed-side players stay in the all-fullback pool but receive no exclusive-side percentile.",
+  "metrics": [
+    "completed_per90",
+    "share_of_team_completions_pct"
+  ],
+  "peer_pools": {
+    "all_fullbacks": [
+      {
+        "team_id": 851,
+        "player_id": 10657
+      },
+      {
+        "team_id": 851,
+        "player_id": 25659
+      },
+      {
+        "team_id": 852,
+        "player_id": 10382
+      },
+      {
+        "team_id": 852,
+        "player_id": 10393
+      },
+      {
+        "team_id": 855,
+        "player_id": 10213
+      },
+      {
+        "team_id": 855,
+        "player_id": 10371
+      },
+      {
+        "team_id": 857,
+        "player_id": 15423
+      },
+      {
+        "team_id": 857,
+        "player_id": 25492
+      },
+      {
+        "team_id": 858,
+        "player_id": 4633
+      },
+      {
+        "team_id": 858,
+        "player_id": 24693
+      },
+      {
+        "team_id": 861,
+        "player_id": 15249
+      },
+      {
+        "team_id": 861,
+        "player_id": 25446
+      },
+      {
+        "team_id": 863,
+        "player_id": 10200
+      },
+      {
+        "team_id": 865,
+        "player_id": 4651
+      },
+      {
+        "team_id": 865,
+        "player_id": 10178
+      },
+      {
+        "team_id": 865,
+        "player_id": 10252
+      },
+      {
+        "team_id": 1107,
+        "player_id": 25675
+      },
+      {
+        "team_id": 1203,
+        "player_id": 25559
+      },
+      {
+        "team_id": 1203,
+        "player_id": 25560
+      },
+      {
+        "team_id": 1204,
+        "player_id": 25633
+      },
+      {
+        "team_id": 1205,
+        "player_id": 5095
+      },
+      {
+        "team_id": 1206,
+        "player_id": 5038
+      },
+      {
+        "team_id": 1206,
+        "player_id": 15290
+      },
+      {
+        "team_id": 1207,
+        "player_id": 25481
+      },
+      {
+        "team_id": 1207,
+        "player_id": 25486
+      },
+      {
+        "team_id": 1208,
+        "player_id": 25623
+      },
+      {
+        "team_id": 1210,
+        "player_id": 25624
+      },
+      {
+        "team_id": 1210,
+        "player_id": 25636
+      },
+      {
+        "team_id": 1211,
+        "player_id": 25447
+      },
+      {
+        "team_id": 1212,
+        "player_id": 25557
+      },
+      {
+        "team_id": 1213,
+        "player_id": 25462
+      },
+      {
+        "team_id": 1213,
+        "player_id": 25468
+      },
+      {
+        "team_id": 1214,
+        "player_id": 5021
+      },
+      {
+        "team_id": 1214,
+        "player_id": 5088
+      },
+      {
+        "team_id": 1216,
+        "player_id": 25520
+      }
+    ],
+    "left_only": [
+      {
+        "team_id": 851,
+        "player_id": 25659
+      },
+      {
+        "team_id": 852,
+        "player_id": 10393
+      },
+      {
+        "team_id": 857,
+        "player_id": 15423
+      },
+      {
+        "team_id": 858,
+        "player_id": 4633
+      },
+      {
+        "team_id": 861,
+        "player_id": 15249
+      },
+      {
+        "team_id": 865,
+        "player_id": 4651
+      },
+      {
+        "team_id": 865,
+        "player_id": 10252
+      },
+      {
+        "team_id": 1107,
+        "player_id": 25675
+      },
+      {
+        "team_id": 1203,
+        "player_id": 25559
+      },
+      {
+        "team_id": 1204,
+        "player_id": 25633
+      },
+      {
+        "team_id": 1206,
+        "player_id": 5038
+      },
+      {
+        "team_id": 1207,
+        "player_id": 25486
+      },
+      {
+        "team_id": 1208,
+        "player_id": 25623
+      },
+      {
+        "team_id": 1210,
+        "player_id": 25636
+      },
+      {
+        "team_id": 1212,
+        "player_id": 25557
+      },
+      {
+        "team_id": 1213,
+        "player_id": 25468
+      },
+      {
+        "team_id": 1214,
+        "player_id": 5088
+      }
+    ],
+    "right_only": [
+      {
+        "team_id": 851,
+        "player_id": 10657
+      },
+      {
+        "team_id": 852,
+        "player_id": 10382
+      },
+      {
+        "team_id": 857,
+        "player_id": 25492
+      },
+      {
+        "team_id": 858,
+        "player_id": 24693
+      },
+      {
+        "team_id": 861,
+        "player_id": 25446
+      },
+      {
+        "team_id": 865,
+        "player_id": 10178
+      },
+      {
+        "team_id": 1203,
+        "player_id": 25560
+      },
+      {
+        "team_id": 1205,
+        "player_id": 5095
+      },
+      {
+        "team_id": 1206,
+        "player_id": 15290
+      },
+      {
+        "team_id": 1207,
+        "player_id": 25481
+      },
+      {
+        "team_id": 1210,
+        "player_id": 25624
+      },
+      {
+        "team_id": 1213,
+        "player_id": 25462
+      },
+      {
+        "team_id": 1214,
+        "player_id": 5021
+      },
+      {
+        "team_id": 1216,
+        "player_id": 25520
+      }
+    ]
+  },
+  "players": [
+    {
+      "team_id": 851,
+      "player_id": 10657,
+      "player_name": "Desiree van Lunteren",
+      "team_name": "Netherlands Women's",
+      "role_starts": 7,
+      "qualifying_match_ids": [
+        22942,
+        22964,
+        68344,
+        69188,
+        69205,
+        69284,
+        69321
+      ],
+      "duration_ms": 43438539,
+      "minutes": 723.97565,
+      "eligible_attempts": 350,
+      "eligible_completed": 269,
+      "attempts_per90": 43.50975063871278,
+      "completed_per90": 33.44035120518211,
+      "completion_pct": 76.85714285714286,
+      "team_completed_while_registered": 2611,
+      "share_of_team_completions_pct": 10.302566066641134,
+      "team_completions_per_player90": 324.58273976479734,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 33.44035120518211,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 28,
+          "tied_other_count": 0,
+          "higher_count": 6,
+          "percentile": 82.3529411764706
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.302566066641134,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 23,
+          "tied_other_count": 0,
+          "higher_count": 11,
+          "percentile": 67.6470588235294
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 33.44035120518211,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 10,
+          "tied_other_count": 0,
+          "higher_count": 3,
+          "percentile": 76.92307692307692
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.302566066641134,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 10,
+          "tied_other_count": 0,
+          "higher_count": 3,
+          "percentile": 76.92307692307692
+        }
+      }
+    },
+    {
+      "team_id": 851,
+      "player_id": 25659,
+      "player_name": "Merel van Dongen",
+      "team_name": "Netherlands Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        68344,
+        69188,
+        69205,
+        69284
+      ],
+      "duration_ms": 25350730,
+      "minutes": 422.51216666666664,
+      "eligible_attempts": 193,
+      "eligible_completed": 156,
+      "attempts_per90": 41.11124216146833,
+      "completed_per90": 33.22981231704176,
+      "completion_pct": 80.82901554404145,
+      "team_completed_while_registered": 1469,
+      "share_of_team_completions_pct": 10.619469026548673,
+      "team_completions_per_player90": 312.91406598547655,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 33.22981231704176,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 27,
+          "tied_other_count": 0,
+          "higher_count": 7,
+          "percentile": 79.41176470588235
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.619469026548673,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 26,
+          "tied_other_count": 0,
+          "higher_count": 8,
+          "percentile": 76.47058823529412
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 33.22981231704176,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 14,
+          "tied_other_count": 0,
+          "higher_count": 2,
+          "percentile": 87.5
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.619469026548673,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 12,
+          "tied_other_count": 0,
+          "higher_count": 4,
+          "percentile": 75.0
+        }
+      }
+    },
+    {
+      "team_id": 852,
+      "player_id": 10382,
+      "player_name": "Ingrid Moe Wold",
+      "team_name": "Norway Women's",
+      "role_starts": 5,
+      "qualifying_match_ids": [
+        22924,
+        22948,
+        22981,
+        68357,
+        69199
+      ],
+      "duration_ms": 28683944,
+      "minutes": 478.06573333333336,
+      "eligible_attempts": 157,
+      "eligible_completed": 123,
+      "attempts_per90": 29.556604907609636,
+      "completed_per90": 23.155811488127295,
+      "completion_pct": 78.34394904458598,
+      "team_completed_while_registered": 1340,
+      "share_of_team_completions_pct": 9.17910447761194,
+      "team_completions_per_player90": 252.26656417959816,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 23.155811488127295,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 16,
+          "tied_other_count": 0,
+          "higher_count": 18,
+          "percentile": 47.05882352941177
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.17910447761194,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 14,
+          "tied_other_count": 0,
+          "higher_count": 20,
+          "percentile": 41.1764705882353
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 23.155811488127295,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 5,
+          "tied_other_count": 0,
+          "higher_count": 8,
+          "percentile": 38.46153846153846
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.17910447761194,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 4,
+          "tied_other_count": 0,
+          "higher_count": 9,
+          "percentile": 30.76923076923077
+        }
+      }
+    },
+    {
+      "team_id": 852,
+      "player_id": 10393,
+      "player_name": "Kristine Minde",
+      "team_name": "Norway Women's",
+      "role_starts": 5,
+      "qualifying_match_ids": [
+        22924,
+        22948,
+        22981,
+        68357,
+        69199
+      ],
+      "duration_ms": 31468838,
+      "minutes": 524.4806333333333,
+      "eligible_attempts": 124,
+      "eligible_completed": 92,
+      "attempts_per90": 21.278192731488847,
+      "completed_per90": 15.787046220136885,
+      "completion_pct": 74.19354838709677,
+      "team_completed_while_registered": 1487,
+      "share_of_team_completions_pct": 6.186953597848016,
+      "team_completions_per_player90": 255.1667144493864,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 15.787046220136885,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 7,
+          "tied_other_count": 0,
+          "higher_count": 27,
+          "percentile": 20.58823529411765
+        },
+        "share_of_team_completions_pct": {
+          "value": 6.186953597848016,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 1,
+          "tied_other_count": 0,
+          "higher_count": 33,
+          "percentile": 2.9411764705882355
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 15.787046220136885,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 5,
+          "tied_other_count": 0,
+          "higher_count": 11,
+          "percentile": 31.25
+        },
+        "share_of_team_completions_pct": {
+          "value": 6.186953597848016,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 0,
+          "tied_other_count": 0,
+          "higher_count": 16,
+          "percentile": 0.0
+        }
+      }
+    },
+    {
+      "team_id": 855,
+      "player_id": 10213,
+      "player_name": "Alia Guagni",
+      "team_name": "Italy Women's",
+      "role_starts": 5,
+      "qualifying_match_ids": [
+        22933,
+        22963,
+        68312,
+        69191,
+        69205
+      ],
+      "duration_ms": 27263968,
+      "minutes": 454.3994666666667,
+      "eligible_attempts": 122,
+      "eligible_completed": 93,
+      "attempts_per90": 24.163760755587738,
+      "completed_per90": 18.419915985816885,
+      "completion_pct": 76.22950819672131,
+      "team_completed_while_registered": 901,
+      "share_of_team_completions_pct": 10.321864594894562,
+      "team_completions_per_player90": 178.45531508839798,
+      "starting_side_group": "mixed",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 18.419915985816885,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 10,
+          "tied_other_count": 0,
+          "higher_count": 24,
+          "percentile": 29.41176470588235
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.321864594894562,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 24,
+          "tied_other_count": 0,
+          "higher_count": 10,
+          "percentile": 70.58823529411765
+        }
+      },
+      "percentiles_same_side": null
+    },
+    {
+      "team_id": 855,
+      "player_id": 10371,
+      "player_name": "Elisa Bartoli",
+      "team_name": "Italy Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22963,
+        68312,
+        69191,
+        69205
+      ],
+      "duration_ms": 19053392,
+      "minutes": 317.55653333333333,
+      "eligible_attempts": 75,
+      "eligible_completed": 63,
+      "attempts_per90": 21.25605771402803,
+      "completed_per90": 17.855088479783547,
+      "completion_pct": 84.0,
+      "team_completed_while_registered": 781,
+      "share_of_team_completions_pct": 8.066581306017925,
+      "team_completions_per_player90": 221.34641432874523,
+      "starting_side_group": "mixed",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 17.855088479783547,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 9,
+          "tied_other_count": 0,
+          "higher_count": 25,
+          "percentile": 26.470588235294116
+        },
+        "share_of_team_completions_pct": {
+          "value": 8.066581306017925,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 9,
+          "tied_other_count": 0,
+          "higher_count": 25,
+          "percentile": 26.470588235294116
+        }
+      },
+      "percentiles_same_side": null
+    },
+    {
+      "team_id": 857,
+      "player_id": 15423,
+      "player_name": "Verena Schweers",
+      "team_name": "Germany Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22949,
+        22984,
+        68355
+      ],
+      "duration_ms": 11478101,
+      "minutes": 191.30168333333333,
+      "eligible_attempts": 55,
+      "eligible_completed": 40,
+      "attempts_per90": 25.875360392803653,
+      "completed_per90": 18.81844392203902,
+      "completion_pct": 72.72727272727273,
+      "team_completed_while_registered": 526,
+      "share_of_team_completions_pct": 7.604562737642586,
+      "team_completions_per_player90": 247.46253757481313,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 18.81844392203902,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 11,
+          "tied_other_count": 0,
+          "higher_count": 23,
+          "percentile": 32.35294117647059
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.604562737642586,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 5,
+          "tied_other_count": 0,
+          "higher_count": 29,
+          "percentile": 14.705882352941176
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 18.81844392203902,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 6,
+          "tied_other_count": 0,
+          "higher_count": 10,
+          "percentile": 37.5
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.604562737642586,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 3,
+          "tied_other_count": 0,
+          "higher_count": 13,
+          "percentile": 18.75
+        }
+      }
+    },
+    {
+      "team_id": 857,
+      "player_id": 25492,
+      "player_name": "Giulia Gwinn",
+      "team_name": "Germany Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22984,
+        68355,
+        69208
+      ],
+      "duration_ms": 17657461,
+      "minutes": 294.2910166666667,
+      "eligible_attempts": 106,
+      "eligible_completed": 88,
+      "attempts_per90": 32.416891647106006,
+      "completed_per90": 26.91213646174838,
+      "completion_pct": 83.01886792452831,
+      "team_completed_while_registered": 1135,
+      "share_of_team_completions_pct": 7.753303964757709,
+      "team_completions_per_player90": 347.1053964100501,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 26.91213646174838,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 20,
+          "tied_other_count": 0,
+          "higher_count": 14,
+          "percentile": 58.8235294117647
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.753303964757709,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 7,
+          "tied_other_count": 0,
+          "higher_count": 27,
+          "percentile": 20.58823529411765
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 26.91213646174838,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 7,
+          "tied_other_count": 0,
+          "higher_count": 6,
+          "percentile": 53.84615384615385
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.753303964757709,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 1,
+          "tied_other_count": 0,
+          "higher_count": 12,
+          "percentile": 7.6923076923076925
+        }
+      }
+    },
+    {
+      "team_id": 858,
+      "player_id": 4633,
+      "player_name": "Magdalena Lilly Eriksson",
+      "team_name": "Sweden Women's",
+      "role_starts": 6,
+      "qualifying_match_ids": [
+        22944,
+        22973,
+        69163,
+        69208,
+        69284,
+        69301
+      ],
+      "duration_ms": 36916421,
+      "minutes": 615.2736833333333,
+      "eligible_attempts": 211,
+      "eligible_completed": 152,
+      "attempts_per90": 30.864313742656687,
+      "completed_per90": 22.234008004188706,
+      "completion_pct": 72.03791469194313,
+      "team_completed_while_registered": 1762,
+      "share_of_team_completions_pct": 8.626560726447218,
+      "team_completions_per_player90": 257.73896120645065,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 22.234008004188706,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 13,
+          "tied_other_count": 0,
+          "higher_count": 21,
+          "percentile": 38.23529411764706
+        },
+        "share_of_team_completions_pct": {
+          "value": 8.626560726447218,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 11,
+          "tied_other_count": 0,
+          "higher_count": 23,
+          "percentile": 32.35294117647059
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 22.234008004188706,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 8,
+          "tied_other_count": 0,
+          "higher_count": 8,
+          "percentile": 50.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 8.626560726447218,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 6,
+          "tied_other_count": 0,
+          "higher_count": 10,
+          "percentile": 37.5
+        }
+      }
+    },
+    {
+      "team_id": 858,
+      "player_id": 24693,
+      "player_name": "Hanna Erica Maria Glas",
+      "team_name": "Sweden Women's",
+      "role_starts": 6,
+      "qualifying_match_ids": [
+        22944,
+        22973,
+        69163,
+        69208,
+        69284,
+        69301
+      ],
+      "duration_ms": 37956184,
+      "minutes": 632.6030666666667,
+      "eligible_attempts": 221,
+      "eligible_completed": 179,
+      "attempts_per90": 31.441516881675987,
+      "completed_per90": 25.46620598108598,
+      "completion_pct": 80.99547511312217,
+      "team_completed_while_registered": 1787,
+      "share_of_team_completions_pct": 10.016787912702855,
+      "team_completions_per_player90": 254.2352518893891,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 25.46620598108598,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 18,
+          "tied_other_count": 0,
+          "higher_count": 16,
+          "percentile": 52.94117647058823
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.016787912702855,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 22,
+          "tied_other_count": 0,
+          "higher_count": 12,
+          "percentile": 64.70588235294117
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 25.46620598108598,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 6,
+          "tied_other_count": 0,
+          "higher_count": 7,
+          "percentile": 46.15384615384615
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.016787912702855,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 9,
+          "tied_other_count": 0,
+          "higher_count": 4,
+          "percentile": 69.23076923076923
+        }
+      }
+    },
+    {
+      "team_id": 861,
+      "player_id": 15249,
+      "player_name": "Amel Majri",
+      "team_name": "France Women's",
+      "role_starts": 5,
+      "qualifying_match_ids": [
+        22921,
+        22948,
+        22980,
+        69137,
+        69202
+      ],
+      "duration_ms": 30253791,
+      "minutes": 504.22985,
+      "eligible_attempts": 222,
+      "eligible_completed": 172,
+      "attempts_per90": 39.62478619621587,
+      "completed_per90": 30.70028480067176,
+      "completion_pct": 77.47747747747748,
+      "team_completed_while_registered": 1623,
+      "share_of_team_completions_pct": 10.59765865680838,
+      "team_completions_per_player90": 289.68931529936197,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 30.70028480067176,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 21,
+          "tied_other_count": 0,
+          "higher_count": 13,
+          "percentile": 61.76470588235294
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.59765865680838,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 25,
+          "tied_other_count": 0,
+          "higher_count": 9,
+          "percentile": 73.52941176470588
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 30.70028480067176,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 10,
+          "tied_other_count": 0,
+          "higher_count": 6,
+          "percentile": 62.5
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.59765865680838,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 11,
+          "tied_other_count": 0,
+          "higher_count": 5,
+          "percentile": 68.75
+        }
+      }
+    },
+    {
+      "team_id": 861,
+      "player_id": 25446,
+      "player_name": "Marion Torrent",
+      "team_name": "France Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22921,
+        22948,
+        69137,
+        69202
+      ],
+      "duration_ms": 24749559,
+      "minutes": 412.49265,
+      "eligible_attempts": 145,
+      "eligible_completed": 106,
+      "attempts_per90": 31.636927348887305,
+      "completed_per90": 23.12768482056589,
+      "completion_pct": 73.10344827586206,
+      "team_completed_while_registered": 1263,
+      "share_of_team_completions_pct": 8.392715756136184,
+      "team_completions_per_player90": 275.56854649410116,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 23.12768482056589,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 15,
+          "tied_other_count": 0,
+          "higher_count": 19,
+          "percentile": 44.11764705882353
+        },
+        "share_of_team_completions_pct": {
+          "value": 8.392715756136184,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 10,
+          "tied_other_count": 0,
+          "higher_count": 24,
+          "percentile": 29.41176470588235
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 23.12768482056589,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 4,
+          "tied_other_count": 0,
+          "higher_count": 9,
+          "percentile": 30.76923076923077
+        },
+        "share_of_team_completions_pct": {
+          "value": 8.392715756136184,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 2,
+          "tied_other_count": 0,
+          "higher_count": 11,
+          "percentile": 15.384615384615385
+        }
+      }
+    },
+    {
+      "team_id": 863,
+      "player_id": 10200,
+      "player_name": "Marta Corredera Rueda",
+      "team_name": "Spain Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22930,
+        22949,
+        22983,
+        69161
+      ],
+      "duration_ms": 23439613,
+      "minutes": 390.66021666666666,
+      "eligible_attempts": 155,
+      "eligible_completed": 109,
+      "attempts_per90": 35.70878068678011,
+      "completed_per90": 25.111336095864722,
+      "completion_pct": 70.3225806451613,
+      "team_completed_while_registered": 1471,
+      "share_of_team_completions_pct": 7.409925220938137,
+      "team_completions_per_player90": 338.88784767905514,
+      "starting_side_group": "mixed",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 25.111336095864722,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 17,
+          "tied_other_count": 0,
+          "higher_count": 17,
+          "percentile": 50.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.409925220938137,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 2,
+          "tied_other_count": 0,
+          "higher_count": 32,
+          "percentile": 5.882352941176471
+        }
+      },
+      "percentiles_same_side": null
+    },
+    {
+      "team_id": 865,
+      "player_id": 4651,
+      "player_name": "Demi Stokes",
+      "team_name": "England Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        68337,
+        69199,
+        69258
+      ],
+      "duration_ms": 17390925,
+      "minutes": 289.84875,
+      "eligible_attempts": 115,
+      "eligible_completed": 101,
+      "attempts_per90": 35.70827888683322,
+      "completed_per90": 31.361184065827437,
+      "completion_pct": 87.82608695652173,
+      "team_completed_while_registered": 1096,
+      "share_of_team_completions_pct": 9.215328467153284,
+      "team_completions_per_player90": 340.31542313016706,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 31.361184065827437,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 23,
+          "tied_other_count": 0,
+          "higher_count": 11,
+          "percentile": 67.6470588235294
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.215328467153284,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 15,
+          "tied_other_count": 0,
+          "higher_count": 19,
+          "percentile": 44.11764705882353
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 31.361184065827437,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 12,
+          "tied_other_count": 0,
+          "higher_count": 4,
+          "percentile": 75.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.215328467153284,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 8,
+          "tied_other_count": 0,
+          "higher_count": 8,
+          "percentile": 50.0
+        }
+      }
+    },
+    {
+      "team_id": 865,
+      "player_id": 10178,
+      "player_name": "Lucy Bronze",
+      "team_name": "England Women's",
+      "role_starts": 7,
+      "qualifying_match_ids": [
+        22936,
+        22962,
+        68337,
+        68362,
+        69199,
+        69258,
+        69301
+      ],
+      "duration_ms": 41471052,
+      "minutes": 691.1842,
+      "eligible_attempts": 436,
+      "eligible_completed": 350,
+      "attempts_per90": 56.77213107591291,
+      "completed_per90": 45.57395843249889,
+      "completion_pct": 80.27522935779817,
+      "team_completed_while_registered": 2837,
+      "share_of_team_completions_pct": 12.336975678533662,
+      "team_completions_per_player90": 369.40948592285525,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 45.57395843249889,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 34,
+          "tied_other_count": 0,
+          "higher_count": 0,
+          "percentile": 100.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 12.336975678533662,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 33,
+          "tied_other_count": 0,
+          "higher_count": 1,
+          "percentile": 97.05882352941177
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 45.57395843249889,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 13,
+          "tied_other_count": 0,
+          "higher_count": 0,
+          "percentile": 100.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 12.336975678533662,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 13,
+          "tied_other_count": 0,
+          "higher_count": 0,
+          "percentile": 100.0
+        }
+      }
+    },
+    {
+      "team_id": 865,
+      "player_id": 10252,
+      "player_name": "Alex Greenwood",
+      "team_name": "England Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22936,
+        22962,
+        68362,
+        69301
+      ],
+      "duration_ms": 24080127,
+      "minutes": 401.33545,
+      "eligible_attempts": 218,
+      "eligible_completed": 173,
+      "attempts_per90": 48.886785356240026,
+      "completed_per90": 38.795476452429014,
+      "completion_pct": 79.35779816513761,
+      "team_completed_while_registered": 1741,
+      "share_of_team_completions_pct": 9.93681792073521,
+      "team_completions_per_player90": 390.42152892299947,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 38.795476452429014,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 32,
+          "tied_other_count": 0,
+          "higher_count": 2,
+          "percentile": 94.11764705882354
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.93681792073521,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 20,
+          "tied_other_count": 0,
+          "higher_count": 14,
+          "percentile": 58.8235294117647
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 38.795476452429014,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 16,
+          "tied_other_count": 0,
+          "higher_count": 0,
+          "percentile": 100.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.93681792073521,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 10,
+          "tied_other_count": 0,
+          "higher_count": 6,
+          "percentile": 62.5
+        }
+      }
+    },
+    {
+      "team_id": 1107,
+      "player_id": 25675,
+      "player_name": "Sunisa Srangthaisong",
+      "team_name": "Thailand W",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22943,
+        22973,
+        68343
+      ],
+      "duration_ms": 17353234,
+      "minutes": 289.2205666666667,
+      "eligible_attempts": 58,
+      "eligible_completed": 44,
+      "attempts_per90": 18.048508998380356,
+      "completed_per90": 13.691972343598891,
+      "completion_pct": 75.86206896551724,
+      "team_completed_while_registered": 369,
+      "share_of_team_completions_pct": 11.924119241192411,
+      "team_completions_per_player90": 114.82585897245436,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 13.691972343598891,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 4,
+          "tied_other_count": 0,
+          "higher_count": 30,
+          "percentile": 11.764705882352942
+        },
+        "share_of_team_completions_pct": {
+          "value": 11.924119241192411,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 31,
+          "tied_other_count": 0,
+          "higher_count": 3,
+          "percentile": 91.17647058823529
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 13.691972343598891,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 3,
+          "tied_other_count": 0,
+          "higher_count": 13,
+          "percentile": 18.75
+        },
+        "share_of_team_completions_pct": {
+          "value": 11.924119241192411,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 15,
+          "tied_other_count": 0,
+          "higher_count": 1,
+          "percentile": 93.75
+        }
+      }
+    },
+    {
+      "team_id": 1203,
+      "player_id": 25559,
+      "player_name": "Tamires C\u00e1ssia Dias de Britto",
+      "team_name": "Brazil Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22934,
+        22955,
+        68312,
+        69137
+      ],
+      "duration_ms": 25631851,
+      "minutes": 427.1975166666667,
+      "eligible_attempts": 195,
+      "eligible_completed": 146,
+      "attempts_per90": 41.081699483974056,
+      "completed_per90": 30.75860576748827,
+      "completion_pct": 74.87179487179488,
+      "team_completed_while_registered": 1143,
+      "share_of_team_completions_pct": 12.773403324584427,
+      "team_completions_per_player90": 240.80196159067873,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 30.75860576748827,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 22,
+          "tied_other_count": 0,
+          "higher_count": 12,
+          "percentile": 64.70588235294117
+        },
+        "share_of_team_completions_pct": {
+          "value": 12.773403324584427,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 34,
+          "tied_other_count": 0,
+          "higher_count": 0,
+          "percentile": 100.0
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 30.75860576748827,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 11,
+          "tied_other_count": 0,
+          "higher_count": 5,
+          "percentile": 68.75
+        },
+        "share_of_team_completions_pct": {
+          "value": 12.773403324584427,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 16,
+          "tied_other_count": 0,
+          "higher_count": 0,
+          "percentile": 100.0
+        }
+      }
+    },
+    {
+      "team_id": 1203,
+      "player_id": 25560,
+      "player_name": "Let\u00edcia Santos de Oliveira",
+      "team_name": "Brazil Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22934,
+        22955,
+        68312,
+        69137
+      ],
+      "duration_ms": 21953069,
+      "minutes": 365.8844833333333,
+      "eligible_attempts": 87,
+      "eligible_completed": 63,
+      "attempts_per90": 21.400196938295963,
+      "completed_per90": 15.496694334628112,
+      "completion_pct": 72.41379310344827,
+      "team_completed_while_registered": 1024,
+      "share_of_team_completions_pct": 6.15234375,
+      "team_completions_per_player90": 251.88277775649502,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 15.496694334628112,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 5,
+          "tied_other_count": 0,
+          "higher_count": 29,
+          "percentile": 14.705882352941176
+        },
+        "share_of_team_completions_pct": {
+          "value": 6.15234375,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 0,
+          "tied_other_count": 0,
+          "higher_count": 34,
+          "percentile": 0.0
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 15.496694334628112,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 1,
+          "tied_other_count": 0,
+          "higher_count": 12,
+          "percentile": 7.6923076923076925
+        },
+        "share_of_team_completions_pct": {
+          "value": 6.15234375,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 0,
+          "tied_other_count": 0,
+          "higher_count": 13,
+          "percentile": 0.0
+        }
+      }
+    },
+    {
+      "team_id": 1204,
+      "player_id": 25633,
+      "player_name": "Eliana Noem\u00ed St\u00e1bile",
+      "team_name": "Argentina Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22940,
+        22962,
+        68338
+      ],
+      "duration_ms": 17315366,
+      "minutes": 288.5894333333333,
+      "eligible_attempts": 53,
+      "eligible_completed": 36,
+      "attempts_per90": 16.528671701193034,
+      "completed_per90": 11.227022287602814,
+      "completion_pct": 67.9245283018868,
+      "team_completed_while_registered": 461,
+      "share_of_team_completions_pct": 7.809110629067245,
+      "team_completions_per_player90": 143.76825762735828,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 11.227022287602814,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 1,
+          "tied_other_count": 0,
+          "higher_count": 33,
+          "percentile": 2.9411764705882355
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.809110629067245,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 8,
+          "tied_other_count": 0,
+          "higher_count": 26,
+          "percentile": 23.529411764705884
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 11.227022287602814,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 1,
+          "tied_other_count": 0,
+          "higher_count": 15,
+          "percentile": 6.25
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.809110629067245,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 5,
+          "tied_other_count": 0,
+          "higher_count": 11,
+          "percentile": 31.25
+        }
+      }
+    },
+    {
+      "team_id": 1205,
+      "player_id": 5095,
+      "player_name": "Ellie Madison Carpenter",
+      "team_name": "Australia Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22933,
+        22955,
+        68311,
+        68357
+      ],
+      "duration_ms": 25562131,
+      "minutes": 426.0355166666667,
+      "eligible_attempts": 189,
+      "eligible_completed": 153,
+      "attempts_per90": 39.92624871533597,
+      "completed_per90": 32.321248960033884,
+      "completion_pct": 80.95238095238095,
+      "team_completed_while_registered": 1677,
+      "share_of_team_completions_pct": 9.123434704830053,
+      "team_completions_per_player90": 354.2662386011557,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 32.321248960033884,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 24,
+          "tied_other_count": 0,
+          "higher_count": 10,
+          "percentile": 70.58823529411765
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.123434704830053,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 13,
+          "tied_other_count": 0,
+          "higher_count": 21,
+          "percentile": 38.23529411764706
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 32.321248960033884,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 8,
+          "tied_other_count": 0,
+          "higher_count": 5,
+          "percentile": 61.53846153846154
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.123434704830053,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 3,
+          "tied_other_count": 0,
+          "higher_count": 10,
+          "percentile": 23.076923076923077
+        }
+      }
+    },
+    {
+      "team_id": 1206,
+      "player_id": 5038,
+      "player_name": "Allysha Lyn Chapman",
+      "team_name": "Canada Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22939,
+        68344,
+        69163
+      ],
+      "duration_ms": 15045253,
+      "minutes": 250.75421666666668,
+      "eligible_attempts": 106,
+      "eligible_completed": 74,
+      "attempts_per90": 38.04522263600353,
+      "completed_per90": 26.559872406266614,
+      "completion_pct": 69.81132075471699,
+      "team_completed_while_registered": 992,
+      "share_of_team_completions_pct": 7.459677419354839,
+      "team_completions_per_player90": 356.04585712184434,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 26.559872406266614,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 19,
+          "tied_other_count": 0,
+          "higher_count": 15,
+          "percentile": 55.88235294117647
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.459677419354839,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 3,
+          "tied_other_count": 0,
+          "higher_count": 31,
+          "percentile": 8.823529411764707
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 26.559872406266614,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 9,
+          "tied_other_count": 0,
+          "higher_count": 7,
+          "percentile": 56.25
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.459677419354839,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 1,
+          "tied_other_count": 0,
+          "higher_count": 15,
+          "percentile": 6.25
+        }
+      }
+    },
+    {
+      "team_id": 1206,
+      "player_id": 15290,
+      "player_name": "Ashley Elizabeth Marie Lawrence",
+      "team_name": "Canada Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22939,
+        68344,
+        69163
+      ],
+      "duration_ms": 17495281,
+      "minutes": 291.58801666666665,
+      "eligible_attempts": 136,
+      "eligible_completed": 106,
+      "attempts_per90": 41.977033692685474,
+      "completed_per90": 32.717393907534266,
+      "completion_pct": 77.94117647058823,
+      "team_completed_while_registered": 1105,
+      "share_of_team_completions_pct": 9.592760180995475,
+      "team_completions_per_player90": 341.06339875306946,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 32.717393907534266,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 25,
+          "tied_other_count": 0,
+          "higher_count": 9,
+          "percentile": 73.52941176470588
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.592760180995475,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 17,
+          "tied_other_count": 0,
+          "higher_count": 17,
+          "percentile": 50.0
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 32.717393907534266,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 9,
+          "tied_other_count": 0,
+          "higher_count": 4,
+          "percentile": 69.23076923076923
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.592760180995475,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 6,
+          "tied_other_count": 0,
+          "higher_count": 7,
+          "percentile": 46.15384615384615
+        }
+      }
+    },
+    {
+      "team_id": 1207,
+      "player_id": 25481,
+      "player_name": "Peng Han",
+      "team_name": "China PR Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22926,
+        22956,
+        22983,
+        69191
+      ],
+      "duration_ms": 23250793,
+      "minutes": 387.51321666666666,
+      "eligible_attempts": 126,
+      "eligible_completed": 98,
+      "attempts_per90": 29.263518022804643,
+      "completed_per90": 22.760514017736945,
+      "completion_pct": 77.77777777777777,
+      "team_completed_while_registered": 1010,
+      "share_of_team_completions_pct": 9.702970297029703,
+      "team_completions_per_player90": 234.5726444685134,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 22.760514017736945,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 14,
+          "tied_other_count": 0,
+          "higher_count": 20,
+          "percentile": 41.1764705882353
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.702970297029703,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 19,
+          "tied_other_count": 0,
+          "higher_count": 15,
+          "percentile": 55.88235294117647
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 22.760514017736945,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 3,
+          "tied_other_count": 0,
+          "higher_count": 10,
+          "percentile": 23.076923076923077
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.702970297029703,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 7,
+          "tied_other_count": 0,
+          "higher_count": 6,
+          "percentile": 53.84615384615385
+        }
+      }
+    },
+    {
+      "team_id": 1207,
+      "player_id": 25486,
+      "player_name": "Shanshan Liu",
+      "team_name": "China PR Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22926,
+        22956,
+        22983,
+        69191
+      ],
+      "duration_ms": 23250793,
+      "minutes": 387.51321666666666,
+      "eligible_attempts": 116,
+      "eligible_completed": 91,
+      "attempts_per90": 26.941016592423324,
+      "completed_per90": 21.134763016470018,
+      "completion_pct": 78.44827586206897,
+      "team_completed_while_registered": 1010,
+      "share_of_team_completions_pct": 9.009900990099009,
+      "team_completions_per_player90": 234.5726444685134,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 21.134763016470018,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 12,
+          "tied_other_count": 0,
+          "higher_count": 22,
+          "percentile": 35.294117647058826
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.009900990099009,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 12,
+          "tied_other_count": 0,
+          "higher_count": 22,
+          "percentile": 35.294117647058826
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 21.134763016470018,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 7,
+          "tied_other_count": 0,
+          "higher_count": 9,
+          "percentile": 43.75
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.009900990099009,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 7,
+          "tied_other_count": 0,
+          "higher_count": 9,
+          "percentile": 43.75
+        }
+      }
+    },
+    {
+      "team_id": 1208,
+      "player_id": 25623,
+      "player_name": "Yvonne Patrice Leuko",
+      "team_name": "Cameroon W",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22964,
+        68346,
+        68362
+      ],
+      "duration_ms": 18131368,
+      "minutes": 302.18946666666665,
+      "eligible_attempts": 72,
+      "eligible_completed": 37,
+      "attempts_per90": 21.443500567635052,
+      "completed_per90": 11.019576680590236,
+      "completion_pct": 51.388888888888886,
+      "team_completed_while_registered": 488,
+      "share_of_team_completions_pct": 7.581967213114754,
+      "team_completions_per_player90": 145.339281625082,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 11.019576680590236,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 0,
+          "tied_other_count": 0,
+          "higher_count": 34,
+          "percentile": 0.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.581967213114754,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 4,
+          "tied_other_count": 0,
+          "higher_count": 30,
+          "percentile": 11.764705882352942
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 11.019576680590236,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 0,
+          "tied_other_count": 0,
+          "higher_count": 16,
+          "percentile": 0.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.581967213114754,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 2,
+          "tied_other_count": 0,
+          "higher_count": 14,
+          "percentile": 12.5
+        }
+      }
+    },
+    {
+      "team_id": 1210,
+      "player_id": 25624,
+      "player_name": "Risa Shimizu",
+      "team_name": "Japan Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22940,
+        22961,
+        68337,
+        69188
+      ],
+      "duration_ms": 22977661,
+      "minutes": 382.9610166666667,
+      "eligible_attempts": 196,
+      "eligible_completed": 168,
+      "attempts_per90": 46.06212964844419,
+      "completed_per90": 39.48182541295217,
+      "completion_pct": 85.71428571428571,
+      "team_completed_while_registered": 1687,
+      "share_of_team_completions_pct": 9.95850622406639,
+      "team_completions_per_player90": 396.46333018839465,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 39.48182541295217,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 33,
+          "tied_other_count": 0,
+          "higher_count": 1,
+          "percentile": 97.05882352941177
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.95850622406639,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 21,
+          "tied_other_count": 0,
+          "higher_count": 13,
+          "percentile": 61.76470588235294
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 39.48182541295217,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 12,
+          "tied_other_count": 0,
+          "higher_count": 1,
+          "percentile": 92.3076923076923
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.95850622406639,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 8,
+          "tied_other_count": 0,
+          "higher_count": 5,
+          "percentile": 61.53846153846154
+        }
+      }
+    },
+    {
+      "team_id": 1210,
+      "player_id": 25636,
+      "player_name": "Aya Sameshima",
+      "team_name": "Japan Women's",
+      "role_starts": 4,
+      "qualifying_match_ids": [
+        22940,
+        22961,
+        68337,
+        69188
+      ],
+      "duration_ms": 22977661,
+      "minutes": 382.9610166666667,
+      "eligible_attempts": 206,
+      "eligible_completed": 163,
+      "attempts_per90": 48.41223830397706,
+      "completed_per90": 38.30677108518573,
+      "completion_pct": 79.12621359223301,
+      "team_completed_while_registered": 1687,
+      "share_of_team_completions_pct": 9.66212211025489,
+      "team_completions_per_player90": 396.46333018839465,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 38.30677108518573,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 31,
+          "tied_other_count": 0,
+          "higher_count": 3,
+          "percentile": 91.17647058823529
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.66212211025489,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 18,
+          "tied_other_count": 0,
+          "higher_count": 16,
+          "percentile": 52.94117647058823
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 38.30677108518573,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 15,
+          "tied_other_count": 0,
+          "higher_count": 1,
+          "percentile": 93.75
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.66212211025489,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 9,
+          "tied_other_count": 0,
+          "higher_count": 7,
+          "percentile": 56.25
+        }
+      }
+    },
+    {
+      "team_id": 1211,
+      "player_id": 25447,
+      "player_name": "Sel-Gi Jang",
+      "team_name": "Korea Republic Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22921,
+        22945,
+        22981
+      ],
+      "duration_ms": 17239962,
+      "minutes": 287.3327,
+      "eligible_attempts": 134,
+      "eligible_completed": 108,
+      "attempts_per90": 41.97225028686258,
+      "completed_per90": 33.828380828217604,
+      "completion_pct": 80.59701492537313,
+      "team_completed_while_registered": 944,
+      "share_of_team_completions_pct": 11.440677966101696,
+      "team_completions_per_player90": 295.68510649849463,
+      "starting_side_group": "mixed",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 33.828380828217604,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 29,
+          "tied_other_count": 0,
+          "higher_count": 5,
+          "percentile": 85.29411764705883
+        },
+        "share_of_team_completions_pct": {
+          "value": 11.440677966101696,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 29,
+          "tied_other_count": 0,
+          "higher_count": 5,
+          "percentile": 85.29411764705883
+        }
+      },
+      "percentiles_same_side": null
+    },
+    {
+      "team_id": 1212,
+      "player_id": 25557,
+      "player_name": "Deneisha Selena Blackwood",
+      "team_name": "Jamaica Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22934,
+        22963,
+        68311
+      ],
+      "duration_ms": 17173311,
+      "minutes": 286.22185,
+      "eligible_attempts": 58,
+      "eligible_completed": 37,
+      "attempts_per90": 18.237601357129094,
+      "completed_per90": 11.634331900237523,
+      "completion_pct": 63.793103448275865,
+      "team_completed_while_registered": 484,
+      "share_of_team_completions_pct": 7.644628099173554,
+      "team_completions_per_player90": 152.18963891121518,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 11.634331900237523,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 2,
+          "tied_other_count": 0,
+          "higher_count": 32,
+          "percentile": 5.882352941176471
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.644628099173554,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 6,
+          "tied_other_count": 0,
+          "higher_count": 28,
+          "percentile": 17.647058823529413
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 11.634331900237523,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 2,
+          "tied_other_count": 0,
+          "higher_count": 14,
+          "percentile": 12.5
+        },
+        "share_of_team_completions_pct": {
+          "value": 7.644628099173554,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 4,
+          "tied_other_count": 0,
+          "higher_count": 12,
+          "percentile": 25.0
+        }
+      }
+    },
+    {
+      "team_id": 1213,
+      "player_id": 25462,
+      "player_name": "Chidinma Nkeruka Okeke",
+      "team_name": "Nigeria Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22945,
+        22980,
+        68355
+      ],
+      "duration_ms": 17889907,
+      "minutes": 298.1651166666667,
+      "eligible_attempts": 62,
+      "eligible_completed": 44,
+      "attempts_per90": 18.714462853272515,
+      "completed_per90": 13.281231702322431,
+      "completion_pct": 70.96774193548387,
+      "team_completed_while_registered": 360,
+      "share_of_team_completions_pct": 12.222222222222221,
+      "team_completions_per_player90": 108.66462301900172,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 13.281231702322431,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 3,
+          "tied_other_count": 0,
+          "higher_count": 31,
+          "percentile": 8.823529411764707
+        },
+        "share_of_team_completions_pct": {
+          "value": 12.222222222222221,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 32,
+          "tied_other_count": 0,
+          "higher_count": 2,
+          "percentile": 94.11764705882354
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 13.281231702322431,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 0,
+          "tied_other_count": 0,
+          "higher_count": 13,
+          "percentile": 0.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 12.222222222222221,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 12,
+          "tied_other_count": 0,
+          "higher_count": 1,
+          "percentile": 92.3076923076923
+        }
+      }
+    },
+    {
+      "team_id": 1213,
+      "player_id": 25468,
+      "player_name": "Ngozi Ebere",
+      "team_name": "Nigeria Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22924,
+        22945,
+        22980
+      ],
+      "duration_ms": 16153126,
+      "minutes": 269.2187666666667,
+      "eligible_attempts": 64,
+      "eligible_completed": 47,
+      "attempts_per90": 21.395239534440577,
+      "completed_per90": 15.712129033104798,
+      "completion_pct": 73.4375,
+      "team_completed_while_registered": 428,
+      "share_of_team_completions_pct": 10.981308411214954,
+      "team_completions_per_player90": 143.08066438657136,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 15.712129033104798,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 6,
+          "tied_other_count": 0,
+          "higher_count": 28,
+          "percentile": 17.647058823529413
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.981308411214954,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 27,
+          "tied_other_count": 0,
+          "higher_count": 7,
+          "percentile": 79.41176470588235
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 15.712129033104798,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 4,
+          "tied_other_count": 0,
+          "higher_count": 12,
+          "percentile": 25.0
+        },
+        "share_of_team_completions_pct": {
+          "value": 10.981308411214954,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 13,
+          "tied_other_count": 0,
+          "higher_count": 3,
+          "percentile": 81.25
+        }
+      }
+    },
+    {
+      "team_id": 1214,
+      "player_id": 5021,
+      "player_name": "Kelley Maureen O'Hara",
+      "team_name": "United States Women's",
+      "role_starts": 6,
+      "qualifying_match_ids": [
+        22943,
+        68345,
+        69161,
+        69202,
+        69258,
+        69321
+      ],
+      "duration_ms": 31830179,
+      "minutes": 530.5029833333333,
+      "eligible_attempts": 239,
+      "eligible_completed": 211,
+      "attempts_per90": 40.54642608198968,
+      "completed_per90": 35.796217168618504,
+      "completion_pct": 88.28451882845188,
+      "team_completed_while_registered": 1805,
+      "share_of_team_completions_pct": 11.689750692520775,
+      "team_completions_per_player90": 306.21882459410614,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 35.796217168618504,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 30,
+          "tied_other_count": 0,
+          "higher_count": 4,
+          "percentile": 88.23529411764706
+        },
+        "share_of_team_completions_pct": {
+          "value": 11.689750692520775,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 30,
+          "tied_other_count": 0,
+          "higher_count": 4,
+          "percentile": 88.23529411764706
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 35.796217168618504,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 11,
+          "tied_other_count": 0,
+          "higher_count": 2,
+          "percentile": 84.61538461538461
+        },
+        "share_of_team_completions_pct": {
+          "value": 11.689750692520775,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 11,
+          "tied_other_count": 0,
+          "higher_count": 2,
+          "percentile": 84.61538461538461
+        }
+      }
+    },
+    {
+      "team_id": 1214,
+      "player_id": 5088,
+      "player_name": "Crystal Alyssia Dunn Soubrier",
+      "team_name": "United States Women's",
+      "role_starts": 6,
+      "qualifying_match_ids": [
+        22943,
+        68345,
+        69161,
+        69202,
+        69258,
+        69321
+      ],
+      "duration_ms": 35436012,
+      "minutes": 590.6002,
+      "eligible_attempts": 271,
+      "eligible_completed": 215,
+      "attempts_per90": 41.2969721310626,
+      "completed_per90": 32.76328047298325,
+      "completion_pct": 79.33579335793358,
+      "team_completed_while_registered": 1912,
+      "share_of_team_completions_pct": 11.244769874476987,
+      "team_completions_per_player90": 291.36461518299524,
+      "starting_side_group": "left_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 32.76328047298325,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 26,
+          "tied_other_count": 0,
+          "higher_count": 8,
+          "percentile": 76.47058823529412
+        },
+        "share_of_team_completions_pct": {
+          "value": 11.244769874476987,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 28,
+          "tied_other_count": 0,
+          "higher_count": 6,
+          "percentile": 82.3529411764706
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 32.76328047298325,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 13,
+          "tied_other_count": 0,
+          "higher_count": 3,
+          "percentile": 81.25
+        },
+        "share_of_team_completions_pct": {
+          "value": 11.244769874476987,
+          "valid_pool_size": 17,
+          "other_players": 16,
+          "lower_count": 14,
+          "tied_other_count": 0,
+          "higher_count": 2,
+          "percentile": 87.5
+        }
+      }
+    },
+    {
+      "team_id": 1216,
+      "player_id": 25520,
+      "player_name": "Lebogang Ramalepe",
+      "team_name": "South Africa Women's",
+      "role_starts": 3,
+      "qualifying_match_ids": [
+        22930,
+        22956,
+        22984
+      ],
+      "duration_ms": 17398985,
+      "minutes": 289.98308333333335,
+      "eligible_attempts": 81,
+      "eligible_completed": 51,
+      "attempts_per90": 25.139397499336884,
+      "completed_per90": 15.82850953661952,
+      "completion_pct": 62.96296296296296,
+      "team_completed_while_registered": 549,
+      "share_of_team_completions_pct": 9.289617486338798,
+      "team_completions_per_player90": 170.38924971772778,
+      "starting_side_group": "right_only",
+      "percentiles_all_fullbacks": {
+        "completed_per90": {
+          "value": 15.82850953661952,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 8,
+          "tied_other_count": 0,
+          "higher_count": 26,
+          "percentile": 23.529411764705884
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.289617486338798,
+          "valid_pool_size": 35,
+          "other_players": 34,
+          "lower_count": 16,
+          "tied_other_count": 0,
+          "higher_count": 18,
+          "percentile": 47.05882352941177
+        }
+      },
+      "percentiles_same_side": {
+        "completed_per90": {
+          "value": 15.82850953661952,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 2,
+          "tied_other_count": 0,
+          "higher_count": 11,
+          "percentile": 15.384615384615385
+        },
+        "share_of_team_completions_pct": {
+          "value": 9.289617486338798,
+          "valid_pool_size": 14,
+          "other_players": 13,
+          "lower_count": 5,
+          "tied_other_count": 0,
+          "higher_count": 8,
+          "percentile": 38.46153846153846
+        }
+      }
+    }
+  ],
+  "scope": "Descriptive ranks within selected historical pools, not completion accuracy, scoring probabilities, model accuracy or general football ability. Original values and exposures unchanged. No possession/difficulty adjustment, confidence interval or recruitment recommendation."
+}

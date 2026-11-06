@@ -670,3 +670,7 @@ Completed assisted evidence-generated Markdown/HTML brief for two familiar fullb
 ### 2026-11-06 · Lesson 70: team passing involvement
 
 Completed assisted team-volume context for the unchanged 35-player sample. Applied the same eligibility rules to all registered teammates, then restricted team denominators by each target’s clock and event-order bounds. Bronze 350/2,837 =12.336976%; Majri 172/1,623 =10.597659%. Preserved original counts/minutes and saved denominator event IDs. Covered same-window exposure, pooled counts and involvement share versus completion percentage or possession. No full possession adjustment, ability ranking or independent mastery claimed. References retain 2019 Women’s World Cup and Soccermatics Lesson 3 → Normalisation.
+
+### 2026-11-06 · Lesson 71: percentile comparisons
+
+Completed assisted percentiles on unchanged activity and team-involvement values. Defined the other-player/tie convention explicitly; saved lower/tied/higher counts and pool identities. All 35 fullbacks remain overall; exclusive qualifying-side pools are 17 left and 14 right, with four mixed-side profiles left without an exclusive-side percentile. Majri activity 21/34 lower peers →61.7647; Bronze activity 100 within the selected pool. Covered reference-group dependence versus unchanged raw values and percentile versus accuracy/ability. References: 2019 Women’s World Cup and Soccermatics Lesson 3 → Comparison: percentile rankings. Independent mastery unverified.

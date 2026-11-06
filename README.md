@@ -409,3 +409,7 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ## Recruitment team context: passing involvement
 
 [Lesson 70](lessons/0052-fullback-team-passing-share.html) adds [same-window team passing shares](reports/53_fullback_team_passing_share.md) for all 35 players. Run `python 70_fullback_team_passing_share.py`. Bronze contributes 350/2,837 team completions (12.34%); Majri 172/1,623 (10.60%), with team counts restricted to each player’s selected registered windows. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation). This is involvement, not possession percentage or adjusted ability.
+
+## Recruitment comparison: name the percentile pool
+
+[Lesson 71](lessons/0053-fullback-percentile-comparisons.html) computes [cohort-relative percentiles](reports/54_fullback_percentile_comparisons.md) using explicit lower/tied/higher counts. Run `python 71_fullback_percentile_comparisons.py`. The full pool has 35 players; exclusive qualifying-side pools have 17 left-back and 14 right-back starters, with four mixed-side players retained overall. **2019 Women’s World Cup**; reading: [Soccermatics Lesson 3 — Comparison: percentile rankings](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings). A percentile is not an overall player-quality grade.

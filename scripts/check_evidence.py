@@ -2343,3 +2343,29 @@ assert (ROOT/'reports/53_fullback_team_passing_share.md').read_text()==share_mod
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert team_share==share_module.build_evidence(allow_download=False)
 print('PASS: same-window team denominators, player subsets, unchanged numerators and involvement shares reconcile.')
+
+percentiles=read('71_fullback_percentile_evidence.json')
+for source in percentiles['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert percentiles['season']=='2019' and percentiles['competition_id']==72 and percentiles['season_id']==30
+assert percentiles['course_reading']['url']=='https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings'
+spec=importlib.util.spec_from_file_location('fullback_percentiles_audit',ROOT/'71_fullback_percentile_comparisons.py')
+percentile_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(percentile_module)
+assert percentiles==percentile_module.build_evidence()
+assert len(percentiles['players'])==len(team_share['players'])
+assert len(percentiles['peer_pools']['all_fullbacks'])==35
+assert len(percentiles['peer_pools']['left_only'])==17 and len(percentiles['peer_pools']['right_only'])==14
+assert sum(p['starting_side_group']=='mixed' for p in percentiles['players'])==4
+for player,old in zip(percentiles['players'],team_share['players']):
+    assert all(player[k]==v for k,v in old.items())
+    if player['starting_side_group']=='mixed':assert player['percentiles_same_side'] is None
+    for scope in ('percentiles_all_fullbacks','percentiles_same_side'):
+        if player[scope] is None:continue
+        for metric,result in player[scope].items():
+            assert result['value']==old[metric]
+            if result['percentile'] is None:continue
+            assert result['lower_count']+result['tied_other_count']+result['higher_count']==result['other_players']==result['valid_pool_size']-1
+            assert math.isclose(result['percentile'],100*(result['lower_count']+.5*result['tied_other_count'])/result['other_players'])
+            assert 0<=result['percentile']<=100
+assert (ROOT/'reports/54_fullback_percentile_comparisons.md').read_text()==percentile_module.render_report(percentiles)
+print('PASS: unchanged metric values, explicit peer pools, percentile tie handling and rank-count evidence reconcile.')

@@ -3,8 +3,8 @@
 ## Current study and reading
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
-- **Course:** [Soccermatics Lesson 3 — Statistical scouting, Normalisation](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation).
-- **Current practice:** [Lesson 70 — team passing involvement](lessons/0052-fullback-team-passing-share.html), a matched-window team-volume denominator alongside the original per-90 results.
+- **Course:** [Soccermatics Lesson 3 — Statistical scouting, Comparison: percentile rankings](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#comparison-percentile-rankings).
+- **Current practice:** [Lesson 71 — percentile comparisons](lessons/0053-fullback-percentile-comparisons.html), explicit ranks and tie handling within named overall and starting-side pools.
 
 ## Knowledge
 
