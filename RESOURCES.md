@@ -3,8 +3,9 @@
 ## Current study and reading
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
-- **Course:** [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure).
-- **Current practice:** [Lesson 76 — counterpressing context](lessons/0058-fullback-counterpress-context.html): provider-flagged Pressure starts within five seconds of an open-play turnover. Context, not pressure regains or success.
+- **Course:** [Soccermatics Lesson 3 — Normalisation → Pressure Regains](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation).
+- **Current practice:** [Lesson 77 — next possession after pressure](lessons/0059-fullback-next-possession.html): a custom five-second next-recorded-possession proxy, with unclear cases preserved. Not official Pressure Regains or causal player credit.
+- **Provider limitation:** [Hudl — Pressure Regains](https://hudl.my.site.com/support/s/article/pressure-regains?language=en_US&topic=Statsbomb_Global_Football_Data_Glossary): IQ possession definitions do not translate cleanly into Event Data.
 
 ## Knowledge
 

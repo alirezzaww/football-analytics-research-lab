@@ -46,3 +46,5 @@ Lesson 74 adds guided matched-window opponent passing exposure to pressure activ
 Lesson 75 adds guided spatial pressure profiles with reconciled event keys and explicit missing-location denominators. Location counts/shares are descriptive, not evidence of independent scouting, successful pressing or tactical instructions.
 
 Lesson 76 adds guided provider-flag enrichment and auditable counterpress-context counts, distinguishing timing labels from possession-regain outcomes and tactical/ability claims. Independent implementation remains unverified.
+
+Lesson77 adds guided outcome-proxy construction with event-level traceability, exact timing, period-end censoring and explicit provider-definition limits. It does not establish official Pressure Regains, pressing ability or independent implementation competence.

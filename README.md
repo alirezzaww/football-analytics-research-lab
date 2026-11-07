@@ -436,3 +436,8 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ### Counterpressing context
 
 [Lesson 76](lessons/0058-fullback-counterpress-context.html) adds [provider-flagged counterpressures](reports/59_fullback_counterpress_context.md) to the same 2,034 Pressure starts across 35 profiles. Bronze 20/102 (19.6%); Majri 17/61 (27.9%); 353 flagged actions overall. Run `python 76_fullback_counterpress_context.py`. Flags describe pressure within five seconds of an open-play turnover, not winning possession back. Missing/false/null flags remain distinguishable. Data: **2019 Women's World Cup**; reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure), plus the StatsBomb Pressure specification. Assisted context extension, not an ability ranking.
+
+
+### What followed the pressure?
+
+[Lesson 77](lessons/0059-fullback-next-possession.html) adds an [explicit next-recorded-possession proxy](reports/60_fullback_next_possession.md): first following new possession belongs to the pressing team and starts within five seconds. Bronze: 12/81 assessable, 21 unclear; Majri: 1/43 assessable, 18 unclear. All original Pressure events and minutes remain intact. This is **not official StatsBomb Pressure Regains**, causal player credit or a confirmed success percentage; provider IQ possession definitions differ from Event Data. Run `python 77_fullback_next_possession.py`. Data: **2019 Women's World Cup**; reading: [Soccermatics Lesson 3 — Normalisation, Pressure Regains](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation). Saved candidate event IDs, time gaps and censoring reasons support review.

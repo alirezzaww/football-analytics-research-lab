@@ -77,3 +77,5 @@ User deferred manual/system data collection practice; continue analysis lessons.
 Lesson 75 adds pressure location mix. Keep examples concrete: Bronze has more opponent-third pressures, Majri a larger share. User needed clarification that opponent passes are passes by the other team, anywhere on pitch during selected registered windows.
 
 Lesson 76 separates counterpressing (pressure after loss, provider flag) from pressure regains (outcome not calculated). Bronze has coincidentally 20 opponent-third pressures and 20 counterpress-flagged pressures; equal counts do not mean the same events. Use the imagined loss→pressure timeline, clearly labelled as illustrative.
+
+Lesson 77 uses an explicitly custom next-recorded-possession proxy, not official Pressure Regains. Provider guidance warns IQ possession differs from raw Event Data. Own-possession-labelled pressures are unclear, not confirmed failures; Bronze has21 and Majri18 such cases. Explain with the real Bronze00:51.472→England possession00:53.660 first-half example, not an unsupported causal claim.

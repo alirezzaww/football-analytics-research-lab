@@ -2489,3 +2489,28 @@ assert (ROOT/'reports/59_fullback_counterpress_context.md').read_text()==counter
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert counterpress_context==counterpress_module.build_evidence(allow_download=False)
 print('PASS: provider counterpress flag states, unchanged pressure membership/exposure and rates reconcile.')
+
+next_possession=read('77_fullback_next_possession_evidence.json')
+for source in next_possession['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert next_possession['season']=='2019' and next_possession['competition_id']==72 and next_possession['season_id']==30
+spec=importlib.util.spec_from_file_location('next_possession_audit',ROOT/'77_fullback_next_possession.py')
+next_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(next_module)
+assert len(next_possession['players'])==35 and len(next_possession['rows'])==len(pressure_activity['rows'])
+for row,old in zip(next_possession['rows'],pressure_activity['rows']):
+    assert all(row[k]==v for k,v in old.items())
+    audit=next(a for a in playing_time['match_audits'] if a['match_id']==row['match_id'])
+    length=next(p['length_ms'] for p in audit['periods'] if p['period']==row['period'])
+    reconstructed={'id':row['event_id'],'index':row['index'],'period':row['period'],'timestamp':row['timestamp'],
+                   'type':{'name':'Pressure'},'team':{'id':row['team_id']},'player':{'id':row['player_id']},
+                   'possession':row['pressure_possession_id'],'possession_team':{'id':row['pressure_possession_team_id']}}
+    assert row==next_module.classify(old,reconstructed,row['next_possession'],length)
+for player,old in zip(next_possession['players'],pressure_activity['players']):
+    assert all(player[k]==v for k,v in old.items())
+    rows=[r for r in next_possession['rows'] if (r['team_id'],r['player_id'])==(player['team_id'],player['player_id'])]
+    assert player==next_module.summarize(old,rows)
+    assert player['assessable_pressures']+player['unassessable_pressures']==player['recorded_pressures']
+assert (ROOT/'reports/60_fullback_next_possession.md').read_text()==next_module.render_report(next_possession)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert next_possession==next_module.build_evidence(allow_download=False)
+print('PASS: custom next-possession outcomes, timing/censoring statuses, unchanged pressure counts and denominators reconcile.')
