@@ -690,3 +690,7 @@ User deferred collection practice and requested continued lessons. Completed ass
 ### 2026-11-07 · Lesson 75: pressure locations
 
 Completed assisted classification of the same 2,034 pressure starts across the 35 profiles into equal-length pitch thirds. Bronze own/middle/opponent 41/41/20; Majri 18/28/15. Opponent-third mapped shares 19.6078% and 24.5902%, despite Bronze's larger count. Preserved original counts/minutes and unmapped status; documented location-share versus per90 denominators and exact boundaries. Custom extension of Soccermatics Lesson 3 → Context: what to measure, using the 2019 Women's World Cup. No pressing success, tactical diagnosis, video observation or independent mastery claimed.
+
+### 2026-11-07 · Lesson 76: counterpressing context
+
+Completed assisted raw-event enrichment of all 2,034 previously selected Pressure starts for the unchanged 35-player pool. Provider top-level counterpress is exactly true on 353; Bronze 20/102 (19.6078%, 2.604226/90), Majri 17/61 (27.8689%, 3.034330/90). Preserved event identities and source fields, original minutes and absent/false/null flag states. Covered pressure after losing the ball versus regaining it, timing context versus location, and action counts versus unique loss episodes. Definition from StatsBomb Open Data specification; related reading Soccermatics Lesson 3 → Context: what to measure, data 2019 Women's World Cup. No own detection algorithm, video observation, success outcome or independent mastery claimed.

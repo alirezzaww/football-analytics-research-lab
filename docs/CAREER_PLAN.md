@@ -44,3 +44,5 @@ Lesson 63 defines a reproducible 35-player fullback profiling pool from all 52 2
 Lesson 74 adds guided matched-window opponent passing exposure to pressure activity, preserving event-ID ledgers. This is a custom descriptive proxy, not a provider-standard pressure success measure or proof of independent skill. Collection practice was deferred by the user.
 
 Lesson 75 adds guided spatial pressure profiles with reconciled event keys and explicit missing-location denominators. Location counts/shares are descriptive, not evidence of independent scouting, successful pressing or tactical instructions.
+
+Lesson 76 adds guided provider-flag enrichment and auditable counterpress-context counts, distinguishing timing labels from possession-regain outcomes and tactical/ability claims. Independent implementation remains unverified.

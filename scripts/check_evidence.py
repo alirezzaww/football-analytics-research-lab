@@ -2468,3 +2468,24 @@ for player,old in zip(pressure_areas['players'],pressure_activity['players']):
         assert math.isclose(sum(a['share_of_mapped_pressures_pct'] for a in player['pressure_areas']),100)
 assert (ROOT/'reports/58_fullback_pressure_areas.md').read_text()==area_module.render_report(pressure_areas)
 print('PASS: pressure thirds partition mapped starts, preserve source profiles and reconcile location denominators.')
+
+counterpress_context=read('76_fullback_counterpress_context_evidence.json')
+for source in counterpress_context['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert counterpress_context['season']=='2019' and counterpress_context['competition_id']==72 and counterpress_context['season_id']==30
+spec=importlib.util.spec_from_file_location('counterpress_context_audit',ROOT/'76_fullback_counterpress_context.py')
+counterpress_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(counterpress_module)
+assert len(counterpress_context['players'])==35
+assert len(counterpress_context['rows'])==len(pressure_activity['rows'])
+for row,old in zip(counterpress_context['rows'],pressure_activity['rows']):
+    assert all(row[k]==v for k,v in old.items())
+for player,old in zip(counterpress_context['players'],pressure_activity['players']):
+    assert all(player[k]==v for k,v in old.items())
+    rows=[r for r in counterpress_context['rows'] if (r['team_id'],r['player_id'])==(player['team_id'],player['player_id'])]
+    assert player==counterpress_module.summarize(old,rows)
+    assert sum(player['counterpress_flag_states'].values())==player['recorded_pressures']
+    assert player['flagged_counterpressures']+player['not_flagged_pressures']==player['recorded_pressures']
+assert (ROOT/'reports/59_fullback_counterpress_context.md').read_text()==counterpress_module.render_report(counterpress_context)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert counterpress_context==counterpress_module.build_evidence(allow_download=False)
+print('PASS: provider counterpress flag states, unchanged pressure membership/exposure and rates reconcile.')

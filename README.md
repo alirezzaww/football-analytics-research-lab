@@ -431,3 +431,8 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ### Where fullbacks applied pressure
 
 [Lesson 75](lessons/0057-fullback-pressure-areas.html) adds [pressure counts, shares and rates by pitch third](reports/58_fullback_pressure_areas.md) for all 35 profiles, preserving the original 2,034 actions and missing-location coverage. Bronze: 20/102 (19.6%) in the opponent third; Majri: 15/61 (24.6%). Counts and shares answer different questions. Run `python 75_fullback_pressure_areas.py`. Data: **2019 Women's World Cup**; reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure). This is location context, not pressing success or a tactical diagnosis.
+
+
+### Counterpressing context
+
+[Lesson 76](lessons/0058-fullback-counterpress-context.html) adds [provider-flagged counterpressures](reports/59_fullback_counterpress_context.md) to the same 2,034 Pressure starts across 35 profiles. Bronze 20/102 (19.6%); Majri 17/61 (27.9%); 353 flagged actions overall. Run `python 76_fullback_counterpress_context.py`. Flags describe pressure within five seconds of an open-play turnover, not winning possession back. Missing/false/null flags remain distinguishable. Data: **2019 Women's World Cup**; reading: [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure), plus the StatsBomb Pressure specification. Assisted context extension, not an ability ranking.

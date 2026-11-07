@@ -75,3 +75,5 @@ The user requests that references always identify the competition and season bei
 User deferred manual/system data collection practice; continue analysis lessons. Lesson 74 adds opponent-attempt exposure context, not pressure success or individual opportunity measurement.
 
 Lesson 75 adds pressure location mix. Keep examples concrete: Bronze has more opponent-third pressures, Majri a larger share. User needed clarification that opponent passes are passes by the other team, anywhere on pitch during selected registered windows.
+
+Lesson 76 separates counterpressing (pressure after loss, provider flag) from pressure regains (outcome not calculated). Bronze has coincidentally 20 opponent-third pressures and 20 counterpress-flagged pressures; equal counts do not mean the same events. Use the imagined loss→pressure timeline, clearly labelled as illustrative.

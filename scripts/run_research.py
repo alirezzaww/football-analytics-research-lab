@@ -70,6 +70,7 @@ STAGES = [
     "73_fullback_pressure_activity.py",
     "74_fullback_opponent_pass_context.py",
     "75_fullback_pressure_areas.py",
+    "76_fullback_counterpress_context.py",
     "scripts/check_evidence.py",
 ]
 
