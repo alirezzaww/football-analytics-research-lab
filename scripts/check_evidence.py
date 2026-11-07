@@ -2514,3 +2514,27 @@ assert (ROOT/'reports/60_fullback_next_possession.md').read_text()==next_module.
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert next_possession==next_module.build_evidence(allow_download=False)
 print('PASS: custom next-possession outcomes, timing/censoring statuses, unchanged pressure counts and denominators reconcile.')
+
+label_audit=read('78_pressure_possession_label_audit_evidence.json')
+for source in label_audit['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert label_audit['season']=='2019' and label_audit['competition_id']==72 and label_audit['season_id']==30
+spec=importlib.util.spec_from_file_location('possession_label_audit78',ROOT/'78_pressure_possession_label_audit.py')
+label_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(label_module)
+expected={(r['match_id'],r['event_id']) for r in next_possession['rows'] if r['outcome_status']=='already_own_possession'}
+assert len(label_audit['rows'])==len(expected)==240
+assert {(r['match_id'],r['event_id']) for r in label_audit['rows']}==expected
+assert len(label_audit['players'])==35
+for player,old in zip(label_audit['players'],next_possession['players']):
+    assert all(player[k]==v for k,v in old.items())
+    rows=[r for r in label_audit['rows'] if (r['team_id'],r['player_id'])==(player['team_id'],player['player_id'])]
+    assert player==label_module.summarize(old,rows)
+for row in label_audit['rows']:
+    assert row['pressure']['team_id']==row['pressure']['possession_team_id']==row['team_id']
+    assert row['pressure_minus_start_ms']==next_module.milliseconds(row['pressure'])-row['labelled_possession_start']['time_ms']
+    assert all(e['period']==row['pressure']['period'] for e in row['nearby_events'])
+assert label_audit['examples']==[next(r for r in label_audit['rows'] if r['player_id']==pid) for pid in (10178,15249)]
+assert (ROOT/'reports/61_pressure_possession_label_audit.md').read_text()==label_module.render_report(label_audit)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert label_audit==label_module.build_evidence(allow_download=False)
+print('PASS: own-labelled pressure audit, actor/sequence distinctions, context references and unchanged outcomes reconcile.')

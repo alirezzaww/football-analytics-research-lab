@@ -4,7 +4,7 @@
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
 - **Course:** [Soccermatics Lesson 3 — Normalisation → Pressure Regains](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#normalisation).
-- **Current practice:** [Lesson 77 — next possession after pressure](lessons/0059-fullback-next-possession.html): a custom five-second next-recorded-possession proxy, with unclear cases preserved. Not official Pressure Regains or causal player credit.
+- **Current practice:** [Lesson 78 — action team versus possession label](lessons/0060-pressure-possession-labels.html): audit the 240 own-labelled unclear pressure cases; preserve all previous outcomes. Read the StatsBomb team/possession_team field definitions alongside the course.
 - **Provider limitation:** [Hudl — Pressure Regains](https://hudl.my.site.com/support/s/article/pressure-regains?language=en_US&topic=Statsbomb_Global_Football_Data_Glossary): IQ possession definitions do not translate cleanly into Event Data.
 
 ## Knowledge

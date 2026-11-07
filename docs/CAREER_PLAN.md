@@ -48,3 +48,5 @@ Lesson 75 adds guided spatial pressure profiles with reconciled event keys and e
 Lesson 76 adds guided provider-flag enrichment and auditable counterpress-context counts, distinguishing timing labels from possession-regain outcomes and tactical/ability claims. Independent implementation remains unverified.
 
 Lesson77 adds guided outcome-proxy construction with event-level traceability, exact timing, period-end censoring and explicit provider-definition limits. It does not establish official Pressure Regains, pressing ability or independent implementation competence.
+
+Lesson78 adds guided semantic validation of actor/possession fields, with traceable raw context and a tested timing hypothesis. Earlier outcome estimates are preserved; this is not proof of provider error or independent data-engineering competence.
