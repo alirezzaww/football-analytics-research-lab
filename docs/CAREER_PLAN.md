@@ -50,3 +50,5 @@ Lesson 76 adds guided provider-flag enrichment and auditable counterpress-contex
 Lesson77 adds guided outcome-proxy construction with event-level traceability, exact timing, period-end censoring and explicit provider-definition limits. It does not establish official Pressure Regains, pressing ability or independent implementation competence.
 
 Lesson78 adds guided semantic validation of actor/possession fields, with traceable raw context and a tested timing hypothesis. Earlier outcome estimates are preserved; this is not proof of provider error or independent data-engineering competence.
+
+Lesson79 adds guided event-ID joins with referential checks, reciprocal-link coverage and per-player pass deduplication. The observed outcomes are not causal pressing-success estimates or proof of independent SQL/Python competence. Consolidate the expanding profile evidence into an employer-readable case study alongside independent reproduction practice.

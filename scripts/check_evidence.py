@@ -2538,3 +2538,26 @@ assert (ROOT/'reports/61_pressure_possession_label_audit.md').read_text()==label
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert label_audit==label_module.build_evidence(allow_download=False)
 print('PASS: own-labelled pressure audit, actor/sequence distinctions, context references and unchanged outcomes reconcile.')
+
+linked_passes=read('79_pressure_linked_passes_evidence.json')
+for source in linked_passes['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert linked_passes['season']=='2019' and linked_passes['competition_id']==72 and linked_passes['season_id']==30
+spec=importlib.util.spec_from_file_location('pressure_pass_links_audit79',ROOT/'79_pressure_linked_passes.py')
+link_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(link_module)
+assert len(linked_passes['players'])==35 and len(linked_passes['rows'])==len(pressure_activity['rows'])
+for row,old in zip(linked_passes['rows'],pressure_activity['rows']):
+    assert all(row[k]==v for k,v in old.items())
+    assert sum(row['related_event_type_counts'].values())==len(row['related_event_ids'])
+    assert set(row['linked_opponent_pass_ids']).isdisjoint(row['linked_same_team_pass_ids'])
+for player,old in zip(linked_passes['players'],pressure_activity['players']):
+    assert all(player[k]==v for k,v in old.items())
+    rows=[r for r in linked_passes['rows'] if (r['team_id'],r['player_id'])==(player['team_id'],player['player_id'])]
+    links=[r for r in linked_passes['links'] if (r['team_id'],r['player_id'])==(player['team_id'],player['player_id'])]
+    assert player==link_module.summarize(old,rows,links)
+    assert sum(player['linked_pass_category_counts'].values())==len(player['unique_linked_opponent_passes'])
+    assert player['pressures_with_linked_opponent_pass']+player['pressures_without_linked_opponent_pass']==player['recorded_pressures']
+assert (ROOT/'reports/62_pressure_linked_passes.md').read_text()==link_module.render_report(linked_passes)
+if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
+    assert linked_passes==link_module.build_evidence(allow_download=False)
+print('PASS: pressure-to-opponent-pass IDs, link coverage, unique outcomes and unchanged source profiles reconcile.')
