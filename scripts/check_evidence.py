@@ -2576,3 +2576,22 @@ assert all(r['review_status']=='Not reviewed' and r['video_observation'] is None
 assert synthesis['linked_event_examples']==linked_passes['examples']
 assert (ROOT/'reports/63_fullback_profile_portfolio_brief.md').read_text()==synthesis_module.render_markdown(synthesis)
 print('PASS: portfolio synthesis preserves source scopes, values, uncertainty and unreviewed event references.')
+
+scouting_database=read('81_scouting_database_evidence.json')
+for source in list(scouting_database['source_files'].values())+list(scouting_database['sql_files'].values()):
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+spec=importlib.util.spec_from_file_location('scouting_database_audit81',ROOT/'81_scouting_database.py')
+scouting_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(scouting_module)
+assert scouting_database==scouting_module.build_evidence()
+assert scouting_database['season']=='2019' and scouting_database['competition_id']==72 and scouting_database['season_id']==30
+assert scouting_database['table_counts']=={'fullbacks':35,'qualifying_fixtures':145}
+assert {k:len(scouting_database['queries'][k]) for k in ('left_only','right_only','mixed')}=={'left_only':17,'right_only':14,'mixed':4}
+for row in scouting_database['queries']['all']:
+    old=next(p for p in team_share['players'] if (p['team_id'],p['player_id'])==(row['team_id'],row['player_id']))
+    assert math.isclose(row['completed_per90'],old['completed_per90'])
+    assert math.isclose(row['completion_pct'],old['completion_pct'])
+    assert math.isclose(row['team_passing_share_pct'],old['share_of_team_completions_pct'])
+    pressure_old=next(p for p in pressure_activity['players'] if (p['team_id'],p['player_id'])==(row['team_id'],row['player_id']))
+    assert math.isclose(row['pressures_per90'],pressure_old['pressures_per90'])
+assert (ROOT/'reports/64_scouting_database.md').read_text()==scouting_module.render_report(scouting_database)
+print('PASS: scouting database keys, fixture memberships, role pools, SQL rates and activity window ranks reproduce.')

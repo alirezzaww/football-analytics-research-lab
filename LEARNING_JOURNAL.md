@@ -710,3 +710,7 @@ Completed assisted directed related_events join for all2,034 Pressure starts and
 ### 2026-11-18 · Lesson 80: portfolio synthesis and communication
 
 Completed assisted synthesis of seven saved evidence sources into a combined fullback brief. Preserved all source values, different starting sides, fixture/minute scopes, original cohort, outcome limitations and six unreviewed event references. Added identity/cohort/exposure consistency gates and an exact report-rebuild audit. Covered finding→material limit→next observation and guided contribution disclosure. No new metric, independent mastery, footage review, validated ability rank or current signing assessment claimed. Dataset:2019 Women's World Cup; reading:Soccermatics Lesson3 → Modesty.
+
+### 2026-11-18 · Lesson 81: new SQL scouting-tool phase
+
+User requested the next phase. Completed assisted SQLite foundation combining unchanged 35-player passing/forward/pressure profiles with145 player-fixture memberships. Added compound primary keys, foreign keys, rate view and bound role/minimum-start query. Introduced DENSE_RANK with explicit ties, side partitions and filter-before-rank semantics. Original side pools17left/14right/4mixed preserved; rank describes passing activity, not ability. Generated local database is ignored/rebuildable; source SQL and canonical query evidence are public. Data:2019 Women's World Cup; reading:Soccermatics Lesson3 → Case study: spreadsheet scouting, and SQLite window functions. Independent SQL proficiency remains to demonstrate.
