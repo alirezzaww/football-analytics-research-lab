@@ -74,6 +74,7 @@ STAGES = [
     "77_fullback_next_possession.py",
     "78_pressure_possession_label_audit.py",
     "79_pressure_linked_passes.py",
+    "80_fullback_portfolio_synthesis.py",
     "scripts/check_evidence.py",
 ]
 

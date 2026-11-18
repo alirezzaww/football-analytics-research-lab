@@ -1,0 +1,296 @@
+{
+  "competition": "FIFA Women\u2019s World Cup",
+  "season": "2019",
+  "competition_id": 72,
+  "season_id": 30,
+  "prepared_on": "2026-11-18",
+  "course_reading": {
+    "lesson": "Soccermatics Lesson 3: Statistical scouting",
+    "section": "Modesty",
+    "url": "https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#modesty"
+  },
+  "cohort_size": 35,
+  "profiles": [
+    {
+      "team_id": 865,
+      "player_id": 10178,
+      "player_name": "Lucy Bronze",
+      "team_name": "England Women's",
+      "qualifying_match_ids": [
+        22936,
+        22962,
+        68337,
+        68362,
+        69199,
+        69258,
+        69301
+      ],
+      "role_starts": 7,
+      "starting_roles": {
+        "Left Back": 0,
+        "Right Back": 7
+      },
+      "duration_ms": 41471052,
+      "minutes": 691.1842,
+      "completed": 350,
+      "attempted": 436,
+      "completed_per90": 45.57395843249889,
+      "completion_pct": 80.27522935779817,
+      "team_completed": 2837,
+      "team_passing_share_pct": 12.336975678533662,
+      "fixed_forward_count": 34,
+      "fixed_forward_per90": 4.427184533442749,
+      "alternative_forward_count": 36,
+      "alternative_forward_per90": 4.687607153057029,
+      "pressures": 102,
+      "pressures_per90": 13.281553600328248,
+      "opponent_pass_attempts": 2034,
+      "pressures_per100_opponent_attempts": 5.014749262536873,
+      "mapped_pressures": 102,
+      "opponent_third_pressures": 20,
+      "opponent_third_share_pct": 19.607843137254903,
+      "counterpress_flagged": 20,
+      "counterpress_flagged_share_pct": 19.607843137254903,
+      "next_possession_positive": 12,
+      "next_possession_assessable": 81,
+      "next_possession_unclear": 21,
+      "linked_pressure_count": 28,
+      "linked_unique_pass_count": 28,
+      "linked_pass_outcomes": {
+        "completed": 19,
+        "not_completed": 8,
+        "unassessable": 1
+      }
+    },
+    {
+      "team_id": 861,
+      "player_id": 15249,
+      "player_name": "Amel Majri",
+      "team_name": "France Women's",
+      "qualifying_match_ids": [
+        22921,
+        22948,
+        22980,
+        69137,
+        69202
+      ],
+      "role_starts": 5,
+      "starting_roles": {
+        "Left Back": 5,
+        "Right Back": 0
+      },
+      "duration_ms": 30253791,
+      "minutes": 504.22985,
+      "completed": 172,
+      "attempted": 222,
+      "completed_per90": 30.70028480067176,
+      "completion_pct": 77.47747747747748,
+      "team_completed": 1623,
+      "team_passing_share_pct": 10.59765865680838,
+      "fixed_forward_count": 18,
+      "fixed_forward_per90": 3.212820502395882,
+      "alternative_forward_count": 19,
+      "alternative_forward_per90": 3.391310530306764,
+      "pressures": 61,
+      "pressures_per90": 10.88789170256382,
+      "opponent_pass_attempts": 1248,
+      "pressures_per100_opponent_attempts": 4.887820512820513,
+      "mapped_pressures": 61,
+      "opponent_third_pressures": 15,
+      "opponent_third_share_pct": 24.59016393442623,
+      "counterpress_flagged": 17,
+      "counterpress_flagged_share_pct": 27.868852459016395,
+      "next_possession_positive": 1,
+      "next_possession_assessable": 43,
+      "next_possession_unclear": 18,
+      "linked_pressure_count": 7,
+      "linked_unique_pass_count": 7,
+      "linked_pass_outcomes": {
+        "completed": 4,
+        "not_completed": 3,
+        "unassessable": 0
+      }
+    }
+  ],
+  "review_queue": [
+    {
+      "match_id": 22936,
+      "match_date": "2019-06-09",
+      "team_id": 865,
+      "player_id": 10178,
+      "player_name": "Lucy Bronze",
+      "opponent": "Scotland W",
+      "pass_id": "a4f3b3e8-e86d-4753-82e2-ab37fcbaeafe",
+      "category": "Fixed-rule example",
+      "period": 1,
+      "minute": 23,
+      "second": 43,
+      "period_timestamp": "00:23:43.899",
+      "recipient": "Nikita Parris",
+      "start": [
+        10.4,
+        75.1
+      ],
+      "end": [
+        32.5,
+        76.8
+      ],
+      "x_gain": 22.1,
+      "review_status": "Not reviewed",
+      "video_observation": null
+    },
+    {
+      "match_id": 22936,
+      "match_date": "2019-06-09",
+      "team_id": 865,
+      "player_id": 10178,
+      "player_name": "Lucy Bronze",
+      "opponent": "Scotland W",
+      "pass_id": "0c5e5756-2841-4f30-9635-7d7656e51871",
+      "category": "Additional alternative-rule example",
+      "period": 2,
+      "minute": 85,
+      "second": 2,
+      "period_timestamp": "00:40:02.457",
+      "recipient": "Georgia Stanway",
+      "start": [
+        95.6,
+        68.8
+      ],
+      "end": [
+        109.7,
+        63.1
+      ],
+      "x_gain": 14.1,
+      "review_status": "Not reviewed",
+      "video_observation": null
+    },
+    {
+      "match_id": 22921,
+      "match_date": "2019-06-07",
+      "team_id": 861,
+      "player_id": 15249,
+      "player_name": "Amel Majri",
+      "opponent": "Korea Republic Women's",
+      "pass_id": "1b526257-b7c8-4af3-955a-25bdff16fa99",
+      "category": "Fixed-rule example",
+      "period": 1,
+      "minute": 2,
+      "second": 30,
+      "period_timestamp": "00:02:30.477",
+      "recipient": "Kadidiatou Diani",
+      "start": [
+        53.9,
+        3.3
+      ],
+      "end": [
+        93.4,
+        8.8
+      ],
+      "x_gain": 39.5,
+      "review_status": "Not reviewed",
+      "video_observation": null
+    },
+    {
+      "match_id": 22980,
+      "match_date": "2019-06-17",
+      "team_id": 861,
+      "player_id": 15249,
+      "player_name": "Amel Majri",
+      "opponent": "Nigeria Women's",
+      "pass_id": "ad95822f-e335-4ae0-8316-50b4ab28fabb",
+      "category": "Additional alternative-rule example",
+      "period": 2,
+      "minute": 94,
+      "second": 48,
+      "period_timestamp": "00:49:48.019",
+      "recipient": "Eug\u00e9nie Le Sommer",
+      "start": [
+        106.9,
+        2.3
+      ],
+      "end": [
+        114.8,
+        6.0
+      ],
+      "x_gain": 7.9,
+      "review_status": "Not reviewed",
+      "video_observation": null
+    }
+  ],
+  "linked_event_examples": [
+    {
+      "match_id": 22936,
+      "team_id": 865,
+      "player_id": 10178,
+      "pressure_id": "c543af09-bb3b-4cc7-a196-32cbded861b8",
+      "pressure_timestamp": "00:06:45.362",
+      "pass_id": "ffb5226d-4927-4364-9d1b-2b58cb80bd83",
+      "pass_team_id": 866,
+      "pass_team_name": "Scotland W",
+      "pass_player_id": 15628,
+      "pass_player_name": "Christie Murray",
+      "period": 1,
+      "pass_index": 285,
+      "pass_timestamp": "00:06:45.418",
+      "pass_start_minus_pressure_start_ms": 56,
+      "raw_outcome": null,
+      "category": "completed",
+      "reciprocal": true,
+      "pass_type": "Recovery"
+    },
+    {
+      "match_id": 22921,
+      "team_id": 861,
+      "player_id": 15249,
+      "pressure_id": "fb96a1cf-d47a-46cd-a0da-82ab6288aba7",
+      "pressure_timestamp": "00:16:03.342",
+      "pass_id": "f9fe2285-e271-4884-b807-809131dd96f1",
+      "pass_team_id": 1211,
+      "pass_team_name": "Korea Republic Women's",
+      "pass_player_id": 25451,
+      "pass_player_name": "Hye-Ri Kim",
+      "period": 1,
+      "pass_index": 610,
+      "pass_timestamp": "00:16:04.526",
+      "pass_start_minus_pressure_start_ms": 1184,
+      "raw_outcome": "Incomplete",
+      "category": "not_completed",
+      "reciprocal": true,
+      "pass_type": "Recovery"
+    }
+  ],
+  "source_files": {
+    "passing": {
+      "path": "data/70_fullback_team_passing_share_evidence.json",
+      "sha256": "58f695db526d7dd64cca84bb27f298a596353e113e0cccb496a6b7614dac07ce"
+    },
+    "opponent": {
+      "path": "data/74_fullback_opponent_pass_context_evidence.json",
+      "sha256": "52d2792e968d82bf923aaaaf1b334af441ab81277a8f92603b708a981e8b3917"
+    },
+    "areas": {
+      "path": "data/75_fullback_pressure_areas_evidence.json",
+      "sha256": "720f7c4aaedfa9830ce49b6ec982ff2e7ff5174bf0a9323fd9acd01ef18ff5ce"
+    },
+    "proxy": {
+      "path": "data/77_fullback_next_possession_evidence.json",
+      "sha256": "2ea2ee9ff5619fc769310793e07042c98b7790a0898949ef988e6f4092d12a59"
+    },
+    "linked_passes": {
+      "path": "data/79_pressure_linked_passes_evidence.json",
+      "sha256": "e6c9777dc67424c521b49e7265eddc93541234a2a8715f0ad180b629bd98ef4e"
+    },
+    "original_brief": {
+      "path": "data/69_fullback_recruitment_brief_evidence.json",
+      "sha256": "ed0d561b6c3ac758481100668eb4494be1064c9f5208bfeb3e7ad0dabc8753f1"
+    },
+    "counterpress": {
+      "path": "data/76_fullback_counterpress_context_evidence.json",
+      "sha256": "a36394db6744f7e06649d4f96321ea954955d9f9a3a60ae10e9a5cf2c034af9d"
+    }
+  },
+  "selection": "Bronze and Majri are familiar historical communication examples, not the best two candidates. Their starting sides differ. No composite score or signing ranking.",
+  "authorship": "Prepared with AI assistance as guided portfolio work. Independent reproduction, interpretation and footage review have not been demonstrated.",
+  "scope": "Synthesis of previously inspected evidence, not new validation, a fresh season, official Pressure Regains or proof of player ability. Earlier reports and numbers remain unchanged."
+}

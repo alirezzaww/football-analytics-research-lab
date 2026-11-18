@@ -2561,3 +2561,18 @@ assert (ROOT/'reports/62_pressure_linked_passes.md').read_text()==link_module.re
 if all((ROOT/m['raw_input']['relative_path']).exists() for m in playing_time['match_audits']):
     assert linked_passes==link_module.build_evidence(allow_download=False)
 print('PASS: pressure-to-opponent-pass IDs, link coverage, unique outcomes and unchanged source profiles reconcile.')
+
+synthesis=read('80_fullback_portfolio_synthesis_evidence.json')
+for source in synthesis['source_files'].values():
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+spec=importlib.util.spec_from_file_location('portfolio_synthesis_audit80',ROOT/'80_fullback_portfolio_synthesis.py')
+synthesis_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(synthesis_module)
+assert synthesis==synthesis_module.build_evidence()
+assert synthesis['season']=='2019' and synthesis['competition_id']==72 and synthesis['season_id']==30
+assert synthesis['cohort_size']==35 and len(synthesis['profiles'])==2
+original_brief=json.loads((ROOT/synthesis['source_files']['original_brief']['path']).read_text())
+assert synthesis['review_queue']==original_brief['review_queue']
+assert all(r['review_status']=='Not reviewed' and r['video_observation'] is None for r in synthesis['review_queue'])
+assert synthesis['linked_event_examples']==linked_passes['examples']
+assert (ROOT/'reports/63_fullback_profile_portfolio_brief.md').read_text()==synthesis_module.render_markdown(synthesis)
+print('PASS: portfolio synthesis preserves source scopes, values, uncertainty and unreviewed event references.')

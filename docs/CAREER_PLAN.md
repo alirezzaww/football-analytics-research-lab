@@ -52,3 +52,5 @@ Lesson77 adds guided outcome-proxy construction with event-level traceability, e
 Lesson78 adds guided semantic validation of actor/possession fields, with traceable raw context and a tested timing hypothesis. Earlier outcome estimates are preserved; this is not proof of provider error or independent data-engineering competence.
 
 Lesson79 adds guided event-ID joins with referential checks, reciprocal-link coverage and per-player pass deduplication. The observed outcomes are not causal pressing-success estimates or proof of independent SQL/Python competence. Consolidate the expanding profile evidence into an employer-readable case study alongside independent reproduction practice.
+
+Lesson80 packages existing passing and pressure evidence into the [combined fullback portfolio brief](../reports/63_fullback_profile_portfolio_brief.md), with clear contribution disclosure and an unreviewed six-event queue. This is a guided communication milestone, not proof of independent analysis. For interview preparation, explain two findings and their denominators, then independently reproduce one calculation before upgrading the CV competence claim.

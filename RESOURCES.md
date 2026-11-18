@@ -3,8 +3,8 @@
 ## Current study and reading
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
-- **Course:** [Soccermatics Lesson 3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure).
-- **Current practice:** [Lesson 79 — pressure-linked opponent passes](lessons/0061-pressure-linked-passes.html): join provider related_events IDs to pass outcomes; preserve coverage and deduplicate passes per player. Linked outcomes are not causal pressing success.
+- **Course:** [Soccermatics Lesson 3 — Statistical scouting → Modesty](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#modesty).
+- **Current practice:** [Lesson 80 — portfolio communication](lessons/0062-fullback-portfolio-synthesis.html): combine passing and pressure evidence into a [readable brief](reports/63_fullback_profile_portfolio_brief.md), distinguishing findings, limits and next observations.
 - **Provider limitation:** [Hudl — Pressure Regains](https://hudl.my.site.com/support/s/article/pressure-regains?language=en_US&topic=Statsbomb_Global_Football_Data_Glossary): IQ possession definitions do not translate cleanly into Event Data.
 
 ## Knowledge

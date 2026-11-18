@@ -8,7 +8,7 @@
 **[Explore the live portfolio](https://alireza-england-2019-research.sara-erfania-6316.chatgpt.site)** ·
 [Study the source](https://github.com/alirezzaww/football-analytics-research-lab)
 
-**Start here:** [France corner case study](reports/36_france_corner_portfolio_case_study.md) · [Fullback recruitment brief](reports/52_fullback_recruitment_brief.md) · [Employment learning plan](docs/CAREER_PLAN.md)
+**Start here:** [France corner case study](reports/36_france_corner_portfolio_case_study.md) · [Fullback portfolio brief](reports/63_fullback_profile_portfolio_brief.md) · [Employment learning plan](docs/CAREER_PLAN.md)
 
 A growing collection of reproducible football research using StatsBomb Open Data,
 covering passing involvement, expected-goals modelling and match analysis across
@@ -451,3 +451,8 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ### Link pressure actions to opponent passes
 
 [Lesson 79](lessons/0061-pressure-linked-passes.html) performs an [audited related-event ID join](reports/62_pressure_linked_passes.md) across all 2,034 selected pressures and 35 profiles, producing 549 opponent-pass relationships. Per-player pass deduplication prevents repeated outcomes. Bronze's 28 unique linked passes:19 completed/8 not completed/1 unassessable; Majri's7:4/3/0. Missing links do not mean failed pressures, and association is not causation. Run `python 79_pressure_linked_passes.py`. Data:**2019 Women's World Cup**; reading:[Soccermatics Lesson3 — Context: what to measure](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#context-what-to-measure), plus StatsBomb related_events/Pass definitions. Prior outcome-proxy results are unchanged.
+
+
+### Portfolio communication milestone
+
+[Lesson 80](lessons/0062-fullback-portfolio-synthesis.html) assembles the [combined fullback portfolio brief](reports/63_fullback_profile_portfolio_brief.md) from seven hashed evidence sources. It connects passing, pressure activity, opponent context, locations and outcome coverage, with six explicitly unreviewed event references. It preserves the two different starting sides and all existing numbers; no overall ability score or signing recommendation is introduced. Run `python 80_fullback_portfolio_synthesis.py`. Data: **2019 Women's World Cup**; reading: [Soccermatics Lesson 3 — Modesty](https://soccermatics.readthedocs.io/en/latest/lesson3/ScoutingPlayers.html#modesty). Prepared with AI assistance; independent explanation and reproduction remain to demonstrate.
