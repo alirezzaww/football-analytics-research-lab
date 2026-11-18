@@ -76,6 +76,7 @@ STAGES = [
     "79_pressure_linked_passes.py",
     "80_fullback_portfolio_synthesis.py",
     "81_scouting_database.py",
+    "82_scouting_role_screen.py",
     "scripts/check_evidence.py",
 ]
 

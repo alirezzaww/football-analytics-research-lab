@@ -2595,3 +2595,22 @@ for row in scouting_database['queries']['all']:
     assert math.isclose(row['pressures_per90'],pressure_old['pressures_per90'])
 assert (ROOT/'reports/64_scouting_database.md').read_text()==scouting_module.render_report(scouting_database)
 print('PASS: scouting database keys, fixture memberships, role pools, SQL rates and activity window ranks reproduce.')
+
+role_screen=read('82_scouting_role_screen_evidence.json')
+for path_key,hash_key in (('source_path','source_sha256'),('protocol_path','protocol_sha256'),('query_path','query_sha256')):
+    assert hashlib.sha256((ROOT/role_screen[path_key]).read_bytes()).hexdigest()==role_screen[hash_key]
+spec=importlib.util.spec_from_file_location('role_screen_audit82',ROOT/'82_scouting_role_screen.py')
+screen_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(screen_module)
+assert role_screen==screen_module.build_evidence()
+assert role_screen['season']=='2019' and role_screen['competition_id']==72 and role_screen['season_id']==30
+p=role_screen['parameters']
+expected=[r for r in scouting_database['queries']['all'] if r['side_group']==p['side_group'] and r['role_starts']>=p['min_starts']]
+assert {(r['team_id'],r['player_id']) for r in role_screen['eligible_rows']}=={(r['team_id'],r['player_id']) for r in expected}
+for row in role_screen['eligible_rows']:
+    assert bool(row['meets_passing_floor'])==(row['completed_per90']>=p['min_completed_per90'])
+    assert bool(row['meets_forward_floor'])==(row['forward_per90']>=p['min_forward_per90'])
+    assert bool(row['meets_both'])==bool(row['meets_passing_floor'] and row['meets_forward_floor'])
+assert role_screen['selected_rows']==[r for r in role_screen['eligible_rows'] if r['meets_both']]
+assert role_screen['counts']==screen_module.summarize(role_screen['eligible_rows'])
+assert (ROOT/'reports/65_scouting_role_screen.md').read_text()==screen_module.render_report(role_screen)
+print('PASS: bound role-screen conditions, full eligible coverage, unrounded thresholds and exclusion counts reconcile.')

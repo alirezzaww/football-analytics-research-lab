@@ -4,8 +4,8 @@
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
 - **Course:** [Soccermatics Lesson 3 — Case study: spreadsheet scouting](https://soccermatics.readthedocs.io/en/latest/lesson3/SpreadsheetScout.html).
-- **Technical reading:** [SQLite window functions — PARTITION BY and DENSE_RANK](https://www.sqlite.org/windowfunctions.html).
-- **Current practice:** [Lesson 81 — new phase: SQL scouting tools](lessons/0063-scouting-database.html). Build the 35-player database and query activity within explicit role pools. Custom SQL extension of the course idea.
+- **Technical reading:** [SQLite expressions — AND and bound parameters](https://www.sqlite.org/lang_expr.html).
+- **Current practice:** [Lesson 82 — first role screen](lessons/0064-scouting-role-screen.html). Apply two illustrative activity floors with AND and retain every eligible profile and exclusion reason.
 - **Provider limitation:** [Hudl — Pressure Regains](https://hudl.my.site.com/support/s/article/pressure-regains?language=en_US&topic=Statsbomb_Global_Football_Data_Glossary): IQ possession definitions do not translate cleanly into Event Data.
 
 ## Knowledge

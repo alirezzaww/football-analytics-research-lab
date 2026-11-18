@@ -1,0 +1,12 @@
+{
+  "competition_id": 72,
+  "season_id": 30,
+  "season": "2019",
+  "side_group": "right_only",
+  "min_starts": 3,
+  "min_completed_per90": 30.0,
+  "min_forward_per90": 3.0,
+  "purpose": "Illustrative right-sided passing profile for learning SQL AND filters. These cutoffs are teaching choices, not validated club requirements or optimal player-quality thresholds.",
+  "forward_definition": "Completed eligible pass with end_x-start_x >=20 coordinate units, using the existing fixed rule.",
+  "selection_rule": "Meet both inclusive activity floors within the original eligible starting-role pool; no composite score or top-N restriction."
+}
