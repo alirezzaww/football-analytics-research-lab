@@ -4,8 +4,8 @@
 
 - **Dataset:** FIFA Women’s World Cup, **2019** — StatsBomb competition ID 72, season ID 30. [Tournament match metadata](https://github.com/statsbomb/open-data/blob/master/data/matches/72/30.json).
 - **Course:** [Soccermatics Lesson 3 — Case study: spreadsheet scouting](https://soccermatics.readthedocs.io/en/latest/lesson3/SpreadsheetScout.html).
-- **Technical reading:** [SQLite expressions — AND and bound parameters](https://www.sqlite.org/lang_expr.html).
-- **Current practice:** [Lesson 83 — cutoff sensitivity](lessons/0065-scouting-screen-sensitivity.html). Hold the role pool and data fixed while testing nine nearby activity-floor combinations; scenario counts are not suitability probabilities.
+- **Technical reading:** [SQLite aggregate functions — SUM and AVG](https://www.sqlite.org/lang_aggfunc.html).
+- **Current practice:** [Lesson 84 — match drill-down](lessons/0066-scouting-match-drilldown.html). Open the games behind shortlisted player averages; reconcile all counts/minutes and distinguish pooled rates from means of match rates.
 - **Provider limitation:** [Hudl — Pressure Regains](https://hudl.my.site.com/support/s/article/pressure-regains?language=en_US&topic=Statsbomb_Global_Football_Data_Glossary): IQ possession definitions do not translate cleanly into Event Data.
 
 ## Knowledge

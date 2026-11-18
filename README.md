@@ -471,3 +471,8 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ### Check sensitivity to scouting cutoffs
 
 [Lesson 83](lessons/0065-scouting-screen-sensitivity.html) tests [nine nearby cutoff combinations](reports/66_scouting_screen_sensitivity.md), preserving the same 14 eligible profiles and original 30/3 screen. Bronze and Van Lunteren appear in 9/9; Lawrence and Shimizu 6/9, dropping out at a 3.2 forward-pass/90 floor. Passing floors 28–32 do not change membership within the tested grid. These are scenario counts, not probabilities or quality scores. Run `python 83_scouting_screen_sensitivity.py`. Data: **2019 Women's World Cup**; course: [Soccermatics Lesson 3 — Spreadsheet scouting](https://soccermatics.readthedocs.io/en/latest/lesson3/SpreadsheetScout.html).
+
+
+### Inspect the matches behind player averages
+
+[Lesson 84](lessons/0066-scouting-match-drilldown.html) adds an [audited match drill-down](reports/67_scouting_match_drilldown.md) with 145 player–fixture activity rows across all 35 profiles and detailed output for the original four selected profiles. Counts and registered time reconcile exactly to the source totals. Bronze's pooled fixed-forward rate is 4.43/90; included match rates span 1.89–6.67/90. This observed range is not a forecast or uncertainty interval. Run `python 84_scouting_match_drilldown.py --team-id 865 --player-id 10178`; generated local database: `data/local/84_scouting_drilldown.sqlite3` (ignored/rebuildable). Data: **2019 Women's World Cup**; reading: [Soccermatics Lesson 3 — Spreadsheet scouting](https://soccermatics.readthedocs.io/en/latest/lesson3/SpreadsheetScout.html) and SQLite SUM/AVG.

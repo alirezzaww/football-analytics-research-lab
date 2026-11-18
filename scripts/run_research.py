@@ -78,6 +78,7 @@ STAGES = [
     "81_scouting_database.py",
     "82_scouting_role_screen.py",
     "83_scouting_screen_sensitivity.py",
+    "84_scouting_match_drilldown.py",
     "scripts/check_evidence.py",
 ]
 

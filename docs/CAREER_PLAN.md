@@ -60,3 +60,5 @@ Lesson81 begins a reusable scouting-database tool: stable keys, referential cons
 Lesson82 demonstrates guided translation of a stated illustrative role/activity requirement into a bound SQL AND query, preserving all eligible profiles and rejection reasons. The four returned profiles are historical investigation examples; thresholds are not club-validated criteria or evidence of current suitability. Independent query editing/explanation remains a learning milestone.
 
 Lesson83 adds a guided parameter-sensitivity audit of the SQL screen, with saved scenario memberships and a readable figure. This demonstrates how changing explicit assumptions affects a search; it does not establish optimal recruitment thresholds, player quality or independent proficiency.
+
+Lesson84 adds a guided relational match drill-down with full-key joins, source event-ID traceability and exact count/time reconciliation. The original shortlist now links to included match evidence. This remains assisted work; independent construction/explanation of an aggregate query and the pooled denominator is still a milestone.

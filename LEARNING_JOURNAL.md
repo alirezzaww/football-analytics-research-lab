@@ -722,3 +722,7 @@ Completed assisted two-condition screen with illustrative requirements stated be
 ### 2026-11-18 · Lesson83: scouting-cutoff sensitivity
 
 Completed assisted3×3scenario grid: completed floors28/30/32 and fixed-forward floors2.8/3/3.2, holding the14right-sided profiles,3startminimum, data and definitions fixed. Original30/3membership reproduces. Bronze/VanLunteren9of9; Lawrence/Shimizu6of9; only the3.2forwardfloor removes them. Passing-floor variation has no membership effect in this grid. Saved scenario memberships, baseline additions/removals and plot; no optimum, inclusion probability, fresh validation or ability ranking claimed. Related reading:Soccermatics Lesson3 → Spreadsheet scouting; dataset:2019 Women's World Cup. Independent mastery unverified.
+
+### 2026-11-18 · Lesson84: player–match drill-down
+
+Completed assisted database extension with145player–fixture activity rows for all35profiles, built by matching existing pass/forward/pressure ledgers to registered intervals. Counts/time reconcile to every original profile. Four shortlisted profiles receive match breakdowns; Bronze7games, pooled4.4272fixed-forward/90, observedmatchrange1.89–6.67. Covered data grain, complete-ID joins, pooled versus unweighted match rates, traceability and observed variation versus explanations/forecasts. Original shortlist/metrics unchanged; no footage observation, causal opponent effect, consistency grade or independent mastery claimed. Dataset:2019 Women's World Cup; reading:Soccermatics Lesson3 → Spreadsheet scouting, SQLite SUM/AVG.

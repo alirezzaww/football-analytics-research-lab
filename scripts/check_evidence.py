@@ -2631,3 +2631,21 @@ for strict in screen_sensitivity['cases']:
 assert sum(p['selected_case_count'] for p in screen_sensitivity['profiles'])==sum(c['selected_count'] for c in screen_sensitivity['cases'])
 assert (ROOT/'reports/66_scouting_screen_sensitivity.md').read_text()==cutoff_module.render_report(screen_sensitivity)
 print('PASS: fixed-pool cutoff scenarios, original membership, monotonic selection and inclusion counts reconcile.')
+
+match_drilldown=read('84_scouting_match_drilldown_evidence.json')
+for source in list(match_drilldown['source_files'].values())+list(match_drilldown['sql_files'].values()):
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+spec=importlib.util.spec_from_file_location('match_drilldown_audit84',ROOT/'84_scouting_match_drilldown.py')
+drill_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(drill_module)
+assert match_drilldown==drill_module.build_evidence()
+assert match_drilldown['season']=='2019' and match_drilldown['competition_id']==72 and match_drilldown['season_id']==30
+assert len(match_drilldown['rows'])==145 and len(match_drilldown['all_player_totals'])==35
+drill_module.reconcile(scouting_database['rows'],match_drilldown['all_player_totals'])
+assert {(p['team_id'],p['player_id']) for p in match_drilldown['focused_profiles']}=={(p['team_id'],p['player_id']) for p in role_screen['selected_rows']}
+for row in match_drilldown['rows']:
+    assert row['completed_passes']==len(row['completed_pass_ids'])
+    assert row['forward_passes']==len(row['forward_pass_ids'])
+    assert set(row['forward_pass_ids'])<=set(row['completed_pass_ids'])
+    assert row['recorded_pressures']==len(row['pressure_ids'])
+assert (ROOT/'reports/67_scouting_match_drilldown.md').read_text()==drill_module.render_report(match_drilldown)
+print('PASS: player-match ledgers, registered windows, compound joins and pooled counts/rates reconcile to all profiles.')
