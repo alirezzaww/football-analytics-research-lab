@@ -62,3 +62,5 @@ Lesson82 demonstrates guided translation of a stated illustrative role/activity 
 Lesson83 adds a guided parameter-sensitivity audit of the SQL screen, with saved scenario memberships and a readable figure. This demonstrates how changing explicit assumptions affects a search; it does not establish optimal recruitment thresholds, player quality or independent proficiency.
 
 Lesson84 adds a guided relational match drill-down with full-key joins, source event-ID traceability and exact count/time reconciliation. The original shortlist now links to included match evidence. This remains assisted work; independent construction/explanation of an aggregate query and the pooled denominator is still a milestone.
+
+Lesson85 adds guided temporal segmentation with matched score-state denominators, audited goal reconstruction and SQL NULL handling. Original counts/minutes reconcile across the full cohort. Independent explanation of state exposure and causal limitations remains to demonstrate; this is not a validated tactical-effect model.

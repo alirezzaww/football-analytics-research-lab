@@ -2649,3 +2649,29 @@ for row in match_drilldown['rows']:
     assert row['recorded_pressures']==len(row['pressure_ids'])
 assert (ROOT/'reports/67_scouting_match_drilldown.md').read_text()==drill_module.render_report(match_drilldown)
 print('PASS: player-match ledgers, registered windows, compound joins and pooled counts/rates reconcile to all profiles.')
+
+score_context=read('85_scouting_score_context_evidence.json')
+for source in list(score_context['source_files'].values())+list(score_context['sql_files'].values()):
+    assert hashlib.sha256((ROOT/source['path']).read_bytes()).hexdigest()==source['sha256']
+assert hashlib.sha256((ROOT/score_context['protocol_path']).read_bytes()).hexdigest()==score_context['protocol_sha256']
+spec=importlib.util.spec_from_file_location('scouting_score_context_audit85',ROOT/'85_scouting_score_context.py')
+state_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(state_module)
+assert score_context['season']=='2019' and score_context['competition_id']==72 and score_context['season_id']==30
+assert len(score_context['rows'])==3*len(match_drilldown['rows']) and len(score_context['rates'])==3*len(match_drilldown['all_player_totals'])
+for old in match_drilldown['rows']:
+    rows=[r for r in score_context['rows'] if (r['match_id'],r['team_id'],r['player_id'])==(old['match_id'],old['team_id'],old['player_id'])]
+    assert {r['score_state'] for r in rows}==set(state_module.STATES)
+    for field in ('duration_ms','completed_passes','forward_passes','recorded_pressures'):
+        assert sum(r[field] for r in rows)==old[field]
+    for field in ('completed_pass_ids','forward_pass_ids','pressure_ids'):
+        ids=[identifier for r in rows for identifier in r[field]]
+        assert len(ids)==len(set(ids)) and set(ids)==set(old[field])
+for row in score_context['rates']:
+    for field,rate in (('completed_passes','completed_per90'),('forward_passes','forward_per90'),('recorded_pressures','pressures_per90')):
+        if row['duration_ms']==0:assert row[rate] is None
+        else:assert math.isclose(row[rate],row[field]*5400000/row['duration_ms'])
+assert (ROOT/'reports/68_scouting_score_context.md').read_text()==state_module.render_report(score_context)
+metadata_path=ROOT/score_context['metadata_input']['relative_path']
+if metadata_path.exists() and all((ROOT/a['raw_input']['relative_path']).exists() for a in score_context['match_audits']):
+    assert score_context==state_module.build_evidence(allow_download=False)
+print('PASS: goal-accounted score states, matched registered exposure, action partitions and zero-exposure SQL rates reconcile.')

@@ -1,0 +1,8 @@
+{
+  "score_states": ["Leading", "Drawing", "Trailing"],
+  "score_update": "At the logged timestamp of a counted goal event. Count Shot/Goal or Own Goal Against once; ignore Own Goal For counterpart and shootouts.",
+  "action_state": "Score immediately before the action by event index. Preserve original selected action IDs and registered clock/index bounds.",
+  "time_exposure": "Split the original registered elapsed-millisecond interval at counted goal timestamps; retain added/extra time and remove halftime gaps as in lesson64.",
+  "rates": "Pool action counts and state-specific milliseconds before division. Zero state exposure gives an undefined rate, even if a boundary action is present.",
+  "limitation": "Logged goal-event times approximate score-change instants; this is descriptive score context, not a causal tactical effect or adjustment for opponents/possession."
+}
