@@ -1,0 +1,737 @@
+{
+  "competition": "FIFA Women\u2019s World Cup",
+  "season": "2019",
+  "competition_id": 72,
+  "season_id": 30,
+  "course_reading": {
+    "lesson": "Soccermatics Lesson 3",
+    "section": "Case study: spreadsheet scouting",
+    "url": "https://soccermatics.readthedocs.io/en/latest/lesson3/SpreadsheetScout.html"
+  },
+  "source_path": "data/82_scouting_role_screen_evidence.json",
+  "source_sha256": "bdbdf42452298dc82f04ac0d2fae614538ae9784c030ca6bb37f5588b179cd18",
+  "protocol_path": "data/83_screen_sensitivity_protocol.json",
+  "protocol_sha256": "0d70548ae6d3261c5c90f41058272bbf87829afa617e379158c95ba3a7568958",
+  "baseline_parameters": {
+    "side_group": "right_only",
+    "min_starts": 3,
+    "min_completed_per90": 30.0,
+    "min_forward_per90": 3.0
+  },
+  "grid": {
+    "completed_per90_floors": [
+      28.0,
+      30.0,
+      32.0
+    ],
+    "forward_per90_floors": [
+      2.8,
+      3.0,
+      3.2
+    ],
+    "purpose": "Illustrative sensitivity scenarios around the original 30/3 activity cutoffs. Hold side, minimum starts, player data and metric definitions fixed. No scenario is treated as optimal, independent validation or a probability model."
+  },
+  "cases": [
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 28.0,
+        "min_forward_per90": 2.8
+      },
+      "selected_count": 4,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ],
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": []
+    },
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 28.0,
+        "min_forward_per90": 3.0
+      },
+      "selected_count": 4,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ],
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": []
+    },
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 28.0,
+        "min_forward_per90": 3.2
+      },
+      "selected_count": 2,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": [
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 30.0,
+        "min_forward_per90": 2.8
+      },
+      "selected_count": 4,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ],
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": []
+    },
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 30.0,
+        "min_forward_per90": 3.0
+      },
+      "selected_count": 4,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ],
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": []
+    },
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 30.0,
+        "min_forward_per90": 3.2
+      },
+      "selected_count": 2,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": [
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ]
+    },
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 32.0,
+        "min_forward_per90": 2.8
+      },
+      "selected_count": 4,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ],
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": []
+    },
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 32.0,
+        "min_forward_per90": 3.0
+      },
+      "selected_count": 4,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ],
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": []
+    },
+    {
+      "parameters": {
+        "side_group": "right_only",
+        "min_starts": 3,
+        "min_completed_per90": 32.0,
+        "min_forward_per90": 3.2
+      },
+      "selected_count": 2,
+      "selected_keys": [
+        [
+          851,
+          10657
+        ],
+        [
+          865,
+          10178
+        ]
+      ],
+      "added_vs_baseline": [],
+      "removed_vs_baseline": [
+        [
+          1206,
+          15290
+        ],
+        [
+          1210,
+          25624
+        ]
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 865,
+      "player_id": 10178,
+      "player_name": "Lucy Bronze",
+      "team_name": "England Women's",
+      "side_group": "right_only",
+      "role_starts": 7,
+      "completed_per90": 45.57395843249889,
+      "forward_per90": 4.427184533442749,
+      "pressures_per90": 13.281553600328248,
+      "team_passing_share_pct": 12.336975678533662,
+      "meets_passing_floor": 1,
+      "meets_forward_floor": 1,
+      "meets_both": 1,
+      "baseline_selected": true,
+      "case_membership": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected_case_count": 9,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 851,
+      "player_id": 10657,
+      "player_name": "Desiree van Lunteren",
+      "team_name": "Netherlands Women's",
+      "side_group": "right_only",
+      "role_starts": 7,
+      "completed_per90": 33.44035120518211,
+      "forward_per90": 4.226661490617813,
+      "pressures_per90": 10.690967299797997,
+      "team_passing_share_pct": 10.302566066641134,
+      "meets_passing_floor": 1,
+      "meets_forward_floor": 1,
+      "meets_both": 1,
+      "baseline_selected": true,
+      "case_membership": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "selected_case_count": 9,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 1206,
+      "player_id": 15290,
+      "player_name": "Ashley Elizabeth Marie Lawrence",
+      "team_name": "Canada Women's",
+      "side_group": "right_only",
+      "role_starts": 3,
+      "completed_per90": 32.717393907534266,
+      "forward_per90": 3.0865465950504025,
+      "pressures_per90": 17.593315591787295,
+      "team_passing_share_pct": 9.592760180995475,
+      "meets_passing_floor": 1,
+      "meets_forward_floor": 1,
+      "meets_both": 1,
+      "baseline_selected": true,
+      "case_membership": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "selected_case_count": 6,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 1210,
+      "player_id": 25624,
+      "player_name": "Risa Shimizu",
+      "team_name": "Japan Women's",
+      "side_group": "right_only",
+      "role_starts": 4,
+      "completed_per90": 39.48182541295217,
+      "forward_per90": 3.0551412521927275,
+      "pressures_per90": 8.460391159918322,
+      "team_passing_share_pct": 9.95850622406639,
+      "meets_passing_floor": 1,
+      "meets_forward_floor": 1,
+      "meets_both": 1,
+      "baseline_selected": true,
+      "case_membership": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "selected_case_count": 6,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 1207,
+      "player_id": 25481,
+      "player_name": "Peng Han",
+      "team_name": "China PR Women's",
+      "side_group": "right_only",
+      "role_starts": 4,
+      "completed_per90": 22.760514017736945,
+      "forward_per90": 4.6450028607626415,
+      "pressures_per90": 13.006008010135396,
+      "team_passing_share_pct": 9.702970297029703,
+      "meets_passing_floor": 0,
+      "meets_forward_floor": 1,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 1213,
+      "player_id": 25462,
+      "player_name": "Chidinma Nkeruka Okeke",
+      "team_name": "Nigeria Women's",
+      "side_group": "right_only",
+      "role_starts": 3,
+      "completed_per90": 13.281231702322433,
+      "forward_per90": 3.6221541006333906,
+      "pressures_per90": 6.942462026213999,
+      "team_passing_share_pct": 12.222222222222221,
+      "meets_passing_floor": 0,
+      "meets_forward_floor": 1,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 852,
+      "player_id": 10382,
+      "player_name": "Ingrid Moe Wold",
+      "team_name": "Norway Women's",
+      "side_group": "right_only",
+      "role_starts": 5,
+      "completed_per90": 23.155811488127295,
+      "forward_per90": 3.5769139697107204,
+      "pressures_per90": 9.224672869253963,
+      "team_passing_share_pct": 9.17910447761194,
+      "meets_passing_floor": 0,
+      "meets_forward_floor": 1,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 861,
+      "player_id": 25446,
+      "player_name": "Marion Torrent",
+      "team_name": "France Women's",
+      "side_group": "right_only",
+      "role_starts": 4,
+      "completed_per90": 23.127684820565893,
+      "forward_per90": 3.054599881961533,
+      "pressures_per90": 12.654770939554924,
+      "team_passing_share_pct": 8.392715756136184,
+      "meets_passing_floor": 0,
+      "meets_forward_floor": 1,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 1214,
+      "player_id": 5021,
+      "player_name": "Kelley Maureen O'Hara",
+      "team_name": "United States Women's",
+      "side_group": "right_only",
+      "role_starts": 6,
+      "completed_per90": 35.7962171686185,
+      "forward_per90": 2.7144050933549573,
+      "pressures_per90": 10.857620373419829,
+      "team_passing_share_pct": 11.689750692520775,
+      "meets_passing_floor": 1,
+      "meets_forward_floor": 0,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 1205,
+      "player_id": 5095,
+      "player_name": "Ellie Madison Carpenter",
+      "team_name": "Australia Women's",
+      "side_group": "right_only",
+      "role_starts": 4,
+      "completed_per90": 32.321248960033884,
+      "forward_per90": 2.3237499252311946,
+      "pressures_per90": 11.618749626155973,
+      "team_passing_share_pct": 9.123434704830053,
+      "meets_passing_floor": 1,
+      "meets_forward_floor": 0,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 858,
+      "player_id": 24693,
+      "player_name": "Hanna Erica Maria Glas",
+      "team_name": "Sweden Women's",
+      "side_group": "right_only",
+      "role_starts": 6,
+      "completed_per90": 25.46620598108598,
+      "forward_per90": 2.2763089145104787,
+      "pressures_per90": 15.507354480102636,
+      "team_passing_share_pct": 10.016787912702855,
+      "meets_passing_floor": 0,
+      "meets_forward_floor": 0,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 1203,
+      "player_id": 25560,
+      "player_name": "Let\u00edcia Santos de Oliveira",
+      "team_name": "Brazil Women's",
+      "side_group": "right_only",
+      "role_starts": 4,
+      "completed_per90": 15.49669433462811,
+      "forward_per90": 1.9678342012226173,
+      "pressures_per90": 14.512777234016802,
+      "team_passing_share_pct": 6.15234375,
+      "meets_passing_floor": 0,
+      "meets_forward_floor": 0,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 1216,
+      "player_id": 25520,
+      "player_name": "Lebogang Ramalepe",
+      "team_name": "South Africa Women's",
+      "side_group": "right_only",
+      "role_starts": 3,
+      "completed_per90": 15.82850953661952,
+      "forward_per90": 1.5518146604528942,
+      "pressures_per90": 22.656494042612255,
+      "team_passing_share_pct": 9.289617486338798,
+      "meets_passing_floor": 0,
+      "meets_forward_floor": 0,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    },
+    {
+      "competition_id": 72,
+      "season_id": 30,
+      "team_id": 857,
+      "player_id": 25492,
+      "player_name": "Giulia Gwinn",
+      "team_name": "Germany Women's",
+      "side_group": "right_only",
+      "role_starts": 3,
+      "completed_per90": 26.91213646174838,
+      "forward_per90": 1.2232789300794717,
+      "pressures_per90": 11.009510370715246,
+      "team_passing_share_pct": 7.753303964757709,
+      "meets_passing_floor": 0,
+      "meets_forward_floor": 0,
+      "meets_both": 0,
+      "baseline_selected": false,
+      "case_membership": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "selected_case_count": 0,
+      "case_count": 9
+    }
+  ],
+  "scope": "Sensitivity to two chosen activity cutoffs only. Same 14 right-sided profiles, minimum three starts, same data and fixed forward-pass definition. Scenario inclusion counts are not probabilities, confidence intervals, future reliability or evidence of player quality. No optimal cutoff is selected; original screen unchanged."
+}

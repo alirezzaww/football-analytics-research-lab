@@ -466,3 +466,8 @@ This is a descriptive coverage audit, not new fitting or fresh validation. Run
 ### First role-based SQL screen
 
 [Lesson 82](lessons/0064-scouting-role-screen.html) applies an [explicit illustrative protocol](data/82_scouting_screen_protocol.json): right-sided profiles, ≥3 qualifying starts, ≥30 completed eligible passes/90 AND ≥3 fixed-rule forward passes/90. Four of14 profiles meet both: Bronze, Van Lunteren, Lawrence and Shimizu. The [full report](reports/65_scouting_role_screen.md) retains all eligible rows and exclusion reasons. Run `python 82_scouting_role_screen.py`; [SQL source](sql/82_role_screen.sql). Cutoffs are teaching choices, not validated club requirements, player grades or signing recommendations. Data: **2019 Women's World Cup**; course: [Soccermatics Lesson3 — Spreadsheet scouting](https://soccermatics.readthedocs.io/en/latest/lesson3/SpreadsheetScout.html).
+
+
+### Check sensitivity to scouting cutoffs
+
+[Lesson 83](lessons/0065-scouting-screen-sensitivity.html) tests [nine nearby cutoff combinations](reports/66_scouting_screen_sensitivity.md), preserving the same 14 eligible profiles and original 30/3 screen. Bronze and Van Lunteren appear in 9/9; Lawrence and Shimizu 6/9, dropping out at a 3.2 forward-pass/90 floor. Passing floors 28–32 do not change membership within the tested grid. These are scenario counts, not probabilities or quality scores. Run `python 83_scouting_screen_sensitivity.py`. Data: **2019 Women's World Cup**; course: [Soccermatics Lesson 3 — Spreadsheet scouting](https://soccermatics.readthedocs.io/en/latest/lesson3/SpreadsheetScout.html).

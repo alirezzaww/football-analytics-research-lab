@@ -77,6 +77,7 @@ STAGES = [
     "80_fullback_portfolio_synthesis.py",
     "81_scouting_database.py",
     "82_scouting_role_screen.py",
+    "83_scouting_screen_sensitivity.py",
     "scripts/check_evidence.py",
 ]
 

@@ -1,0 +1,5 @@
+{
+  "completed_per90_floors": [28.0, 30.0, 32.0],
+  "forward_per90_floors": [2.8, 3.0, 3.2],
+  "purpose": "Illustrative sensitivity scenarios around the original 30/3 activity cutoffs. Hold side, minimum starts, player data and metric definitions fixed. No scenario is treated as optimal, independent validation or a probability model."
+}

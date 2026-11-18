@@ -58,3 +58,5 @@ Lesson80 packages existing passing and pressure evidence into the [combined full
 Lesson81 begins a reusable scouting-database tool: stable keys, referential constraints, SQL rate views, parameter binding and window rankings within explicit role pools. The generated database can be rebuilt locally without a server. These are guided implementation examples relevant to portfolio discussion; independently alter and explain a query before claiming SQL proficiency.
 
 Lesson82 demonstrates guided translation of a stated illustrative role/activity requirement into a bound SQL AND query, preserving all eligible profiles and rejection reasons. The four returned profiles are historical investigation examples; thresholds are not club-validated criteria or evidence of current suitability. Independent query editing/explanation remains a learning milestone.
+
+Lesson83 adds a guided parameter-sensitivity audit of the SQL screen, with saved scenario memberships and a readable figure. This demonstrates how changing explicit assumptions affects a search; it does not establish optimal recruitment thresholds, player quality or independent proficiency.

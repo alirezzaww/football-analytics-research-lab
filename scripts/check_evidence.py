@@ -2614,3 +2614,20 @@ assert role_screen['selected_rows']==[r for r in role_screen['eligible_rows'] if
 assert role_screen['counts']==screen_module.summarize(role_screen['eligible_rows'])
 assert (ROOT/'reports/65_scouting_role_screen.md').read_text()==screen_module.render_report(role_screen)
 print('PASS: bound role-screen conditions, full eligible coverage, unrounded thresholds and exclusion counts reconcile.')
+
+screen_sensitivity=read('83_scouting_screen_sensitivity_evidence.json')
+for path_key,hash_key in (('source_path','source_sha256'),('protocol_path','protocol_sha256')):
+    assert hashlib.sha256((ROOT/screen_sensitivity[path_key]).read_bytes()).hexdigest()==screen_sensitivity[hash_key]
+spec=importlib.util.spec_from_file_location('screen_sensitivity_audit83',ROOT/'83_scouting_screen_sensitivity.py')
+cutoff_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(cutoff_module)
+assert screen_sensitivity==cutoff_module.build_evidence()
+assert screen_sensitivity['season']=='2019' and screen_sensitivity['competition_id']==72 and screen_sensitivity['season_id']==30
+assert len(screen_sensitivity['profiles'])==len(role_screen['eligible_rows'])
+assert screen_sensitivity['baseline_parameters']==role_screen['parameters']
+for strict in screen_sensitivity['cases']:
+    for loose in screen_sensitivity['cases']:
+        if all(strict['parameters'][p]>=loose['parameters'][p] for p in ('min_completed_per90','min_forward_per90')):
+            assert {tuple(k) for k in strict['selected_keys']}<={tuple(k) for k in loose['selected_keys']}
+assert sum(p['selected_case_count'] for p in screen_sensitivity['profiles'])==sum(c['selected_count'] for c in screen_sensitivity['cases'])
+assert (ROOT/'reports/66_scouting_screen_sensitivity.md').read_text()==cutoff_module.render_report(screen_sensitivity)
+print('PASS: fixed-pool cutoff scenarios, original membership, monotonic selection and inclusion counts reconcile.')
